@@ -1,0 +1,77 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: is_sorted
+Previous failures:
+- attempt_01: AssertionError: This prints if this assert fails 5 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_065642_HumanEval_126/slm_attempt_01/candidate_run.py", line 26, in __run_tests
+    check(globals().get('is_sorted'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_065642_HumanEval_126/slm_attempt_01/candidate_run.py", line 18, in check
+    assert candidate([1, 2, 2, 2, 3, 4]) == False, "This prints if this assert fails 5 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 5 (good for debugging!)
+- attempt_02: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_065642_HumanEval_126/slm_attempt_02/candidate_run.py", line 39, in __run_tests
+    check(globals().get('is_sorted'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_065642_HumanEval_126/slm_attempt_02/candidate_run.py", line 20, in check
+    assert candidate([5]) == True
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Self-debug notes:
+- Check if the list is empty.
+- Sort the list.
+- Iterate through the sorted list and append elements to a result list.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/70 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.803
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,15 @@
+ def strange_sort_list(lst):
+-    return sorted(lst, key=lambda x: (x % 2, -x))
++    if not lst:
++        return []
++    sorted_lst = sorted(lst)
++    result = []
++    left, right = 0, len(sorted_lst) - 1
++    while left <= right:
++        if left == right:
++            result.append(sorted_lst[left])
++        else:
++            result.append(sorted_lst[left])
++            result.append(sorted_lst[right])
++        left += 1
++        right -= 1
++    return result
+[case 2] task_id=HumanEval/19 error=AssertionError fix_actions=['change_return'] score=0.769
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,8 @@
+ def sort_numbers(numbers: str) -> str:
+-    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+-    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+-    Return the string with numbers sorted from smallest to largest
+-    >>> sort_numbers('three one five')
+-    'one three five'
+-    """
+-    return ' '.join(sorted(numbers.split()))
++    n...
+
+def is_sorted(lst):
+    '''
+    Given a list of numbers, return whether or not they are sorted
+    in ascending order. If list has more than 1 duplicate of the same
+    number, return False. Assume no negative numbers and only integers.
+
+    Examples
+    is_sorted([5]) ➞ True
+    is_sorted([1, 2, 3, 4, 5]) ➞ True
+    is_sorted([1, 3, 2, 4, 5]) ➞ False
+    is_sorted([1, 2, 3, 4, 5, 6]) ➞ True
+    is_sorted([1, 2, 3, 4, 5, 6, 7]) ➞ True
+    is_sorted([1, 3, 2, 4, 5, 6, 7]) ➞ False
+    is_sorted([1, 2, 2, 3, 3, 4]) ➞ True
+    is_sorted([1, 2, 2, 2, 3, 4]) ➞ False
+    '''

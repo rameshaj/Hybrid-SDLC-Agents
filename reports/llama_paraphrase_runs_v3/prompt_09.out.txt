@@ -1,0 +1,23 @@
+user
+Implement task_func(pairs: list[tuple[str, str]]) -> dict[int, int].
+Convert each tuple of numeric strings to ints, sum all numbers, generate a random list of that length with ints in [0, 9], and return Counter of the list.
+Return ONLY the function code.
+assistant
+```python
+from collections import Counter
+import random
+
+def task_func(pairs: list[tuple[str, str]]) -> dict[int, int]:
+    # Convert each tuple to a list of integers
+    nums = [int(x) + int(y) for x, y in pairs]
+    
+    # Generate a random list of the same length with integers in [0, 9]
+    random_list = [random.randint(0, 9) for _ in range(len(nums))]
+    
+    # Return the Counter of the list
+    return Counter(random_list)
+```
+
+> EOF by user
+
+

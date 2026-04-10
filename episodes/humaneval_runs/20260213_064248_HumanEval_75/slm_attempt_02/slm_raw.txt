@@ -1,0 +1,53 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: is_multiply_prime
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_064248_HumanEval_75/slm_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('is_multiply_prime'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_064248_HumanEval_75/slm_attempt_01/candidate_run.py", line 11, in check
+    assert candidate(5) == False
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+def is_multiply_prime(a):
+    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+    and false otherwise.
+    Knowing that (a) is less then 100. 
+    Example:
+    is_multiply_prime(30) == True
+    30 = 2 * 3 * 5
+    """
+
+assistant
+```python
+def is_multiply_prime(a):
+    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+    and false otherwise.
+    Knowing that (a) is less then 100. 
+    Example:
+    is_multiply_prime(30) == True
+    30 = 2 * 3 * 5
+    """
+    def is_prime(n):
+        if n <= 1:
+            return False
+        for i in range(2, int(n**0.5) + 1):
+            if n % i == 0:
+                return False
+        return True
+
+    count = 0
+    for i in range(2, int(a**0.5) + 1):
+        if a % i == 0 and is_prime(i):
+            count += 1
+            if count > 3:
+                return False
+    if count == 3:
+        return True
+    return False
+```
+
+> EOF by user

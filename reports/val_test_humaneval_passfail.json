@@ -1,0 +1,74 @@
+{
+  "adapter_path": "data/derived/finetune/qwen1.5b_lora_fix",
+  "model_path": "models/hf/qwen2.5-coder-1.5b-instruct",
+  "val_path": "data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl",
+  "test_path": "data/derived/finetune/humaneval_slm_fix_pairs.cleaned.test.jsonl",
+  "results": [
+    {
+      "task_id": "HumanEval/21",
+      "split": "val",
+      "entry_point": "rescale_to_unit",
+      "error_type": "NameError",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/humaneval_eval_wd4qyoah/HumanEval_21.py\", line 29, in <module>\n    check(rescale_to_unit)\n  File \"/tmp/humaneval_eval_wd4qyoah/HumanEval_21.py\", line 20, in check\n    assert candidate([2.0, 49.9]) == [0.0, 1.0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "max_new_tokens": 81
+    },
+    {
+      "task_id": "HumanEval/22",
+      "split": "val",
+      "entry_point": "filter_integers",
+      "error_type": "NameError",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/humaneval_eval_wd4qyoah/HumanEval_22.py\", line 1, in <module>\n    def filter_integers(values: list[Any]) -> list[int]:\n                                     ^^^\nNameError: name 'Any' is not defined. Did you mean: 'any'?\n",
+      "max_new_tokens": 57
+    },
+    {
+      "task_id": "HumanEval/0",
+      "split": "test",
+      "entry_point": "has_close_elements",
+      "error_type": "NameError",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "max_new_tokens": 89
+    },
+    {
+      "task_id": "HumanEval/14",
+      "split": "test",
+      "entry_point": "all_prefixes",
+      "error_type": "NameError",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "max_new_tokens": 64
+    },
+    {
+      "task_id": "HumanEval/7",
+      "split": "test",
+      "entry_point": "filter_by_substring",
+      "error_type": "NameError",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "max_new_tokens": 54
+    },
+    {
+      "task_id": "HumanEval/75",
+      "split": "test",
+      "entry_point": "is_multiply_prime",
+      "error_type": "AssertionError",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/humaneval_eval_wd4qyoah/HumanEval_75.py\", line 27, in <module>\n    check(is_multiply_prime)\n  File \"/tmp/humaneval_eval_wd4qyoah/HumanEval_75.py\", line 17, in check\n    assert candidate(3 * 5 * 7) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "max_new_tokens": 168
+    }
+  ]
+}

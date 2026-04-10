@@ -1,0 +1,33 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/17 error=NameError fix_actions=['change_return'] score=0.509
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def parse_music(music_string: str) -> List[int]:
+-    """ Input to this function is a string representing musical notes in a special ASCII format.
+-    Your task is to parse this string and return list of integers corresponding to how many beats does each
+-    not last.
+-
+-    Here is a legend:
+-    'o' - whole note, lasts four beats
+-    'o|' - half note, lasts two beats
+-    '.|' - quater note, lasts one beat
+-
+-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')
+-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
+-    """
+-    return [4 if note == 'o' else 2 if note...
+[case 2] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.475
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i...

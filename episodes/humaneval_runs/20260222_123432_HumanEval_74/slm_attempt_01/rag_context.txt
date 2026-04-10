@@ -1,0 +1,35 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/12 error=NameError fix_actions=['change_return'] score=0.547
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def longest(strings: List[str]) -> Optional[str]:
+-    """ Out of list of strings, return the longest one. Return the first one in case of multiple
+-    strings of the same length. Return None in case the input list is empty.
+-    >>> longest([])
+-
+-    >>> longest(['a', 'b', 'c'])
+-    'a'
+-    >>> longest(['a', 'bb', 'ccc'])
+-    'ccc'
+-    """
++def longest(strings):
+     if not strings:
+         return None
+-    max_length = max(len(s) for s in strings)
+-    return next(s for s in strings if len(s) == max_length)
++    return max(strings, key=len)
+[case 2] task_id=HumanEval/17 error=NameError fix_actions=['change_return'] score=0.531
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def parse_music(music_string: str) -> List[int]:
+-    """ Input to this function is a string representing musical notes in a special ASCII format.
+-    Your task is to parse this string and return list of integers corresponding to how many beats does each
+-    not last.
+-
+-    Here is a legend:
+-    'o' - whole note, lasts four beats
+-    'o|' -...

@@ -1,0 +1,56 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: count_nums
+Previous failures:
+- attempt_01: SLM_TIMEOUT
+- attempt_02: SLM_TIMEOUT
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/3 error=NameError fix_actions=[] score=0.408
+fix_diff:
+--- slm
++++ llm
+@@ -1,4 +1,4 @@
+-def below_zero(operations: List[int]) -> bool:
++def below_zero(operations: list[int]) -> bool:
+     balance = 0
+     for operation in operations:
+         balance += operation
+[case 2] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.398
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
++def intersperse(numbers, delimeter):
++    result = []
++    for i, number in enumerate(numbers):
++        result.append(number)
++        if i < len(numbers)...
+[case 3] task_id=HumanEval/0 error=NameError fix_actions=[] score=0.397
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+-def has_close_elements(numbers: List[float], thres...
+
+def count_nums(arr):
+    """
+    Write a function count_nums which takes an array of integers and returns
+    the number of elements which has a sum of digits > 0.
+    If a number is negative, then its first signed digit will be negative:
+    e.g. -123 has signed digits -1, 2, and 3.
+    >>> count_nums([]) == 0
+    >>> count_nums([-1, 11, -11]) == 1
+    >>> count_nums([1, 1, 2]) == 3
+    """

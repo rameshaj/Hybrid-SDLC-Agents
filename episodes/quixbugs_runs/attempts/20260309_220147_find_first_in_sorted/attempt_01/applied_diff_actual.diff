@@ -1,0 +1,13 @@
+diff --git a/python_programs/find_first_in_sorted.py b/python_programs/find_first_in_sorted.py
+index a131a02..caabef0 100644
+--- a/python_programs/find_first_in_sorted.py
++++ b/python_programs/find_first_in_sorted.py
+@@ -2,7 +2,7 @@ def find_first_in_sorted(arr, x):
+     lo = 0
+     hi = len(arr)
+ 
+-    while lo <= hi:
++    while lo < hi:
+         mid = (lo + hi) // 2
+ 
+         if x == arr[mid] and (mid == 0 or x != arr[mid - 1]):

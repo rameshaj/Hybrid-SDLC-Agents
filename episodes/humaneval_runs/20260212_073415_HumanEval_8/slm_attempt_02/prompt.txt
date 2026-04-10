@@ -1,0 +1,23 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: sum_product
+Previous failures:
+- attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_073415_HumanEval_8/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def sum_product(numbers: List[int]) -> Tuple[int, int]:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+
+from typing import List, Tuple
+
+
+def sum_product(numbers: List[int]) -> Tuple[int, int]:
+    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+    Empty sum should be equal to 0 and empty product should be equal to 1.
+    >>> sum_product([])
+    (0, 1)
+    >>> sum_product([1, 2, 3, 4])
+    (10, 24)
+    """

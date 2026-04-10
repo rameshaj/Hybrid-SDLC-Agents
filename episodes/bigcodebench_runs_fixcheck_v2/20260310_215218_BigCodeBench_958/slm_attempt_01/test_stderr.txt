@@ -1,0 +1,29 @@
+...F..F..F
+======================================================================
+FAIL: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215218_BigCodeBench_958/slm_attempt_01/candidate_run.py", line 37, in test_case_3
+    self.assertTrue(output_text.endswith("!"))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_case_6 (__main__.TestCases.test_case_6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215218_BigCodeBench_958/slm_attempt_01/candidate_run.py", line 56, in test_case_6
+    self.assertTrue(output_text.startswith("P") and output_text.endswith("!"))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_case_9 (__main__.TestCases.test_case_9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215218_BigCodeBench_958/slm_attempt_01/candidate_run.py", line 78, in test_case_9
+    self.assertTrue(output_text.startswith("П") and output_text.endswith("?"))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=3)

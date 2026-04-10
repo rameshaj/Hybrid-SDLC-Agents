@@ -1,0 +1,13 @@
+diff --git a/python_programs/flatten.py b/python_programs/flatten.py
+index e3e7933..e09d8bb 100644
+--- a/python_programs/flatten.py
++++ b/python_programs/flatten.py
+@@ -4,7 +4,7 @@ def flatten(arr):
+             for y in flatten(x):
+                 yield y
+         else:
+-            yield flatten(x)
++            yield x
+ 
+ 
+ 

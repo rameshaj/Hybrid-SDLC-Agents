@@ -1,0 +1,23 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: starts_one_ends
+
+def starts_one_ends(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """
+
+assistant
+```python
+def starts_one_ends(n):
+    if n == 1:
+        return 1
+    else:
+        return 2 * (10 ** (n - 2))
+```
+
+> EOF by user

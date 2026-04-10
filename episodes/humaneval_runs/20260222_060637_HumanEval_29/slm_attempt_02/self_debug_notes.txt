@@ -1,0 +1,3 @@
+- Import the `List` type from the `typing` module.
+- Use the correct spelling for the `List` type, which is `List`.
+- Ensure that the function definition includes the `from typing import List` statement.

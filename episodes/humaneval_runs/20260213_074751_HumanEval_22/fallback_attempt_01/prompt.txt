@@ -1,0 +1,27 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: filter_integers
+Previous failures:
+- attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_074751_HumanEval_22/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def filter_integers(values: List[Any]) -> List[int]:
+                                ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+- attempt_02: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_074751_HumanEval_22/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def filter_integers(values: List[Any]) -> List[int]:
+                                ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+
+from typing import List, Any
+
+
+def filter_integers(values: List[Any]) -> List[int]:
+    """ Filter given list of any python values only for integers
+    >>> filter_integers(['a', 3.14, 5])
+    [5]
+    >>> filter_integers([1, 2, 3, 'abc', {}, []])
+    [1, 2, 3]
+    """

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 4,
+    "case_id": "HumanEval/17::20260213_071722_HumanEval_17",
+    "task_id": "HumanEval/17",
+    "dataset": "HumanEval",
+    "entry_point": "parse_music",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_071722_HumanEval_17/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_music(music_string: str) -> List[int]:\n                                          ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def parse_music(music_string: str) -> list[int]:\n    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n    notes = music_string.split()\n    return [note_durations[note] for note in notes]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def parse_music(music_string: str) -> List[int]:\n-    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n-    Your task is to parse this string and return list of integers corresponding to how many beats does each\n-    not last.\n-\n-    Here is a legend:\n-    'o' - whole note, lasts four beats\n-    'o|' - half note, lasts two beats\n-    '.|' - quater note, lasts one beat\n-\n-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n-    \"\"\"\n-    return [4 if note == 'o' else 2 if note == 'o|' else 1 for note in music_string.split()]\n+def parse_music(music_string: str) -> list[int]:\n+    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n+    notes = music_string.split()\n+    return [note_durations[note] for note in notes]",
+    "prompt": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_071722_HumanEval_17",
+    "timestamp": "20260213_071722",
+    "score": 0.34443700313568115
+  },
+  {
+    "id": 2,
+    "case_id": "HumanEval/12::20260212_074142_HumanEval_12",
+    "task_id": "HumanEval/12",
+    "dataset": "HumanEval",
+    "entry_point": "longest",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074142_HumanEval_12/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def longest(strings: List[str]) -> Optional[str]:\n                         ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def longest(strings):\n    if not strings:\n        return None\n    return max(strings, key=len)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def longest(strings: List[str]) -> Optional[str]:\n-    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n-    strings of the same length. Return None in case the input list is empty.\n-    >>> longest([])\n-\n-    >>> longest(['a', 'b', 'c'])\n-    'a'\n-    >>> longest(['a', 'bb', 'ccc'])\n-    'ccc'\n-    \"\"\"\n+def longest(strings):\n     if not strings:\n         return None\n-    max_length = max(len(s) for s in strings)\n-    return next(s for s in strings if len(s) == max_length)\n+    return max(strings, key=len)",
+    "prompt": "from typing import List, Optional\n\n\ndef longest(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> longest([])\n\n    >>> longest(['a', 'b', 'c'])\n    'a'\n    >>> longest(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_074142_HumanEval_12",
+    "timestamp": "20260212_074142",
+    "score": 0.32270804047584534
+  },
+  {
+    "id": 6,
+    "case_id": "HumanEval/20::20260213_073022_HumanEval_20",
+    "task_id": "HumanEval/20",
+    "dataset": "HumanEval",
+    "entry_point": "find_closest_elements",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_073022_HumanEval_20/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n                                       ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def find_closest_elements(numbers):\n    numbers.sort()\n    closest_pair = (numbers[0], numbers[1])\n    min_diff = abs(numbers[1] - numbers[0])\n    \n    for i in range(1, len(numbers)):\n        diff = abs(numbers[i] - numbers[i - 1])\n        if diff < min_diff:\n            min_diff = diff\n            closest_pair = (numbers[i - 1], numbers[i])\n    \n    return closest_pair",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,10 +1,12 @@\n-def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n-    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n-    other and return them in order (smaller number, larger number).\n-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n-    (2.0, 2.2)\n-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n-    (2.0, 2.0)\n-    \"\"\"\n+def find_closest_elements(numbers):\n     numbers.sort()\n-    return numbers[0], numbers[-1]\n+    closest_pair = (numbers[0], numbers[1])\n+    min_diff = abs(numbers[1] - numbers[0])\n+    \n+    for i in range(1, len(numbers)):\n+        diff = abs(numbers[i] - numbers[i - 1])\n+        if diff < min_diff:\n+            min_diff = diff\n+            closest_pair = (numbers[i - 1], numbers[i])\n+    \n+    return closest_pair",
+    "prompt": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_073022_HumanEval_20",
+    "timestamp": "20260213_073022",
+    "score": 0.3163686990737915
+  }
+]

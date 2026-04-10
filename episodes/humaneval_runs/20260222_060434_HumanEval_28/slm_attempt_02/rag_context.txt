@@ -1,0 +1,32 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/14 error=NameError fix_actions=['change_return'] score=0.727
+fix_diff:
+--- slm
++++ llm
+@@ -1,6 +1,2 @@
+-def all_prefixes(string: str) -> List[str]:
+-    """ Return list of all prefixes from shortest to longest of the input string
+-    >>> all_prefixes('abc')
+-    ['a', 'ab', 'abc']
+-    """
+-    return [string[:i+1] for i in range(len(string))]
++def all_prefixes(string: str) -> list:
++    return [string[:i] for i in range(1, len(string) + 1)]
+[case 2] task_id=HumanEval/1 error=NameError fix_actions=['add_guard', 'change_return'] score=0.661
+fix_diff:
+--- slm
++++ llm
+@@ -1,24 +1,22 @@
+-def separate_paren_groups(paren_string: str) -> List[str]:
+-    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+-    separate those group into separate strings and return the list of those.
+-    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+-    Ignore any spaces in the input string.
+-    >>> separate_paren_groups('( ) (( )) (( )( ))')
+-    ['()', '(())', '(()())']
+-    """
+-    result = []
+-    current_group = ''
+-    depth = 0
+-
+-...

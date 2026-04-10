@@ -1,0 +1,22 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: string_sequence
+
+def string_sequence(n: int) -> str:
+    """ Return a string containing space-delimited numbers starting from 0 upto n inclusive.
+    >>> string_sequence(0)
+    '0'
+    >>> string_sequence(5)
+    '0 1 2 3 4 5'
+    """
+
+assistant
+```python
+def string_sequence(n: int) -> str:
+    return ' '.join(map(str, range(n + 1)))
+```
+
+> EOF by user

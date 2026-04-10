@@ -1,0 +1,79 @@
+You are fixing a Python bug.
+STRICT RULES:
+1) Output ONLY a unified diff
+2) First line MUST be: diff --git
+3) NO explanation text
+4) Do NOT wrap in code fences or <PATCH> tags
+5) Do NOT repeat the prompt
+
+Target:
+a/python_programs/kth.py
+b/python_programs/kth.py
+
+Attempt 2/2
+Previous status: FAIL: [FAIL] kth case#1 in=[[1, 2, 3, 4, 5, 6, 7], 4] good=5 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')") [FAIL] kth case#2 in=[[3, 6, 7, 1, 6, 3, 8, 9], 5] good=7 bad=('__EXC__', "RecursionError('maximum recursion depth exc...
+
+Recent failure diagnostics (previous attempts):
+attempt_01 FAIL: [FAIL] kth case#1 in=[[1, 2, 3, 4, 5, 6, 7], 4] good=5 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')") [FAIL] kth case#2 in=[[3, 6, 7, 1, 6, 3, 8, 9], 5] good=7 bad=('__EXC__', "RecursionError('maximum recursion depth exc...
+[FAIL] kth case#1 in=[[1, 2, 3, 4, 5, 6, 7], 4] good=5 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] kth case#2 in=[[3, 6, 7, 1, 6, 3, 8, 9], 5] good=7 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] kth case#3 in=[[3, 6, 7, 1, 6, 3, 8, 9], 2] good=3 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] kth case#4 in=[[2, 6, 8, 3, 5, 7], 0] good=2 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] kth case#5 in=[[34, 25, 7, 1, 9], 4] good=34 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] kth case#6 in=[[45, 2, 6, 8, 42, 90, 322], 1] good=6 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] kth case#7 in=[[45, 2, 6, 8, 42, 90, 322], 6] good=322 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] kth failed 7/7 cases
+
+Recent attempted diffs (previous attempts):
+attempt_01 hash=9fe6ca0672d7
+diff --git a/python_programs/kth.py b/python_programs/kth.py
+--- a/python_programs/kth.py
++++ b/python_programs/kth.py
+@@ -1,4 +1,4 @@
+-    above = [x for x in arr if x > pivot]
++    above = [x for x in arr if x >= pivot]
+
+Buggy file content (exact):
+def kth(arr, k):
+    pivot = arr[0]
+    below = [x for x in arr if x < pivot]
+    above = [x for x in arr if x > pivot]
+
+    num_less = len(below)
+    num_lessoreq = len(arr) - len(above)
+
+    if k < num_less:
+        return kth(below, k)
+    elif k >= num_lessoreq:
+        return kth(above, k)
+    else:
+        return pivot
+
+
+
+"""
+QuickSelect
+
+This is an efficient equivalent to sorted(arr)[k].
+
+Input:
+    arr: A list of ints
+    k: An int
+
+Precondition:
+    0 <= k < len(arr)
+
+Output:
+    The kth-lowest element of arr (0-based)
+"""
+
+
+Failing output:
+```
+[FAIL] kth case#1 in=[[1, 2, 3, 4, 5, 6, 7], 4] good=5 bad=('__EXC__', "IndexError('list index out of range')")
+[FAIL] kth case#2 in=[[3, 6, 7, 1, 6, 3, 8, 9], 5] good=7 bad=('__EXC__', "IndexError('list index out of range')")
+[FAIL] kth case#6 in=[[45, 2, 6, 8, 42, 90, 322], 1] good=6 bad=('__EXC__', "IndexError('list index out of range')")
+[FAIL] kth case#7 in=[[45, 2, 6, 8, 42, 90, 322], 6] good=322 bad=('__EXC__', "IndexError('list index out of range')")
+[FAIL] kth failed 4/7 cases
+
+```

@@ -1,0 +1,20 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: all_prefixes
+Previous failures:
+- attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_080604_HumanEval_14/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def all_prefixes(string: str) -> List[str]:
+                                     ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+
+from typing import List
+
+
+def all_prefixes(string: str) -> List[str]:
+    """ Return list of all prefixes from shortest to longest of the input string
+    >>> all_prefixes('abc')
+    ['a', 'ab', 'abc']
+    """

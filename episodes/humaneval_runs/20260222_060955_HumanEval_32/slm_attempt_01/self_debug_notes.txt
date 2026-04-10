@@ -1,0 +1,3 @@
+- 0.5
+- 0.5
+- Fix the triple-quoted string by removing the extra closing quote.

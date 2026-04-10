@@ -1,0 +1,17 @@
+entry_point: remove_duplicates
+error_type: NameError
+error_summary: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060206_HumanEval_26/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def remove_duplicates(numbers: List[int]) -> List[int]:
+                                   ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+prompt:
+from typing import List
+
+
+def remove_duplicates(numbers: List[int]) -> List[int]:
+    """ From a list of integers, remove all elements that occur more than once.
+    Keep order of elements left the same as in the input.
+    >>> remove_duplicates([1, 2, 3, 2, 4])
+    [1, 3, 4]
+    """

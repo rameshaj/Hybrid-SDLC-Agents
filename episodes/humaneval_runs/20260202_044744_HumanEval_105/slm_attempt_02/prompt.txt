@@ -1,0 +1,35 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: by_length
+Previous failures:
+- attempt_01: TypeError: list indices must be integers or slices, not list | tail:     assert candidate([2, 1, 1, 4, 5, 8, 2, 3]) == ["Eight", "Five", "Four", "Three", "Two", "Two", "One", "One"], "Error"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044744_HumanEval_105/slm_attempt_01/candidate_run.py", line 5, in by_length
+    return ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'][arr]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+TypeError: list indices must be integers or slices, not list
+
+def by_length(arr):
+    """
+    Given an array of integers, sort the integers that are between 1 and 9 inclusive,
+    reverse the resulting array, and then replace each digit by its corresponding name from
+    "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine".
+
+    For example:
+      arr = [2, 1, 1, 4, 5, 8, 2, 3]   
+            -> sort arr -> [1, 1, 2, 2, 3, 4, 5, 8] 
+            -> reverse arr -> [8, 5, 4, 3, 2, 2, 1, 1]
+      return ["Eight", "Five", "Four", "Three", "Two", "Two", "One", "One"]
+    
+      If the array is empty, return an empty array:
+      arr = []
+      return []
+    
+      If the array has any strange number ignore it:
+      arr = [1, -1 , 55] 
+            -> sort arr -> [-1, 1, 55]
+            -> reverse arr -> [55, 1, -1]
+      return = ['One']
+    """

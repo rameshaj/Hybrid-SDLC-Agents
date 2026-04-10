@@ -1,0 +1,76 @@
+user
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+
+import heapq
+import random
+
+
+def task_func(list_length:5, k:int):
+    """
+    Find the k largest numbers in a random-generated list using heapq.
+
+    Parameters:
+    list_length (int): The length of the randomly generated list of integers.
+    k (int): The number of largest elements to find.
+
+    Returns:
+    tuple: A tuple containing two lists: 
+        - list[int]: The randomly generated list of integers with the specified length.
+        - list[int]: The k largest numbers found using heapq.
+
+    Requirements:
+    - heapq
+    - random
+
+    Example:
+    >>> random.seed(0)
+    >>> rand_list, top_k = task_func(5, 3)
+    >>> top_k[0] in rand_list
+    True
+    """
+
+assistant
+```python
+import heapq
+import random
+
+def task_func(list_length:5, k:int):
+    """
+    Find the k largest numbers in a random-generated list using heapq.
+
+    Parameters:
+    list_length (int): The length of the randomly generated list of integers.
+    k (int): The number of largest elements to find.
+
+    Returns:
+    tuple: A tuple containing two lists: 
+        - list[int]: The randomly generated list of integers with the specified length.
+        - list[int]: The k largest numbers found using heapq.
+
+    Requirements:
+    - heapq
+    - random
+
+    Example:
+    >>> random.seed(0)
+    >>> rand_list, top_k = task_func(5, 3)
+    >>> top_k[0] in rand_list
+    True
+    """
+    # Generate a random list of integers
+    random_list = [random.randint(-100, 100) for _ in range(list_length)]
+    
+    # Use heapq to find the k largest numbers
+    top_k = heapq.nlargest(k, random_list)
+    
+    return random_list, top_k
+```
+
+> EOF by user

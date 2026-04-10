@@ -1,0 +1,26 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def has_close_elements(numbers: List[float], threshold: float) -> bool:\n    return any(abs(a - b) < threshold for a, b in combinations(numbers, 2))",
+    "dir": "episodes/humaneval_runs/20260211_071642_HumanEval_0/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_071642_HumanEval_0/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def has_close_elements(numbers: List[float], threshold: float) -> bool:\n                                    ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?\n",
+      "elapsed_s": 0.07252216339111328,
+      "failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_071642_HumanEval_0/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def has_close_elements(numbers: List[float], threshold: float) -> bool:\n                                    ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_071642_HumanEval_0/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def has_close_elements(numbers: List[float], threshold: float) -> bool:\n                                    ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "attempt_02: SLM_TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: ERROR OpenAI URLError: [Errno 1] Operation not permitted",
+    "fallback_02: ERROR OpenAI URLError: [Errno 1] Operation not permitted"
+  ]
+}

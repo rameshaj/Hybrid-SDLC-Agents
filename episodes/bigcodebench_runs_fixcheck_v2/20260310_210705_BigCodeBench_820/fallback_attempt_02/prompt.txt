@@ -1,0 +1,53 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: NameError: name 'string' is not defined | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_210705_BigCodeBench_820/slm_attempt_01/candidate_run.py", line 2, in <module>
+    LETTERS = string.ascii_letters
+              ^^^^^^
+NameError: name 'string' is not defined
+- attempt_02: NameError: name 'string' is not defined | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_210705_BigCodeBench_820/slm_attempt_02/candidate_run.py", line 2, in <module>
+    LETTERS = string.ascii_letters
+              ^^^^^^
+NameError: name 'string' is not defined
+- fallback_01: NameError: name 'string' is not defined | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_210705_BigCodeBench_820/fallback_attempt_01/candidate_run.py", line 2, in <module>
+    LETTERS = string.ascii_letters
+              ^^^^^^
+NameError: name 'string' is not defined
+
+import random
+import string
+
+# Constants
+LETTERS = string.ascii_letters
+
+def task_func(num_words, word_length):
+    """
+    Create a list of random words of a certain length.
+
+    Parameters:
+    - num_words (int): The number of words to generate.
+    - word_length (int): The length of each word.
+
+    Returns:
+    - words (list): A list of random words.
+
+    Requirements:
+    - random
+    - string
+
+    Raises:
+    - ValueError: If num_words or word_length is negative.
+    
+    Example:
+    >>> task_func(5, 3)
+    ['Ohb', 'Vrp', 'oiV', 'gRV', 'IfL']
+    """

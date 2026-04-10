@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def decode_cyclic(s: str):\n    \"\"\"\n    takes as input string encoded with encode_cyclic function. Returns decoded string.\n    \"\"\"\n    # split string to groups. Each of length 3.\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    # cycle elements in each group. Unless group has fewer elements than 3.\n    groups = [(group[-1] + group[:-1]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)",
+    "dir": "episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py\", line 32, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py\", line 29, in __run_tests\n    check(globals().get('decode_cyclic'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py\", line 23, in check\n    encoded_str = encode_cyclic(str)\n                  ^^^^^^^^^^^^^\nNameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?\n",
+      "elapsed_s": 0.0794827938079834,
+      "failure_summary": "NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'? | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py\", line 29, in __run_tests\n    check(globals().get('decode_cyclic'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py\", line 23, in check\n    encoded_str = encode_cyclic(str)\n                  ^^^^^^^^^^^^^\nNameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'? | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py\", line 29, in __run_tests\n    check(globals().get('decode_cyclic'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py\", line 23, in check\n    encoded_str = encode_cyclic(str)\n                  ^^^^^^^^^^^^^\nNameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?",
+    "attempt_02: SLM_TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'? | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/fallback_attempt_01/candidate_run.py\", line 24, in __run_tests\n    check(globals().get('decode_cyclic'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/fallback_attempt_01/candidate_run.py\", line 18, in check\n    encoded_str = encode_cyclic(str)\n                  ^^^^^^^^^^^^^\nNameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?",
+    "fallback_02: NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'? | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/fallback_attempt_02/candidate_run.py\", line 24, in __run_tests\n    check(globals().get('decode_cyclic'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/fallback_attempt_02/candidate_run.py\", line 18, in check\n    encoded_str = encode_cyclic(str)\n                  ^^^^^^^^^^^^^\nNameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

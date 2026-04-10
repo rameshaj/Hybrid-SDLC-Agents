@@ -1,0 +1,37 @@
+FF..F..F
+======================================================================
+FAIL: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205848_BigCodeBench_733/slm_attempt_01/candidate_run.py", line 33, in test_case_1
+    self.assertEqual(task_func('this is an example content'), 1)
+AssertionError: 4 != 1
+
+======================================================================
+FAIL: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205848_BigCodeBench_733/slm_attempt_01/candidate_run.py", line 36, in test_case_2
+    self.assertEqual(task_func('this is an the of'), 0)
+AssertionError: 4 != 0
+
+======================================================================
+FAIL: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205848_BigCodeBench_733/slm_attempt_01/candidate_run.py", line 45, in test_case_5
+    self.assertEqual(task_func(''), 0)
+AssertionError: -1 != 0
+
+======================================================================
+FAIL: test_case_8 (__main__.TestCases.test_case_8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205848_BigCodeBench_733/slm_attempt_01/candidate_run.py", line 54, in test_case_8
+    self.assertEqual(task_func('This IS an Example Content'), 1)
+AssertionError: 4 != 1
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+
+FAILED (failures=4)

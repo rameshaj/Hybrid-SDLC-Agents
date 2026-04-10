@@ -1,0 +1,21 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: digits
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_074851_HumanEval_131/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('digits'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_074851_HumanEval_131/slm_attempt_01/candidate_run.py", line 19, in check
+    assert candidate(2468) == 0
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+def digits(n):
+    """Given a positive integer n, return the product of the odd digits.
+    Return 0 if all digits are even.
+    For example:
+    digits(1)  == 1
+    digits(4)  == 0
+    digits(235) == 15
+    """

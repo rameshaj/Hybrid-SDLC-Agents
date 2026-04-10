@@ -1,0 +1,55 @@
+You are a senior software engineer fixing a Python bug.
+STRICT OUTPUT RULES:
+1) Output ONLY a unified diff patch.
+2) First line MUST start with: diff --git
+3) Do NOT add any explanation before or after the diff.
+4) Provide COMPLETE hunks (do not truncate).
+5) Do NOT use code fences. Optional wrapper ONLY if needed: <PATCH> ... </PATCH>
+6) Every hunk line MUST start with one of: space, '+', '-', or '\'.
+7) Unchanged context lines MUST start with a single space.
+Target path MUST be exactly: a/python_programs/bitcount.py and b/python_programs/bitcount.py
+
+SLM attempts summary:
+attempt_01: FAIL: [TIMEOUT]
+attempt_02: FAIL: [TIMEOUT]
+attempt_03: FAIL: [TIMEOUT]
+
+Fallback attempts summary:
+None
+
+Buggy file content (exact):
+```python
+
+def bitcount(n):
+    count = 0
+    while n:
+        n ^= n - 1
+        count += 1
+    return count
+
+
+"""
+Bitcount
+bitcount
+
+
+Input:
+    n: a nonnegative int
+
+Output:
+    The number of 1-bits in the binary encoding of n
+
+Examples:
+    >>> bitcount(127)
+    7
+    >>> bitcount(128)
+    1
+"""
+
+```
+
+Failing test output:
+```
+[TIMEOUT]
+
+```

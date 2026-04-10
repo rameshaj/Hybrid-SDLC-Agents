@@ -1,0 +1,56 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: int_to_mini_roman
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+- attempt_02: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/17 error=NameError fix_actions=['change_return'] score=0.344
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def parse_music(music_string: str) -> List[int]:
+-    """ Input to this function is a string representing musical notes in a special ASCII format.
+-    Your task is to parse this string and return list of integers corresponding to how many beats does each
+-    not last.
+-
+-    Here is a legend:
+-    'o' - whole note, lasts four beats
+-    'o|' - half note, lasts two beats
+-    '.|' - quater note, lasts one beat
+-
+-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')
+-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
+-    """
+-    return [4 if note == 'o' else 2 if note...
+[case 2] task_id=HumanEval/12 error=NameError fix_actions=['change_return'] score=0.323
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def longest(strings: List[str]) -> Optional[str]:
+-    """ Out of list of strings, return the longest one. Return the first one in case of multiple
+-    strings of the same length. Return None in case the input list is empty.
+-    >>> longest([])
+-
+-    >>> longest(['a', 'b', 'c'])
+-    'a'
+-    >>> longest(['a', 'bb', 'ccc'])
+-    'c...
+
+def int_to_mini_roman(number):
+    """
+    Given a positive integer, obtain its roman numeral equivalent as a string,
+    and return it in lowercase.
+    Restrictions: 1 <= num <= 1000
+
+    Examples:
+    >>> int_to_mini_roman(19) == 'xix'
+    >>> int_to_mini_roman(152) == 'clii'
+    >>> int_to_mini_roman(426) == 'cdxxvi'
+    """

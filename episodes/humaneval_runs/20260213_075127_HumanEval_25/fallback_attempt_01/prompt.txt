@@ -1,0 +1,31 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: factorize
+Previous failures:
+- attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_075127_HumanEval_25/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def factorize(n: int) -> List[int]:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+- attempt_02: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_075127_HumanEval_25/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def factorize(n: int) -> List[int]:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+
+from typing import List
+
+
+def factorize(n: int) -> List[int]:
+    """ Return list of prime factors of given integer in the order from smallest to largest.
+    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.
+    Input number should be equal to the product of all factors
+    >>> factorize(8)
+    [2, 2, 2]
+    >>> factorize(25)
+    [5, 5]
+    >>> factorize(70)
+    [2, 5, 7]
+    """

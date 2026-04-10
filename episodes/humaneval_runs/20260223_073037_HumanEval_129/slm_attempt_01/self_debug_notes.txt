@@ -1,0 +1,3 @@
+- Ensure `N` is defined before using it in the `dfs` function.
+- Initialize `min_path` as an empty list before starting the search.
+- Return `min_path` directly after finding a valid path.

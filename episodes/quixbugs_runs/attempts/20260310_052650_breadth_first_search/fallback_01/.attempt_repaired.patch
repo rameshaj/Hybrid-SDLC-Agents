@@ -1,0 +1,11 @@
+--- a/python_programs/breadth_first_search.py
++++ b/python_programs/breadth_first_search.py
+@@ -8,6 +8,8 @@
+     nodesseen = set()
+     nodesseen.add(startnode)
+ 
++    if not queue:  # Check if the queue is empty before proceeding
++        return False
+     while True:
+         node = queue.popleft()
+ 

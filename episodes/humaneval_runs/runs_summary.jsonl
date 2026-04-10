@@ -1,0 +1,685 @@
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_164813_HumanEval_19"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_171858_HumanEval_19"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_175322_HumanEval_19"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_175614_HumanEval_34"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_180042_HumanEval_57"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_180055_HumanEval_58"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_180812_HumanEval_0"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_180950_HumanEval_1"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_181202_HumanEval_2"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_181211_HumanEval_3"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_181311_HumanEval_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_181457_HumanEval_5"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_211005_HumanEval_6"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_211200_HumanEval_7"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_211309_HumanEval_8"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_211446_HumanEval_9"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260201_211622_HumanEval_10"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_211734_HumanEval_11"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_211746_HumanEval_12"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_211910_HumanEval_13"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_211922_HumanEval_14"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_212020_HumanEval_15"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_212029_HumanEval_16"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260201_212039_HumanEval_17"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260201_212244_HumanEval_18"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_040331_HumanEval_20"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_040436_HumanEval_21"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_040609_HumanEval_22"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_040711_HumanEval_23"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_040726_HumanEval_24"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_040748_HumanEval_25"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_040929_HumanEval_26"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041041_HumanEval_27"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_041057_HumanEval_28"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_041127_HumanEval_29"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041206_HumanEval_30"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041216_HumanEval_31"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_041250_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_041439_HumanEval_33"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041538_HumanEval_35"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041547_HumanEval_36"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_041605_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_041641_HumanEval_38"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_041752_HumanEval_39"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041902_HumanEval_40"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041923_HumanEval_41"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041933_HumanEval_42"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041943_HumanEval_43"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_041957_HumanEval_44"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042016_HumanEval_45"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_042025_HumanEval_46"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042151_HumanEval_47"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042209_HumanEval_48"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042217_HumanEval_49"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_042246_HumanEval_50"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042322_HumanEval_51"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042334_HumanEval_52"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042347_HumanEval_53"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_042356_HumanEval_54"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042450_HumanEval_55"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042505_HumanEval_56"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042522_HumanEval_59"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042556_HumanEval_60"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042607_HumanEval_61"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042623_HumanEval_62"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042634_HumanEval_63"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_042658_HumanEval_64"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_042817_HumanEval_65"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042901_HumanEval_66"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_042911_HumanEval_67"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_042940_HumanEval_68"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043006_HumanEval_69"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043047_HumanEval_70"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043115_HumanEval_71"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043154_HumanEval_72"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043208_HumanEval_73"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043227_HumanEval_74"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043303_HumanEval_75"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043340_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043502_HumanEval_77"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043527_HumanEval_78"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043543_HumanEval_79"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043636_HumanEval_80"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043649_HumanEval_81"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043745_HumanEval_82"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043802_HumanEval_83"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043836_HumanEval_84"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043846_HumanEval_85"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043858_HumanEval_86"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_043921_HumanEval_87"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_043939_HumanEval_88"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044046_HumanEval_89"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044105_HumanEval_90"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044134_HumanEval_91"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044221_HumanEval_92"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044237_HumanEval_93"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044327_HumanEval_94"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044358_HumanEval_95"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044420_HumanEval_96"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044444_HumanEval_97"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044455_HumanEval_98"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044507_HumanEval_99"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044522_HumanEval_100"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044534_HumanEval_101"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044558_HumanEval_102"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044658_HumanEval_103"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044732_HumanEval_104"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260202_044744_HumanEval_105"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044854_HumanEval_106"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_044929_HumanEval_107"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_044955_HumanEval_108"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_045028_HumanEval_109"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_045050_HumanEval_110"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_045215_HumanEval_111"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_045243_HumanEval_112"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_045315_HumanEval_113"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_045405_HumanEval_114"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_045425_HumanEval_115"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_045525_HumanEval_116"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_045453_HumanEval_115"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_045613_HumanEval_116"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_045552_HumanEval_117"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_045636_HumanEval_117"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260202_045727_HumanEval_118"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260202_045756_HumanEval_118"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_050203_HumanEval_120"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_050237_HumanEval_120"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260202_050258_HumanEval_121"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_050403_HumanEval_122"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260202_050334_HumanEval_121"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_050437_HumanEval_122"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_053859_HumanEval_125"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_073517_HumanEval_128"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_073521_HumanEval_128"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_074309_HumanEval_129"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_074309_HumanEval_129"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_083147_HumanEval_133"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_083412_HumanEval_133"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_110048_HumanEval_141"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_110048_HumanEval_142"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_110209_HumanEval_136"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_110210_HumanEval_139"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_131543_HumanEval_142"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_131543_HumanEval_143"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_131707_HumanEval_140"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_131707_HumanEval_137"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_132135_HumanEval_138"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132011_HumanEval_143"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132011_HumanEval_144"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132105_HumanEval_141"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132327_HumanEval_139"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132412_HumanEval_144"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132412_HumanEval_145"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132506_HumanEval_142"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132728_HumanEval_140"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132812_HumanEval_145"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132812_HumanEval_146"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_132907_HumanEval_143"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133041_HumanEval_141"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133213_HumanEval_146"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133213_HumanEval_147"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133308_HumanEval_144"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133441_HumanEval_142"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133614_HumanEval_147"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133614_HumanEval_148"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133709_HumanEval_145"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133710_HumanEval_119"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_133842_HumanEval_143"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134015_HumanEval_149"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134015_HumanEval_148"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134110_HumanEval_146"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134111_HumanEval_123"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134244_HumanEval_144"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134416_HumanEval_149"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134416_HumanEval_150"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134512_HumanEval_124"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134512_HumanEval_147"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134645_HumanEval_145"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134816_HumanEval_150"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134816_HumanEval_151"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134913_HumanEval_148"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_134913_HumanEval_126"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135013_HumanEval_126"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135047_HumanEval_146"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135218_HumanEval_152"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135218_HumanEval_151"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135314_HumanEval_149"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135315_HumanEval_127"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135414_HumanEval_127"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135449_HumanEval_147"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135619_HumanEval_153"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135619_HumanEval_152"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135716_HumanEval_130"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135716_HumanEval_150"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135815_HumanEval_130"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_135851_HumanEval_148"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140020_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140021_HumanEval_153"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140118_HumanEval_151"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140117_HumanEval_131"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140216_HumanEval_131"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140253_HumanEval_149"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140422_HumanEval_155"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140422_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140519_HumanEval_132"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140519_HumanEval_152"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140618_HumanEval_132"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140655_HumanEval_150"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140823_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140824_HumanEval_155"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140920_HumanEval_153"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_140920_HumanEval_134"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141019_HumanEval_134"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141057_HumanEval_151"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141221_HumanEval_134"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141225_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141225_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141321_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141322_HumanEval_135"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141420_HumanEval_135"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141459_HumanEval_152"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141622_HumanEval_135"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141626_HumanEval_158"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141626_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141723_HumanEval_148"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141723_HumanEval_155"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141822_HumanEval_151"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_141902_HumanEval_153"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142023_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142028_HumanEval_158"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142028_HumanEval_159"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142114_HumanEval_159"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142125_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142125_HumanEval_149"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142225_HumanEval_152"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142304_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142425_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142430_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142430_HumanEval_159"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142517_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142527_HumanEval_150"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142527_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142628_HumanEval_153"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142706_HumanEval_155"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142828_HumanEval_158"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142831_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142831_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142920_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142929_HumanEval_151"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_142929_HumanEval_158"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143030_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143110_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143230_HumanEval_159"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143234_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143233_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143323_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143332_HumanEval_159"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143332_HumanEval_152"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143433_HumanEval_155"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143512_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143633_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143635_HumanEval_163"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143635_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143726_HumanEval_163"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143735_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143735_HumanEval_153"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143844_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_143915_HumanEval_158"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_144036_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_144038_HumanEval_163"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_144137_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_144138_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_144247_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_144317_HumanEval_159"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153344_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153444_HumanEval_155"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153445_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153553_HumanEval_158"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153624_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153745_HumanEval_163"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153846_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_153846_HumanEval_163"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260202_153955_HumanEval_159"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260202_154025_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_154247_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_154343_HumanEval_162"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_154429_HumanEval_158"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_154329_HumanEval_160"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_154607_HumanEval_159"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_154531_HumanEval_163"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_155036_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_155152_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_155042_HumanEval_160"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260202_155347_HumanEval_161"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_155248_HumanEval_163"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_155417_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260202_155450_HumanEval_163"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_215451_HumanEval_0"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_215852_HumanEval_1"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_215935_HumanEval_0"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_220253_HumanEval_3"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_220653_HumanEval_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_221054_HumanEval_5"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_221454_HumanEval_6"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_225404_HumanEval_7"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260204_232801_HumanEval_8"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260205_001109_HumanEval_9"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260205_003031_HumanEval_12"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260205_072300_HumanEval_3"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260206_063510_HumanEval_3"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260206_064346_HumanEval_3"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260206_070057_HumanEval_3"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260206_071641_HumanEval_3"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_070327_HumanEval_0"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_070509_HumanEval_1"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_070726_HumanEval_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_070907_HumanEval_5"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_071053_HumanEval_6"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_071306_HumanEval_7"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_071420_HumanEval_8"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_071642_HumanEval_0"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_071759_HumanEval_9"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_071942_HumanEval_1"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_072113_HumanEval_12"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_072342_HumanEval_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_072406_HumanEval_119"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_072633_HumanEval_0"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_072636_HumanEval_5"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_072807_HumanEval_19"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073034_HumanEval_1"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073037_HumanEval_6"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073126_HumanEval_54"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073434_HumanEval_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073437_HumanEval_7"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073503_HumanEval_64"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073835_HumanEval_5"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073838_HumanEval_8"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_073904_HumanEval_69"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_074305_HumanEval_70"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_074239_HumanEval_9"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_074236_HumanEval_6"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_074630_HumanEval_12"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_074627_HumanEval_71"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_074637_HumanEval_7"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075018_HumanEval_119"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075028_HumanEval_74"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075035_HumanEval_8"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075419_HumanEval_19"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075429_HumanEval_75"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075436_HumanEval_9"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075751_HumanEval_54"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075830_HumanEval_77"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_075833_HumanEval_12"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080133_HumanEval_64"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080226_HumanEval_79"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080229_HumanEval_119"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080534_HumanEval_69"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080630_HumanEval_19"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080604_HumanEval_14"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080934_HumanEval_70"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080950_HumanEval_54"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_080953_HumanEval_17"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_081307_HumanEval_71"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_081327_HumanEval_64"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_081354_HumanEval_20"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_081708_HumanEval_74"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_081728_HumanEval_69"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_081755_HumanEval_21"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_082109_HumanEval_75"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260211_082123_HumanEval_69"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_083551_HumanEval_70"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_083618_HumanEval_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_083932_HumanEval_77"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_083952_HumanEval_71"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084019_HumanEval_25"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084039_HumanEval_71"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084333_HumanEval_79"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084353_HumanEval_74"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084421_HumanEval_33"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084441_HumanEval_74"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084605_HumanEval_74"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084734_HumanEval_14"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084755_HumanEval_75"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084822_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_084844_HumanEval_75"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085007_HumanEval_75"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085136_HumanEval_17"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085156_HumanEval_77"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085224_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085247_HumanEval_77"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085409_HumanEval_77"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085537_HumanEval_20"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085558_HumanEval_79"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085625_HumanEval_67"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085649_HumanEval_79"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085823_HumanEval_79"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_085950_HumanEval_21"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_090012_HumanEval_14"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_090029_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093100_HumanEval_14"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093205_HumanEval_14"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093233_HumanEval_14"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093359_HumanEval_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093421_HumanEval_17"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093503_HumanEval_17"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093607_HumanEval_17"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093636_HumanEval_17"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093801_HumanEval_25"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093822_HumanEval_20"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_093905_HumanEval_20"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094010_HumanEval_20"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094038_HumanEval_20"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094202_HumanEval_33"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094223_HumanEval_21"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094307_HumanEval_21"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094412_HumanEval_21"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094440_HumanEval_21"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094604_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094624_HumanEval_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094731_HumanEval_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094822_HumanEval_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_094848_HumanEval_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_095010_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_095027_HumanEval_25"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_095137_HumanEval_25"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_095234_HumanEval_25"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_095252_HumanEval_25"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_095413_HumanEval_67"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142250_HumanEval_33"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142441_HumanEval_33"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142536_HumanEval_33"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142553_HumanEval_33"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142713_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142750_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142844_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142940_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_142955_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143151_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143246_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143343_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143357_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143554_HumanEval_67"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143649_HumanEval_67"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143745_HumanEval_67"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143800_HumanEval_67"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_143956_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_144054_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_144149_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260211_144203_HumanEval_32"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_064246_HumanEval_0"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_065147_HumanEval_1"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_065551_HumanEval_4"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_070827_HumanEval_5"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_071808_HumanEval_6"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_073048_HumanEval_7"}
+{"status": "PASS", "model": "LLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260212_073415_HumanEval_8"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_073753_HumanEval_9"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_074142_HumanEval_12"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260212_074323_HumanEval_119"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_074839_HumanEval_19"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_074958_HumanEval_54"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_080911_HumanEval_64"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_081415_HumanEval_69"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_081548_HumanEval_70"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260212_081734_HumanEval_71"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260212_082238_HumanEval_74"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_064248_HumanEval_75"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_065301_HumanEval_77"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260213_065351_HumanEval_79"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_070326_HumanEval_14"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_071722_HumanEval_17"}
+{"status": "PASS", "model": "LLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260213_073022_HumanEval_20"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_073942_HumanEval_21"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_074751_HumanEval_22"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_075127_HumanEval_25"}
+{"status": "PASS", "model": "LLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260213_075605_HumanEval_33"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_080041_HumanEval_37"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260213_080424_HumanEval_76"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260213_082821_HumanEval_67"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260213_084436_HumanEval_32"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260214_070831_HumanEval_14"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260214_072509_HumanEval_14"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260214_073154_HumanEval_14"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_072948_HumanEval_26"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_072955_HumanEval_28"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_072956_HumanEval_29"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_072958_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_072959_HumanEval_38"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073000_HumanEval_39"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073000_HumanEval_46"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073002_HumanEval_50"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073004_HumanEval_65"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073004_HumanEval_74"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073005_HumanEval_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073006_HumanEval_79"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073008_HumanEval_81"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073009_HumanEval_83"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073010_HumanEval_86"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073011_HumanEval_88"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073012_HumanEval_90"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073013_HumanEval_91"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073013_HumanEval_93"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073015_HumanEval_101"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073015_HumanEval_102"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073016_HumanEval_103"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073017_HumanEval_106"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073018_HumanEval_108"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073018_HumanEval_110"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073019_HumanEval_112"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073021_HumanEval_113"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073021_HumanEval_115"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073022_HumanEval_117"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073023_HumanEval_119"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073024_HumanEval_120"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073024_HumanEval_123"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073025_HumanEval_124"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073026_HumanEval_126"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073027_HumanEval_127"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073028_HumanEval_129"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073028_HumanEval_130"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073029_HumanEval_131"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073030_HumanEval_132"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073031_HumanEval_133"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073031_HumanEval_134"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073032_HumanEval_135"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073033_HumanEval_136"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073034_HumanEval_137"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073034_HumanEval_139"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073035_HumanEval_140"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073036_HumanEval_141"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073037_HumanEval_142"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073038_HumanEval_143"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073038_HumanEval_144"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073039_HumanEval_145"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073040_HumanEval_146"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073041_HumanEval_147"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073041_HumanEval_148"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073042_HumanEval_149"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073043_HumanEval_150"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073044_HumanEval_151"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073044_HumanEval_152"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073045_HumanEval_153"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073046_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073047_HumanEval_155"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073047_HumanEval_156"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073048_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073049_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073050_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_073051_HumanEval_163"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074016_HumanEval_26"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074021_HumanEval_28"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074023_HumanEval_29"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074024_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074026_HumanEval_38"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074028_HumanEval_39"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074031_HumanEval_46"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074033_HumanEval_50"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074035_HumanEval_65"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074037_HumanEval_74"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074038_HumanEval_76"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074040_HumanEval_79"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074042_HumanEval_81"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074045_HumanEval_83"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074046_HumanEval_86"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074047_HumanEval_88"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074049_HumanEval_90"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074050_HumanEval_91"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074052_HumanEval_93"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074054_HumanEval_101"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074056_HumanEval_102"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074058_HumanEval_103"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074100_HumanEval_106"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074102_HumanEval_108"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074104_HumanEval_110"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074106_HumanEval_112"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074108_HumanEval_113"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074110_HumanEval_115"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074112_HumanEval_117"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074114_HumanEval_119"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074116_HumanEval_120"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074118_HumanEval_123"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074120_HumanEval_124"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074124_HumanEval_126"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074126_HumanEval_127"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074129_HumanEval_129"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074137_HumanEval_130"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074139_HumanEval_131"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074141_HumanEval_132"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074143_HumanEval_133"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074144_HumanEval_134"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074146_HumanEval_135"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074148_HumanEval_136"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074149_HumanEval_137"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074151_HumanEval_139"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074153_HumanEval_140"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074155_HumanEval_141"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074157_HumanEval_142"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074159_HumanEval_143"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074202_HumanEval_144"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074205_HumanEval_145"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074206_HumanEval_146"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074209_HumanEval_147"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074211_HumanEval_148"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074214_HumanEval_149"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074215_HumanEval_150"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074217_HumanEval_151"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074218_HumanEval_152"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074220_HumanEval_153"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074222_HumanEval_154"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074224_HumanEval_155"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074226_HumanEval_156"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074228_HumanEval_157"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260221_074229_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074231_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_074232_HumanEval_163"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260221_080131_HumanEval_26"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_054807_HumanEval_26"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_060206_HumanEval_26"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_060434_HumanEval_28"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_060637_HumanEval_29"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_060955_HumanEval_32"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_064903_HumanEval_38"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_102150_HumanEval_39"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_114758_HumanEval_46"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_115315_HumanEval_50"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_122759_HumanEval_65"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_123432_HumanEval_74"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_130829_HumanEval_76"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_134359_HumanEval_79"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_134840_HumanEval_81"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_143303_HumanEval_83"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_150735_HumanEval_86"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_154343_HumanEval_88"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_161834_HumanEval_90"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_170956_HumanEval_91"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_174547_HumanEval_93"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_182120_HumanEval_101"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_192837_HumanEval_102"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_195616_HumanEval_103"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_203049_HumanEval_106"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_211407_HumanEval_108"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_215002_HumanEval_110"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_222555_HumanEval_112"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260222_231724_HumanEval_113"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260222_235349_HumanEval_115"}
+{"status": "PASS", "model": "LLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260223_003013_HumanEval_117"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_063715_HumanEval_119"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_064619_HumanEval_119"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_064708_HumanEval_120"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_065124_HumanEval_123"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_065505_HumanEval_124"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_065642_HumanEval_126"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_070049_HumanEval_127"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260223_073037_HumanEval_129"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260223_193112_HumanEval_130"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260223_193611_HumanEval_131"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260223_193652_HumanEval_132"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260223_225939_HumanEval_133"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_002955_HumanEval_134"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_003446_HumanEval_135"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_054749_HumanEval_137"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_055257_HumanEval_139"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_061835_HumanEval_140"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_062317_HumanEval_141"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_062445_HumanEval_142"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_062524_HumanEval_143"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_064458_HumanEval_144"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_064907_HumanEval_145"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_072150_HumanEval_146"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_072253_HumanEval_147"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260224_072359_HumanEval_148"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260224_072751_HumanEval_149"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_073056_HumanEval_150"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_073140_HumanEval_151"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_073219_HumanEval_152"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_073259_HumanEval_153"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_073353_HumanEval_154"}
+{"status": "PASS", "model": "LLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260224_073437_HumanEval_155"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_073814_HumanEval_156"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260224_073914_HumanEval_157"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_074301_HumanEval_160"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_074709_HumanEval_162"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/humaneval_runs/20260224_110545_HumanEval_163"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/humaneval_runs/20260401_071443_HumanEval_148"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/humaneval_runs/20260401_071651_HumanEval_149"}

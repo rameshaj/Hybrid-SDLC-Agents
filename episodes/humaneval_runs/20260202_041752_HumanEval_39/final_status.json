@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def prime_fib(n: int):\n    def is_prime(num):\n        if num <= 1:\n            return False\n        for i in range(2, int(num**0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    a, b = 0, 1\n    count = 0\n    while True:\n        if is_prime(a) and count == n:\n            return a\n        a, b = b, a + b\n        count += 1",
+    "dir": "episodes/humaneval_runs/20260202_041752_HumanEval_39/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 124,
+      "stdout": "",
+      "stderr": "\n[TIMEOUT]\n",
+      "elapsed_s": 5.006426095962524,
+      "failure_summary": "TIMEOUT"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: TIMEOUT",
+    "attempt_02: TIMEOUT"
+  ],
+  "fallback_failures": []
+}

@@ -1,0 +1,3 @@
+- Import the `List` type from `typing`.
+- Use `list` instead of `List` in the function definition.
+- Ensure the function is called with the correct arguments.

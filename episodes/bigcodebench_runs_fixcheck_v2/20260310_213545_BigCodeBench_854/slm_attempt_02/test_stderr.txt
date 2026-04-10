@@ -1,0 +1,53 @@
+FF.E.
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_02/candidate_run.py", line 40, in test_case_4
+    result, perm = task_func([])
+                   ^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_02/candidate_run.py", line 15, in task_func
+    factorial_sums_list = [factorial_sum(perm) for perm in permutations_list]
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_02/candidate_run.py", line 15, in <listcomp>
+    factorial_sums_list = [factorial_sum(perm) for perm in permutations_list]
+                           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_02/candidate_run.py", line 12, in factorial_sum
+    return reduce(lambda x, y: x * math.factorial(y), perm)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: reduce() of empty iterable with no initial value
+
+======================================================================
+FAIL: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_02/candidate_run.py", line 25, in test_case_1
+    self.assertEqual(result, expected)
+AssertionError: Lists differ: [2, 2] != [3, 3]
+
+First differing element 0:
+2
+3
+
+- [2, 2]
++ [3, 3]
+
+======================================================================
+FAIL: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_02/candidate_run.py", line 31, in test_case_2
+    self.assertEqual(result, expected)
+AssertionError: Lists differ: [12, 12, 12, 12, 6, 6] != [9, 9, 9, 9, 9, 9]
+
+First differing element 0:
+12
+9
+
+- [12, 12, 12, 12, 6, 6]
++ [9, 9, 9, 9, 9, 9]
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (failures=2, errors=1)

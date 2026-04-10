@@ -1,0 +1,46 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: is_bored
+Previous failures:
+- attempt_01: AssertionError: Test 2 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044134_HumanEval_91/slm_attempt_01/candidate_run.py", line 20, in __run_tests
+    check(globals().get('is_bored'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044134_HumanEval_91/slm_attempt_01/candidate_run.py", line 8, in check
+    assert candidate("Is the sky blue?") == 0, "Test 2"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 2
+
+def is_bored(S):
+    """
+    You'll be given a string of words, and your task is to count the number
+    of boredoms. A boredom is a sentence that starts with the word "I".
+    Sentences are delimited by '.', '?' or '!'.
+   
+    For example:
+    >>> is_bored("Hello world")
+    0
+    >>> is_bored("The sky is blue. The sun is shining. I love this weather")
+    1
+    """
+
+assistant
+```python
+def is_bored(S):
+    """
+    You'll be given a string of words, and your task is to count the number
+    of boredoms. A boredom is a sentence that starts with the word "I".
+    Sentences are delimited by '.', '?' or '!'.
+   
+    For example:
+    >>> is_bored("Hello world")
+    0
+    >>> is_bored("The sky is blue. The sun is shining. I love this weather")
+    1
+    """
+    return sum(1 for line in S.split('.') + S.split('?') + S.split('!')
+              if line.strip().startswith('I'))
+```
+
+> EOF by user

@@ -1,0 +1,25 @@
+{
+  "adapter_path": "data/derived/finetune/qwen1.5b_lora_fix",
+  "model_path": "models/hf/qwen2.5-coder-1.5b-instruct",
+  "val_path": "data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl",
+  "results": [
+    {
+      "task_id": "HumanEval/21",
+      "entry_point": "rescale_to_unit",
+      "error_type": "NameError",
+      "max_new_tokens": 113,
+      "expected": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(num - min_val) / (max_val - min_val) for num in numbers]",
+      "generated_raw": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_num = min(numbers)\n    max_num = max(numbers)\n    range_value = max_num - min_num\n    \n    if range_value == 0:\n        raise ValueError(\"The input list must contain at least two distinct values.\")\n    \n    scaled_numbers = [(num - min_num) / range_value for num in numbers]\n    return scaled_numbers",
+      "generated_code": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_num = min(numbers)\n    max_num = max(numbers)\n    range_value = max_num - min_num\n    \n    if range_value == 0:\n        raise ValueError(\"The input list must contain at least two distinct values.\")\n    \n    scaled_numbers = [(num - min_num) / range_value for num in numbers]\n    return scaled_numbers"
+    },
+    {
+      "task_id": "HumanEval/22",
+      "entry_point": "filter_integers",
+      "error_type": "NameError",
+      "max_new_tokens": 89,
+      "expected": "def filter_integers(values: list) -> list:\n    return [value for value in values if isinstance(value, int)]",
+      "generated_raw": "def filter_integers(values: list[Any]) -> list[int]:\n    result = []\n    for value in values:\n        if isinstance(value, int):\n            result.append(value)\n    return result",
+      "generated_code": "def filter_integers(values: list[Any]) -> list[int]:\n    result = []\n    for value in values:\n        if isinstance(value, int):\n            result.append(value)\n    return result"
+    }
+  ]
+}

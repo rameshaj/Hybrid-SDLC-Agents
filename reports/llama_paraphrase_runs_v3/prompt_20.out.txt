@@ -1,0 +1,21 @@
+user
+Implement task_func(nums: list[int], k: int) -> list[int].
+Return a list of sliding-window maximums for window size k. If k <= 0 or k > len(nums), return [].
+Return ONLY the function code.
+assistant
+```python
+def task_func(nums: list[int], k: int) -> list[int]:
+    if k <= 0 or k > len(nums):
+        return []
+    
+    result = []
+    for i in range(len(nums) - k + 1):
+        max_val = max(nums[i:i+k])
+        result.append(max_val)
+    
+    return result
+```
+
+> EOF by user
+
+

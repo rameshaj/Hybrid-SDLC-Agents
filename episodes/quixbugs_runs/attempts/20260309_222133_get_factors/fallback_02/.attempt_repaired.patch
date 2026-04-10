@@ -1,0 +1,11 @@
+--- a/python_programs/get_factors.py
++++ b/python_programs/get_factors.py
+@@ -5,7 +5,7 @@
+ 
+     for i in range(2, int(n ** 0.5) + 1):
+         if n % i == 0:
+-            return [i] + get_factors(n // i)
++            return [i] + get_factors(n // i) + get_factors(i)
+ 
+     return []
+ 

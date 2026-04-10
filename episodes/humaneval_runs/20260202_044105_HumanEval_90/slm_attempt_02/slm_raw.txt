@@ -1,0 +1,36 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: next_smallest
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044105_HumanEval_90/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('next_smallest'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044105_HumanEval_90/slm_attempt_01/candidate_run.py", line 13, in check
+    assert candidate([1, 1]) == None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+def next_smallest(lst):
+    """
+    You are given a list of integers.
+    Write a function next_smallest() that returns the 2nd smallest element of the list.
+    Return None if there is no such element.
+    
+    next_smallest([1, 2, 3, 4, 5]) == 2
+    next_smallest([5, 1, 4, 3, 2]) == 2
+    next_smallest([]) == None
+    next_smallest([1, 1]) == None
+    """
+
+assistant
+```python
+def next_smallest(lst):
+    if len(lst) < 2:
+        return None
+    sorted_lst = sorted(lst)
+    return sorted_lst[1]
+```
+
+> EOF by user

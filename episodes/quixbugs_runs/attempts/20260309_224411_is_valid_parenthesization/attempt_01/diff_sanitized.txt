@@ -1,0 +1,10 @@
+diff --git a/python_programs/is_valid_parenthesization.py b/python_programs/is_valid_parenthesization.py
+index 1234567..89abcdef 100644
+--- a/python_programs/is_valid_parenthesization.py
++++ b/python_programs/is_valid_parenthesization.py
+@@ -1,4 +1,4 @@
+ def is_valid_parenthesization(parens):
+     depth = 0
+     for paren in parens:
+-        if paren == '(':
++            if paren == '(':

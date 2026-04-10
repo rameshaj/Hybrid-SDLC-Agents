@@ -1,0 +1,2 @@
+def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]

@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def starts_one_ends(n):\n    if n == 1:\n        return 1\n    else:\n        return 2 * (10 ** (n - 2))",
+    "dir": "episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py\", line 26, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('starts_one_ends'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py\", line 12, in check\n    assert candidate(2) == 18\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "elapsed_s": 0.07170391082763672,
+      "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('starts_one_ends'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py\", line 12, in check\n    assert candidate(2) == 18\n           ^^^^^^^^^^^^^^^^^^\nAssertionError"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('starts_one_ends'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py\", line 12, in check\n    assert candidate(2) == 18\n           ^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "attempt_02: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_02/candidate_run.py\", line 27, in __run_tests\n    check(globals().get('starts_one_ends'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_02/candidate_run.py\", line 16, in check\n    assert candidate(2) == 18\n           ^^^^^^^^^^^^^^^^^^\nAssertionError"
+  ],
+  "fallback_failures": []
+}

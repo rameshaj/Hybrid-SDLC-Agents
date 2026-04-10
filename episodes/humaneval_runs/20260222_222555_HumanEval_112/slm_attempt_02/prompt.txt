@@ -1,0 +1,68 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: reverse_delete
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_222555_HumanEval_112/slm_attempt_01/candidate_run.py", line 18, in __run_tests
+    check(globals().get('reverse_delete'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_222555_HumanEval_112/slm_attempt_01/candidate_run.py", line 13, in check
+    assert candidate("vabba","v") == ('abba',True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/54 error=AssertionError fix_actions=['change_return'] score=0.847
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,2 @@
+ def same_chars(s0: str, s1: str):
+-    """
+-    Check if two words have the same characters.
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+-    True
+-    >>> same_chars('abcd', 'dddddddabc')
+-    True
+-    >>> same_chars('dddddddabc', 'abcd')
+-    True
+-    >>> same_chars('eabcd', 'dddddddabc')
+-    False
+-    >>> same_chars('abcd', 'dddddddabce')
+-    False
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+-    False
+-    """
+-    return sorted(s0) == sorted(s1)
++    return set(s0) == set(s1)
+[case 2] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.825
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 3] task_id=HumanEval/64 error=AssertionError fix_actions=['add_guard'] score=0.807
+fix_diff:
+--- slm
++++ llm
+@@ -1,16 +1,10 @@
+ def vowels_count(s):
+-    """Write a function vowels_count which takes a string representing
+-    a word as input and...
+
+def reverse_delete(s,c):
+    """Task
+    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c
+    then check if the result string is palindrome.
+    A string is called palindrome if it reads the same backward as forward.
+    You should return a tuple containing the result string and True/False for the check.
+    Example
+    For s = "abcde", c = "ae", the result should be ('bcd',False)
+    For s = "abcdef", c = "b"  the result should be ('acdef',False)
+    For s = "abcdedcba", c = "ab", the result should be ('cdedc',True)
+    """

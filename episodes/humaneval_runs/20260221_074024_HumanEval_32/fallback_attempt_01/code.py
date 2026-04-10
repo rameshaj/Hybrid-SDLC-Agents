@@ -1,0 +1,6 @@
+def find_zero(xs: list):
+        def poly(x):
+            return sum(coeff * x**i for i, coeff in enumerate(xs))
+
+        # Use the bisection method to find a root
+        return bisect(poly, -1000, 1000)

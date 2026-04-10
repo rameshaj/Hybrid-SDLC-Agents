@@ -1,0 +1,24 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: sort_numbers
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_072807_HumanEval_19/slm_attempt_01/candidate_run.py", line 21, in __run_tests
+    check(globals().get('sort_numbers'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_072807_HumanEval_19/slm_attempt_01/candidate_run.py", line 15, in check
+    assert candidate('three five nine') == 'three five nine'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+- attempt_02: SLM_TIMEOUT
+
+from typing import List
+
+
+def sort_numbers(numbers: str) -> str:
+    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+    Return the string with numbers sorted from smallest to largest
+    >>> sort_numbers('three one five')
+    'one three five'
+    """

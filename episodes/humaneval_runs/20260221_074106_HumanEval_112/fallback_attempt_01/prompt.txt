@@ -1,0 +1,55 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: reverse_delete
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+- attempt_02: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/14 error=NameError fix_actions=['change_return'] score=0.442
+fix_diff:
+--- slm
++++ llm
+@@ -1,6 +1,2 @@
+-def all_prefixes(string: str) -> List[str]:
+-    """ Return list of all prefixes from shortest to longest of the input string
+-    >>> all_prefixes('abc')
+-    ['a', 'ab', 'abc']
+-    """
+-    return [string[:i+1] for i in range(len(string))]
++def all_prefixes(string: str) -> list:
++    return [string[:i] for i in range(1, len(string) + 1)]
+[case 2] task_id=HumanEval/17 error=NameError fix_actions=['change_return'] score=0.416
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def parse_music(music_string: str) -> List[int]:
+-    """ Input to this function is a string representing musical notes in a special ASCII format.
+-    Your task is to parse this string and return list of integers corresponding to how many beats does each
+-    not last.
+-
+-    Here is a legend:
+-    'o' - whole note, lasts four beats
+-    'o|' - half note, lasts two beats
+-    '.|' - quater note, lasts one beat
+-
+-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')
+-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]
+-    """
+-    return [4 if note == 'o' else 2 if no...
+
+def reverse_delete(s,c):
+    """Task
+    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c
+    then check if the result string is palindrome.
+    A string is called palindrome if it reads the same backward as forward.
+    You should return a tuple containing the result string and True/False for the check.
+    Example
+    For s = "abcde", c = "ae", the result should be ('bcd',False)
+    For s = "abcdef", c = "b"  the result should be ('acdef',False)
+    For s = "abcdedcba", c = "ab", the result should be ('cdedc',True)
+    """

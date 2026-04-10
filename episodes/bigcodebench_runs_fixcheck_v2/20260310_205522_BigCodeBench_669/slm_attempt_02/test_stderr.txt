@@ -1,0 +1,65 @@
+EEEEE
+======================================================================
+ERROR: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 42, in test_case_1
+    self.assertEqual(sorted(task_func({'a': 1, 'b': 2, 'c': 3})), sorted(('a', 'b')))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 32, in task_func
+    sum_cosines = math.cos(value1) + math.cos(value2)
+                                     ^^^^^^^^^^^^^^^^
+TypeError: must be real number, not str
+
+======================================================================
+ERROR: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 45, in test_case_2
+    self.assertEqual(sorted(task_func({'a': 1, 'b': 2, 'c': 3, 'd': 4})), sorted(('a', 'b')))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 32, in task_func
+    sum_cosines = math.cos(value1) + math.cos(value2)
+                                     ^^^^^^^^^^^^^^^^
+TypeError: must be real number, not str
+
+======================================================================
+ERROR: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 47, in test_case_3
+    self.assertEqual( sorted(task_func({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5})),  sorted(('e', 'a')))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 32, in task_func
+    sum_cosines = math.cos(value1) + math.cos(value2)
+                                     ^^^^^^^^^^^^^^^^
+TypeError: must be real number, not str
+
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 49, in test_case_4
+    self.assertEqual( sorted(task_func({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6})),  sorted(('f', 'a')))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 32, in task_func
+    sum_cosines = math.cos(value1) + math.cos(value2)
+                                     ^^^^^^^^^^^^^^^^
+TypeError: must be real number, not str
+
+======================================================================
+ERROR: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 51, in test_case_5
+    self.assertEqual( sorted(task_func({'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7})),  sorted(('g', 'f')))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669/slm_attempt_02/candidate_run.py", line 32, in task_func
+    sum_cosines = math.cos(value1) + math.cos(value2)
+                                     ^^^^^^^^^^^^^^^^
+TypeError: must be real number, not str
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (errors=5)

@@ -1,0 +1,3 @@
+- Ensure that both inputs are either integers or floats.
+- Replace commas with dots in string inputs before comparing them.
+- Use `float()` to convert string inputs to float values.

@@ -1,0 +1,19 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: parse_nested_parens
+Previous failures:
+- attempt_01: SLM_TIMEOUT
+
+from typing import List
+
+
+def parse_nested_parens(paren_string: str) -> List[int]:
+    """ Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+    For each of the group, output the deepest level of nesting of parentheses.
+    E.g. (()()) has maximum two levels of nesting while ((())) has three.
+
+    >>> parse_nested_parens('(()()) ((())) () ((())()())')
+    [2, 3, 1, 3]
+    """

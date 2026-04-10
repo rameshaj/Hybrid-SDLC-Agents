@@ -1,0 +1,54 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: double_the_difference
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+- attempt_02: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.431
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
++def intersperse(numbers, delimeter):
++    result = []
++    for i, number in enumerate(numbers):
++        result.append(number)
++        if i < len(numbers)...
+[case 2] task_id=HumanEval/4 error=NameError fix_actions=[] score=0.419
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,3 @@
+-def mean_absolute_deviation(numbers: List[float]) -> float:
+-    """ For a given list of input numbers, calculate Mean Absolute Deviation
+-    around the mean of this dataset.
+-    Mean Absolute Deviation is the average absolute difference between each
+-    element and a centerpoint (mean in this case):
+-    MAD = average | x - x_mean |
+-...
+
+def double_the_difference(lst):
+    '''
+    Given a list of numbers, return the sum of squares of the numbers
+    in the list that are odd. Ignore numbers that are negative or not integers.
+    
+    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10
+    double_the_difference([-1, -2, 0]) == 0
+    double_the_difference([9, -2]) == 81
+    double_the_difference([0]) == 0  
+   
+    If the input list is empty, return 0.
+    '''

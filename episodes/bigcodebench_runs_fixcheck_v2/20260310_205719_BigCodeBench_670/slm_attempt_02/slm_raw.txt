@@ -1,0 +1,85 @@
+user
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: AssertionError: 'bc' != 'c' | tail: - bc
+? -
++ c
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+FAILED (failures=3)
+
+from itertools import combinations
+import math
+
+def task_func(x, w):
+    """
+    Find the continuous substring of x, which has the maximum total weight, given a dictionary where the keys are characters and the values are their weights.
+
+    Parameters:
+    - x (str): The input string.
+    - w (dict): The dictionary of character weights.
+
+    Returns:
+    - max_substr (str): The continuous substring with the highest weight.
+
+    Requirements:
+    - itertools
+    - math
+
+    Example:
+    >>> task_func('c', {'a': 1, 'b': 2, 'c': 3})
+    'c'
+    >>> task_func('abc', {'a': 10, 'b': -5, 'c': 3})
+    'a'
+    """
+
+assistant
+```python
+from itertools import combinations
+import math
+
+def task_func(x, w):
+    """
+    Find the continuous substring of x, which has the maximum total weight, given a dictionary where the keys are characters and the values are their weights.
+
+    Parameters:
+    - x (str): The input string.
+    - w (dict): The dictionary of character weights.
+
+    Returns:
+    - max_substr (str): The continuous substring with the highest weight.
+
+    Requirements:
+    - itertools
+    - math
+
+    Example:
+    >>> task_func('c', {'a': 1, 'b': 2, 'c': 3})
+    'c'
+    >>> task_func('abc', {'a': 10, 'b': -5, 'c': 3})
+    'a'
+    """
+    max_weight = float('-inf')
+    max_substr = ''
+
+    for i in range(len(x)):
+        current_weight = 0
+        current_substring = x[i]
+        for j in range(i + 1, len(x)):
+            current_weight += w[x[j]]
+            current_substring += x[j]
+            if current_weight > max_weight:
+                max_weight = current_weight
+                max_substr = current_substring
+
+    return max_substr
+```
+
+> EOF by user

@@ -1,0 +1,22 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: largest_divisor
+
+def largest_divisor(n: int) -> int:
+    """ For a given number n, find the largest number that divides n evenly, smaller than n
+    >>> largest_divisor(15)
+    5
+    """
+
+assistant
+```python
+def largest_divisor(n: int) -> int:
+    for i in range(n-1, 0, -1):
+        if n % i == 0:
+            return i
+```
+
+> EOF by user

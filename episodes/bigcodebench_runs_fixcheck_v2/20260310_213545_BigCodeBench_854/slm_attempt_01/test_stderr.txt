@@ -1,0 +1,50 @@
+FF.E.
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_01/candidate_run.py", line 36, in test_case_4
+    result, perm = task_func([])
+                   ^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_01/candidate_run.py", line 12, in task_func
+    fac = [reduce(lambda x, y: x * y, map(math.factorial, p)) for p in perm]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_01/candidate_run.py", line 12, in <listcomp>
+    fac = [reduce(lambda x, y: x * y, map(math.factorial, p)) for p in perm]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: reduce() of empty iterable with no initial value
+
+======================================================================
+FAIL: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_01/candidate_run.py", line 21, in test_case_1
+    self.assertEqual(result, expected)
+AssertionError: Lists differ: [2, 2] != [3, 3]
+
+First differing element 0:
+2
+3
+
+- [2, 2]
++ [3, 3]
+
+======================================================================
+FAIL: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854/slm_attempt_01/candidate_run.py", line 27, in test_case_2
+    self.assertEqual(result, expected)
+AssertionError: Lists differ: [12, 12, 12, 12, 12, 12] != [9, 9, 9, 9, 9, 9]
+
+First differing element 0:
+12
+9
+
+- [12, 12, 12, 12, 12, 12]
++ [9, 9, 9, 9, 9, 9]
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+FAILED (failures=2, errors=1)

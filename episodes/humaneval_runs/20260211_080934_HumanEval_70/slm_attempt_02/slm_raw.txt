@@ -1,0 +1,33 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: strange_sort_list
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_080934_HumanEval_70/slm_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('strange_sort_list'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260211_080934_HumanEval_70/slm_attempt_01/candidate_run.py", line 7, in check
+    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+def strange_sort_list(lst):
+    '''
+    Given list of integers, return list in strange order.
+    Strange sorting, is when you start with the minimum value,
+    then maximum of the remaining integers, then minimum and so on.
+
+    Examples:
+    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]
+    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]
+    strange_sort_list([]) == []
+    '''
+
+assistant
+```python
+def strange_sort_list(lst):
+    return sorted(lst, key=lambda x: (x % 2, -x))
+```
+
+> EOF by user

@@ -1,0 +1,30 @@
+user
+Implement task_func(csv_path: str, out_dir: str) -> list[str].
+Read a CSV with a column 'command'; execute each command via subprocess and save stdout to a file per command in out_dir. Return list of output file paths.
+Return ONLY the function code.
+assistant
+```python
+import subprocess
+import os
+
+def task_func(csv_path: str, out_dir: str) -> list[str]:
+    # Read commands from CSV
+    with open(csv_path, 'r') as file:
+        commands = file.readlines()
+    
+    # Execute each command and save stdout to a file
+    output_files = []
+    for command in commands:
+        command = command.strip()  # Remove leading/trailing whitespace
+        if command:  # Skip empty lines
+            output_file_path = os.path.join(out_dir, f"{command}.out")
+            with open(output_file_path, 'w') as file:
+                subprocess.run(command, shell=True, stdout=file)
+            output_files.append(output_file_path)
+    
+    return output_files
+```
+
+> EOF by user
+
+

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 24,
+    "case_id": "HumanEval/77::20260213_065301_HumanEval_77",
+    "task_id": "HumanEval/77",
+    "dataset": "HumanEval",
+    "entry_point": "iscube",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError: Third test error: False | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065301_HumanEval_77/slm_attempt_02/candidate_run.py\", line 22, in __run_tests\n    check(globals().get('iscube'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065301_HumanEval_77/slm_attempt_02/candidate_run.py\", line 9, in check\n    assert candidate(-1) == True, \"Third test error: \" + str(candidate(-1))\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Third test error: False",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def iscube(a):\n    if a < 0:\n        a = -a\n    return round(a ** (1/3)) ** 3 == a",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,2 +1,4 @@\n def iscube(a):\n-    return a == abs(a)**(1/3)\n+    if a < 0:\n+        a = -a\n+    return round(a ** (1/3)) ** 3 == a",
+    "prompt": "\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> True\n    iscube(2) ==> False\n    iscube(-1) ==> True\n    iscube(64) ==> True\n    iscube(0) ==> True\n    iscube(180) ==> False\n    '''\n",
+    "run_dir": "episodes/humaneval_runs/20260213_065301_HumanEval_77",
+    "timestamp": "20260213_065301",
+    "score": 0.8697867393493652
+  },
+  {
+    "id": 15,
+    "case_id": "HumanEval/54::20260212_074958_HumanEval_54",
+    "task_id": "HumanEval/54",
+    "dataset": "HumanEval",
+    "entry_point": "same_chars",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074958_HumanEval_54/slm_attempt_02/candidate_run.py\", line 36, in __run_tests\n    check(globals().get('same_chars'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074958_HumanEval_54/slm_attempt_02/candidate_run.py\", line 25, in check\n    assert candidate('eabcdzzzz', 'dddzzzzzzzddeddabc') == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def same_chars(s0: str, s1: str):\n    return set(s0) == set(s1)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,17 +1,2 @@\n def same_chars(s0: str, s1: str):\n-    \"\"\"\n-    Check if two words have the same characters.\n-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n-    True\n-    >>> same_chars('abcd', 'dddddddabc')\n-    True\n-    >>> same_chars('dddddddabc', 'abcd')\n-    True\n-    >>> same_chars('eabcd', 'dddddddabc')\n-    False\n-    >>> same_chars('abcd', 'dddddddabce')\n-    False\n-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n-    False\n-    \"\"\"\n-    return sorted(s0) == sorted(s1)\n+    return set(s0) == set(s1)",
+    "prompt": "\n\ndef same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabc')\n    True\n    >>> same_chars('dddddddabc', 'abcd')\n    True\n    >>> same_chars('eabcd', 'dddddddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabce')\n    False\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    False\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_074958_HumanEval_54",
+    "timestamp": "20260212_074958",
+    "score": 0.8443393707275391
+  },
+  {
+    "id": 17,
+    "case_id": "HumanEval/64::20260212_080911_HumanEval_64",
+    "task_id": "HumanEval/64",
+    "dataset": "HumanEval",
+    "entry_point": "vowels_count",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError: Test 5 | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_080911_HumanEval_64/slm_attempt_02/candidate_run.py\", line 35, in __run_tests\n    check(globals().get('vowels_count'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_080911_HumanEval_64/slm_attempt_02/candidate_run.py\", line 25, in check\n    assert candidate(\"keY\") == 2, \"Test 5\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 5",
+    "fix_actions": [
+      "add_guard"
+    ],
+    "llm_code": "def vowels_count(s):\n    vowels = 'aeiou'\n    count = 0\n    s = s.lower()\n    for i in range(len(s)):\n        if s[i] in vowels:\n            count += 1\n        elif s[i] == 'y' and i == len(s) - 1:\n            count += 1\n    return count",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,16 +1,10 @@\n def vowels_count(s):\n-    \"\"\"Write a function vowels_count which takes a string representing\n-    a word as input and returns the number of vowels in the string.\n-    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n-    vowel, but only when it is at the end of the given word.\n-\n-    Example:\n-    >>> vowels_count(\"abcde\")\n-    2\n-    >>> vowels_count(\"ACEDY\")\n-    3\n-    \"\"\"\n-    count = sum(1 for char in s if char.lower() in 'aeiou')\n-    if s.endswith('y') and s[:-1].lower() not in 'aeiou':\n-        count += 1\n+    vowels = 'aeiou'\n+    count = 0\n+    s = s.lower()\n+    for i in range(len(s)):\n+        if s[i] in vowels:\n+            count += 1\n+        elif s[i] == 'y' and i == len(s) - 1:\n+            count += 1\n     return count",
+    "prompt": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    \"\"\"Write a function vowels_count which takes a string representing\n    a word as input and returns the number of vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> vowels_count(\"abcde\")\n    2\n    >>> vowels_count(\"ACEDY\")\n    3\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_080911_HumanEval_64",
+    "timestamp": "20260212_080911",
+    "score": 0.8220722675323486
+  }
+]

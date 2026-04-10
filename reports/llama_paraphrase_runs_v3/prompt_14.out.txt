@@ -1,0 +1,31 @@
+user
+Implement task_func(config_path: str, project_dir: str, out_dir: str) -> str.
+Read a config file for an archive name, zip the project_dir into out_dir, and return the archive path.
+Return ONLY the function code.
+assistant
+```python
+import os
+import zipfile
+
+def task_func(config_path: str, project_dir: str, out_dir: str) -> str:
+    # Read the archive name from the config file
+    with open(config_path, 'r') as file:
+        archive_name = file.read().strip()
+    
+    # Create the full path for the output zip file
+    zip_file_path = os.path.join(out_dir, archive_name)
+    
+    # Zip the project directory into the output zip file
+    with zipfile.ZipFile(zip_file_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for root, dirs, files in os.walk(project_dir):
+            for file in files:
+                file_path = os.path.join(root, file)
+                zipf.write(file_path, os.path.relpath(file_path, project_dir))
+    
+    # Return the path of the created zip file
+    return zip_file_path
+```
+
+> EOF by user
+
+

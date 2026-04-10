@@ -1,0 +1,3 @@
+- Ensure the list is sorted by length first.
+- Use `sorted` function with a custom key to sort by length and then alphabetically.
+- Return the sorted list.

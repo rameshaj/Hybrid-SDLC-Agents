@@ -1,0 +1,57 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: largest_smallest_integers
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/9 error=NameError fix_actions=['change_return'] score=0.509
+fix_diff:
+--- slm
++++ llm
+@@ -1,18 +1,7 @@
+-def rolling_max(numbers: List[int]) -> List[int]:
+-    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+-    in the sequence.
+-    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+-    [1, 2, 3, 3, 3, 4, 4]
+-    """
+-    if not numbers:
+-        return []
+-    
+-    max_so_far = numbers[0]
+-    rolling_max_list = [max_so_far]
+-    
+-    for num in numbers[1:]:
+-        if num > max_so_far:
+-            max_so_far = num
+-        rolling_max_list.append(max_so_far)
+-    
+-    return rolling_max_list
++def rolling_max...
+[case 2] task_id=HumanEval/20 error=NameError fix_actions=['add_guard', 'change_return'] score=0.472
+fix_diff:
+--- slm
++++ llm
+@@ -1,10 +1,12 @@
+-def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+-    """ From a supplied list of numbers (of length at least two) select and return two that are the closest to each
+-    other and return them in order (smaller number, larger number).
+-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])
+-...
+
+def largest_smallest_integers(lst):
+    '''
+    Create a function that returns a tuple (a, b), where 'a' is
+    the largest of negative integers, and 'b' is the smallest
+    of positive integers in a list.
+    If there is no negative or positive integers, return them as None.
+
+    Examples:
+    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)
+    largest_smallest_integers([]) == (None, None)
+    largest_smallest_integers([0]) == (None, None)
+    '''

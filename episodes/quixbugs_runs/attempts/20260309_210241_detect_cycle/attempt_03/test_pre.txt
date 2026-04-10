@@ -1,0 +1,10 @@
+Cycle not detected! 
+Cycle detected! 
+Cycle detected! 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data/external/QuixBugs/python_programs/detect_cycle_test.py", line 48, in main
+    if detect_cycle(node7):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data/external/QuixBugs/python_programs/detect_cycle.py", line 5, in detect_cycle
+    if hare.successor is None:
+AttributeError: 'NoneType' object has no attribute 'successor'

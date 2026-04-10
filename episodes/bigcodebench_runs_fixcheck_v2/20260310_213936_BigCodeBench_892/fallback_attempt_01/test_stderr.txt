@@ -1,0 +1,37 @@
+FFF.F
+======================================================================
+FAIL: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213936_BigCodeBench_892/fallback_attempt_01/candidate_run.py", line 18, in test_case_1
+    self.assertEqual(total_counts, 10)
+AssertionError: 5 != 10
+
+======================================================================
+FAIL: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213936_BigCodeBench_892/fallback_attempt_01/candidate_run.py", line 24, in test_case_2
+    self.assertEqual(total_counts, 10)
+AssertionError: 0 != 10
+
+======================================================================
+FAIL: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213936_BigCodeBench_892/fallback_attempt_01/candidate_run.py", line 30, in test_case_3
+    self.assertEqual(total_counts, 10)
+AssertionError: 5 != 10
+
+======================================================================
+FAIL: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_213936_BigCodeBench_892/fallback_attempt_01/candidate_run.py", line 39, in test_case_5
+    self.assertEqual(total_counts, 10)
+AssertionError: 1 != 10
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=4)

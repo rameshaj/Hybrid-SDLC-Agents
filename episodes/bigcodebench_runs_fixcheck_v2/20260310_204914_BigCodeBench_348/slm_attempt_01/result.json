@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 124,
+  "stdout": "",
+  "stderr": "..FF\n[TIMEOUT]\n",
+  "elapsed_s": 10.009358882904053,
+  "failure_summary": "TIMEOUT"
+}

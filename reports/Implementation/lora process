@@ -1,0 +1,211 @@
+# LoRA Process (Old Adapter Only)
+
+Date captured: 2026-03-15
+
+## Scope
+This document describes only the old baseline LoRA adapter process in this project:
+- Adapter: `data/derived/finetune/qwen1.5b_lora_fix`
+- Base model: `models/hf/qwen2.5-coder-1.5b-instruct`
+
+No new adapter (`qwen1.5b_lora_fix_v2_72`) details are included here.
+
+---
+
+## Step 1: Build Case Memory from HumanEval Runs
+
+Purpose:
+- Convert successful fallback-fix runs into structured fix cases for downstream data preparation.
+
+Source runs:
+- `episodes/humaneval_runs/*`
+
+Builder script:
+- `scripts/build_rag_cases_from_fallback.py`
+
+Output:
+- `data/derived/rag/cases.jsonl`
+
+How rows are selected:
+1. Read each run folder (`YYYYMMDD_HHMMSS_HumanEval_<id>`).
+2. Keep runs where a `fallback_attempt_*` has `result.json` with `ok=true`.
+3. Extract:
+- task prompt and entry point,
+- SLM failure summary/type,
+- SLM code,
+- fallback LLM passing code.
+4. Build `fix_diff` (SLM -> LLM) and `fix_actions`.
+5. Dedupe to latest case per task.
+
+Current case file size used for old adapter dataset line:
+- `data/derived/rag/cases.jsonl`: 27 rows.
+
+---
+
+## Step 2: Prepare Fine-Tuning Dataset (Input/Output Pairs)
+
+Purpose:
+- Convert case memory into supervised teacher-student pairs.
+
+Builder script:
+- `scripts/build_finetune_dataset.py`
+
+Input:
+- `data/derived/rag/cases.jsonl`
+
+Outputs:
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.train.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.test.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.summary.json`
+
+Split summary (from summary file):
+- cases_total: 27
+- train_rows: 21
+- val_rows: 2
+- test_rows: 4
+- seed: 42
+- train_ratio: 0.8
+- val_ratio: 0.1
+
+Row format in cleaned train file:
+- `task_id`
+- `dataset`
+- `entry_point`
+- `error_type`
+- `input` (instruction + task prompt + failure summary + SLM code)
+- `output` (target fixed code)
+
+Example file:
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.train.jsonl`
+
+---
+
+## Step 3: Train LoRA Adapter with PEFT
+
+Training script:
+- `scripts/train_lora_peft.py`
+
+Core training pipeline in script:
+1. Load base CausalLM model with `AutoModelForCausalLM.from_pretrained`.
+2. Load tokenizer and set pad token if missing.
+3. Apply PEFT LoRA via `LoraConfig` + `get_peft_model`.
+4. Load JSONL train/eval dataset (`input`, `output` fields).
+5. Use causal collator that:
+- masks input tokens in labels (`-100`),
+- trains only on output tokens (+ EOS),
+- truncates to `max_seq_len`.
+6. Train with HuggingFace `Trainer`.
+7. Save adapter and tokenizer to output directory.
+
+Old adapter output directory:
+- `data/derived/finetune/qwen1.5b_lora_fix`
+
+Old adapter LoRA config (from `adapter_config.json`):
+- `peft_type`: `LORA`
+- `task_type`: `CAUSAL_LM`
+- `r`: 16
+- `lora_alpha`: 32
+- `lora_dropout`: 0.05
+- `bias`: `none`
+- `target_modules`:
+- `q_proj`, `k_proj`, `v_proj`, `o_proj`, `gate_proj`, `up_proj`, `down_proj`
+- `base_model_name_or_path`: `models/hf/qwen2.5-coder-1.5b-instruct`
+
+Training progress evidence (from `checkpoint-9/trainer_state.json`):
+- `num_train_epochs`: 3
+- `global_step`: 9
+- `max_steps`: 9
+- `eval_steps`: 3
+- `save_steps`: 3
+- `train_batch_size`: 1
+
+Checkpoint evidence:
+- `data/derived/finetune/qwen1.5b_lora_fix/checkpoint-6`
+- `data/derived/finetune/qwen1.5b_lora_fix/checkpoint-9`
+
+Final adapter artifacts:
+- `adapter_model.safetensors`
+- `adapter_config.json`
+- tokenizer files (`tokenizer.json`, `tokenizer_config.json`, `vocab.json`, etc.)
+- `training_args.bin`
+
+---
+
+## Step 4: Validate/Evaluate the Old Adapter
+
+Evaluation scripts used:
+- `scripts/run_lora_humaneval_eval.py`
+- Evaluation summary artifact:
+- `reports/val_test_humaneval_passfail.json`
+
+What eval script does:
+1. Load base model + tokenizer.
+2. Attach LoRA adapter (`PeftModel.from_pretrained`).
+3. Generate candidate code for selected HumanEval tasks.
+4. Execute task tests with timeout.
+5. Report pass/fail per task.
+
+Documented old adapter evaluation evidence:
+- From `reports/val_test_humaneval_passfail.json` (adapter path = old adapter):
+- Val split (2 tasks): both fail.
+- Test split (4 tasks):
+- PASS: `HumanEval/0`, `HumanEval/7`, `HumanEval/14`
+- FAIL: `HumanEval/75`
+
+This confirms the old adapter produced successful fixes on multiple held-out test tasks while still having failure cases.
+
+---
+
+## Step 5: End-to-End Repro (Old Adapter Line Only)
+
+1. Build cases from fallback-pass HumanEval runs:
+```bash
+python scripts/build_rag_cases_from_fallback.py \
+  --runs_root episodes/humaneval_runs \
+  --dataset HumanEval \
+  --out_path data/derived/rag/cases.jsonl
+```
+
+2. Build fine-tuning dataset and splits:
+```bash
+python scripts/build_finetune_dataset.py \
+  --cases_path data/derived/rag/cases.jsonl \
+  --out_dir data/derived/finetune \
+  --seed 42 \
+  --train_ratio 0.8 \
+  --val_ratio 0.1
+```
+
+3. Train LoRA (old adapter path):
+```bash
+python scripts/train_lora_peft.py \
+  --model_name_or_path models/hf/qwen2.5-coder-1.5b-instruct \
+  --train_file data/derived/finetune/humaneval_slm_fix_pairs.cleaned.train.jsonl \
+  --eval_file data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl \
+  --output_dir data/derived/finetune/qwen1.5b_lora_fix
+```
+
+4. Evaluate adapter on selected HumanEval tasks:
+```bash
+python scripts/run_lora_humaneval_eval.py \
+  --model_name_or_path models/hf/qwen2.5-coder-1.5b-instruct \
+  --adapter_path data/derived/finetune/qwen1.5b_lora_fix \
+  --task_ids HumanEval/0,HumanEval/7 \
+  --max_seq_len 512 \
+  --max_new_tokens 256 \
+  --timeout_s 5
+```
+
+---
+
+## Final Process Summary
+
+Old adapter pipeline was:
+1. Collect fallback-pass HumanEval fix episodes into case memory.
+2. Transform cases into supervised `input` -> `output` code-fix pairs.
+3. Split dataset (21 train / 2 val / 4 test).
+4. Fine-tune Qwen2.5-Coder-1.5B with PEFT LoRA to `qwen1.5b_lora_fix`.
+5. Evaluate generated code on HumanEval tasks using adapter-attached inference.
+
+This is the complete old-adapter LoRA process currently evidenced in this repository.

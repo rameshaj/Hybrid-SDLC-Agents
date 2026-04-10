@@ -1,0 +1,73 @@
+user
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: AssertionError: 4 != 1 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205848_BigCodeBench_733/slm_attempt_01/candidate_run.py", line 54, in test_case_8
+    self.assertEqual(task_func('This IS an Example Content'), 1)
+AssertionError: 4 != 1
+----------------------------------------------------------------------
+Ran 8 tests in 0.001s
+FAILED (failures=4)
+
+import re
+import string
+
+def task_func(content):
+    """Count the non-stop words in a sentence without the last word.
+
+    Parameters:
+    - content (str): The sentence to count non-stopwords from.
+
+    Returns:
+    - count (int): The count of non-stopwords.
+
+    Requirements:
+    - re
+    - string
+
+    Example:
+    >>> task_func('this is an example content')
+    1
+    """
+
+assistant
+```python
+import re
+import string
+
+def task_func(content):
+    """Count the non-stop words in a sentence without the last word.
+
+    Parameters:
+    - content (str): The sentence to count non-stopwords from.
+
+    Returns:
+    - count (int): The count of non-stopwords.
+
+    Requirements:
+    - re
+    - string
+
+    Example:
+    >>> task_func('this is an example content')
+    1
+    """
+    # Remove punctuation and convert to lowercase
+    cleaned_content = re.sub(r'[^\w\s]', '', content).lower()
+    
+    # Split the content into words
+    words = cleaned_content.split()
+    
+    # Count non-stopwords (excluding the last word)
+    count = len(words) - 1
+    
+    return count
+```
+
+> EOF by user

@@ -1,0 +1,3 @@
+- Import the `List` type from the `typing` module.
+- Ensure that the function signature matches the expected input and output types.
+- Use a set to keep track of seen numbers and a list to store the result.

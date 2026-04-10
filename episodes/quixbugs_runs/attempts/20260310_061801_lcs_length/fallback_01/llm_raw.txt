@@ -1,0 +1,17 @@
+diff --git a/python_programs/lcs_length.py b/python_programs/lcs_length.py
+index 1234567..89abcdef 100644
+--- a/python_programs/lcs_length.py
++++ b/python_programs/lcs_length.py
+@@ -4,7 +4,7 @@ def lcs_length(s, t):
+     dp = Counter()
+ 
+     for i in range(len(s)):
+-        for j in range(len(t)):
++        for j in range(len(t) + 1):
+             if s[i] == t[j]:
+                 dp[i, j] = dp[i - 1, j - 1] + 1
+             else:
+@@ -10,6 +10,7 @@ def lcs_length(s, t):
+                 dp[i, j] = max(dp[i - 1, j], dp[i, j - 1])
+ 
+     return max(dp.values()) if dp else 0

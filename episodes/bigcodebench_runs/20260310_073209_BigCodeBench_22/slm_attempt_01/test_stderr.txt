@@ -1,0 +1,4 @@
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/slm_attempt_01/candidate_run.py", line 6
+    """
+    ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 104)

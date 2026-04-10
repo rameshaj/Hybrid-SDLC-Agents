@@ -1,0 +1,8 @@
+FALLBACK_ERROR: RuntimeError: OpenAI HTTPError: 429 Too Many Requests {
+    "error": {
+        "message": "Request too large for gpt-4.1 in organization org-ktULhF5WltJ6XeGvPUpXcnOo on tokens per min (TPM): Limit 30000, Requested 36926. The input or output tokens must be reduced in order to run successfully. Visit https://platform.openai.com/account/rate-limits to learn more.",
+        "type": "tokens",
+        "param": null,
+        "code": "rate_limit_exceeded"
+    }
+}

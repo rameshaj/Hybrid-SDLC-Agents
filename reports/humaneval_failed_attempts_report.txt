@@ -1,0 +1,594 @@
+HumanEval/0	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/1	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/4	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/5	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/6	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/7	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/8	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/9	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/12	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/14	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_211922_HumanEval_14/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def all_prefixes(string: str) -> List[str]:
+                                     ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_211922_HumanEval_14/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def all_prefixes(string: str) -> List[str]:
+                                     ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/17	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_212039_HumanEval_17/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def parse_music(music_string: str) -> List[int]:
+                                          ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_212039_HumanEval_17/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def parse_music(music_string: str) -> List[int]:
+                                          ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/19	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_175322_HumanEval_19/slm_attempt_01/candidate_run.py", line 21, in __run_tests
+    check(globals().get('sort_numbers'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_175322_HumanEval_19/slm_attempt_01/candidate_run.py", line 15, in check
+    assert candidate('three five nine') == 'three five nine'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_175322_HumanEval_19/slm_attempt_02/candidate_run.py", line 27, in __run_tests
+    check(globals().get('sort_numbers'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_175322_HumanEval_19/slm_attempt_02/candidate_run.py", line 21, in check
+    assert candidate('three five nine') == 'three five nine'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/20	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040331_HumanEval_20/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+                                       ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040331_HumanEval_20/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+                                       ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/21	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040436_HumanEval_21/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def rescale_to_unit(numbers: List[float]) -> List[float]:
+                                 ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040436_HumanEval_21/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def rescale_to_unit(numbers: List[float]) -> List[float]:
+                                 ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/22	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040609_HumanEval_22/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def filter_integers(values: List[Any]) -> List[int]:
+                                ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040609_HumanEval_22/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def filter_integers(values: List[Any]) -> List[int]:
+                                ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/25	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040748_HumanEval_25/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def factorize(n: int) -> List[int]:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040748_HumanEval_25/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def factorize(n: int) -> List[int]:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/26	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040929_HumanEval_26/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def remove_duplicates(numbers: List[int]) -> List[int]:
+                                   ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040929_HumanEval_26/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def remove_duplicates(numbers: List[int]) -> List[int]:
+                                   ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/28	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041057_HumanEval_28/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def concatenate(strings: List[str]) -> str:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041057_HumanEval_28/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def concatenate(strings: List[str]) -> str:
+                             ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/29	attempt_01: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041127_HumanEval_29/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+                                  ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?	attempt_02: NameError; code=yes; NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041127_HumanEval_29/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+                                  ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+HumanEval/32	attempt_01: NameError; code=yes; NameError: name 'poly' is not defined | tail:     solution = candidate(copy.deepcopy(coeffs))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041250_HumanEval_32/slm_attempt_01/candidate_run.py", line 14, in find_zero
+    f_x = poly(xs, x)
+          ^^^^
+NameError: name 'poly' is not defined	attempt_02: IndentationError; code=yes; IndentationError: expected an indented block after 'while' statement on line 22 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041250_HumanEval_32/slm_attempt_02/candidate_run.py", line 26
+    METADATA = {}
+IndentationError: expected an indented block after 'while' statement on line 22
+HumanEval/33	attempt_01: TypeError; code=yes; TypeError: 'int' object is not iterable | tail:     return [x if i % 3 != 0 else sorted(x) for i, x in enumerate(l)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041439_HumanEval_33/slm_attempt_01/candidate_run.py", line 2, in <listcomp>
+    return [x if i % 3 != 0 else sorted(x) for i, x in enumerate(l)]
+                                 ^^^^^^^^^
+TypeError: 'int' object is not iterable	attempt_02: TypeError; code=yes; TypeError: 'int' object is not iterable | tail:     return [x if i % 3 != 0 else sorted(x) for i, x in enumerate(l)]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041439_HumanEval_33/slm_attempt_02/candidate_run.py", line 10, in <listcomp>
+    return [x if i % 3 != 0 else sorted(x) for i, x in enumerate(l)]
+                                 ^^^^^^^^^
+TypeError: 'int' object is not iterable
+HumanEval/37	attempt_01: IndexError; code=yes; IndexError: list index out of range | tail:     return [even_indices[i] if i % 2 == 0 else l[i] for i in range(len(l))]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041605_HumanEval_37/slm_attempt_01/candidate_run.py", line 3, in <listcomp>
+    return [even_indices[i] if i % 2 == 0 else l[i] for i in range(len(l))]
+            ~~~~~~~~~~~~^^^
+IndexError: list index out of range	attempt_02: TypeError; code=yes; TypeError: 'int' object is not iterable | tail:     return [even_indices[i] if i % 2 == 0 else sorted(l[i]) for i in range(len(l))]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041605_HumanEval_37/slm_attempt_02/candidate_run.py", line 3, in <listcomp>
+    return [even_indices[i] if i % 2 == 0 else sorted(l[i]) for i in range(len(l))]
+                                               ^^^^^^^^^^^^
+TypeError: 'int' object is not iterable
+HumanEval/38	attempt_01: NameError; code=yes; NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'? | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041641_HumanEval_38/slm_attempt_01/candidate_run.py", line 29, in __run_tests
+    check(globals().get('decode_cyclic'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041641_HumanEval_38/slm_attempt_01/candidate_run.py", line 23, in check
+    encoded_str = encode_cyclic(str)
+                  ^^^^^^^^^^^^^
+NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?	attempt_02: NameError; code=yes; NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'? | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041641_HumanEval_38/slm_attempt_02/candidate_run.py", line 29, in __run_tests
+    check(globals().get('decode_cyclic'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_041641_HumanEval_38/slm_attempt_02/candidate_run.py", line 23, in check
+    encoded_str = encode_cyclic(str)
+                  ^^^^^^^^^^^^^
+NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?
+HumanEval/39	attempt_01: TIMEOUT; code=yes; TIMEOUT	attempt_02: TIMEOUT; code=yes; TIMEOUT
+HumanEval/46	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py", line 26, in __run_tests
+    check(globals().get('fib4'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py", line 18, in check
+    assert candidate(5) == 4
+           ^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: SyntaxError; code=yes; SyntaxError: invalid syntax | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_02/candidate_run.py", line 25
+    a, b, c, d =
+                ^
+SyntaxError: invalid syntax
+HumanEval/50	attempt_01: NameError; code=yes; NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'? | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('decode_shift'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py", line 17, in check
+    encoded_str = encode_shift(str)
+                  ^^^^^^^^^^^^
+NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?	attempt_02: NameError; code=yes; NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'? | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_02/candidate_run.py", line 26, in __run_tests
+    check(globals().get('decode_shift'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_02/candidate_run.py", line 20, in check
+    encoded_str = encode_shift(str)
+                  ^^^^^^^^^^^^
+NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?
+HumanEval/54	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042356_HumanEval_54/slm_attempt_01/candidate_run.py", line 21, in __run_tests
+    check(globals().get('same_chars'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042356_HumanEval_54/slm_attempt_01/candidate_run.py", line 10, in check
+    assert candidate('eabcdzzzz', 'dddzzzzzzzddeddabc') == True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042356_HumanEval_54/slm_attempt_02/candidate_run.py", line 36, in __run_tests
+    check(globals().get('same_chars'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042356_HumanEval_54/slm_attempt_02/candidate_run.py", line 25, in check
+    assert candidate('eabcdzzzz', 'dddzzzzzzzddeddabc') == True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/64	attempt_01: AssertionError; code=yes; AssertionError: Test 5 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042658_HumanEval_64/slm_attempt_01/candidate_run.py", line 36, in __run_tests
+    check(globals().get('vowels_count'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042658_HumanEval_64/slm_attempt_01/candidate_run.py", line 26, in check
+    assert candidate("keY") == 2, "Test 5"
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 5	attempt_02: AssertionError; code=yes; AssertionError: Test 5 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042658_HumanEval_64/slm_attempt_02/candidate_run.py", line 35, in __run_tests
+    check(globals().get('vowels_count'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042658_HumanEval_64/slm_attempt_02/candidate_run.py", line 25, in check
+    assert candidate("keY") == 2, "Test 5"
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 5
+HumanEval/65	attempt_01: TypeError; code=yes; TypeError: 'int' object is not subscriptable | tail:     assert candidate(100, 2) == "001"
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042817_HumanEval_65/slm_attempt_01/candidate_run.py", line 5, in circular_shift
+    return str(x)[-shift:] + str(x[:-shift])
+                                 ~^^^^^^^^^
+TypeError: 'int' object is not subscriptable	attempt_02: TypeError; code=yes; TypeError: 'int' object is not subscriptable | tail:     assert candidate(100, 2) == "001"
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042817_HumanEval_65/slm_attempt_02/candidate_run.py", line 13, in circular_shift
+    return str(x)[-shift:] + str(x[:-shift])
+                                 ~^^^^^^^^^
+TypeError: 'int' object is not subscriptable
+HumanEval/67	attempt_01: ValueError; code=yes; ValueError: invalid literal for int() with base 10: 'apples' | tail:     assert candidate("5 apples and 6 oranges",19) == 8
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042911_HumanEval_67/slm_attempt_01/candidate_run.py", line 2, in fruit_distribution
+    return n - sum(map(int, s.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'apples'	attempt_02: ValueError; code=yes; ValueError: invalid literal for int() with base 10: 'apples' | tail:     assert candidate("5 apples and 6 oranges",19) == 8
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042911_HumanEval_67/slm_attempt_02/candidate_run.py", line 2, in fruit_distribution
+    return n - sum(map(int, s.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'apples'
+HumanEval/69	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043006_HumanEval_69/slm_attempt_01/candidate_run.py", line 43, in __run_tests
+    check(globals().get('search'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043006_HumanEval_69/slm_attempt_01/candidate_run.py", line 30, in check
+    assert candidate([9, 2, 4, 1, 5, 1, 5, 2, 5, 7, 7, 7, 3, 10, 1, 5, 4, 2, 8, 4, 1, 9, 10, 7, 10, 2, 8, 10, 9, 4]) == 4
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043006_HumanEval_69/slm_attempt_02/candidate_run.py", line 43, in __run_tests
+    check(globals().get('search'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043006_HumanEval_69/slm_attempt_02/candidate_run.py", line 30, in check
+    assert candidate([9, 2, 4, 1, 5, 1, 5, 2, 5, 7, 7, 7, 3, 10, 1, 5, 4, 2, 8, 4, 1, 9, 10, 7, 10, 2, 8, 10, 9, 4]) == 4
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/70	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('strange_sort_list'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py", line 7, in check
+    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_02/candidate_run.py", line 23, in __run_tests
+    check(globals().get('strange_sort_list'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_02/candidate_run.py", line 7, in check
+    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/71	attempt_01: AssertionError; code=yes; AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043115_HumanEval_71/slm_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('triangle_area'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043115_HumanEval_71/slm_attempt_01/candidate_run.py", line 10, in check
+    assert candidate(3, 4, 5) == 6.00, "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 1 (good for debugging!)	attempt_02: AssertionError; code=yes; AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043115_HumanEval_71/slm_attempt_02/candidate_run.py", line 25, in __run_tests
+    check(globals().get('triangle_area'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043115_HumanEval_71/slm_attempt_02/candidate_run.py", line 10, in check
+    assert candidate(3, 4, 5) == 6.00, "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 1 (good for debugging!)
+HumanEval/74	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043227_HumanEval_74/slm_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('total_match'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043227_HumanEval_74/slm_attempt_01/candidate_run.py", line 14, in check
+    assert candidate(['hi', 'admin'], ['hI', 'hi', 'hii']) == ['hi', 'admin']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043227_HumanEval_74/slm_attempt_02/candidate_run.py", line 25, in __run_tests
+    check(globals().get('total_match'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043227_HumanEval_74/slm_attempt_02/candidate_run.py", line 9, in check
+    assert candidate(['hi', 'admin'], ['hi', 'hi']) == ['hi', 'hi']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/75	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043303_HumanEval_75/slm_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('is_multiply_prime'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043303_HumanEval_75/slm_attempt_01/candidate_run.py", line 11, in check
+    assert candidate(5) == False
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043303_HumanEval_75/slm_attempt_02/candidate_run.py", line 25, in __run_tests
+    check(globals().get('is_multiply_prime'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043303_HumanEval_75/slm_attempt_02/candidate_run.py", line 11, in check
+    assert candidate(5) == False
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/76	attempt_01: AssertionError; code=yes; AssertionError: This prints if this assert fails 2 (also good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043340_HumanEval_76/slm_attempt_01/candidate_run.py", line 31, in __run_tests
+    check(globals().get('is_simple_power'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043340_HumanEval_76/slm_attempt_01/candidate_run.py", line 26, in check
+    assert candidate(1, 12)==True, "This prints if this assert fails 2 (also good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 2 (also good for debugging!)	attempt_02: UnboundLocalError; code=yes; UnboundLocalError: cannot access local variable 'int' where it is not associated with a value | tail:     assert candidate(16, 2)== True, "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043340_HumanEval_76/slm_attempt_02/candidate_run.py", line 19, in is_simple_power
+    while n**int <= x:
+             ^^^
+UnboundLocalError: cannot access local variable 'int' where it is not associated with a value
+HumanEval/77	attempt_01: AssertionError; code=yes; AssertionError: Third test error: False | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043502_HumanEval_77/slm_attempt_01/candidate_run.py", line 22, in __run_tests
+    check(globals().get('iscube'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043502_HumanEval_77/slm_attempt_01/candidate_run.py", line 9, in check
+    assert candidate(-1) == True, "Third test error: " + str(candidate(-1))
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Third test error: False	attempt_02: AssertionError; code=yes; AssertionError: Third test error: False | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043502_HumanEval_77/slm_attempt_02/candidate_run.py", line 22, in __run_tests
+    check(globals().get('iscube'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043502_HumanEval_77/slm_attempt_02/candidate_run.py", line 9, in check
+    assert candidate(-1) == True, "Third test error: " + str(candidate(-1))
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Third test error: False
+HumanEval/79	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043543_HumanEval_79/slm_attempt_01/candidate_run.py", line 18, in __run_tests
+    check(globals().get('decimal_to_binary'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043543_HumanEval_79/slm_attempt_01/candidate_run.py", line 7, in check
+    assert candidate(0) == "db0db"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043543_HumanEval_79/slm_attempt_02/candidate_run.py", line 29, in __run_tests
+    check(globals().get('decimal_to_binary'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043543_HumanEval_79/slm_attempt_02/candidate_run.py", line 18, in check
+    assert candidate(0) == "db0db"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/81	attempt_01: NameError; code=yes; NameError: name 'grade_equation' is not defined | tail:     return [grade_equation(g) for g in grades]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043649_HumanEval_81/slm_attempt_01/candidate_run.py", line 2, in <listcomp>
+    return [grade_equation(g) for g in grades]
+            ^^^^^^^^^^^^^^
+NameError: name 'grade_equation' is not defined	attempt_02: KeyError; code=yes; KeyError: 3.5 | tail:     return [grade_equation[g] for g in grades]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043649_HumanEval_81/slm_attempt_02/candidate_run.py", line 16, in <listcomp>
+    return [grade_equation[g] for g in grades]
+            ~~~~~~~~~~~~~~^^^
+KeyError: 3.5
+HumanEval/83	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('starts_one_ends'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py", line 12, in check
+    assert candidate(2) == 18
+           ^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_02/candidate_run.py", line 27, in __run_tests
+    check(globals().get('starts_one_ends'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_02/candidate_run.py", line 16, in check
+    assert candidate(2) == 18
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/86	attempt_01: TypeError; code=yes; TypeError: sequence item 0: expected str instance, list found | tail:     assert candidate('Hi') == 'Hi'
+           ^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01/candidate_run.py", line 2, in anti_shuffle
+    return ' '.join(sorted(word) for word in s.split())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: sequence item 0: expected str instance, list found	attempt_02: TypeError; code=yes; TypeError: sequence item 0: expected str instance, list found | tail:     assert candidate('Hi') == 'Hi'
+           ^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_02/candidate_run.py", line 2, in anti_shuffle
+    return ' '.join(sorted(word) for word in s.split())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: sequence item 0: expected str instance, list found
+HumanEval/88	attempt_01: IndexError; code=yes; IndexError: list index out of range | tail:     assert candidate([]) == [], "Error"
+           ^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043939_HumanEval_88/slm_attempt_01/candidate_run.py", line 2, in sort_array
+    return sorted(array, reverse=(array[0] + array[-1]) % 2 == 0)
+                                  ~~~~~^^^
+IndexError: list index out of range	attempt_02: IndexError; code=yes; IndexError: list index out of range | tail:     assert candidate([]) == [], "Error"
+           ^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043939_HumanEval_88/slm_attempt_02/candidate_run.py", line 16, in sort_array
+    return sorted(array, reverse=(array[0] + array[-1]) % 2 == 0)
+                                  ~~~~~^^^
+IndexError: list index out of range
+HumanEval/90	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044105_HumanEval_90/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('next_smallest'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044105_HumanEval_90/slm_attempt_01/candidate_run.py", line 13, in check
+    assert candidate([1, 1]) == None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044105_HumanEval_90/slm_attempt_02/candidate_run.py", line 24, in __run_tests
+    check(globals().get('next_smallest'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044105_HumanEval_90/slm_attempt_02/candidate_run.py", line 13, in check
+    assert candidate([1, 1]) == None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/91	attempt_01: AssertionError; code=yes; AssertionError: Test 2 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044134_HumanEval_91/slm_attempt_01/candidate_run.py", line 20, in __run_tests
+    check(globals().get('is_bored'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044134_HumanEval_91/slm_attempt_01/candidate_run.py", line 8, in check
+    assert candidate("Is the sky blue?") == 0, "Test 2"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 2	attempt_02: AssertionError; code=yes; AssertionError: Test 2 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044134_HumanEval_91/slm_attempt_02/candidate_run.py", line 32, in __run_tests
+    check(globals().get('is_bored'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044134_HumanEval_91/slm_attempt_02/candidate_run.py", line 20, in check
+    assert candidate("Is the sky blue?") == 0, "Test 2"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 2
+HumanEval/93	attempt_01: AssertionError; code=yes; AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py", line 29, in __run_tests
+    check(globals().get('encode'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py", line 18, in check
+    assert candidate('TEST') == 'tgst', "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 1 (good for debugging!)	attempt_02: AssertionError; code=yes; AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_02/candidate_run.py", line 23, in __run_tests
+    check(globals().get('encode'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_02/candidate_run.py", line 12, in check
+    assert candidate('TEST') == 'tgst', "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 1 (good for debugging!)
+HumanEval/101	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044534_HumanEval_101/slm_attempt_01/candidate_run.py", line 21, in __run_tests
+    check(globals().get('words_string'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044534_HumanEval_101/slm_attempt_01/candidate_run.py", line 8, in check
+    assert candidate("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044534_HumanEval_101/slm_attempt_02/candidate_run.py", line 21, in __run_tests
+    check(globals().get('words_string'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044534_HumanEval_101/slm_attempt_02/candidate_run.py", line 8, in check
+    assert candidate("Hi, my name is John") == ["Hi", "my", "name", "is", "John"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/102	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044558_HumanEval_102/slm_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('choose_num'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044558_HumanEval_102/slm_attempt_01/candidate_run.py", line 12, in check
+    assert candidate(13, 12) == -1
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044558_HumanEval_102/slm_attempt_02/candidate_run.py", line 34, in __run_tests
+    check(globals().get('choose_num'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044558_HumanEval_102/slm_attempt_02/candidate_run.py", line 20, in check
+    assert candidate(12, 15) == 14
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/103	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py", line 28, in __run_tests
+    check(globals().get('rounded_avg'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py", line 9, in check
+    assert candidate(1, 5) == "0b11"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_02/candidate_run.py", line 28, in __run_tests
+    check(globals().get('rounded_avg'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_02/candidate_run.py", line 9, in check
+    assert candidate(1, 5) == "0b11"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/106	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044854_HumanEval_106/slm_attempt_01/candidate_run.py", line 13, in __run_tests
+    check(globals().get('f'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044854_HumanEval_106/slm_attempt_01/candidate_run.py", line 6, in check
+    assert candidate(5) == [1, 2, 6, 24, 15]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044854_HumanEval_106/slm_attempt_02/candidate_run.py", line 13, in __run_tests
+    check(globals().get('f'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044854_HumanEval_106/slm_attempt_02/candidate_run.py", line 6, in check
+    assert candidate(5) == [1, 2, 6, 24, 15]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/108	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044955_HumanEval_108/slm_attempt_01/candidate_run.py", line 22, in __run_tests
+    check(globals().get('count_nums'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044955_HumanEval_108/slm_attempt_01/candidate_run.py", line 8, in check
+    assert candidate([-1, -2, 0]) == 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044955_HumanEval_108/slm_attempt_02/candidate_run.py", line 25, in __run_tests
+    check(globals().get('count_nums'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044955_HumanEval_108/slm_attempt_02/candidate_run.py", line 11, in check
+    assert candidate([-1, -2, 0]) == 0
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/110	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045050_HumanEval_110/slm_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('exchange'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045050_HumanEval_110/slm_attempt_01/candidate_run.py", line 10, in check
+    assert candidate([1, 2, 3, 4], [1, 2, 3, 4]) == "YES"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045050_HumanEval_110/slm_attempt_02/candidate_run.py", line 38, in __run_tests
+    check(globals().get('exchange'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045050_HumanEval_110/slm_attempt_02/candidate_run.py", line 26, in check
+    assert candidate([1, 2, 3, 4], [1, 5, 3, 4]) == "NO"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/112	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045243_HumanEval_112/slm_attempt_01/candidate_run.py", line 18, in __run_tests
+    check(globals().get('reverse_delete'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045243_HumanEval_112/slm_attempt_01/candidate_run.py", line 13, in check
+    assert candidate("vabba","v") == ('abba',True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045243_HumanEval_112/slm_attempt_02/candidate_run.py", line 18, in __run_tests
+    check(globals().get('reverse_delete'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045243_HumanEval_112/slm_attempt_02/candidate_run.py", line 13, in check
+    assert candidate("vabba","v") == ('abba',True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/113	attempt_01: AssertionError; code=yes; AssertionError: Test 1 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045315_HumanEval_113/slm_attempt_01/candidate_run.py", line 21, in __run_tests
+    check(globals().get('odd_count'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045315_HumanEval_113/slm_attempt_01/candidate_run.py", line 7, in check
+    assert candidate(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."], "Test 1"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 1	attempt_02: AssertionError; code=yes; AssertionError: Test 1 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045315_HumanEval_113/slm_attempt_02/candidate_run.py", line 21, in __run_tests
+    check(globals().get('odd_count'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045315_HumanEval_113/slm_attempt_02/candidate_run.py", line 7, in check
+    assert candidate(['1234567']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."], "Test 1"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 1
+HumanEval/115	attempt_01: AssertionError; code=yes; AssertionError: Error | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py", line 21, in __run_tests
+    check(globals().get('max_fill'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py", line 10, in check
+    assert candidate([[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]], 2) == 5, "Error"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Error	attempt_02: AssertionError; code=yes; AssertionError: Error | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_02/candidate_run.py", line 23, in __run_tests
+    check(globals().get('max_fill'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_02/candidate_run.py", line 18, in check
+    assert candidate([[1,1,1,1], [1,1,1,1]], 9) == 2, "Error"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Error
+HumanEval/117	attempt_01: AssertionError; code=yes; AssertionError: Fifth test error: [] | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045636_HumanEval_117/slm_attempt_01/candidate_run.py", line 21, in __run_tests
+    check(globals().get('select_words'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045636_HumanEval_117/slm_attempt_01/candidate_run.py", line 11, in check
+    assert candidate("Uncle sam", 3) == ["Uncle"], "Fifth test error: " + str(candidate("Uncle sam", 3))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Fifth test error: []	attempt_02: AssertionError; code=yes; AssertionError: First test error: [] | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045636_HumanEval_117/slm_attempt_02/candidate_run.py", line 27, in __run_tests
+    check(globals().get('select_words'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045636_HumanEval_117/slm_attempt_02/candidate_run.py", line 13, in check
+    assert candidate("Mary had a little lamb", 4) == ["little"], "First test error: " + str(candidate("Mary had a little lamb", 4))      
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: First test error: []
+HumanEval/119	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/120	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_050237_HumanEval_120/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('maximum'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_050237_HumanEval_120/slm_attempt_01/candidate_run.py", line 19, in check
+    assert candidate([1, 2, 3, -23, 243, -400, 0], 0) == []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_050237_HumanEval_120/slm_attempt_02/candidate_run.py", line 24, in __run_tests
+    check(globals().get('maximum'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_050237_HumanEval_120/slm_attempt_02/candidate_run.py", line 19, in check
+    assert candidate([1, 2, 3, -23, 243, -400, 0], 0) == []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/123	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/124	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/126	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/127	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/129	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_074309_HumanEval_129/slm_attempt_01/candidate_run.py", line 45, in __run_tests
+    check(globals().get('minPath'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_074309_HumanEval_129/slm_attempt_01/candidate_run.py", line 28, in check
+    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_074309_HumanEval_129/slm_attempt_02/candidate_run.py", line 47, in __run_tests
+    check(globals().get('minPath'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_074309_HumanEval_129/slm_attempt_02/candidate_run.py", line 30, in check
+    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/130	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/131	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/132	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/133	attempt_01: NameError; code=yes; NameError: name 'math' is not defined | tail:     return sum(math.ceil(x)**2 for x in lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_083412_HumanEval_133/slm_attempt_01/candidate_run.py", line 2, in <genexpr>
+    return sum(math.ceil(x)**2 for x in lst)
+               ^^^^
+NameError: name 'math' is not defined	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/134	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/135	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/136	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/137	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/139	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/140	attempt_01: AssertionError; code=yes; AssertionError: This prints if this assert fails 4 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_132728_HumanEval_140/slm_attempt_01/candidate_run.py", line 18, in __run_tests
+    check(globals().get('fix_spaces'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_132728_HumanEval_140/slm_attempt_01/candidate_run.py", line 12, in check
+    assert candidate("Exa   mple") == "Exa-mple", "This prints if this assert fails 4 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 4 (good for debugging!)	attempt_02: AssertionError; code=yes; AssertionError: This prints if this assert fails 4 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_132728_HumanEval_140/slm_attempt_02/candidate_run.py", line 18, in __run_tests
+    check(globals().get('fix_spaces'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_132728_HumanEval_140/slm_attempt_02/candidate_run.py", line 12, in check
+    assert candidate("Exa   mple") == "Exa-mple", "This prints if this assert fails 4 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 4 (good for debugging!)
+HumanEval/141	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/142	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/143	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/144	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/145	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/146	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/147	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/148	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/149	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/150	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/151	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/152	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/153	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/154	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/155	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/156	attempt_01: SLM_TIMEOUT; code=no; SLM_TIMEOUT	attempt_02: SLM_TIMEOUT; code=no; SLM_TIMEOUT
+HumanEval/157	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_154247_HumanEval_157/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('right_angle_triangle'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_154247_HumanEval_157/slm_attempt_01/candidate_run.py", line 9, in check
+    assert candidate(10, 6, 8) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_154247_HumanEval_157/slm_attempt_02/candidate_run.py", line 24, in __run_tests
+    check(globals().get('right_angle_triangle'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_154247_HumanEval_157/slm_attempt_02/candidate_run.py", line 9, in check
+    assert candidate(10, 6, 8) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/160	attempt_01: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155042_HumanEval_160/slm_attempt_01/candidate_run.py", line 29, in __run_tests
+    check(globals().get('do_algebra'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155042_HumanEval_160/slm_attempt_01/candidate_run.py", line 20, in check
+    assert candidate(['+', '*', '-'], [2, 3, 4, 5]) == 9
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError	attempt_02: AssertionError; code=yes; AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155042_HumanEval_160/slm_attempt_02/candidate_run.py", line 29, in __run_tests
+    check(globals().get('do_algebra'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155042_HumanEval_160/slm_attempt_02/candidate_run.py", line 20, in check
+    assert candidate(['+', '*', '-'], [2, 3, 4, 5]) == 9
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+HumanEval/162	attempt_01: NameError; code=yes; NameError: name 'hashlib' is not defined | tail:     assert candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155417_HumanEval_162/slm_attempt_01/candidate_run.py", line 4, in string_to_md5
+    return hashlib.md5(text.encode()).hexdigest()
+           ^^^^^^^
+NameError: name 'hashlib' is not defined	attempt_02: NameError; code=yes; NameError: name 'hashlib' is not defined | tail:     assert candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155417_HumanEval_162/slm_attempt_02/candidate_run.py", line 4, in string_to_md5
+    return hashlib.md5(text.encode()).hexdigest()
+           ^^^^^^^
+NameError: name 'hashlib' is not defined
+HumanEval/163	attempt_01: AssertionError; code=yes; AssertionError: Test 1 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155450_HumanEval_163/slm_attempt_01/candidate_run.py", line 18, in __run_tests
+    check(globals().get('generate_integers'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155450_HumanEval_163/slm_attempt_01/candidate_run.py", line 7, in check
+    assert candidate(2, 10) == [2, 4, 6, 8], "Test 1"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 1	attempt_02: AssertionError; code=yes; AssertionError: Test 1 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155450_HumanEval_163/slm_attempt_02/candidate_run.py", line 27, in __run_tests
+    check(globals().get('generate_integers'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155450_HumanEval_163/slm_attempt_02/candidate_run.py", line 16, in check
+    assert candidate(2, 10) == [2, 4, 6, 8], "Test 1"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 1

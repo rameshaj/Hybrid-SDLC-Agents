@@ -1,0 +1,3 @@
+- Ensure the function returns a tuple.
+- Use `abs(num)` to remove the sign of the number if it's negative.
+- Ensure the while loop condition is correct. It should be `num > 0` instead of `num >= 0`.

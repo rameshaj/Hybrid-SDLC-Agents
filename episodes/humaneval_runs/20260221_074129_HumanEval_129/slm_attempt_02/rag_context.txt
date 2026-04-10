@@ -1,0 +1,30 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/20 error=NameError fix_actions=['add_guard', 'change_return'] score=0.470
+fix_diff:
+--- slm
++++ llm
+@@ -1,10 +1,12 @@
+-def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+-    """ From a supplied list of numbers (of length at least two) select and return two that are the closest to each
+-    other and return them in order (smaller number, larger number).
+-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])
+-    (2.0, 2.2)
+-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])
+-    (2.0, 2.0)
+-    """
++def find_closest_elements(numbers):
+     numbers.sort()
+-    return numbers[0], numbers[-1]
++    closest_pair = (numbers[0], numbers[1])...
+[case 2] task_id=HumanEval/21 error=NameError fix_actions=[] score=0.373
+fix_diff:
+--- slm
++++ llm
+@@ -1,9 +1,4 @@
+-def rescale_to_unit(numbers: List[float]) -> List[float]:
+-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+-    such that the smallest number will become 0 and the largest will become 1
+-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+-    [0.0, 0.25, 0.5, 0.75, 1.0]
+-    """
++def resca...

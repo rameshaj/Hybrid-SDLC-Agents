@@ -1,0 +1,57 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0) | tail:   File "/opt/anaconda3/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+----------------------------------------------------------------------
+Ran 5 tests in 0.021s
+FAILED (errors=4)
+
+import json
+from glob import glob
+
+
+def task_func(directory, string):
+    """
+    Search for a specific string within the JSON data of files in a given directory and its subdirectories.
+
+    This function recursively scans the specified directory for JSON files, then checks each file to see if 
+    the given string is present within the JSON data structure.
+
+    Parameters:
+    directory (str): The directory path where the search should be performed.
+    string (str): The string to search for within the JSON data of the files.
+
+    Returns:
+    list: A list of file paths (str) containing the string within their JSON data.
+
+    Requirements:
+    - json
+    - pathlib
+    - glob
+
+    Note:
+    - The string search is case-sensitive and looks for a match within the structure of the JSON data, not 
+    just as a substring in the file content.
+    - If the directory does not contain any JSON files or if no JSON files contain the string, an empty list 
+    is returned.
+
+    Example:
+    >>> import tempfile
+    >>> import json
+    >>> directory = tempfile.mkdtemp()
+    >>> with open(directory + "/file1.json", "w") as file:
+    ...     json.dump({"name": "John", "age": 30, "city": "New York"}, file)
+    >>> with open(directory + "/file2.json", "w") as file:
+    ...     json.dump({"book": "Harry Potter", "author": "J.K. Rowling", "quote": "Magic is everywhere!"}, file)
+    >>> files = task_func(directory, "book")
+    >>> len(files)
+    1
+    """

@@ -1,0 +1,49 @@
+user
+Implement task_func(script_path: str, log_path: str) -> dict.
+Run a backup shell script at script_path. Log start time, end time, and exit status to a JSON file at log_path. Return the log dict.
+Return ONLY the function code.
+assistant
+```python
+import subprocess
+import json
+
+def task_func(script_path: str, log_path: str) -> dict:
+    try:
+        # Start logging
+        start_time = subprocess.check_output(['date']).decode().strip()
+        
+        # Run the backup script
+        subprocess.run([script_path], check=True)
+        
+        # End logging
+        end_time = subprocess.check_output(['date']).decode().strip()
+        
+        # Get exit status
+        exit_status = subprocess.check_output(['echo', '0']).decode().strip()
+        
+        # Create log dictionary
+        log_dict = {
+            "start_time": start_time,
+            "end_time": end_time,
+            "exit_status": exit_status
+        }
+        
+        # Write log to file
+        with open(log_path, 'w') as file:
+            json.dump(log_dict, file)
+        
+        return log_dict
+    except subprocess.CalledProcessError as e:
+        # Log error if backup script fails
+        error_message = f"Backup failed: {e}"
+        log_dict = {
+            "start_time": start_time,
+            "end_time": None,
+            "exit_status": error_message
+        }
+        
+        with open(log_path, 'w') as file:
+           
+> EOF by user
+
+

@@ -1,0 +1,42 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: AssertionError: defaultdict(<class 'int'>, {'a': 'B', 'B': 'b', 'A': 'a', 'b': '!', '!': '!'}) != {'Aa': 1, 'aB': 1, 'Bb': 1, 'bC': 1, 'Cc': 1} | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260204_063347_BigCodeBench_931/slm_attempt_01/candidate_run.py", line 61, in test_case_7
+    self.assertEqual(result, expected)
+AssertionError: defaultdict(<class 'int'>, {'a': 'B', 'B': 'b', 'A': 'a', 'b': '!', '!': '!'}) != {'Aa': 1, 'aB': 1, 'Bb': 1, 'bC': 1, 'Cc': 1}
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+FAILED (failures=5)
+
+from collections import defaultdict
+import re
+
+def task_func(word: str) -> dict:
+    """
+    Find the occurrences of each two-letter combination in the sanitized word,
+    where only alphabetic characters are considered.
+
+    Requirements:
+    - collections.defaultdict
+    - re
+    
+    Parameters:
+    word (str): The input string.
+
+    Returns:
+    collections.defaultdict: A dictionary with keys as two-letter combinations and values as their counts in the sanitized word.
+
+    Example:
+    >>> task_func('abcdef')
+    defaultdict(<class 'int'>, {'ab': 1, 'bc': 1, 'cd': 1, 'de': 1, 'ef': 1})
+    >>> task_func('aabbcc')
+    defaultdict(<class 'int'>, {'aa': 1, 'ab': 1, 'bb': 1, 'bc': 1, 'cc': 1})
+    >>> task_func('a1!b@c#d$')
+    defaultdict(<class 'int'>, {'ab': 1, 'bc': 1, 'cd': 1})
+    """

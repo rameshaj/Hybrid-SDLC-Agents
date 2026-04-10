@@ -1,0 +1,3 @@
+Implement task_func(csv_path: str, out_dir: str) -> list[str].
+Read a CSV with a column 'command'; execute each command via subprocess and save stdout to a file per command in out_dir. Return list of output file paths.
+Return ONLY the function code.

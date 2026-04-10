@@ -1,0 +1,3 @@
+- Check if the input is a positive integer.
+- Ensure the while loop condition is correct to stop when n becomes 1.
+- Use the correct modulo operation to check if a number is odd.

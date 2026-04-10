@@ -1,0 +1,14 @@
+def do_algebra(operator, operand):
+    result = operand[0]
+    for i, op in enumerate(operator):
+        if op == '+':
+            result += operand[i + 1]
+        elif op == '-':
+            result -= operand[i + 1]
+        elif op == '*':
+            result *= operand[i + 1]
+        elif op == '//':
+            result //= operand[i + 1]
+        elif op == '**':
+            result **= operand[i + 1]
+    return result

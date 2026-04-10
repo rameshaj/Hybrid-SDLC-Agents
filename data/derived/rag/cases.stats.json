@@ -1,0 +1,9 @@
+{
+  "cases_path": "data/derived/rag/cases.jsonl",
+  "n_cases": 27,
+  "dim": 384,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "metric": "cosine (IP on normalized embeddings)",
+  "normalize": true,
+  "batch_size": 8
+}

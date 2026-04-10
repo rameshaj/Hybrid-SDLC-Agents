@@ -1,0 +1,3 @@
+Implement task_func(path: str, pattern: str) -> str | None.
+Find the most recently modified file in the directory path whose filename matches the regex pattern. Return its full path, or None if none match.
+Return ONLY the function code.

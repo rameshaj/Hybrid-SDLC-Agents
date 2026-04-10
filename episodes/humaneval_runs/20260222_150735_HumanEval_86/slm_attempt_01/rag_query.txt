@@ -1,0 +1,22 @@
+entry_point: anti_shuffle
+error_type: TypeError
+error_summary: TypeError: sequence item 0: expected str instance, list found | tail:     assert candidate('Hi') == 'Hi'
+           ^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_150735_HumanEval_86/slm_attempt_01/candidate_run.py", line 2, in anti_shuffle
+    return ' '.join(sorted(word) for word in s.split())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: sequence item 0: expected str instance, list found
+prompt:
+def anti_shuffle(s):
+    """
+    Write a function that takes a string and returns an ordered version of it.
+    Ordered version of string, is a string where all words (separated by space)
+    are replaced by a new word where all the characters arranged in
+    ascending order based on ascii value.
+    Note: You should keep the order of words and blank spaces in the sentence.
+
+    For example:
+    anti_shuffle('Hi') returns 'Hi'
+    anti_shuffle('hello') returns 'ehllo'
+    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
+    """

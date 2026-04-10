@@ -1,0 +1,55 @@
+[
+  {
+    "id": 14,
+    "case_id": "HumanEval/5::20260212_070827_HumanEval_5",
+    "task_id": "HumanEval/5",
+    "dataset": "HumanEval",
+    "entry_point": "intersperse",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_070827_HumanEval_5/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def intersperse(numbers, delimeter):\n    result = []\n    for i, number in enumerate(numbers):\n        result.append(number)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,7 @@\n-def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n-    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n-    >>> intersperse([], 4)\n-    []\n-    >>> intersperse([1, 2, 3], 4)\n-    [1, 4, 2, 4, 3]\n-    \"\"\"\n-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]\n+def intersperse(numbers, delimeter):\n+    result = []\n+    for i, number in enumerate(numbers):\n+        result.append(number)\n+        if i < len(numbers) - 1:\n+            result.append(delimeter)\n+    return result",
+    "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_070827_HumanEval_5",
+    "timestamp": "20260212_070827",
+    "score": 0.47828665375709534
+  },
+  {
+    "id": 0,
+    "case_id": "HumanEval/0::20260212_064246_HumanEval_0",
+    "task_id": "HumanEval/0",
+    "dataset": "HumanEval",
+    "entry_point": "has_close_elements",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_064246_HumanEval_0/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def has_close_elements(numbers: List[float], threshold: float) -> bool:\n                                    ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def has_close_elements(numbers: list[float], threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,11 +1,4 @@\n-def has_close_elements(numbers: List[float], threshold: float) -> bool:\n-    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n-    given threshold.\n-    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n-    False\n-    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n-    True\n-    \"\"\"\n+def has_close_elements(numbers: list[float], threshold: float) -> bool:\n     for i in range(len(numbers)):\n         for j in range(i + 1, len(numbers)):\n             if abs(numbers[i] - numbers[j]) < threshold:",
+    "prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_064246_HumanEval_0",
+    "timestamp": "20260212_064246",
+    "score": 0.470058798789978
+  },
+  {
+    "id": 4,
+    "case_id": "HumanEval/17::20260213_071722_HumanEval_17",
+    "task_id": "HumanEval/17",
+    "dataset": "HumanEval",
+    "entry_point": "parse_music",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_071722_HumanEval_17/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_music(music_string: str) -> List[int]:\n                                          ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def parse_music(music_string: str) -> list[int]:\n    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n    notes = music_string.split()\n    return [note_durations[note] for note in notes]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def parse_music(music_string: str) -> List[int]:\n-    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n-    Your task is to parse this string and return list of integers corresponding to how many beats does each\n-    not last.\n-\n-    Here is a legend:\n-    'o' - whole note, lasts four beats\n-    'o|' - half note, lasts two beats\n-    '.|' - quater note, lasts one beat\n-\n-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n-    \"\"\"\n-    return [4 if note == 'o' else 2 if note == 'o|' else 1 for note in music_string.split()]\n+def parse_music(music_string: str) -> list[int]:\n+    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n+    notes = music_string.split()\n+    return [note_durations[note] for note in notes]",
+    "prompt": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_071722_HumanEval_17",
+    "timestamp": "20260213_071722",
+    "score": 0.4205050468444824
+  }
+]

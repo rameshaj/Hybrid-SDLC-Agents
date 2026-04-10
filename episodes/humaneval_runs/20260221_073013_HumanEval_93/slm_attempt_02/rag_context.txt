@@ -1,0 +1,36 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/64 error=AssertionError fix_actions=['add_guard'] score=0.398
+fix_diff:
+--- slm
++++ llm
+@@ -1,16 +1,10 @@
+ def vowels_count(s):
+-    """Write a function vowels_count which takes a string representing
+-    a word as input and returns the number of vowels in the string.
+-    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a
+-    vowel, but only when it is at the end of the given word.
+-
+-    Example:
+-    >>> vowels_count("abcde")
+-    2
+-    >>> vowels_count("ACEDY")
+-    3
+-    """
+-    count = sum(1 for char in s if char.lower() in 'aeiou')
+-    if s.endswith('y') and s[:-1].lower() not in 'aeiou':
+-        count += 1
++    vowels = 'aeiou'
++...
+[case 2] task_id=HumanEval/14 error=NameError fix_actions=['change_return'] score=0.385
+fix_diff:
+--- slm
++++ llm
+@@ -1,6 +1,2 @@
+-def all_prefixes(string: str) -> List[str]:
+-    """ Return list of all prefixes from shortest to longest of the input string
+-    >>> all_prefixes('abc')
+-    ['a', 'ab', 'abc']
+-    """
+-    return [string[:i+1] for i in range(len(string))]
++def all_prefixes(string: str) -> list:
++    return [string[:i] for i in range(1, len(string)...

@@ -1,0 +1,148 @@
+# Run Arguments and Experiment Commands
+
+Date captured: 2026-03-14
+
+## 1) QuixBugs (v5) - Script Arguments and How Experiments Were Run
+
+Script:
+- `src/step6_orchestrator_quixbugs_v5_attempts.py`
+
+Required arguments:
+- `--tasks_path` (JSONL task manifest path)
+- `--task_index` (0-based task row index)
+- `--llama_path` (llama CLI path, typically `/usr/local/bin/llama-completion`)
+- `--gguf_model_path` (GGUF model file path)
+
+Optional arguments (defaults from code):
+- `--max_attempts` (default `5`)
+- `--slm_timeout_s` (default `900`)
+- `--slm_max_output_mb` (default `8`)
+- `--skip_rollback` (flag; default off)
+- `--fallback_model` (default empty string, fallback disabled)
+- `--fallback_max_attempts` (default `2`)
+- `--fallback_timeout_s` (default `120`)
+- `--fallback_max_new_tokens` (default `1200`)
+- `--fallback_temp` (default `0.0`)
+- `--repo_root` (default `"."`)
+
+Notes:
+- The test command and buggy file path are read from the selected row in `--tasks_path`.
+- Per task logic enforces a minimum test timeout of 10 seconds from task metadata (`max(task_timeout, 10)`).
+- If `--fallback_model` is set, `OPENAI_API_KEY` must exist in environment.
+
+Typical experiment run (single task, SLM + fallback):
+```bash
+python src/step6_orchestrator_quixbugs_v5_attempts.py \
+  --tasks_path data/quixbugs_tasks_v2.jsonl \
+  --task_index 0 \
+  --llama_path /usr/local/bin/llama-completion \
+  --gguf_model_path models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf \
+  --max_attempts 3 \
+  --slm_timeout_s 400 \
+  --fallback_model gpt-4.1 \
+  --fallback_max_attempts 2 \
+  --fallback_timeout_s 120 \
+  --repo_root .
+```
+
+Typical batch pattern:
+```bash
+for i in $(seq 0 40); do
+  python src/step6_orchestrator_quixbugs_v5_attempts.py \
+    --tasks_path data/quixbugs_tasks_v2.jsonl \
+    --task_index "$i" \
+    --llama_path /usr/local/bin/llama-completion \
+    --gguf_model_path models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf \
+    --max_attempts 3 \
+    --slm_timeout_s 400 \
+    --fallback_model gpt-4.1 \
+    --fallback_max_attempts 2
+done
+```
+
+Run artifacts location:
+- `episodes/quixbugs_runs/attempts/<timestamp>_<algo>/...`
+
+---
+
+## 2) HumanEval (Latest = v2) - Script Arguments and How Experiments Were Run
+
+Script:
+- `src/humaneval/run_humaneval_hybrid_v2.py`
+
+Task selection arguments:
+- `--tasks_path` (default `data/external/humaneval/humaneval_train.jsonl`)
+- `--task_index` (default `-1`)
+- `--task_id` (default empty string)
+- `--max_tasks` (default `-1`)
+
+SLM generation arguments:
+- `--llama_path` (default `/usr/local/bin/llama-completion` or env `LLAMA_COMPLETION`)
+- `--gguf_model_path` (default `models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf`)
+- `--max_new_tokens` (default `256`)
+- `--slm_timeout_s` (default `120`)
+- `--slm_attempts` (default `2`)
+
+Evaluation/routing arguments:
+- `--test_timeout_s` (default `5`)
+- `--pass_threshold` (default `1.0`)
+
+Fallback LLM arguments:
+- `--fallback_attempts` (default `1`)
+- `--fallback_model` (default `gpt-4.2`)
+- `--fallback_timeout_s` (default `120`)
+- `--fallback_max_tokens` (default `512`)
+- `--fallback_temp` (default `0.0`)
+
+RAG and self-debug arguments:
+- `--rag_enabled` (default `0`)
+- `--rag_top_k` (default `3`)
+- `--self_debug_enabled` (default `1`)
+- `--self_debug_max_tokens` (default `128`)
+
+Output argument:
+- `--out_dir` (default `episodes/humaneval_runs`)
+
+Typical experiment run (single task by ID):
+```bash
+python src/humaneval/run_humaneval_hybrid_v2.py \
+  --tasks_path data/external/humaneval/humaneval_train.jsonl \
+  --task_id HumanEval/8 \
+  --llama_path /usr/local/bin/llama-completion \
+  --gguf_model_path models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf \
+  --slm_attempts 2 \
+  --fallback_attempts 2 \
+  --fallback_model gpt-4o-mini \
+  --rag_enabled 1 \
+  --self_debug_enabled 1 \
+  --out_dir episodes/humaneval_runs
+```
+
+Typical experiment run (single task by index):
+```bash
+python src/humaneval/run_humaneval_hybrid_v2.py \
+  --tasks_path data/external/humaneval/humaneval_train.jsonl \
+  --task_index 8 \
+  --slm_attempts 2 \
+  --fallback_attempts 2
+```
+
+Typical full sweep pattern:
+```bash
+python src/humaneval/run_humaneval_hybrid_v2.py \
+  --tasks_path data/external/humaneval/humaneval_train.jsonl \
+  --max_tasks -1 \
+  --slm_attempts 2 \
+  --fallback_attempts 2 \
+  --out_dir episodes/humaneval_runs
+```
+
+Run artifacts location:
+- `episodes/humaneval_runs/<timestamp>_HumanEval_<id>/...`
+- Global summary: `episodes/humaneval_runs/runs_summary.jsonl`
+
+---
+
+Version clarification:
+- QuixBugs requested here is `v5` (captured above).
+- HumanEval latest in this repository is `v2`; a `v5` HumanEval script is not present.

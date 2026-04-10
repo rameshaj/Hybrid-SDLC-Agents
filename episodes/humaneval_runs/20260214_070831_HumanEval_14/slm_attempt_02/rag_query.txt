@@ -1,0 +1,16 @@
+entry_point: all_prefixes
+error_type: NameError
+error_summary: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260214_070831_HumanEval_14/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def all_prefixes(string: str) -> List[str]:
+                                     ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+prompt:
+from typing import List
+
+
+def all_prefixes(string: str) -> List[str]:
+    """ Return list of all prefixes from shortest to longest of the input string
+    >>> all_prefixes('abc')
+    ['a', 'ab', 'abc']
+    """

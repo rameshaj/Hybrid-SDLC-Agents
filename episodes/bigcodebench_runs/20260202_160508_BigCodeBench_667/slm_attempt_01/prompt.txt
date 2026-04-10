@@ -1,0 +1,30 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Keep the imports and signature as shown.
+Use the provided stub and fill in the function body.
+
+import heapq
+import collections
+
+def task_func(x, n):
+    """
+    Find the n most common letters in a dictionary, x, where the key letters and the values are their frequencies.
+
+    Parameters:
+    - x (dict): The dictionary of letter frequencies.
+    - n (int): The number of most frequent letters to return.
+
+    Returns:
+    - list: The n most frequent letters.
+
+    Requirements:
+    - heapq
+    - collections
+
+    Example:
+    >>> task_func({'a': 1, 'b': 2, 'c': 3}, 2)
+    ['c', 'b']
+    """

@@ -1,0 +1,70 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: minPath
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/20 error=NameError fix_actions=['add_guard', 'change_return'] score=0.470
+fix_diff:
+--- slm
++++ llm
+@@ -1,10 +1,12 @@
+-def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+-    """ From a supplied list of numbers (of length at least two) select and return two that are the closest to each
+-    other and return them in order (smaller number, larger number).
+-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])
+-    (2.0, 2.2)
+-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])
+-    (2.0, 2.0)
+-    """
++def find_closest_elements(numbers):
+     numbers.sort()
+-    return numbers[0], numbers[-1]
++    closest_pair = (numbers[0], numbers[1])...
+[case 2] task_id=HumanEval/21 error=NameError fix_actions=[] score=0.373
+fix_diff:
+--- slm
++++ llm
+@@ -1,9 +1,4 @@
+-def rescale_to_unit(numbers: List[float]) -> List[float]:
+-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+-    such that the smallest number will become 0 and the largest will become 1
+-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+-    [0.0, 0.25, 0.5, 0.75, 1.0]
+-    """
++def resca...
+
+def minPath(grid, k):
+    """
+    Given a grid with N rows and N columns (N >= 2) and a positive integer k, 
+    each cell of the grid contains a value. Every integer in the range [1, N * N]
+    inclusive appears exactly once on the cells of the grid.
+
+    You have to find the minimum path of length k in the grid. You can start
+    from any cell, and in each step you can move to any of the neighbor cells,
+    in other words, you can go to cells which share an edge with you current
+    cell.
+    Please note that a path of length k means visiting exactly k cells (not
+    necessarily distinct).
+    You CANNOT go off the grid.
+    A path A (of length k) is considered less than a path B (of length k) if
+    after making the ordered lists of the values on the cells that A and B go
+    through (let's call them lst_A and lst_B), lst_A is lexicographically less
+    than lst_B, in other words, there exist an integer index i (1 <= i <= k)
+    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have
+    lst_A[j] = lst_B[j].
+    It is guaranteed that the answer is unique.
+    Return an ordered list of the values on the cells that the minimum path go through.
+
+    Examples:
+
+        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3
+        Output: [1, 2, 1]
+
+        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1
+        Output: [1]
+    """

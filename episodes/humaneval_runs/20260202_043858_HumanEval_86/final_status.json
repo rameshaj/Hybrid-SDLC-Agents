@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def anti_shuffle(s):\n    return ' '.join(sorted(word) for word in s.split())",
+    "dir": "episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01/candidate_run.py\", line 23, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01/candidate_run.py\", line 20, in __run_tests\n    check(globals().get('anti_shuffle'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate('Hi') == 'Hi'\n           ^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01/candidate_run.py\", line 2, in anti_shuffle\n    return ' '.join(sorted(word) for word in s.split())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: sequence item 0: expected str instance, list found\n",
+      "elapsed_s": 0.04584383964538574,
+      "failure_summary": "TypeError: sequence item 0: expected str instance, list found | tail:     assert candidate('Hi') == 'Hi'\n           ^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01/candidate_run.py\", line 2, in anti_shuffle\n    return ' '.join(sorted(word) for word in s.split())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: sequence item 0: expected str instance, list found"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: TypeError: sequence item 0: expected str instance, list found | tail:     assert candidate('Hi') == 'Hi'\n           ^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_01/candidate_run.py\", line 2, in anti_shuffle\n    return ' '.join(sorted(word) for word in s.split())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: sequence item 0: expected str instance, list found",
+    "attempt_02: TypeError: sequence item 0: expected str instance, list found | tail:     assert candidate('Hi') == 'Hi'\n           ^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043858_HumanEval_86/slm_attempt_02/candidate_run.py\", line 2, in anti_shuffle\n    return ' '.join(sorted(word) for word in s.split())\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: sequence item 0: expected str instance, list found"
+  ],
+  "fallback_failures": []
+}

@@ -1,0 +1,3 @@
+Implement task_func(script_path: str, log_path: str) -> dict.
+Run a backup shell script at script_path. Log start time, end time, and exit status to a JSON file at log_path. Return the log dict.
+Return ONLY the function code.

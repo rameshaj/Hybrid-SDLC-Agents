@@ -1,0 +1,37 @@
+F..FF
+======================================================================
+FAIL: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205719_BigCodeBench_670/slm_attempt_01/candidate_run.py", line 25, in test_case_1
+    self.assertEqual(task_func('c', {'a': 1, 'b': 2, 'c': 3}), 'c')
+AssertionError: '' != 'c'
++ c
+
+======================================================================
+FAIL: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205719_BigCodeBench_670/slm_attempt_01/candidate_run.py", line 32, in test_case_4
+    self.assertEqual(task_func('aabc', {'a': 2, 'b': -5, 'c': 3}), 'aa')
+AssertionError: 'bc' != 'aa'
+- bc
++ aa
+
+
+======================================================================
+FAIL: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_205719_BigCodeBench_670/slm_attempt_01/candidate_run.py", line 35, in test_case_5
+    self.assertEqual(task_func('aabc', {'a': 0, 'b': -1, 'c': 1}), 'c')
+AssertionError: 'bc' != 'c'
+- bc
+? -
++ c
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=3)

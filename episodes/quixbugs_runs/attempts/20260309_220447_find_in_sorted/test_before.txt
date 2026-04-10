@@ -1,0 +1,3 @@
+[FAIL] find_in_sorted case#2 in=[[1, 2, 3, 4, 6, 7, 8], 5] good=-1 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] find_in_sorted case#7 in=[[24, 26, 28, 50, 59], 101] good=-1 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] find_in_sorted failed 2/7 cases

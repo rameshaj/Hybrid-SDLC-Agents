@@ -1,0 +1,20 @@
+entry_point: next_smallest
+error_type: AssertionError
+error_summary: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_161834_HumanEval_90/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('next_smallest'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_161834_HumanEval_90/slm_attempt_01/candidate_run.py", line 13, in check
+    assert candidate([1, 1]) == None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+prompt:
+def next_smallest(lst):
+    """
+    You are given a list of integers.
+    Write a function next_smallest() that returns the 2nd smallest element of the list.
+    Return None if there is no such element.
+    
+    next_smallest([1, 2, 3, 4, 5]) == 2
+    next_smallest([5, 1, 4, 3, 2]) == 2
+    next_smallest([]) == None
+    next_smallest([1, 1]) == None
+    """

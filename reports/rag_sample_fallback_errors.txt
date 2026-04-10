@@ -1,0 +1,32 @@
+task_id	fallback1	fallback2
+HumanEval/0	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/1	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/4	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/5	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/6	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/7	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/8	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/9	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/12	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/119	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/19	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/54	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/64	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/69	PASS	NOT_RUN
+HumanEval/70	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/71	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/74	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/75	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/77	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/79	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/14	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/17	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/20	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/21	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/22	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/25	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/33	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/37	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/76	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/67	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted
+HumanEval/32	ERROR: OpenAI URLError: [Errno 1] Operation not permitted	ERROR: OpenAI URLError: [Errno 1] Operation not permitted

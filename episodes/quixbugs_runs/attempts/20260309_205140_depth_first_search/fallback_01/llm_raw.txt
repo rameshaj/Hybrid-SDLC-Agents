@@ -1,0 +1,19 @@
+diff --git a/python_programs/depth_first_search.py b/python_programs/depth_first_search.py
+index 1234567..89abcdef 100644
+--- a/python_programs/depth_first_search.py
++++ b/python_programs/depth_first_search.py
+@@ -5,7 +5,7 @@ def depth_first_search(startnode, goalnode):
+     nodesvisited = set()
+ 
+     def search_from(node):
+-        if node in nodesvisited:
++        if node in nodesvisited or node is None:
+             return False
+         elif node is goalnode:
+             return True
+         else:
+             return any(
+                 search_from(nextnode) for nextnode in node.successors
+             )
+ 
+     return search_from(startnode)

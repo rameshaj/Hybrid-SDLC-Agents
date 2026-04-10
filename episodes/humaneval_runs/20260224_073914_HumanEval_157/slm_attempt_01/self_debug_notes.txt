@@ -1,0 +1,3 @@
+- The function `right_angle_triangle` is designed to check if the given sides form a right-angled triangle.
+- The failed code returns `a**2 + b**2 == c**2`, which is incorrect. The correct condition for a right-angled triangle is that the square of the length of the hypotenuse (the side opposite the right angle) should be equal to the sum of the squares of the lengths of the other two sides.
+- The correct condition should be `a**2 + b**2 == c**2`.

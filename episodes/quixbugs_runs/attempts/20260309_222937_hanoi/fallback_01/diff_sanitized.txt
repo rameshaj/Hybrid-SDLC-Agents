@@ -1,0 +1,10 @@
+diff --git a/python_programs/hanoi.py b/python_programs/hanoi.py
+index 1234567..89abcdef 100644
+--- a/python_programs/hanoi.py
++++ b/python_programs/hanoi.py
+@@ -1,4 +1,4 @@
+ def hanoi(height, start=1, end=3):
+     steps = []
+     if height > 0:
+-        helper = ({1, 2, 3} - {start} - {end}).pop()
++        helper = (set([1, 2, 3]) - {start} - {end}).pop()

@@ -1,0 +1,3 @@
+- Import the `List` type from the `typing` module.
+- Replace `List` with `list` in the function definition.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?

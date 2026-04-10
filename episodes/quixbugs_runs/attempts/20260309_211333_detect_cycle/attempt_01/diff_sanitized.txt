@@ -1,0 +1,10 @@
+diff --git a/python_programs/detect_cycle.py b/python_programs/detect_cycle.py
+index 1234567..89abcdef 100644
+--- a/python_programs/detect_cycle.py
++++ b/python_programs/detect_cycle.py
+@@ -5,4 +5,4 @@
+     hare = tortoise = node
+ 
+     while True:
+-        if hare.successor is None:
++        if hare is None or hare.successor is None:

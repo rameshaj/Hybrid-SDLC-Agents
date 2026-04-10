@@ -1,0 +1,3 @@
+The square root of the sum of numeric elements: 3.872983346207417
+The square root of the sum of numeric elements: 2.2671568097509267
+The square root of the sum of numeric elements: 70.35623639735144

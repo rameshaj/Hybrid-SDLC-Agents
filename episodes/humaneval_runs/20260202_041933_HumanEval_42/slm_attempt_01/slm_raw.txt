@@ -1,0 +1,22 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: incr_list
+
+def incr_list(l: list):
+    """Return list with elements incremented by 1.
+    >>> incr_list([1, 2, 3])
+    [2, 3, 4]
+    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])
+    [6, 4, 6, 3, 4, 4, 10, 1, 124]
+    """
+
+assistant
+```python
+def incr_list(l: list):
+    return [x + 1 for x in l]
+```
+
+> EOF by user

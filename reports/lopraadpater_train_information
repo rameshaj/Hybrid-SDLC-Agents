@@ -1,0 +1,297 @@
+# LoRA Adapter Training Information (Detailed Session Record)
+
+Generated on: 2026-03-05
+Workspace: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent
+
+## 1) Executive Answers (Direct Yes/No)
+
+- Was the old adapter trained on test dataset? **No**.
+- Was the old adapter trained on eval dataset (for gradient updates)? **No**.
+- Was eval dataset used at all? **Yes**, for periodic evaluation/loss checks only.
+- Old adapter to treat as baseline from your pass/fail runs: **data/derived/finetune/qwen1.5b_lora_fix**.
+
+## 2) Adapter Inventory Found
+
+Under `data/derived/finetune`, these adapter outputs exist:
+
+1. `data/derived/finetune/qwen1.5b_lora_fix_smoketest`
+2. `data/derived/finetune/qwen1.5b_lora_fix`
+3. `data/derived/finetune/qwen1.5b_lora_fix_v2_72`
+
+Timestamp order (oldest to newest):
+
+1. `qwen1.5b_lora_fix_smoketest` (around 2026-02-17)
+2. `qwen1.5b_lora_fix` (around 2026-02-19)
+3. `qwen1.5b_lora_fix_v2_72` (around 2026-02-28)
+
+Important distinction:
+- `qwen1.5b_lora_fix_smoketest` is a smoke-test adapter (sample-based validation artifact).
+- The old main adapter used in your successful evaluations is `qwen1.5b_lora_fix`.
+
+## 3) Mapping to Your Pasted Terminal Runs
+
+From your pasted commands/results:
+
+1. `--adapter_path data/derived/finetune/qwen1.5b_lora_fix_v2_72`
+   - `HumanEval/0` failed (`SyntaxError`)
+2. `--adapter_path data/derived/finetune/qwen1.5b_lora_fix`
+   - `HumanEval/0` passed
+3. `--adapter_path data/derived/finetune/qwen1.5b_lora_fix`
+   - `HumanEval/7` passed
+
+Conclusion from your run logs:
+- Newer adapter (`v2_72`) failed in the shown run.
+- Older adapter (`qwen1.5b_lora_fix`) passed the shown tasks.
+
+## 4) Old Adapter: Training Script Used
+
+Script:
+- `scripts/train_lora_peft.py`
+
+This script:
+- Loads base model with `AutoModelForCausalLM.from_pretrained(...)`
+- Loads tokenizer with `AutoTokenizer.from_pretrained(...)`
+- Applies PEFT LoRA via `LoraConfig` + `get_peft_model(...)`
+- Reads JSONL rows and uses only `input` and `output`
+- Trains with Hugging Face `Trainer` using:
+  - `train_dataset=train_ds`
+  - `eval_dataset=eval_ds`
+- Saves adapter + tokenizer to output directory
+
+Key script locations:
+- CLI args: lines 106-130
+- LoRA construction: lines 137-146
+- dataset wiring: lines 148-150
+- trainer wiring: lines 178-184
+- training call: line 187
+
+## 5) Old Adapter: Dataset Paths Used During Training
+
+Recorded command path evidence indicates old adapter training used:
+
+- Train file:
+  - `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.train.jsonl`
+- Eval file:
+  - `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl`
+- Output dir:
+  - `data/derived/finetune/qwen1.5b_lora_fix`
+
+Evidence source:
+- `reports/session_summary.md` (command block under "Run LoRA training")
+
+## 6) Old Adapter: Confirmed Runtime Training Arguments
+
+From saved:
+- `data/derived/finetune/qwen1.5b_lora_fix/training_args.bin`
+- `data/derived/finetune/qwen1.5b_lora_fix/checkpoint-9/trainer_state.json`
+
+Recovered training args (actual saved run config):
+
+- `output_dir = data/derived/finetune/qwen1.5b_lora_fix`
+- `eval_strategy = steps`
+- `per_device_train_batch_size = 1`
+- `per_device_eval_batch_size = 1`
+- `gradient_accumulation_steps = 8`
+- `learning_rate = 0.0002`
+- `num_train_epochs = 3`
+- `logging_steps = 10`
+- `save_strategy = steps`
+- `save_steps = 3`
+- `save_total_limit = 2`
+- `eval_steps = 3`
+- `seed = 42`
+- `report_to = []`
+- `resume_from_checkpoint = None`
+- `optim = adamw_torch`
+- `lr_scheduler_type = linear`
+
+Training progress from trainer state:
+- `epoch = 3.0`
+- `global_step = 9`
+- `max_steps = 9`
+
+So old adapter training effectively ran:
+- **3 epochs**
+- **9 total optimizer steps**
+- **3 steps per epoch**
+
+## 7) Old Adapter: Confirmed LoRA Configuration
+
+From:
+- `data/derived/finetune/qwen1.5b_lora_fix/adapter_config.json`
+
+Confirmed LoRA config:
+- `base_model_name_or_path = models/hf/qwen2.5-coder-1.5b-instruct`
+- `peft_type = LORA`
+- `task_type = CAUSAL_LM`
+- `r = 16`
+- `lora_alpha = 32`
+- `lora_dropout = 0.05`
+- `bias = none`
+- `target_modules = [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]`
+
+## 8) Was Old Adapter Trained on Eval/Test?
+
+### 8.1 Eval dataset usage
+
+- Eval dataset was passed as `eval_dataset` to `Trainer`.
+- This is for evaluation during training (validation loss/logging), not for gradient updates.
+- Gradient training dataset is `train_dataset`.
+
+### 8.2 Test dataset usage
+
+- The training script has no `--test_file` argument.
+- Only `--train_file` and `--eval_file` are used by training pipeline.
+- Therefore test split is not used in training loop.
+
+### 8.3 Leakage check performed
+
+Train/test overlap check by `task_id` on cleaned split:
+- train rows: 21
+- test rows: 4
+- intersection: empty (`[]`)
+
+This supports separation between train and test splits.
+
+## 9) How the Training Dataset Was Prepared
+
+Preparation script:
+- `scripts/build_finetune_dataset.py`
+
+Default input source:
+- `data/derived/rag/cases.jsonl` (`--cases_path`)
+
+Processing steps:
+
+1. Read each case row from `cases.jsonl`.
+2. Keep row only when `prompt` and `llm_code` are present.
+3. Clean failure summary:
+   - Keeps main error line before any `| tail: ...`
+   - Redacts absolute `/Users/...` paths to `<PATH>`
+4. Build instruction-style `input` text containing:
+   - System instruction ("You are a coding assistant...")
+   - Task prompt
+   - Optional entry point
+   - Optional error type
+   - Failure summary
+   - SLM code
+   - Final instruction: "Return ONLY valid Python code. No explanations, no markdown."
+5. Set `output = llm_code`.
+6. Split by `task_id` using seed and ratios:
+   - train ratio 0.8
+   - val ratio 0.1
+   - remainder test
+7. Write:
+   - full cleaned file
+   - train/val/test files
+   - summary JSON
+
+Files generated (for cleaned set):
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.train.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.test.jsonl`
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.summary.json`
+
+## 10) Training Row Format (Schema)
+
+Rows in `humaneval_slm_fix_pairs.cleaned.train.jsonl` contain:
+
+- `task_id` (metadata)
+- `dataset` (metadata)
+- `entry_point` (metadata)
+- `error_type` (metadata)
+- `input` (training prompt text)
+- `output` (target corrected code)
+
+Training script consumption:
+- `scripts/train_lora_peft.py` uses only:
+  - `input` -> `input_text`
+  - `output` -> `output_text`
+- Metadata fields are preserved in dataset file but ignored by trainer dataset loader.
+
+## 11) Split Summary for Old Adapter Dataset Family
+
+From:
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.summary.json`
+
+Values:
+- `cases_total = 27`
+- `tasks_total = 27`
+- `train_tasks = 21`
+- `val_tasks = 2`
+- `test_tasks = 4`
+- `train_rows = 21`
+- `val_rows = 2`
+- `test_rows = 4`
+- `seed = 42`
+
+## 12) Important Nuance About Script Defaults vs Actual Saved Run
+
+Current `scripts/train_lora_peft.py` file now shows defaults like:
+- `per_device_train_batch_size = 2`
+- `per_device_eval_batch_size = 2`
+- `save_steps = 50`
+- `eval_steps = 50`
+
+But the old adapter saved runtime args prove actual old run used:
+- `per_device_train_batch_size = 1`
+- `per_device_eval_batch_size = 1`
+- `save_steps = 3`
+- `eval_steps = 3`
+
+Interpretation:
+- Either CLI overrides were used at old training time, or script changed after old run.
+- For documentation of old adapter, trust saved artifacts (`training_args.bin`, `trainer_state.json`) as authoritative.
+
+## 13) Evidence File List (Primary)
+
+- Old adapter directory:
+  - `data/derived/finetune/qwen1.5b_lora_fix`
+- Newer adapter directory:
+  - `data/derived/finetune/qwen1.5b_lora_fix_v2_72`
+- Smoke-test adapter directory:
+  - `data/derived/finetune/qwen1.5b_lora_fix_smoketest`
+- Training script:
+  - `scripts/train_lora_peft.py`
+- Dataset builder script:
+  - `scripts/build_finetune_dataset.py`
+- Dataset split summary:
+  - `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.summary.json`
+- Old adapter LoRA config:
+  - `data/derived/finetune/qwen1.5b_lora_fix/adapter_config.json`
+- Old adapter trainer args:
+  - `data/derived/finetune/qwen1.5b_lora_fix/training_args.bin`
+- Old adapter trainer state:
+  - `data/derived/finetune/qwen1.5b_lora_fix/checkpoint-9/trainer_state.json`
+- Command record for old training path usage:
+  - `reports/session_summary.md`
+- Evaluation artifact references (old adapter used):
+  - `reports/val_inference.json`
+  - `reports/test_humaneval_passfail.json`
+- Smoke-test artifact (explicitly not old baseline):
+  - `reports/smoketest_inference.json`
+
+## 14) Final Confirmation Block (Proposal-Ready)
+
+The old baseline LoRA adapter is:
+- `data/derived/finetune/qwen1.5b_lora_fix`
+
+It was trained via:
+- `scripts/train_lora_peft.py`
+
+With primary training file:
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.train.jsonl`
+
+And eval file:
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl`
+
+It was trained for:
+- `3 epochs`
+- `9 steps total`
+
+It was **not** trained on test split:
+- `data/derived/finetune/humaneval_slm_fix_pairs.cleaned.test.jsonl`
+
+Eval split was used only for in-training evaluation, not gradient updates.
+

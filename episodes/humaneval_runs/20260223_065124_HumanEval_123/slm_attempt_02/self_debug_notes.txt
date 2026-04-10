@@ -1,0 +1,3 @@
+- Ensure the input is a positive integer.
+- Use a while loop to iterate until n becomes 1.
+- Append odd numbers to the list.

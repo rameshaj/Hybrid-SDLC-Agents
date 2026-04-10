@@ -1,0 +1,109 @@
+E/opt/anaconda3/lib/python3.11/subprocess.py:1127: ResourceWarning: subprocess 85852 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/anaconda3/lib/python3.11/unittest/case.py:622: ResourceWarning: unclosed file <_io.BufferedReader name=3>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/anaconda3/lib/python3.11/unittest/case.py:622: ResourceWarning: unclosed file <_io.BufferedReader name=5>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+E/opt/anaconda3/lib/python3.11/subprocess.py:1127: ResourceWarning: subprocess 85853 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/anaconda3/lib/python3.11/unittest/case.py:622: ResourceWarning: unclosed file <_io.BufferedReader name=3>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/anaconda3/lib/python3.11/unittest/case.py:622: ResourceWarning: unclosed file <_io.BufferedReader name=5>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py:104: ResourceWarning: unclosed file <_io.BufferedReader name=3>
+  result = task_func('/path/to/short_script.py')
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py:104: ResourceWarning: unclosed file <_io.BufferedReader name=5>
+  result = task_func('/path/to/short_script.py')
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+FE/opt/anaconda3/lib/python3.11/subprocess.py:1127: ResourceWarning: subprocess 85855 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/anaconda3/lib/python3.11/unittest/case.py:622: ResourceWarning: unclosed file <_io.BufferedReader name=3>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/opt/anaconda3/lib/python3.11/unittest/case.py:622: ResourceWarning: unclosed file <_io.BufferedReader name=5>
+  with outcome.testPartExecutor(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py:112: ResourceWarning: unclosed file <_io.BufferedReader name=3>
+  result = task_func(self.test_dir+"/script3.py")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py:112: ResourceWarning: unclosed file <_io.BufferedReader name=5>
+  result = task_func(self.test_dir+"/script3.py")
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.
+======================================================================
+ERROR: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py", line 94, in test_case_1
+    result = task_func('/path/to/short_script.py', 10)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py", line 54, in task_func
+    process.wait(timeout)
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 2038, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['python', '/path/to/short_script.py']' timed out after 0 seconds
+
+======================================================================
+ERROR: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py", line 99, in test_case_2
+    result = task_func(self.test_dir+"/script1.py", 3)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py", line 54, in task_func
+    process.wait(timeout)
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 2038, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['python', 'testdir_task_func/script1.py']' timed out after 0 seconds
+
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py", line 108, in test_case_4
+    result = task_func(self.test_dir+"/script1.py", 20)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py", line 54, in task_func
+    process.wait(timeout)
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 1264, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 2038, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['python', 'testdir_task_func/script1.py']' timed out after 0 seconds
+
+======================================================================
+FAIL: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104/slm_attempt_01/candidate_run.py", line 105, in test_case_3
+    self.assertEqual(result, 'Script executed successfully.')
+AssertionError: 'Terminating process due to timeout.' != 'Script executed successfully.'
+- Terminating process due to timeout.
++ Script executed successfully.
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.088s
+
+FAILED (failures=1, errors=3)

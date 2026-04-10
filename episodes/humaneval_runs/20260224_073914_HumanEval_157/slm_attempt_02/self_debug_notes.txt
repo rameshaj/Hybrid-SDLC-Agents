@@ -1,0 +1,3 @@
+- Ensure the function returns a boolean value.
+- Use the correct mathematical operation for checking the right angle triangle condition.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?

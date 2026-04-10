@@ -1,0 +1,13 @@
+- **Identify the Exception Type**: The first line of the stack trace indicates the type of exception that was thrown. This helps in understanding the nature of the error.
+- **Stack Trace Path**: The subsequent lines show the sequence of method calls leading up to the point where the exception was thrown. Each line represents a method call, starting from the topmost method (the one at the bottom of the stack) and moving down to the current method.
+- **Line Numbers**: Each method call includes a line number, which helps in pinpointing the exact location in the code where the error occurred.
+- **Class Names**: The names of the classes involved in the method calls are listed. This information is crucial for understanding the context of the error.
+- **Stack Trace Summary**: The stack trace summary at the bottom provides a brief overview of the exception and its cause. It often includes the name of the class, the method name, and the line number where the exception was thrown.
+
+[ Prompt: 33.5 t/s | Generation: 6.0 t/s ]
+
+> 
+
+> 
+
+Exiting...

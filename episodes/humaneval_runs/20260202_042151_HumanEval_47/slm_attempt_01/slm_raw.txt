@@ -1,0 +1,27 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: median
+
+def median(l: list):
+    """Return median of elements in the list l.
+    >>> median([3, 1, 2, 4, 5])
+    3
+    >>> median([-10, 4, 6, 1000, 10, 20])
+    15.0
+    """
+
+assistant
+```python
+def median(l: list):
+    l.sort()
+    n = len(l)
+    if n % 2 == 1:
+        return l[n // 2]
+    else:
+        return (l[n // 2 - 1] + l[n // 2]) / 2.0
+```
+
+> EOF by user

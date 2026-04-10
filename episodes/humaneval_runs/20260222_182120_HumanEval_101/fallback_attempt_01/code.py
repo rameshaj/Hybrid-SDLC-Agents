@@ -1,0 +1,3 @@
+def words_string(s):
+    import re
+    return re.findall(r'\b\w+\b', s)

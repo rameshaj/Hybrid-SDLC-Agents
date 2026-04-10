@@ -1,0 +1,61 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: generate_integers
+Previous failures:
+- attempt_01: AssertionError: Test 1 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py", line 18, in __run_tests
+    check(globals().get('generate_integers'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py", line 7, in check
+    assert candidate(2, 10) == [2, 4, 6, 8], "Test 1"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 1
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/19 error=AssertionError fix_actions=['change_return'] score=0.858
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,8 @@
+ def sort_numbers(numbers: str) -> str:
+-    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+-    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.
+-    Return the string with numbers sorted from smallest to largest
+-    >>> sort_numbers('three one five')
+-    'one three five'
+-    """
+-    return ' '.join(sorted(numbers.split()))
++    num_dict = {
++        'zero': 0, 'one': 1, 'two': 2, 'three': 3,
++        'four': 4, 'five': 5, 'six': 6, 'seven': 7,
++        'eight': 8, 'nine': 9
++...
+[case 2] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.850
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 3] task_id=HumanEval/70 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.840
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,15 @@
+ def strange_sort_list(lst):
+-    return sorted(...
+
+def generate_integers(a, b):
+    """
+    Given two positive integers a and b, return the even digits between a
+    and b, in ascending order.
+
+    For example:
+    generate_integers(2, 8) => [2, 4, 6, 8]
+    generate_integers(8, 2) => [2, 4, 6, 8]
+    generate_integers(10, 14) => []
+    """

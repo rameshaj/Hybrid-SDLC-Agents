@@ -1,0 +1,55 @@
+[
+  {
+    "id": 9,
+    "case_id": "HumanEval/25::20260213_075127_HumanEval_25",
+    "task_id": "HumanEval/25",
+    "dataset": "HumanEval",
+    "entry_point": "factorize",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_075127_HumanEval_25/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def factorize(n: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def factorize(n: int) -> list:\n    factors = []\n    divisor = 2\n    while n > 1:\n        while n % divisor == 0:\n            factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    return factors",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,21 +1,9 @@\n-def factorize(n: int) -> List[int]:\n-    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n-    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n-    Input number should be equal to the product of all factors\n-    >>> factorize(8)\n-    [2, 2, 2]\n-    >>> factorize(25)\n-    [5, 5]\n-    >>> factorize(70)\n-    [2, 5, 7]\n-    \"\"\"\n+def factorize(n: int) -> list:\n     factors = []\n     divisor = 2\n-    while divisor * divisor <= n:\n+    while n > 1:\n         while n % divisor == 0:\n             factors.append(divisor)\n             n //= divisor\n         divisor += 1\n-    if n > 1:\n-        factors.append(n)\n     return factors",
+    "prompt": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_075127_HumanEval_25",
+    "timestamp": "20260213_075127",
+    "score": 0.5440089106559753
+  },
+  {
+    "id": 25,
+    "case_id": "HumanEval/8::20260212_073415_HumanEval_8",
+    "task_id": "HumanEval/8",
+    "dataset": "HumanEval",
+    "entry_point": "sum_product",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_073415_HumanEval_8/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def sum_product(numbers: List[int]) -> Tuple[int, int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def sum_product(numbers):\n    total_sum = sum(numbers)\n    total_product = 1\n    for number in numbers:\n        total_product *= number\n    return (total_sum, total_product) if numbers else (0, 1)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,17 +1,6 @@\n-def sum_product(numbers: List[int]) -> Tuple[int, int]:\n-    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n-    Empty sum should be equal to 0 and empty product should be equal to 1.\n-    >>> sum_product([])\n-    (0, 1)\n-    >>> sum_product([1, 2, 3, 4])\n-    (10, 24)\n-    \"\"\"\n-    if not numbers:\n-        return (0, 1)\n-    \n+def sum_product(numbers):\n     total_sum = sum(numbers)\n     total_product = 1\n-    for num in numbers:\n-        total_product *= num\n-    \n-    return total_sum, total_product\n+    for number in numbers:\n+        total_product *= number\n+    return (total_sum, total_product) if numbers else (0, 1)",
+    "prompt": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_073415_HumanEval_8",
+    "timestamp": "20260212_073415",
+    "score": 0.49434706568717957
+  },
+  {
+    "id": 14,
+    "case_id": "HumanEval/5::20260212_070827_HumanEval_5",
+    "task_id": "HumanEval/5",
+    "dataset": "HumanEval",
+    "entry_point": "intersperse",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_070827_HumanEval_5/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def intersperse(numbers, delimeter):\n    result = []\n    for i, number in enumerate(numbers):\n        result.append(number)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,7 @@\n-def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n-    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n-    >>> intersperse([], 4)\n-    []\n-    >>> intersperse([1, 2, 3], 4)\n-    [1, 4, 2, 4, 3]\n-    \"\"\"\n-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]\n+def intersperse(numbers, delimeter):\n+    result = []\n+    for i, number in enumerate(numbers):\n+        result.append(number)\n+        if i < len(numbers) - 1:\n+            result.append(delimeter)\n+    return result",
+    "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_070827_HumanEval_5",
+    "timestamp": "20260212_070827",
+    "score": 0.492951899766922
+  }
+]

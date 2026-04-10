@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "model": "SLM",
+  "attempt": 1,
+  "reason": "score >= threshold",
+  "score": 1.0
+}

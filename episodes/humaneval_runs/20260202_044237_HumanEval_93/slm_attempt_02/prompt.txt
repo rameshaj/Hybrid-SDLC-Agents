@@ -1,0 +1,27 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: encode
+Previous failures:
+- attempt_01: AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py", line 29, in __run_tests
+    check(globals().get('encode'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py", line 18, in check
+    assert candidate('TEST') == 'tgst', "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 1 (good for debugging!)
+
+def encode(message):
+    """
+    Write a function that takes a message, and encodes in such a 
+    way that it swaps case of all letters, replaces all vowels in 
+    the message with the letter that appears 2 places ahead of that 
+    vowel in the english alphabet. 
+    Assume only letters. 
+    
+    Examples:
+    >>> encode('test')
+    'TGST'
+    >>> encode('This is a message')
+    'tHKS KS C MGSSCGG'
+    """

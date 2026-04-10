@@ -1,0 +1,39 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/71 error=AssertionError fix_actions=['change_return'] score=0.786
+fix_diff:
+--- slm
++++ llm
+@@ -1,5 +1,6 @@
+ def triangle_area(a, b, c):
+     if a + b > c and a + c > b and b + c > a:
+-        return round((a * b * c) ** 0.5 / 4, 2)
+-    else:
+-        return -1
++        s = (a + b + c) / 2
++        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
++        return round(area, 2)
++    return -1
+[case 2] task_id=HumanEval/54 error=AssertionError fix_actions=['change_return'] score=0.740
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,2 @@
+ def same_chars(s0: str, s1: str):
+-    """
+-    Check if two words have the same characters.
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+-    True
+-    >>> same_chars('abcd', 'dddddddabc')
+-    True
+-    >>> same_chars('dddddddabc', 'abcd')
+-    True
+-    >>> same_chars('eabcd', 'dddddddabc')
+-    False
+-    >>> same_chars('abcd', 'dddddddabce')
+-    False
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+-    False
+-    """
+-    return sorted(s0) == sorted(s1)
++    return set(s0) == set(s1)
+[case 3] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] sc...

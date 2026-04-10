@@ -1,0 +1,92 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: maximum
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_064708_HumanEval_120/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('maximum'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_064708_HumanEval_120/slm_attempt_01/candidate_run.py", line 19, in check
+    assert candidate([1, 2, 3, -23, 243, -400, 0], 0) == []
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+- attempt_02: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_064708_HumanEval_120/slm_attempt_02/candidate_run.py", line 48, in __run_tests
+    check(globals().get('maximum'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_064708_HumanEval_120/slm_attempt_02/candidate_run.py", line 32, in check
+    assert candidate([4, -4, 4], 2) == [4, 4]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Self-debug notes:
+- Ensure the function `maximum` returns a sorted list of length `k`.
+- The function should handle the input array and the value of `k` correctly.
+- The function should not raise any errors or exceptions.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/70 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.790
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,15 @@
+ def strange_sort_list(lst):
+-    return sorted(lst, key=lambda x: (x % 2, -x))
++    if not lst:
++        return []
++    sorted_lst = sorted(lst)
++    result = []
++    left, right = 0, len(sorted_lst) - 1
++    while left <= right:
++        if left == right:
++            result.append(sorted_lst[left])
++        else:
++            result.append(sorted_lst[left])
++            result.append(sorted_lst[right])
++        left += 1
++        right -= 1
++    return result
+[case 2] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.768
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 3] task_id=HumanEval/71 error=AssertionError fix_actions=['change_return'] score=0.767
+fix_diff:
+--- slm
++++ llm
+@@ -1,5 +1,6 @@
+ def triangle_area(a, b, c):
+     if a + b > c and a + c > b and b + c > a:
+-        return round((a * b * c) ** 0.5 / 4, 2)
+-    else:
+-        retur...
+
+def maximum(arr, k):
+    """
+    Given an array arr of integers and a positive integer k, return a sorted list 
+    of length k with the maximum k numbers in arr.
+
+    Example 1:
+
+        Input: arr = [-3, -4, 5], k = 3
+        Output: [-4, -3, 5]
+
+    Example 2:
+
+        Input: arr = [4, -4, 4], k = 2
+        Output: [4, 4]
+
+    Example 3:
+
+        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1
+        Output: [2]
+
+    Note:
+        1. The length of the array will be in the range of [1, 1000].
+        2. The elements in the array will be in the range of [-1000, 1000].
+        3. 0 <= k <= len(arr)
+    """

@@ -1,0 +1,9 @@
+[FAIL] lcs_length case#1 in=['witch', 'sandwich'] good=2 bad=1
+[FAIL] lcs_length case#2 in=['meow', 'homeowner'] good=4 bad=1
+[FAIL] lcs_length case#4 in=['fun', 'function'] good=3 bad=1
+[FAIL] lcs_length case#5 in=['cyborg', 'cyber'] good=3 bad=1
+[FAIL] lcs_length case#6 in=['physics', 'physics'] good=7 bad=1
+[FAIL] lcs_length case#7 in=['space age', 'pace a'] good=6 bad=1
+[FAIL] lcs_length case#8 in=['flippy', 'floppy'] good=3 bad=2
+[FAIL] lcs_length case#9 in=['acbdegcedbg', 'begcfeubk'] good=3 bad=1
+[FAIL] lcs_length failed 8/9 cases

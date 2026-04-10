@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "case_id": "HumanEval/1::20260212_065147_HumanEval_1",
+    "task_id": "HumanEval/1",
+    "dataset": "HumanEval",
+    "entry_point": "separate_paren_groups",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_065147_HumanEval_1/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def separate_paren_groups(paren_string: str) -> List[str]:\n                                                    ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def separate_paren_groups(paren_string: str) -> list:\n    groups = []\n    current_group = []\n    balance = 0\n    \n    for char in paren_string:\n        if char == '(':\n            if balance == 0 and current_group:\n                groups.append(''.join(current_group).replace(' ', ''))\n                current_group = []\n            current_group.append(char)\n            balance += 1\n        elif char == ')':\n            current_group.append(char)\n            balance -= 1\n            if balance == 0:\n                groups.append(''.join(current_group).replace(' ', ''))\n                current_group = []\n        elif char == ' ':\n            continue\n    \n    return groups",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,24 +1,22 @@\n-def separate_paren_groups(paren_string: str) -> List[str]:\n-    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n-    separate those group into separate strings and return the list of those.\n-    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n-    Ignore any spaces in the input string.\n-    >>> separate_paren_groups('( ) (( )) (( )( ))')\n-    ['()', '(())', '(()())']\n-    \"\"\"\n-    result = []\n-    current_group = ''\n-    depth = 0\n-\n-    for char in paren_string.replace(' ', ''):\n+def separate_paren_groups(paren_string: str) -> list:\n+    groups = []\n+    current_group = []\n+    balance = 0\n+    \n+    for char in paren_string:\n         if char == '(':\n-            depth += 1\n-            current_group += char\n+            if balance == 0 and current_group:\n+                groups.append(''.join(current_group).replace(' ', ''))\n+                current_group = []\n+            current_group.append(char)\n+            balance += 1\n         elif char == ')':\n-            depth -= 1\n-            current_group += char\n-            if depth == 0:\n-                result.append(current_group)\n-                current_group = ''\n-\n-    return result\n+            current_group.append(char)\n+            balance -= 1\n+            if balance == 0:\n+                groups.append(''.join(current_group).replace(' ', ''))\n+                current_group = []\n+        elif char == ' ':\n+            continue\n+    \n+    return groups",
+    "prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_065147_HumanEval_1",
+    "timestamp": "20260212_065147",
+    "score": 0.5655130743980408
+  },
+  {
+    "id": 3,
+    "case_id": "HumanEval/14::20260213_070326_HumanEval_14",
+    "task_id": "HumanEval/14",
+    "dataset": "HumanEval",
+    "entry_point": "all_prefixes",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_070326_HumanEval_14/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def all_prefixes(string: str) -> List[str]:\n                                     ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def all_prefixes(string: str) -> list:\n    return [string[:i] for i in range(1, len(string) + 1)]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,6 +1,2 @@\n-def all_prefixes(string: str) -> List[str]:\n-    \"\"\" Return list of all prefixes from shortest to longest of the input string\n-    >>> all_prefixes('abc')\n-    ['a', 'ab', 'abc']\n-    \"\"\"\n-    return [string[:i+1] for i in range(len(string))]\n+def all_prefixes(string: str) -> list:\n+    return [string[:i] for i in range(1, len(string) + 1)]",
+    "prompt": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_070326_HumanEval_14",
+    "timestamp": "20260213_070326",
+    "score": 0.5495226383209229
+  },
+  {
+    "id": 4,
+    "case_id": "HumanEval/17::20260213_071722_HumanEval_17",
+    "task_id": "HumanEval/17",
+    "dataset": "HumanEval",
+    "entry_point": "parse_music",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_071722_HumanEval_17/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_music(music_string: str) -> List[int]:\n                                          ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def parse_music(music_string: str) -> list[int]:\n    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n    notes = music_string.split()\n    return [note_durations[note] for note in notes]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def parse_music(music_string: str) -> List[int]:\n-    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n-    Your task is to parse this string and return list of integers corresponding to how many beats does each\n-    not last.\n-\n-    Here is a legend:\n-    'o' - whole note, lasts four beats\n-    'o|' - half note, lasts two beats\n-    '.|' - quater note, lasts one beat\n-\n-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n-    \"\"\"\n-    return [4 if note == 'o' else 2 if note == 'o|' else 1 for note in music_string.split()]\n+def parse_music(music_string: str) -> list[int]:\n+    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n+    notes = music_string.split()\n+    return [note_durations[note] for note in notes]",
+    "prompt": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_071722_HumanEval_17",
+    "timestamp": "20260213_071722",
+    "score": 0.5030667781829834
+  }
+]

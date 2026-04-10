@@ -1,0 +1,7 @@
+--- a/src/main/java/com/example/Foo.java
++++ b/src/main/java/com/example/Foo.java
+@@ -40,7 +40,7 @@ public class Foo {
+     public void testBar() {
+         assertEquals(3, bar());
+     }
+ }

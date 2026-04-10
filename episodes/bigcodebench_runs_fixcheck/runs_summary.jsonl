@@ -1,0 +1,5 @@
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck/20260310_081609_BigCodeBench_4"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck/20260310_081914_BigCodeBench_4"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck/20260310_082021_BigCodeBench_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck/20260310_082803_BigCodeBench_270"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck/20260310_083008_BigCodeBench_279"}

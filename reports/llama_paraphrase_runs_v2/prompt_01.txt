@@ -1,0 +1,5 @@
+You are a coding assistant. Write a Python function named task_func(nums: list[int]) -> float.
+
+Task: For all permutations of nums, shuffle each permutation randomly (use random.shuffle) and compute the sum of absolute differences between consecutive elements. Return the average of those sums across all permutations. If nums has length < 2, return 0.0.
+
+Return ONLY the Python code for task_func (no explanations).

@@ -1,0 +1,32 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/20 error=NameError fix_actions=['add_guard', 'change_return'] score=0.611
+fix_diff:
+--- slm
++++ llm
+@@ -1,10 +1,12 @@
+-def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:
+-    """ From a supplied list of numbers (of length at least two) select and return two that are the closest to each
+-    other and return them in order (smaller number, larger number).
+-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])
+-    (2.0, 2.2)
+-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])
+-    (2.0, 2.0)
+-    """
++def find_closest_elements(numbers):
+     numbers.sort()
+-    return numbers[0], numbers[-1]
++    closest_pair = (numbers[0], numbers[1])...
+[case 2] task_id=HumanEval/0 error=NameError fix_actions=[] score=0.528
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+-def has_close_elements(numbers: List[float], threshold: float) -> bool:
+-    """ Check if in given list of numbers, are any two numbers closer to each other than
+-    given threshold.
+-    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+-    False
+-    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+-    True
+-    """
++def has_c...

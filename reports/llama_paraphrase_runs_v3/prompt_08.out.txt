@@ -1,0 +1,17 @@
+user
+Implement task_func(csv_path: str) -> str.
+Given a CSV with columns product, quantity, return the product with the highest total quantity sold. Assume header row.
+Return ONLY the function code.
+assistant
+```python
+import pandas as pd
+
+def task_func(csv_path: str) -> str:
+    df = pd.read_csv(csv_path)
+    max_quantity_product = df[df['quantity'] == df['quantity'].max()]['product'].values[0]
+    return max_quantity_product
+```
+
+> EOF by user
+
+

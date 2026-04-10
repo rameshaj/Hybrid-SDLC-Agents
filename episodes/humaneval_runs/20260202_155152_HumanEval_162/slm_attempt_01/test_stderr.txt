@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155152_HumanEval_162/slm_attempt_01/candidate_run.py", line 23, in <module>
+    __run_tests()
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155152_HumanEval_162/slm_attempt_01/candidate_run.py", line 20, in __run_tests
+    check(globals().get('string_to_md5'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155152_HumanEval_162/slm_attempt_01/candidate_run.py", line 9, in check
+    assert candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155152_HumanEval_162/slm_attempt_01/candidate_run.py", line 4, in string_to_md5
+    return hashlib.md5(text.encode()).hexdigest()
+           ^^^^^^^
+NameError: name 'hashlib' is not defined

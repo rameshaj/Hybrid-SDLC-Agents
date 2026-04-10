@@ -1,0 +1,61 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: rounded_avg
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+- attempt_02: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/4 error=NameError fix_actions=[] score=0.434
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,3 @@
+-def mean_absolute_deviation(numbers: List[float]) -> float:
+-    """ For a given list of input numbers, calculate Mean Absolute Deviation
+-    around the mean of this dataset.
+-    Mean Absolute Deviation is the average absolute difference between each
+-    element and a centerpoint (mean in this case):
+-    MAD = average | x - x_mean |
+-    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
+-    1.0
+-    """
+-    if not numbers:
+-        return 0.0
+-
++def mean_absolute_deviation(numbers: list[float]) -> float:
+     mean = sum(numbers) / len(numbers)
+     re...
+[case 2] task_id=HumanEval/67 error=ValueError fix_actions=['change_return'] score=0.304
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,5 @@
+-def fruit_distribution(s,n):
+-    return n - sum(map(int, s.split()))
++def fruit_distribution(s, n):
++    words = s.split()
++    apples = int(words[0])
++    oranges = int(words[3])
++    return n - apples - oranges
+[case 3] task_id=HumanEval/8 error=NameError fix_actions=['change_return'] score=0.292
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,6 @@
+-def sum...
+
+def rounded_avg(n, m):
+    """You are given two positive integers n and m, and your task is to compute the
+    average of the integers from n through m (including n and m). 
+    Round the answer to the nearest integer and convert that to binary.
+    If n is greater than m, return -1.
+    Example:
+    rounded_avg(1, 5) => "0b11"
+    rounded_avg(7, 5) => -1
+    rounded_avg(10, 20) => "0b1111"
+    rounded_avg(20, 33) => "0b11010"
+    """

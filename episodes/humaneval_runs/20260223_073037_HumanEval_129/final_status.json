@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def minPath(grid, k):\n    def dfs(x, y, path, visited):\n        if len(path) == k:\n            return path\n        for dx, dy in [(0, 1), (1, 0), (-1, 0), (0, -1)]:\n            nx, ny = x + dx, y + dy\n            if 0 <= nx < N and 0 <= ny < N and (nx, ny) not in visited:\n                visited.add((nx, ny))\n                result = dfs(nx, ny, path + [grid[nx][ny]], visited)\n                if result:\n                    return result\n                visited.remove((nx, ny))\n        return None\n\n    N = len(grid)\n    min_path = []\n    for i in range(N):\n        for j in range(N):\n            visited = {(i, j)}\n            path = [grid[i][j]]\n            result = dfs(i, j, path, visited)\n            if result and (not min_path or result < min_path):\n                min_path = result\n    return min_path",
+    "dir": "episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01/candidate_run.py\", line 50, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01/candidate_run.py\", line 47, in __run_tests\n    check(globals().get('minPath'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01/candidate_run.py\", line 30, in check\n    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "elapsed_s": 0.15789389610290527,
+      "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01/candidate_run.py\", line 47, in __run_tests\n    check(globals().get('minPath'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01/candidate_run.py\", line 30, in check\n    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01/candidate_run.py\", line 47, in __run_tests\n    check(globals().get('minPath'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_073037_HumanEval_129/slm_attempt_01/candidate_run.py\", line 30, in check\n    assert candidate([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 3) == [1, 2, 1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "attempt_02: SLM_TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: ERROR OpenAI URLError: [Errno 51] Network is unreachable",
+    "fallback_02: ERROR OpenAI URLError: [Errno 51] Network is unreachable"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

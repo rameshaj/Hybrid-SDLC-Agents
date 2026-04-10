@@ -1,0 +1,20 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: intersperse
+Previous failures:
+- attempt_01: SLM_TIMEOUT
+- attempt_02: SLM_TIMEOUT
+- fallback_01: ERROR OpenAI URLError: [Errno 1] Operation not permitted
+
+from typing import List
+
+
+def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+    >>> intersperse([], 4)
+    []
+    >>> intersperse([1, 2, 3], 4)
+    [1, 4, 2, 4, 3]
+    """

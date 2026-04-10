@@ -1,0 +1,38 @@
+user
+Implement task_func(csv_path: str, out_dir: str, chunk_size: int) -> list[str].
+Split a CSV into chunks of chunk_size rows (excluding header). Shuffle rows within each chunk and write to separate files in out_dir. Return list of chunk file paths.
+Return ONLY the function code.
+assistant
+```python
+import os
+import random
+import pandas as pd
+
+def task_func(csv_path: str, out_dir: str, chunk_size: int) -> list[str]:
+    # Load the CSV into a DataFrame
+    df = pd.read_csv(csv_path)
+    
+    # Shuffle the DataFrame rows
+    df = df.sample(frac=1).reset_index(drop=True)
+    
+    # Calculate the number of chunks needed
+    num_chunks = len(df) // chunk_size + (len(df) % chunk_size != 0)
+    
+    # Create a list to store the paths of the chunk files
+    chunk_file_paths = []
+    
+    # Split the DataFrame into chunks and write each chunk to a separate file
+    for i in range(num_chunks):
+        start_index = i * chunk_size
+        end_index = start_index + chunk_size if i < num_chunks - 1 else len(df)
+        chunk = df.iloc[start_index:end_index]
+        
+        # Shuffle the rows within the chunk
+        chunk = chunk.sample(frac=1).reset_index(drop=True)
+        
+        # Write the chunk to a file
+        chunk_file_path = os.path.join(out_dir, f"chunk_{i+1}.csv")
+        chunk.to_csv(chunk
+> EOF by user
+
+

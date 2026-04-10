@@ -1,0 +1,3 @@
+Implement task_func(dir_path: str, zip_path: str) -> str.
+Zip all files (non-recursive) in dir_path into zip_path. Return zip_path.
+Return ONLY the function code.

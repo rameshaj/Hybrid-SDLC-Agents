@@ -1,0 +1,26 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def below_zero(operations: List[int]) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False",
+    "dir": "episodes/humaneval_runs/20260206_070057_HumanEval_3/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260206_070057_HumanEval_3/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def below_zero(operations: List[int]) -> bool:\n                               ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?\n",
+      "elapsed_s": 0.053205013275146484,
+      "failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260206_070057_HumanEval_3/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def below_zero(operations: List[int]) -> bool:\n                               ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260206_070057_HumanEval_3/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def below_zero(operations: List[int]) -> bool:\n                               ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "attempt_02: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260206_070057_HumanEval_3/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def below_zero(operations: List[int]) -> bool:\n                               ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+  ],
+  "fallback_failures": [
+    "fallback_01: ERROR OpenAI HTTPError: 404 Not Found {\n    \"error\": {\n        \"message\": \"The model `gpt-4.2` does not exist or you do not have access to it.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}",
+    "fallback_02: ERROR OpenAI HTTPError: 404 Not Found {\n    \"error\": {\n        \"message\": \"The model `gpt-4.2` does not exist or you do not have access to it.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}"
+  ]
+}

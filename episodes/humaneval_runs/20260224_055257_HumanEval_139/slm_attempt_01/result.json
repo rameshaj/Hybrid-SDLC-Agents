@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_055257_HumanEval_139/slm_attempt_01/candidate_run.py\", line 23, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_055257_HumanEval_139/slm_attempt_01/candidate_run.py\", line 20, in __run_tests\n    check(globals().get('special_factorial'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_055257_HumanEval_139/slm_attempt_01/candidate_run.py\", line 10, in check\n    assert candidate(4) == 288, \"Test 4\"\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 4\n",
+  "elapsed_s": 0.08469200134277344,
+  "failure_summary": "AssertionError: Test 4 | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_055257_HumanEval_139/slm_attempt_01/candidate_run.py\", line 20, in __run_tests\n    check(globals().get('special_factorial'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_055257_HumanEval_139/slm_attempt_01/candidate_run.py\", line 10, in check\n    assert candidate(4) == 288, \"Test 4\"\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 4"
+}

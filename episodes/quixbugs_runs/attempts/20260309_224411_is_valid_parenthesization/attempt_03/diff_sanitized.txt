@@ -1,0 +1,4 @@
+diff --git a/python_programs/is_valid_parenthesization.py b/python_programs/is_valid_parenthesization.py
+index 1234567..89abcdef 100644
+--- a/python_programs/is_valid_parenthesization.py
++++ b/python_programs/is_valid_parenthesization.py

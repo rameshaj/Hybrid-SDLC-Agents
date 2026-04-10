@@ -1,0 +1,42 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: circular_shift
+Previous failures:
+- attempt_01: TypeError: 'int' object is not subscriptable | tail:     assert candidate(100, 2) == "001"
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042817_HumanEval_65/slm_attempt_01/candidate_run.py", line 5, in circular_shift
+    return str(x)[-shift:] + str(x[:-shift])
+                                 ~^^^^^^^^^
+TypeError: 'int' object is not subscriptable
+
+def circular_shift(x, shift):
+    """Circular shift the digits of the integer x, shift the digits right by shift
+    and return the result as a string.
+    If shift > number of digits, return digits reversed.
+    >>> circular_shift(12, 1)
+    "21"
+    >>> circular_shift(12, 2)
+    "12"
+    """
+
+assistant
+```python
+def circular_shift(x, shift):
+    """Circular shift the digits of the integer x, shift the digits right by shift
+    and return the result as a string.
+    If shift > number of digits, return digits reversed.
+    >>> circular_shift(12, 1)
+    "21"
+    >>> circular_shift(12, 2)
+    "12"
+    """
+    if shift > len(str(x)):
+        return str(x)[::-1]
+    else:
+        return str(x)[-shift:] + str(x[:-shift])
+```
+
+> EOF by user

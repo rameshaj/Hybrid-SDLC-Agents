@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def is_nested(string):\n    stack = []\n    for char in string:\n        if char == '[':\n            stack.append(char)\n        elif char == ']':\n            if not stack or stack[-1] != '[':\n                return False\n            stack.pop()\n    return len(stack) > 0",
+    "dir": "episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01/candidate_run.py\", line 38, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01/candidate_run.py\", line 35, in __run_tests\n    check(globals().get('is_nested'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01/candidate_run.py\", line 15, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+      "elapsed_s": 0.17412686347961426,
+      "failure_summary": "AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01/candidate_run.py\", line 35, in __run_tests\n    check(globals().get('is_nested'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01/candidate_run.py\", line 15, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01/candidate_run.py\", line 35, in __run_tests\n    check(globals().get('is_nested'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/slm_attempt_01/candidate_run.py\", line 15, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "attempt_02: SLM_TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/fallback_attempt_01/candidate_run.py\", line 38, in __run_tests\n    check(globals().get('is_nested'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/fallback_attempt_01/candidate_run.py\", line 25, in check\n    assert candidate('[[]') == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fallback_02: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/fallback_attempt_02/candidate_run.py\", line 38, in __run_tests\n    check(globals().get('is_nested'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193652_HumanEval_132/fallback_attempt_02/candidate_run.py\", line 25, in check\n    assert candidate('[[]') == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

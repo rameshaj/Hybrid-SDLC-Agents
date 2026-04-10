@@ -1,0 +1,34 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: starts_one_ends
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('starts_one_ends'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043802_HumanEval_83/slm_attempt_01/candidate_run.py", line 12, in check
+    assert candidate(2) == 18
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+
+def starts_one_ends(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """
+
+assistant
+```python
+def starts_one_ends(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """
+    if n == 1:
+        return 1
+    else:
+        return 2 * (10 ** (n - 2)) - 1
+```
+
+> EOF by user

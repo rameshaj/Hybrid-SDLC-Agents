@@ -1,0 +1,3 @@
+- Import hashlib at the beginning of the function.
+- Ensure that hashlib is installed in your Python environment.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?

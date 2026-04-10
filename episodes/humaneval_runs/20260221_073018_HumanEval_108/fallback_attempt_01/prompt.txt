@@ -1,0 +1,52 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: count_nums
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+- attempt_02: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.421
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
++def intersperse(numbers, delimeter):
++    result = []
++    for i, number in enumerate(numbers):
++        result.append(number)
++        if i < len(numbers)...
+[case 2] task_id=HumanEval/8 error=NameError fix_actions=['change_return'] score=0.421
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,6 @@
+-def sum_product(numbers: List[int]) -> Tuple[int, int]:
+-    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+-    Empty sum should be equal to 0 and empty product should be equal to 1.
+-    >>> sum_product([])
+-    (0, 1)
+-    >>> sum_product([1, 2, 3, 4])
+-...
+
+def count_nums(arr):
+    """
+    Write a function count_nums which takes an array of integers and returns
+    the number of elements which has a sum of digits > 0.
+    If a number is negative, then its first signed digit will be negative:
+    e.g. -123 has signed digits -1, 2, and 3.
+    >>> count_nums([]) == 0
+    >>> count_nums([-1, 11, -11]) == 1
+    >>> count_nums([1, 1, 2]) == 3
+    """

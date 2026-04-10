@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py\", line 35, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py\", line 32, in __run_tests\n    check(globals().get('find_zero'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py\", line 26, in check\n    solution = candidate(copy.deepcopy(coeffs))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py\", line 6, in find_zero\n    return bisect(poly, -1000, 1000)\n           ^^^^^^\nNameError: name 'bisect' is not defined\n",
+  "elapsed_s": 0.08442878723144531,
+  "failure_summary": "NameError: name 'bisect' is not defined | tail:     solution = candidate(copy.deepcopy(coeffs))\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py\", line 6, in find_zero\n    return bisect(poly, -1000, 1000)\n           ^^^^^^\nNameError: name 'bisect' is not defined"
+}

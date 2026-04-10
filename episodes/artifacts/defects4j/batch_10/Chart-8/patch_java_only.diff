@@ -1,0 +1,15 @@
+# Java-only patch
+# buggy: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-8-8b
+# fixed: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-8-8f
+
+--- /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-8-8b/source/org/jfree/data/time/Week.java	2026-01-02 18:58:02
++++ /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-8-8f/source/org/jfree/data/time/Week.java	2026-01-02 18:58:12
+@@ -172,7 +172,7 @@
+      */
+     public Week(Date time, TimeZone zone) {
+         // defer argument checking...
+-        this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());
++        this(time, zone, Locale.getDefault());
+     }
+ 
+     /**

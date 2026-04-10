@@ -1,0 +1,11 @@
+{
+  "cases_total": 27,
+  "tasks_total": 27,
+  "rows_total": 27,
+  "train_tasks": 21,
+  "val_tasks": 2,
+  "test_tasks": 4,
+  "train_rows": 21,
+  "val_rows": 2,
+  "test_rows": 4
+}

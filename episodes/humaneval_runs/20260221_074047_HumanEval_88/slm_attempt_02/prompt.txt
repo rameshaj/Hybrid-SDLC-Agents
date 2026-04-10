@@ -1,0 +1,53 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: sort_array
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/37 error=TypeError fix_actions=['change_return'] score=0.402
+fix_diff:
+--- slm
++++ llm
+@@ -1,3 +1,3 @@
+ def sort_even(l: list):
+-    even_indices = [i for i in range(len(l)) if i % 2 == 0]
+-    return [even_indices[i] if i % 2 == 0 else sorted(l[i]) for i in range(len(l))]
++    even_indices = sorted(l[i] for i in range(len(l)) if i % 2 == 0)
++    return [even_indices[i // 2] if i % 2 == 0 else l[i] for i in range(len(l))]
+[case 2] task_id=HumanEval/33 error=TypeError fix_actions=['add_guard', 'change_return'] score=0.379
+fix_diff:
+--- slm
++++ llm
+@@ -1,10 +1,7 @@
+ def sort_third(l: list):
+-    """This function takes a list l and returns a list l' such that
+-    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal
+-    to the values of the corresponding indicies of l, but sorted.
+-    >>> sort_third([1, 2, 3])
+-    [1, 2, 3]
+-    >>> sort_third([5, 6, 3, 4, 8, 9, 2])
+-    [2, 6, 3, 4, 8, 9, 5]
+-    """
+-    return [x if i % 3 != 0 else sorted(x) for i, x in enumerate(l)]
++    sorted_third = sorted(l[i] for i in range(len(l)) if i %...
+[c...
+
+def sort_array(array):
+    """
+    Given an array of non-negative integers, return a copy of the given array after sorting,
+    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,
+    or sort it in descending order if the sum( first index value, last index value) is even.
+
+    Note:
+    * don't change the given array.
+
+    Examples:
+    * sort_array([]) => []
+    * sort_array([5]) => [5]
+    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]
+    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]
+    """

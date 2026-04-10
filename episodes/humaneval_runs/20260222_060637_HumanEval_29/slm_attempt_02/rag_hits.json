@@ -1,0 +1,52 @@
+[
+  {
+    "id": 20,
+    "case_id": "HumanEval/7::20260212_073048_HumanEval_7",
+    "task_id": "HumanEval/7",
+    "dataset": "HumanEval",
+    "entry_point": "filter_by_substring",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_073048_HumanEval_7/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def filter_by_substring(strings: List[str], substring: str) -> List[str]:\n                                     ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def filter_by_substring(strings, substring):\n    return [s for s in strings if substring in s]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,2 @@\n-def filter_by_substring(strings: List[str], substring: str) -> List[str]:\n-    \"\"\" Filter an input list of strings only for ones that contain given substring\n-    >>> filter_by_substring([], 'a')\n-    []\n-    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n-    ['abc', 'bacd', 'array']\n-    \"\"\"\n+def filter_by_substring(strings, substring):\n     return [s for s in strings if substring in s]",
+    "prompt": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_073048_HumanEval_7",
+    "timestamp": "20260212_073048",
+    "score": 0.8552095890045166
+  },
+  {
+    "id": 3,
+    "case_id": "HumanEval/14::20260213_070326_HumanEval_14",
+    "task_id": "HumanEval/14",
+    "dataset": "HumanEval",
+    "entry_point": "all_prefixes",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_070326_HumanEval_14/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def all_prefixes(string: str) -> List[str]:\n                                     ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def all_prefixes(string: str) -> list:\n    return [string[:i] for i in range(1, len(string) + 1)]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,6 +1,2 @@\n-def all_prefixes(string: str) -> List[str]:\n-    \"\"\" Return list of all prefixes from shortest to longest of the input string\n-    >>> all_prefixes('abc')\n-    ['a', 'ab', 'abc']\n-    \"\"\"\n-    return [string[:i+1] for i in range(len(string))]\n+def all_prefixes(string: str) -> list:\n+    return [string[:i] for i in range(1, len(string) + 1)]",
+    "prompt": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_070326_HumanEval_14",
+    "timestamp": "20260213_070326",
+    "score": 0.8516786694526672
+  },
+  {
+    "id": 8,
+    "case_id": "HumanEval/22::20260213_074751_HumanEval_22",
+    "task_id": "HumanEval/22",
+    "dataset": "HumanEval",
+    "entry_point": "filter_integers",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_074751_HumanEval_22/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def filter_integers(values: List[Any]) -> List[int]:\n                                ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def filter_integers(values: list) -> list:\n    return [value for value in values if isinstance(value, int)]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,2 @@\n-def filter_integers(values: List[Any]) -> List[int]:\n-    \"\"\" Filter given list of any python values only for integers\n-    >>> filter_integers(['a', 3.14, 5])\n-    [5]\n-    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n-    [1, 2, 3]\n-    \"\"\"\n+def filter_integers(values: list) -> list:\n     return [value for value in values if isinstance(value, int)]",
+    "prompt": "from typing import List, Any\n\n\ndef filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_074751_HumanEval_22",
+    "timestamp": "20260213_074751",
+    "score": 0.7386482357978821
+  }
+]

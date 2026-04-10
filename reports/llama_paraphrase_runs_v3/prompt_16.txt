@@ -1,0 +1,3 @@
+Implement task_func(log_dir: str, archive_path: str) -> str.
+Create a tar.gz archive of all .log files in log_dir and delete the originals. Return archive_path.
+Return ONLY the function code.

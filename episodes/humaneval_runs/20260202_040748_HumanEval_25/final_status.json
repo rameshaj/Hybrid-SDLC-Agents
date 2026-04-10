@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def factorize(n: int) -> List[int]:\n    factors = []\n    divisor = 2\n    while divisor * divisor <= n:\n        while n % divisor == 0:\n            factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    if n > 1:\n        factors.append(n)\n    return factors",
+    "dir": "episodes/humaneval_runs/20260202_040748_HumanEval_25/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040748_HumanEval_25/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def factorize(n: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?\n",
+      "elapsed_s": 0.04549884796142578,
+      "failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040748_HumanEval_25/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def factorize(n: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040748_HumanEval_25/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def factorize(n: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "attempt_02: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_040748_HumanEval_25/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def factorize(n: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+  ],
+  "fallback_failures": []
+}

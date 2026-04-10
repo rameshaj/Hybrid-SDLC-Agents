@@ -1,0 +1,18 @@
+# Constants
+CARDS = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+
+import random
+from collections import Counter
+
+def task_func(x=1):
+    hands = []
+    all_drawn_cards = []
+    
+    for _ in range(x):
+        hand = random.sample(CARDS, 5)
+        hands.append(hand)
+        all_drawn_cards.extend(hand)
+    
+    card_counter = Counter(all_drawn_cards)
+    
+    return hands, card_counter

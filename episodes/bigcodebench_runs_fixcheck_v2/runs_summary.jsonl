@@ -1,0 +1,30 @@
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_084816_BigCodeBench_4"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_085246_BigCodeBench_220"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_085606_BigCodeBench_270"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_085745_BigCodeBench_279"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_204411_BigCodeBench_295"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_204622_BigCodeBench_320"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_204826_BigCodeBench_330"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_204914_BigCodeBench_348"}
+{"status": "PASS", "model": "SLM", "attempt": 2, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_205132_BigCodeBench_400"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_205435_BigCodeBench_667"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_205522_BigCodeBench_669"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_205719_BigCodeBench_670"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_205848_BigCodeBench_733"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_210049_BigCodeBench_791"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_210321_BigCodeBench_795"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_210705_BigCodeBench_820"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_210907_BigCodeBench_852"}
+{"status": "PASS", "model": "LLM", "attempt": 2, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_213545_BigCodeBench_854"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_213829_BigCodeBench_861"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_213936_BigCodeBench_892"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_214106_BigCodeBench_896"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_214339_BigCodeBench_928"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_214613_BigCodeBench_930"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_214756_BigCodeBench_931"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_215035_BigCodeBench_957"}
+{"status": "PASS", "model": "LLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_215218_BigCodeBench_958"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_215704_BigCodeBench_1104"}
+{"status": "PASS", "model": "LLM", "attempt": 2, "run_dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_220056_BigCodeBench_1111"}

@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "score": 1.0,
+  "rc": 0,
+  "stdout": "The square root of the sum of numeric elements: 3.872983346207417\nThe square root of the sum of numeric elements: 2.2671568097509267\nThe square root of the sum of numeric elements: 70.35623639735144\n",
+  "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n",
+  "elapsed_s": 0.11192703247070312,
+  "failure_summary": "PASS"
+}

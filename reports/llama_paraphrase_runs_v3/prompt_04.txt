@@ -1,0 +1,3 @@
+Implement task_func(letters: list[str], k: int) -> dict[str, float].
+For each letter, generate a list of k random integers in [0, 50]. Return a dict of letter -> mean using numpy.mean.
+Return ONLY the function code.

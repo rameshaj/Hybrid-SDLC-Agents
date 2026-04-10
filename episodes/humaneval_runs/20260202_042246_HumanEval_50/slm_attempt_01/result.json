@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py\", line 26, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('decode_shift'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py\", line 17, in check\n    encoded_str = encode_shift(str)\n                  ^^^^^^^^^^^^\nNameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?\n",
+  "elapsed_s": 0.07491779327392578,
+  "failure_summary": "NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'? | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('decode_shift'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py\", line 17, in check\n    encoded_str = encode_shift(str)\n                  ^^^^^^^^^^^^\nNameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?"
+}

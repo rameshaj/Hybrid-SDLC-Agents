@@ -1,0 +1,79 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: max_fill
+Previous failures:
+- attempt_01: SLM_TIMEOUT
+- attempt_02: SLM_TIMEOUT
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/3 error=NameError fix_actions=[] score=0.437
+fix_diff:
+--- slm
++++ llm
+@@ -1,4 +1,4 @@
+-def below_zero(operations: List[int]) -> bool:
++def below_zero(operations: list[int]) -> bool:
+     balance = 0
+     for operation in operations:
+         balance += operation
+[case 2] task_id=HumanEval/21 error=NameError fix_actions=[] score=0.419
+fix_diff:
+--- slm
++++ llm
+@@ -1,9 +1,4 @@
+-def rescale_to_unit(numbers: List[float]) -> List[float]:
+-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+-    such that the smallest number will become 0 and the largest will become 1
+-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+-    [0.0, 0.25, 0.5, 0.75, 1.0]
+-    """
++def rescale_to_unit(numbers: list[float]) -> list[float]:
+     min_val = min(numbers)
+     max_val = max(numbers)
+     return [(num - min_val) / (max_val - min_val) for num in numbers]
+[case 3] task_id=HumanEval/0 error=NameError fix_actions=[] score=0.383
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+-def has_close_elements(numbers: List[float], threshold: float) -> bool:
+-    """ Check if in given list of numbers, are any two n...
+
+def max_fill(grid, capacity):
+    import math
+    """
+    You are given a rectangular grid of wells. Each row represents a single well,
+    and each 1 in a row represents a single unit of water.
+    Each well has a corresponding bucket that can be used to extract water from it, 
+    and all buckets have the same capacity.
+    Your task is to use the buckets to empty the wells.
+    Output the number of times you need to lower the buckets.
+
+    Example 1:
+        Input: 
+            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]
+            bucket_capacity : 1
+        Output: 6
+
+    Example 2:
+        Input: 
+            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]
+            bucket_capacity : 2
+        Output: 5
+    
+    Example 3:
+        Input: 
+            grid : [[0,0,0], [0,0,0]]
+            bucket_capacity : 5
+        Output: 0
+
+    Constraints:
+        * all wells have the same length
+        * 1 <= grid.length <= 10^2
+        * 1 <= grid[:,1].length <= 10^2
+        * grid[i][j] -> 0 | 1
+        * 1 <= capacity <= 10
+    """

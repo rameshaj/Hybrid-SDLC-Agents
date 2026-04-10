@@ -1,0 +1,6 @@
+[FAIL] gcd case#2 in=[13, 13] good=13 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] gcd case#3 in=[37, 600] good=1 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] gcd case#4 in=[20, 100] good=20 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] gcd case#5 in=[624129, 2061517] good=18913 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] gcd case#6 in=[3, 12] good=3 bad=('__EXC__', "RecursionError('maximum recursion depth exceeded in comparison')")
+[FAIL] gcd failed 5/6 cases

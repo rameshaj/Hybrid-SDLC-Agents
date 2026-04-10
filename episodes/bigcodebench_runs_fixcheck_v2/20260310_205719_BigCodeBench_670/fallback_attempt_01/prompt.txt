@@ -1,0 +1,46 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: AssertionError: 'bc' != 'c' | tail: - bc
+? -
++ c
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+FAILED (failures=3)
+- attempt_02: AssertionError: 'bc' != 'c' | tail: - bc
+? -
++ c
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+FAILED (failures=3)
+
+from itertools import combinations
+import math
+
+def task_func(x, w):
+    """
+    Find the continuous substring of x, which has the maximum total weight, given a dictionary where the keys are characters and the values are their weights.
+
+    Parameters:
+    - x (str): The input string.
+    - w (dict): The dictionary of character weights.
+
+    Returns:
+    - max_substr (str): The continuous substring with the highest weight.
+
+    Requirements:
+    - itertools
+    - math
+
+    Example:
+    >>> task_func('c', {'a': 1, 'b': 2, 'c': 3})
+    'c'
+    >>> task_func('abc', {'a': 10, 'b': -5, 'c': 3})
+    'a'
+    """

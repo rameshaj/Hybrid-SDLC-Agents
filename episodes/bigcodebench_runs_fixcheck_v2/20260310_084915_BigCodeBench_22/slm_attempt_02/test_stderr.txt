@@ -1,0 +1,125 @@
+EEEEEEEE
+======================================================================
+ERROR: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 50, in test_case_1
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 57, in test_case_2
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 64, in test_case_3
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 71, in test_case_4
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 78, in test_case_5
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_case_with_non_integers (__main__.TestCases.test_case_with_non_integers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 85, in test_case_with_non_integers
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_empty_first_list (__main__.TestCases.test_empty_first_list)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 102, in test_empty_first_list
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+======================================================================
+ERROR: test_imbalanced_lists (__main__.TestCases.test_imbalanced_lists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 94, in test_imbalanced_lists
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in task_func
+    combined = [item for sublist in combined if sublist is not None]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_084915_BigCodeBench_22/slm_attempt_02/candidate_run.py", line 35, in <listcomp>
+    combined = [item for sublist in combined if sublist is not None]
+                ^^^^
+NameError: name 'item' is not defined
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.004s
+
+FAILED (errors=8)

@@ -1,0 +1,30 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.421
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
++def intersperse(numbers, delimeter):
++    result = []
++    for i, number in enumerate(numbers):
++        result.append(number)
++        if i < len(numbers)...
+[case 2] task_id=HumanEval/25 error=NameError fix_actions=[] score=0.414
+fix_diff:
+--- slm
++++ llm
+@@ -1,21 +1,9 @@
+-def factorize(n: int) -> List[int]:
+-    """ Return list of prime factors of given integer in the order from smallest to largest.
+-    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.
+-    Input number should be equal to the product of all factors
+-    >>> factorize(8)
+-...

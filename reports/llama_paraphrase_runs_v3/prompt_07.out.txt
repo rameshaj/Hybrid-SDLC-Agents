@@ -1,0 +1,22 @@
+user
+Implement task_func(path: str, pattern: str) -> str | None.
+Find the most recently modified file in the directory path whose filename matches the regex pattern. Return its full path, or None if none match.
+Return ONLY the function code.
+assistant
+```python
+import os
+
+def task_func(path: str, pattern: str) -> str | None:
+    # List all files in the directory that match the pattern
+    matching_files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f)) and re.match(pattern, f)]
+    
+    # Sort the matching files by modification time in descending order
+    matching_files.sort(key=os.path.getmtime, reverse=True)
+    
+    # Return the full path of the most recently modified file
+    return os.path.join(path, matching_files[0]) if matching_files else None
+```
+
+> EOF by user
+
+

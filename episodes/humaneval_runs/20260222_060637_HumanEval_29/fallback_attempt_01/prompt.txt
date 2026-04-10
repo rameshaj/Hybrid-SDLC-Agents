@@ -1,0 +1,68 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: filter_by_prefix
+Previous failures:
+- attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060637_HumanEval_29/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+                                  ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+- attempt_02: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060637_HumanEval_29/slm_attempt_02/candidate_run.py", line 1, in <module>
+    def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+                                  ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+Self-debug notes:
+- Import the `List` type from the `typing` module.
+- Use the correct spelling for the `List` type, which is `List`.
+- Ensure that the function definition includes the `from typing import List` statement.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/7 error=NameError fix_actions=[] score=0.855
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,2 @@
+-def filter_by_substring(strings: List[str], substring: str) -> List[str]:
+-    """ Filter an input list of strings only for ones that contain given substring
+-    >>> filter_by_substring([], 'a')
+-    []
+-    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')
+-    ['abc', 'bacd', 'array']
+-    """
++def filter_by_substring(strings, substring):
+     return [s for s in strings if substring in s]
+[case 2] task_id=HumanEval/14 error=NameError fix_actions=['change_return'] score=0.852
+fix_diff:
+--- slm
++++ llm
+@@ -1,6 +1,2 @@
+-def all_prefixes(string: str) -> List[str]:
+-    """ Return list of all prefixes from shortest to longest of the input string
+-    >>> all_prefixes('abc')
+-    ['a', 'ab', 'abc']
+-    """
+-    return [string[:i+1] for i in range(len(string))]
++def all_prefixes(string: str) -> list:
++    return [string[:i] for i in range(1, len(string) + 1)]
+[case 3] task_id=HumanEval/22 error=NameError fix_actions=[] score=0.739
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,2 @@
+-def filter_integers(values: List[Any]) -> List[int]:
+-...
+
+from typing import List
+
+
+def filter_by_prefix(strings: List[str], prefix: str) -> List[str]:
+    """ Filter an input list of strings only for ones that start with a given prefix.
+    >>> filter_by_prefix([], 'a')
+    []
+    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')
+    ['abc', 'array']
+    """

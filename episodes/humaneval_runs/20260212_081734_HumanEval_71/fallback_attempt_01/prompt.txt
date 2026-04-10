@@ -1,0 +1,30 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: triangle_area
+Previous failures:
+- attempt_01: AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('triangle_area'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_01/candidate_run.py", line 10, in check
+    assert candidate(3, 4, 5) == 6.00, "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 1 (good for debugging!)
+- attempt_02: AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py", line 25, in __run_tests
+    check(globals().get('triangle_area'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py", line 10, in check
+    assert candidate(3, 4, 5) == 6.00, "This prints if this assert fails 1 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 1 (good for debugging!)
+
+def triangle_area(a, b, c):
+    '''
+    Given the lengths of the three sides of a triangle. Return the area of
+    the triangle rounded to 2 decimal points if the three sides form a valid triangle. 
+    Otherwise return -1
+    Three sides make a valid triangle when the sum of any two sides is greater 
+    than the third side.
+    Example:
+    triangle_area(3, 4, 5) == 6.00
+    triangle_area(1, 2, 10) == -1
+    '''

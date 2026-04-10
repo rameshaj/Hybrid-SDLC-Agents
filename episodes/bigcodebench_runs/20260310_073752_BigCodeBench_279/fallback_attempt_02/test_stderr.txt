@@ -1,0 +1,118 @@
+EEEEEEE
+======================================================================
+ERROR: test_card_distribution (__main__.TestCases.test_card_distribution)
+Test if all possible cards appear over multiple executions.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 49, in test_card_distribution
+    all_cards.update(task_func()[0][0])
+                     ^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in task_func
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in <listcomp>
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+                           ^^^^^
+NameError: name 'CARDS' is not defined
+
+======================================================================
+ERROR: test_card_uniqueness (__main__.TestCases.test_card_uniqueness)
+Test if all cards in the hand are unique.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 31, in test_card_uniqueness
+    hand, _ = task_func()
+              ^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in task_func
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in <listcomp>
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+                           ^^^^^
+NameError: name 'CARDS' is not defined
+
+======================================================================
+ERROR: test_counter (__main__.TestCases.test_counter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 24, in test_counter
+    hand, counter = task_func(1)
+                    ^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in task_func
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in <listcomp>
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+                           ^^^^^
+NameError: name 'CARDS' is not defined
+
+======================================================================
+ERROR: test_drawn_size (__main__.TestCases.test_drawn_size)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 18, in test_drawn_size
+    hand, _ = task_func(2)
+              ^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in task_func
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in <listcomp>
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+                           ^^^^^
+NameError: name 'CARDS' is not defined
+
+======================================================================
+ERROR: test_hand_size (__main__.TestCases.test_hand_size)
+Test if the hand contains exactly 5 cards.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 12, in test_hand_size
+    hand, _ = task_func()
+              ^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in task_func
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in <listcomp>
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+                           ^^^^^
+NameError: name 'CARDS' is not defined
+
+======================================================================
+ERROR: test_randomness (__main__.TestCases.test_randomness)
+Test if multiple executions return different hands.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 42, in test_randomness
+    hands = [task_func()[0][0] for _ in range(10)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 42, in <listcomp>
+    hands = [task_func()[0][0] for _ in range(10)]
+             ^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in task_func
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in <listcomp>
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+                           ^^^^^
+NameError: name 'CARDS' is not defined
+
+======================================================================
+ERROR: test_valid_cards (__main__.TestCases.test_valid_cards)
+Test if all cards drawn are valid card values.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 36, in test_valid_cards
+    hand, _ = task_func()
+              ^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in task_func
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279/fallback_attempt_02/candidate_run.py", line 2, in <listcomp>
+    hands = [random.sample(CARDS, 5) for _ in range(x)]
+                           ^^^^^
+NameError: name 'CARDS' is not defined
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (errors=7)

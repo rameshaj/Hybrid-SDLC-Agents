@@ -1,0 +1,4 @@
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260203_070906_BigCodeBench_4/slm_attempt_01/candidate_run.py", line 1
+    .
+    ^
+SyntaxError: invalid syntax

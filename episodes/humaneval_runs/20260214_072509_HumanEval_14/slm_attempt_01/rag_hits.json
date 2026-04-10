@@ -1,0 +1,56 @@
+[
+  {
+    "id": 3,
+    "case_id": "HumanEval/14::20260213_070326_HumanEval_14",
+    "task_id": "HumanEval/14",
+    "dataset": "HumanEval",
+    "entry_point": "all_prefixes",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_070326_HumanEval_14/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def all_prefixes(string: str) -> List[str]:\n                                     ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def all_prefixes(string: str) -> list:\n    return [string[:i] for i in range(1, len(string) + 1)]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,6 +1,2 @@\n-def all_prefixes(string: str) -> List[str]:\n-    \"\"\" Return list of all prefixes from shortest to longest of the input string\n-    >>> all_prefixes('abc')\n-    ['a', 'ab', 'abc']\n-    \"\"\"\n-    return [string[:i+1] for i in range(len(string))]\n+def all_prefixes(string: str) -> list:\n+    return [string[:i] for i in range(1, len(string) + 1)]",
+    "prompt": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_070326_HumanEval_14",
+    "timestamp": "20260213_070326",
+    "score": 0.925965428352356
+  },
+  {
+    "id": 2,
+    "case_id": "HumanEval/12::20260212_074142_HumanEval_12",
+    "task_id": "HumanEval/12",
+    "dataset": "HumanEval",
+    "entry_point": "longest",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074142_HumanEval_12/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def longest(strings: List[str]) -> Optional[str]:\n                         ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def longest(strings):\n    if not strings:\n        return None\n    return max(strings, key=len)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def longest(strings: List[str]) -> Optional[str]:\n-    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n-    strings of the same length. Return None in case the input list is empty.\n-    >>> longest([])\n-\n-    >>> longest(['a', 'b', 'c'])\n-    'a'\n-    >>> longest(['a', 'bb', 'ccc'])\n-    'ccc'\n-    \"\"\"\n+def longest(strings):\n     if not strings:\n         return None\n-    max_length = max(len(s) for s in strings)\n-    return next(s for s in strings if len(s) == max_length)\n+    return max(strings, key=len)",
+    "prompt": "from typing import List, Optional\n\n\ndef longest(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> longest([])\n\n    >>> longest(['a', 'b', 'c'])\n    'a'\n    >>> longest(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_074142_HumanEval_12",
+    "timestamp": "20260212_074142",
+    "score": 0.7468843460083008
+  },
+  {
+    "id": 16,
+    "case_id": "HumanEval/6::20260212_071808_HumanEval_6",
+    "task_id": "HumanEval/6",
+    "dataset": "HumanEval",
+    "entry_point": "parse_nested_parens",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_071808_HumanEval_6/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_nested_parens(paren_string: str) -> List[int]:\n                                                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def parse_nested_parens(paren_string: str) -> list:\n    results = []\n    for group in paren_string.split():\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    return results",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,20 +1,13 @@\n-def parse_nested_parens(paren_string: str) -> List[int]:\n-    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n-    For each of the group, output the deepest level of nesting of parentheses.\n-    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n-\n-    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n-    [2, 3, 1, 3]\n-    \"\"\"\n-    def max_depth(s):\n-        depth = 0\n+def parse_nested_parens(paren_string: str) -> list:\n+    results = []\n+    for group in paren_string.split():\n         max_depth = 0\n-        for char in s:\n+        current_depth = 0\n+        for char in group:\n             if char == '(':\n-                depth += 1\n-                max_depth = max(max_depth, depth)\n+                current_depth += 1\n+                max_depth = max(max_depth, current_depth)\n             elif char == ')':\n-                depth -= 1\n-        return max_depth\n-\n-    return [max_depth(group) for group in paren_string.split()]\n+                current_depth -= 1\n+        results.append(max_depth)\n+    return results",
+    "prompt": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_071808_HumanEval_6",
+    "timestamp": "20260212_071808",
+    "score": 0.7276402711868286
+  }
+]

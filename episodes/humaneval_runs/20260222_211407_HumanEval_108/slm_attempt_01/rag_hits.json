@@ -1,0 +1,53 @@
+[
+  {
+    "id": 10,
+    "case_id": "HumanEval/3::20260206_071641_HumanEval_3",
+    "task_id": "HumanEval/3",
+    "dataset": "HumanEval",
+    "entry_point": "below_zero",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260206_071641_HumanEval_3/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def below_zero(operations: List[int]) -> bool:\n                               ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def below_zero(operations: list[int]) -> bool:\n    balance = 0\n    for operation in operations:\n        balance += operation\n        if balance < 0:\n            return True\n    return False",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,4 +1,4 @@\n-def below_zero(operations: List[int]) -> bool:\n+def below_zero(operations: list[int]) -> bool:\n     balance = 0\n     for operation in operations:\n         balance += operation",
+    "prompt": "from typing import List\n\n\ndef below_zero(operations: List[int]) -> bool:\n    \"\"\" You're given a list of deposit and withdrawal operations on a bank account that starts with\n    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and\n    at that point function should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260206_071641_HumanEval_3",
+    "timestamp": "20260206_071641",
+    "score": 0.4079083204269409
+  },
+  {
+    "id": 14,
+    "case_id": "HumanEval/5::20260212_070827_HumanEval_5",
+    "task_id": "HumanEval/5",
+    "dataset": "HumanEval",
+    "entry_point": "intersperse",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_070827_HumanEval_5/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def intersperse(numbers, delimeter):\n    result = []\n    for i, number in enumerate(numbers):\n        result.append(number)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,7 @@\n-def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n-    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n-    >>> intersperse([], 4)\n-    []\n-    >>> intersperse([1, 2, 3], 4)\n-    [1, 4, 2, 4, 3]\n-    \"\"\"\n-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]\n+def intersperse(numbers, delimeter):\n+    result = []\n+    for i, number in enumerate(numbers):\n+        result.append(number)\n+        if i < len(numbers) - 1:\n+            result.append(delimeter)\n+    return result",
+    "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_070827_HumanEval_5",
+    "timestamp": "20260212_070827",
+    "score": 0.39834892749786377
+  },
+  {
+    "id": 0,
+    "case_id": "HumanEval/0::20260212_064246_HumanEval_0",
+    "task_id": "HumanEval/0",
+    "dataset": "HumanEval",
+    "entry_point": "has_close_elements",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_064246_HumanEval_0/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def has_close_elements(numbers: List[float], threshold: float) -> bool:\n                                    ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def has_close_elements(numbers: list[float], threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,11 +1,4 @@\n-def has_close_elements(numbers: List[float], threshold: float) -> bool:\n-    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n-    given threshold.\n-    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n-    False\n-    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n-    True\n-    \"\"\"\n+def has_close_elements(numbers: list[float], threshold: float) -> bool:\n     for i in range(len(numbers)):\n         for j in range(i + 1, len(numbers)):\n             if abs(numbers[i] - numbers[j]) < threshold:",
+    "prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_064246_HumanEval_0",
+    "timestamp": "20260212_064246",
+    "score": 0.3972536325454712
+  }
+]

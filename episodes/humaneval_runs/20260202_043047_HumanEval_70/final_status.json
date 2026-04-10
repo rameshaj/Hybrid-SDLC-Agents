@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def strange_sort_list(lst):\n    return sorted(lst, key=lambda x: (x % 2, -x))",
+    "dir": "episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py\", line 26, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('strange_sort_list'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "elapsed_s": 0.040290117263793945,
+      "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('strange_sort_list'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('strange_sort_list'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "attempt_02: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_02/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('strange_sort_list'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043047_HumanEval_70/slm_attempt_02/candidate_run.py\", line 7, in check\n    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+  ],
+  "fallback_failures": []
+}

@@ -1,0 +1,45 @@
+import random
+from collections import Counter
+
+def task_func(strings: list) -> dict:
+    pattern_count = Counter()
+    for string in strings:
+        count = string.count('}')
+        if count > 0:
+            pattern_count[count] += 1
+    return dict(pattern_count)
+
+import unittest
+class TestCases(unittest.TestCase):
+    
+    def test_case_1(self):
+        result = task_func(['abcd}def}', 'pqrs}tuv}', 'wxyz}123}', '456}789}', '0ab}cde}'])
+        total_counts = sum(result.values())
+        self.assertEqual(total_counts, 10)
+        for key in result:
+            self.assertTrue(1 <= key <= 2)
+    def test_case_2(self):
+        result = task_func(['abcd', 'pqrs', 'wxyz', '456', '0ab'])
+        total_counts = sum(result.values())
+        self.assertEqual(total_counts, 10)
+        self.assertTrue(0 in result)
+        self.assertEqual(result[0], 10)
+    def test_case_3(self):
+        result = task_func(['a}b}c}d', 'p}q}r}s', 'w}x}y}z', '4}5}6', '0}a}b'])
+        total_counts = sum(result.values())
+        self.assertEqual(total_counts, 10)
+        for key in result:
+            self.assertTrue(2 <= key <= 4)
+    def test_case_4(self):
+        result = task_func([])
+        self.assertEqual(result, Counter())
+    def test_case_5(self):
+        result = task_func(['a}b}c}d}e}f}g}h}i}j}k}l}'])
+        total_counts = sum(result.values())
+        self.assertEqual(total_counts, 10)
+        self.assertTrue(12 in result)
+        self.assertEqual(result[12], 10)
+
+if __name__ == '__main__':
+    import unittest
+    unittest.main()

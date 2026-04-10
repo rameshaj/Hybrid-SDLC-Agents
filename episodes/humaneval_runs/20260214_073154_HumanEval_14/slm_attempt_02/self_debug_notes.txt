@@ -1,0 +1,3 @@
+- Import the `List` type from `typing`.
+- Use `list` instead of `List` for the return type.
+- Ensure the function is defined before it is called in the main block.

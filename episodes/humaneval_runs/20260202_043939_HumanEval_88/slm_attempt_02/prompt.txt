@@ -1,0 +1,28 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: sort_array
+Previous failures:
+- attempt_01: IndexError: list index out of range | tail:     assert candidate([]) == [], "Error"
+           ^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043939_HumanEval_88/slm_attempt_01/candidate_run.py", line 2, in sort_array
+    return sorted(array, reverse=(array[0] + array[-1]) % 2 == 0)
+                                  ~~~~~^^^
+IndexError: list index out of range
+
+def sort_array(array):
+    """
+    Given an array of non-negative integers, return a copy of the given array after sorting,
+    you will sort the given array in ascending order if the sum( first index value, last index value) is odd,
+    or sort it in descending order if the sum( first index value, last index value) is even.
+
+    Note:
+    * don't change the given array.
+
+    Examples:
+    * sort_array([]) => []
+    * sort_array([5]) => [5]
+    * sort_array([2, 4, 3, 0, 1, 5]) => [0, 1, 2, 3, 4, 5]
+    * sort_array([2, 4, 3, 0, 1, 5, 6]) => [6, 5, 4, 3, 2, 1, 0]
+    """

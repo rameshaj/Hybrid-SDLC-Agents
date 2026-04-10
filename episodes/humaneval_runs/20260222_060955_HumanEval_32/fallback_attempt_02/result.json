@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060955_HumanEval_32/fallback_attempt_02/candidate_run.py\", line 4\n    left, right = -1e6, 1e6\n                           ^\nIndentationError: unindent does not match any outer indentation level\n",
+  "elapsed_s": 0.05723714828491211,
+  "failure_summary": "IndentationError: unindent does not match any outer indentation level | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060955_HumanEval_32/fallback_attempt_02/candidate_run.py\", line 4\n    left, right = -1e6, 1e6\n                           ^\nIndentationError: unindent does not match any outer indentation level"
+}

@@ -1,0 +1,45 @@
+FF..FFF
+======================================================================
+FAIL: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214756_BigCodeBench_931/slm_attempt_01/candidate_run.py", line 35, in test_case_1
+    self.assertEqual(result, expected)
+AssertionError: defaultdict(<class 'int'>, {'d': 'e', 'a': 'b', 'e': 'f', 'c': 'd', 'b': 'c'}) != {'ab': 1, 'bc': 1, 'cd': 1, 'de': 1, 'ef': 1}
+
+======================================================================
+FAIL: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214756_BigCodeBench_931/slm_attempt_01/candidate_run.py", line 39, in test_case_2
+    self.assertEqual(result, expected)
+AssertionError: defaultdict(<class 'int'>, {'a': 'a', 'c': 'c', 'b': 'c'}) != {'aa': 1, 'ab': 1, 'bb': 1, 'bc': 1, 'cc': 1}
+
+======================================================================
+FAIL: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214756_BigCodeBench_931/slm_attempt_01/candidate_run.py", line 51, in test_case_5
+    self.assertEqual(result, expected)
+AssertionError: defaultdict(<class 'int'>, {'A': 'b', 'b': 'C', 'C': 'd'}) != {'Ab': 1, 'bC': 1, 'Cd': 1}
+
+======================================================================
+FAIL: test_case_6 (__main__.TestCases.test_case_6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214756_BigCodeBench_931/slm_attempt_01/candidate_run.py", line 56, in test_case_6
+    self.assertEqual(result, expected)
+AssertionError: defaultdict(<class 'int'>, {'a': '1', '1': '!', '!': 'b'}) != {'ab': 1, 'bc': 1, 'cd': 1}
+
+======================================================================
+FAIL: test_case_7 (__main__.TestCases.test_case_7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214756_BigCodeBench_931/slm_attempt_01/candidate_run.py", line 61, in test_case_7
+    self.assertEqual(result, expected)
+AssertionError: defaultdict(<class 'int'>, {'B': 'b', 'b': '!', '!': '!', 'A': 'a', 'a': 'B'}) != {'Aa': 1, 'aB': 1, 'Bb': 1, 'bC': 1, 'Cc': 1}
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=5)

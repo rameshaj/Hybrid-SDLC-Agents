@@ -1,0 +1,55 @@
+[
+  {
+    "id": 14,
+    "case_id": "HumanEval/5::20260212_070827_HumanEval_5",
+    "task_id": "HumanEval/5",
+    "dataset": "HumanEval",
+    "entry_point": "intersperse",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_070827_HumanEval_5/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def intersperse(numbers, delimeter):\n    result = []\n    for i, number in enumerate(numbers):\n        result.append(number)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,7 @@\n-def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n-    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n-    >>> intersperse([], 4)\n-    []\n-    >>> intersperse([1, 2, 3], 4)\n-    [1, 4, 2, 4, 3]\n-    \"\"\"\n-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]\n+def intersperse(numbers, delimeter):\n+    result = []\n+    for i, number in enumerate(numbers):\n+        result.append(number)\n+        if i < len(numbers) - 1:\n+            result.append(delimeter)\n+    return result",
+    "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_070827_HumanEval_5",
+    "timestamp": "20260212_070827",
+    "score": 0.4205024540424347
+  },
+  {
+    "id": 9,
+    "case_id": "HumanEval/25::20260213_075127_HumanEval_25",
+    "task_id": "HumanEval/25",
+    "dataset": "HumanEval",
+    "entry_point": "factorize",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_075127_HumanEval_25/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def factorize(n: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def factorize(n: int) -> list:\n    factors = []\n    divisor = 2\n    while n > 1:\n        while n % divisor == 0:\n            factors.append(divisor)\n            n //= divisor\n        divisor += 1\n    return factors",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,21 +1,9 @@\n-def factorize(n: int) -> List[int]:\n-    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n-    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n-    Input number should be equal to the product of all factors\n-    >>> factorize(8)\n-    [2, 2, 2]\n-    >>> factorize(25)\n-    [5, 5]\n-    >>> factorize(70)\n-    [2, 5, 7]\n-    \"\"\"\n+def factorize(n: int) -> list:\n     factors = []\n     divisor = 2\n-    while divisor * divisor <= n:\n+    while n > 1:\n         while n % divisor == 0:\n             factors.append(divisor)\n             n //= divisor\n         divisor += 1\n-    if n > 1:\n-        factors.append(n)\n     return factors",
+    "prompt": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 2, 2]\n    >>> factorize(25)\n    [5, 5]\n    >>> factorize(70)\n    [2, 5, 7]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_075127_HumanEval_25",
+    "timestamp": "20260213_075127",
+    "score": 0.4141433537006378
+  },
+  {
+    "id": 4,
+    "case_id": "HumanEval/17::20260213_071722_HumanEval_17",
+    "task_id": "HumanEval/17",
+    "dataset": "HumanEval",
+    "entry_point": "parse_music",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_071722_HumanEval_17/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_music(music_string: str) -> List[int]:\n                                          ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def parse_music(music_string: str) -> list[int]:\n    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n    notes = music_string.split()\n    return [note_durations[note] for note in notes]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def parse_music(music_string: str) -> List[int]:\n-    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n-    Your task is to parse this string and return list of integers corresponding to how many beats does each\n-    not last.\n-\n-    Here is a legend:\n-    'o' - whole note, lasts four beats\n-    'o|' - half note, lasts two beats\n-    '.|' - quater note, lasts one beat\n-\n-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n-    \"\"\"\n-    return [4 if note == 'o' else 2 if note == 'o|' else 1 for note in music_string.split()]\n+def parse_music(music_string: str) -> list[int]:\n+    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n+    notes = music_string.split()\n+    return [note_durations[note] for note in notes]",
+    "prompt": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_071722_HumanEval_17",
+    "timestamp": "20260213_071722",
+    "score": 0.3499448001384735
+  }
+]
