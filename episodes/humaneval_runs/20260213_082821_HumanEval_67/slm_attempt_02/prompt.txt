@@ -1,0 +1,26 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: fruit_distribution
+Previous failures:
+- attempt_01: ValueError: invalid literal for int() with base 10: 'apples' | tail:     assert candidate("5 apples and 6 oranges",19) == 8
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_082821_HumanEval_67/slm_attempt_01/candidate_run.py", line 2, in fruit_distribution
+    return n - sum(map(int, s.split()))
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'apples'
+
+def fruit_distribution(s,n):
+    """
+    In this task, you will be given a string that represents a number of apples and oranges 
+    that are distributed in a basket of fruit this basket contains 
+    apples, oranges, and mango fruits. Given the string that represents the total number of 
+    the oranges and apples and an integer that represent the total number of the fruits 
+    in the basket return the number of the mango fruits in the basket.
+    for examble:
+    fruit_distribution("5 apples and 6 oranges", 19) ->19 - 5 - 6 = 8
+    fruit_distribution("0 apples and 1 oranges",3) -> 3 - 0 - 1 = 2
+    fruit_distribution("2 apples and 3 oranges", 100) -> 100 - 2 - 3 = 95
+    fruit_distribution("100 apples and 1 oranges",120) -> 120 - 100 - 1 = 19
+    """

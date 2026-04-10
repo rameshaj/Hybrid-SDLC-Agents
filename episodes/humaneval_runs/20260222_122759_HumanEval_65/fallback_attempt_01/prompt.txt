@@ -1,0 +1,51 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: circular_shift
+Previous failures:
+- attempt_01: SLM_TIMEOUT
+- attempt_02: SLM_TIMEOUT
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.333
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
++def intersperse(numbers, delimeter):
++    result = []
++    for i, number in enumerate(numbers):
++        result.append(number)
++        if i < len(numbers)...
+[case 2] task_id=HumanEval/21 error=NameError fix_actions=[] score=0.308
+fix_diff:
+--- slm
++++ llm
+@@ -1,9 +1,4 @@
+-def rescale_to_unit(numbers: List[float]) -> List[float]:
+-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+-    such that the smallest number will become 0 and the largest will become 1
+-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+-    [0.0, 0.25, 0.5, 0.75, 1.0]
+-    """
++def rescale...
+
+def circular_shift(x, shift):
+    """Circular shift the digits of the integer x, shift the digits right by shift
+    and return the result as a string.
+    If shift > number of digits, return digits reversed.
+    >>> circular_shift(12, 1)
+    "21"
+    >>> circular_shift(12, 2)
+    "12"
+    """

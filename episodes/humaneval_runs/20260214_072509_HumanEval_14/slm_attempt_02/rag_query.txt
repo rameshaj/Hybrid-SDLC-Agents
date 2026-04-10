@@ -1,0 +1,15 @@
+entry_point: all_prefixes
+error_type: SyntaxError
+error_summary: SyntaxError: invalid syntax | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260214_072509_HumanEval_14/slm_attempt_02/candidate_run.py", line 7
+    - Import `List` from `typing`.
+             ^
+SyntaxError: invalid syntax
+prompt:
+from typing import List
+
+
+def all_prefixes(string: str) -> List[str]:
+    """ Return list of all prefixes from shortest to longest of the input string
+    >>> all_prefixes('abc')
+    ['a', 'ab', 'abc']
+    """

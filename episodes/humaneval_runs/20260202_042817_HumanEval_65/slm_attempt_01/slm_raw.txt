@@ -1,0 +1,27 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: circular_shift
+
+def circular_shift(x, shift):
+    """Circular shift the digits of the integer x, shift the digits right by shift
+    and return the result as a string.
+    If shift > number of digits, return digits reversed.
+    >>> circular_shift(12, 1)
+    "21"
+    >>> circular_shift(12, 2)
+    "12"
+    """
+
+assistant
+```python
+def circular_shift(x, shift):
+    if shift > len(str(x)):
+        return str(x)[::-1]
+    else:
+        return str(x)[-shift:] + str(x[:-shift])
+```
+
+> EOF by user

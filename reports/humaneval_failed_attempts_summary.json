@@ -1,0 +1,25 @@
+{
+  "failed_total": 92,
+  "attempt1_error_counts": {
+    "SLM_TIMEOUT": 38,
+    "AssertionError": 32,
+    "NameError": 15,
+    "TypeError": 3,
+    "IndexError": 2,
+    "TIMEOUT": 1,
+    "ValueError": 1
+  },
+  "attempt2_error_counts": {
+    "SLM_TIMEOUT": 39,
+    "AssertionError": 30,
+    "NameError": 12,
+    "TypeError": 4,
+    "IndentationError": 1,
+    "IndexError": 1,
+    "KeyError": 1,
+    "SyntaxError": 1,
+    "TIMEOUT": 1,
+    "UnboundLocalError": 1,
+    "ValueError": 1
+  }
+}

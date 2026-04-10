@@ -1,0 +1,3 @@
+- Import the `List` type from the `typing` module.
+- Use the correct type for the input parameter.
+- Ensure the function returns the concatenated string.

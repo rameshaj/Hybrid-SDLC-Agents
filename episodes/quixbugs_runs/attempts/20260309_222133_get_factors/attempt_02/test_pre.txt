@@ -1,0 +1,11 @@
+[FAIL] get_factors case#2 in=[100] good=[2, 2, 5, 5] bad=[2, 2, 5]
+[FAIL] get_factors case#3 in=[101] good=[101] bad=[]
+[FAIL] get_factors case#4 in=[104] good=[2, 2, 2, 13] bad=[2, 2, 2]
+[FAIL] get_factors case#5 in=[2] good=[2] bad=[]
+[FAIL] get_factors case#6 in=[3] good=[3] bad=[]
+[FAIL] get_factors case#7 in=[17] good=[17] bad=[]
+[FAIL] get_factors case#8 in=[63] good=[3, 3, 7] bad=[3, 3]
+[FAIL] get_factors case#9 in=[74] good=[2, 37] bad=[2]
+[FAIL] get_factors case#10 in=[73] good=[73] bad=[]
+[FAIL] get_factors case#11 in=[9837] good=[3, 3, 1093] bad=[3, 3]
+[FAIL] get_factors failed 10/11 cases

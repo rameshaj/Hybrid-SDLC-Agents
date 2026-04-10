@@ -1,0 +1,31 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/0 error=NameError fix_actions=[] score=0.491
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+-def has_close_elements(numbers: List[float], threshold: float) -> bool:
+-    """ Check if in given list of numbers, are any two numbers closer to each other than
+-    given threshold.
+-    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+-    False
+-    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+-    True
+-    """
++def has_close_elements(numbers: list[float], threshold: float) -> bool:
+     for i in range(len(numbers)):
+         for j in range(i + 1, len(numbers)):
+             if abs(numbers[i] - numbers[j]) < threshold:
+[case 2] task_id=HumanEval/21 error=NameError fix_actions=[] score=0.443
+fix_diff:
+--- slm
++++ llm
+@@ -1,9 +1,4 @@
+-def rescale_to_unit(numbers: List[float]) -> List[float]:
+-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+-    such that the smallest number will become 0 and the largest will become 1
+-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+-    [0.0, 0.25, 0.5, 0.75, 1.0]
+-    """
++def rescale_to_unit(numbers: list[float]) -> list[float]:
+     m...

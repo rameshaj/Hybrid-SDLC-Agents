@@ -1,0 +1,6 @@
+diff --git a/python_programs/bitcount.py b/python_programs/bitcount.py
+--- a/python_programs/bitcount.py
++++ b/python_programs/bitcount.py
+@@ -1,1 +1,1 @@
+-    while n:
++    while n > 0:

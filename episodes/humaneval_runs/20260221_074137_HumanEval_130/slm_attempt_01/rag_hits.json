@@ -1,0 +1,57 @@
+[
+  {
+    "id": 14,
+    "case_id": "HumanEval/5::20260212_070827_HumanEval_5",
+    "task_id": "HumanEval/5",
+    "dataset": "HumanEval",
+    "entry_point": "intersperse",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_070827_HumanEval_5/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def intersperse(numbers, delimeter):\n    result = []\n    for i, number in enumerate(numbers):\n        result.append(number)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,7 @@\n-def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n-    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n-    >>> intersperse([], 4)\n-    []\n-    >>> intersperse([1, 2, 3], 4)\n-    [1, 4, 2, 4, 3]\n-    \"\"\"\n-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]\n+def intersperse(numbers, delimeter):\n+    result = []\n+    for i, number in enumerate(numbers):\n+        result.append(number)\n+        if i < len(numbers) - 1:\n+            result.append(delimeter)\n+    return result",
+    "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_070827_HumanEval_5",
+    "timestamp": "20260212_070827",
+    "score": 0.32379886507987976
+  },
+  {
+    "id": 16,
+    "case_id": "HumanEval/6::20260212_071808_HumanEval_6",
+    "task_id": "HumanEval/6",
+    "dataset": "HumanEval",
+    "entry_point": "parse_nested_parens",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_071808_HumanEval_6/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_nested_parens(paren_string: str) -> List[int]:\n                                                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def parse_nested_parens(paren_string: str) -> list:\n    results = []\n    for group in paren_string.split():\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n        results.append(max_depth)\n    return results",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,20 +1,13 @@\n-def parse_nested_parens(paren_string: str) -> List[int]:\n-    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n-    For each of the group, output the deepest level of nesting of parentheses.\n-    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n-\n-    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n-    [2, 3, 1, 3]\n-    \"\"\"\n-    def max_depth(s):\n-        depth = 0\n+def parse_nested_parens(paren_string: str) -> list:\n+    results = []\n+    for group in paren_string.split():\n         max_depth = 0\n-        for char in s:\n+        current_depth = 0\n+        for char in group:\n             if char == '(':\n-                depth += 1\n-                max_depth = max(max_depth, depth)\n+                current_depth += 1\n+                max_depth = max(max_depth, current_depth)\n             elif char == ')':\n-                depth -= 1\n-        return max_depth\n-\n-    return [max_depth(group) for group in paren_string.split()]\n+                current_depth -= 1\n+        results.append(max_depth)\n+    return results",
+    "prompt": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_071808_HumanEval_6",
+    "timestamp": "20260212_071808",
+    "score": 0.2941320538520813
+  },
+  {
+    "id": 4,
+    "case_id": "HumanEval/17::20260213_071722_HumanEval_17",
+    "task_id": "HumanEval/17",
+    "dataset": "HumanEval",
+    "entry_point": "parse_music",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_071722_HumanEval_17/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_music(music_string: str) -> List[int]:\n                                          ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def parse_music(music_string: str) -> list[int]:\n    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n    notes = music_string.split()\n    return [note_durations[note] for note in notes]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def parse_music(music_string: str) -> List[int]:\n-    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n-    Your task is to parse this string and return list of integers corresponding to how many beats does each\n-    not last.\n-\n-    Here is a legend:\n-    'o' - whole note, lasts four beats\n-    'o|' - half note, lasts two beats\n-    '.|' - quater note, lasts one beat\n-\n-    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n-    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n-    \"\"\"\n-    return [4 if note == 'o' else 2 if note == 'o|' else 1 for note in music_string.split()]\n+def parse_music(music_string: str) -> list[int]:\n+    note_durations = {'o': 4, 'o|': 2, '.|': 1}\n+    notes = music_string.split()\n+    return [note_durations[note] for note in notes]",
+    "prompt": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_071722_HumanEval_17",
+    "timestamp": "20260213_071722",
+    "score": 0.2772819399833679
+  }
+]

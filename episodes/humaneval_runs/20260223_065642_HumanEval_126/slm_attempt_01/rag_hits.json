@@ -1,0 +1,57 @@
+[
+  {
+    "id": 21,
+    "case_id": "HumanEval/70::20260212_081548_HumanEval_70",
+    "task_id": "HumanEval/70",
+    "dataset": "HumanEval",
+    "entry_point": "strange_sort_list",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081548_HumanEval_70/slm_attempt_02/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('strange_sort_list'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081548_HumanEval_70/slm_attempt_02/candidate_run.py\", line 7, in check\n    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    sorted_lst = sorted(lst)\n    result = []\n    left, right = 0, len(sorted_lst) - 1\n    while left <= right:\n        if left == right:\n            result.append(sorted_lst[left])\n        else:\n            result.append(sorted_lst[left])\n            result.append(sorted_lst[right])\n        left += 1\n        right -= 1\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,2 +1,15 @@\n def strange_sort_list(lst):\n-    return sorted(lst, key=lambda x: (x % 2, -x))\n+    if not lst:\n+        return []\n+    sorted_lst = sorted(lst)\n+    result = []\n+    left, right = 0, len(sorted_lst) - 1\n+    while left <= right:\n+        if left == right:\n+            result.append(sorted_lst[left])\n+        else:\n+            result.append(sorted_lst[left])\n+            result.append(sorted_lst[right])\n+        left += 1\n+        right -= 1\n+    return result",
+    "prompt": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n",
+    "run_dir": "episodes/humaneval_runs/20260212_081548_HumanEval_70",
+    "timestamp": "20260212_081548",
+    "score": 0.8669576048851013
+  },
+  {
+    "id": 22,
+    "case_id": "HumanEval/71::20260212_081734_HumanEval_71",
+    "task_id": "HumanEval/71",
+    "dataset": "HumanEval",
+    "entry_point": "triangle_area",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py\", line 25, in __run_tests\n    check(globals().get('triangle_area'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py\", line 10, in check\n    assert candidate(3, 4, 5) == 6.00, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def triangle_area(a, b, c):\n    if a + b > c and a + c > b and b + c > a:\n        s = (a + b + c) / 2\n        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n        return round(area, 2)\n    return -1",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,5 +1,6 @@\n def triangle_area(a, b, c):\n     if a + b > c and a + c > b and b + c > a:\n-        return round((a * b * c) ** 0.5 / 4, 2)\n-    else:\n-        return -1\n+        s = (a + b + c) / 2\n+        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n+        return round(area, 2)\n+    return -1",
+    "prompt": "\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle. \n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater \n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 6.00\n    triangle_area(1, 2, 10) == -1\n    '''\n",
+    "run_dir": "episodes/humaneval_runs/20260212_081734_HumanEval_71",
+    "timestamp": "20260212_081734",
+    "score": 0.8630948066711426
+  },
+  {
+    "id": 5,
+    "case_id": "HumanEval/19::20260212_074839_HumanEval_19",
+    "task_id": "HumanEval/19",
+    "dataset": "HumanEval",
+    "entry_point": "sort_numbers",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074839_HumanEval_19/slm_attempt_02/candidate_run.py\", line 27, in __run_tests\n    check(globals().get('sort_numbers'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074839_HumanEval_19/slm_attempt_02/candidate_run.py\", line 21, in check\n    assert candidate('three five nine') == 'three five nine'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def sort_numbers(numbers: str) -> str:\n    num_dict = {\n        'zero': 0, 'one': 1, 'two': 2, 'three': 3,\n        'four': 4, 'five': 5, 'six': 6, 'seven': 7,\n        'eight': 8, 'nine': 9\n    }\n    sorted_numbers = sorted(numbers.split(), key=lambda x: num_dict[x])\n    return ' '.join(sorted_numbers)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,8 @@\n def sort_numbers(numbers: str) -> str:\n-    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n-    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n-    Return the string with numbers sorted from smallest to largest\n-    >>> sort_numbers('three one five')\n-    'one three five'\n-    \"\"\"\n-    return ' '.join(sorted(numbers.split()))\n+    num_dict = {\n+        'zero': 0, 'one': 1, 'two': 2, 'three': 3,\n+        'four': 4, 'five': 5, 'six': 6, 'seven': 7,\n+        'eight': 8, 'nine': 9\n+    }\n+    sorted_numbers = sorted(numbers.split(), key=lambda x: num_dict[x])\n+    return ' '.join(sorted_numbers)",
+    "prompt": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'one three five'\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_074839_HumanEval_19",
+    "timestamp": "20260212_074839",
+    "score": 0.8225053548812866
+  }
+]

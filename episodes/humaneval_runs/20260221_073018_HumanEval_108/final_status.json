@@ -1,0 +1,27 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "",
+    "dir": "episodes/humaneval_runs/20260221_073018_HumanEval_108/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "NO_CODE",
+      "elapsed_s": 0.0,
+      "failure_summary": "NO_CODE_EXTRACTED"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NO_CODE_EXTRACTED",
+    "attempt_02: NO_CODE_EXTRACTED"
+  ],
+  "fallback_failures": [
+    "fallback_01: ERROR OpenAI HTTPError: 404 Not Found {\n    \"error\": {\n        \"message\": \"The model `gpt-4.2` does not exist or you do not have access to it.\",\n        \"type\": \"invalid_request_error\",\n        \"param\": null,\n        \"code\": \"model_not_found\"\n    }\n}"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

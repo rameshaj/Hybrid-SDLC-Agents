@@ -1,0 +1,74 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: right_angle_triangle
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_073914_HumanEval_157/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('right_angle_triangle'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_073914_HumanEval_157/slm_attempt_01/candidate_run.py", line 9, in check
+    assert candidate(10, 6, 8) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+- attempt_02: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_073914_HumanEval_157/slm_attempt_02/candidate_run.py", line 33, in __run_tests
+    check(globals().get('right_angle_triangle'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_073914_HumanEval_157/slm_attempt_02/candidate_run.py", line 18, in check
+    assert candidate(10, 6, 8) == True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Self-debug notes:
+- Ensure the function returns a boolean value.
+- Use the correct mathematical operation for checking the right angle triangle condition.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/71 error=AssertionError fix_actions=['change_return'] score=0.786
+fix_diff:
+--- slm
++++ llm
+@@ -1,5 +1,6 @@
+ def triangle_area(a, b, c):
+     if a + b > c and a + c > b and b + c > a:
+-        return round((a * b * c) ** 0.5 / 4, 2)
+-    else:
+-        return -1
++        s = (a + b + c) / 2
++        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
++        return round(area, 2)
++    return -1
+[case 2] task_id=HumanEval/54 error=AssertionError fix_actions=['change_return'] score=0.740
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,2 @@
+ def same_chars(s0: str, s1: str):
+-    """
+-    Check if two words have the same characters.
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+-    True
+-    >>> same_chars('abcd', 'dddddddabc')
+-    True
+-    >>> same_chars('dddddddabc', 'abcd')
+-    True
+-    >>> same_chars('eabcd', 'dddddddabc')
+-    False
+-    >>> same_chars('abcd', 'dddddddabce')
+-    False
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+-    False
+-    """
+-    return sorted(s0) == sorted(s1)
++    return set(s0) == set(s1)
+[case 3] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] sc...
+
+def right_angle_triangle(a, b, c):
+    '''
+    Given the lengths of the three sides of a triangle. Return True if the three
+    sides form a right-angled triangle, False otherwise.
+    A right-angled triangle is a triangle in which one angle is right angle or 
+    90 degree.
+    Example:
+    right_angle_triangle(3, 4, 5) == True
+    right_angle_triangle(1, 2, 3) == False
+    '''

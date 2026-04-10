@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "model": "LLM",
+  "attempt": 2,
+  "score": 1.0,
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

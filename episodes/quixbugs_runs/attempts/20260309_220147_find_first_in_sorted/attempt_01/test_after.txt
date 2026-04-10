@@ -1,0 +1,1 @@
+[PASS] find_first_in_sorted (7 cases)

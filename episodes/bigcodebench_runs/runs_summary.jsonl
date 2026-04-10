@@ -1,0 +1,18 @@
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260202_110044_BigCodeBench_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260202_161815_BigCodeBench_667"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260202_162253_BigCodeBench_931"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260202_164555_BigCodeBench_667"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs/20260202_165156_BigCodeBench_667"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260203_062927_BigCodeBench_270"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260203_081226_BigCodeBench_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260204_062147_BigCodeBench_4"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs/20260204_062628_BigCodeBench_4"}
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs/20260204_071813_BigCodeBench_667"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260210_071924_BigCodeBench_76"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260310_071531_BigCodeBench_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260310_073001_BigCodeBench_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260310_073624_BigCodeBench_270"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs/20260310_073752_BigCodeBench_279"}

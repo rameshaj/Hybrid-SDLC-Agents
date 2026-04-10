@@ -1,0 +1,52 @@
+[
+  {
+    "id": 13,
+    "case_id": "HumanEval/4::20260212_065551_HumanEval_4",
+    "task_id": "HumanEval/4",
+    "dataset": "HumanEval",
+    "entry_point": "mean_absolute_deviation",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_065551_HumanEval_4/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def mean_absolute_deviation(numbers: List[float]) -> float:\n                                         ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def mean_absolute_deviation(numbers: list[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,3 @@\n-def mean_absolute_deviation(numbers: List[float]) -> float:\n-    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n-    around the mean of this dataset.\n-    Mean Absolute Deviation is the average absolute difference between each\n-    element and a centerpoint (mean in this case):\n-    MAD = average | x - x_mean |\n-    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n-    1.0\n-    \"\"\"\n-    if not numbers:\n-        return 0.0\n-\n+def mean_absolute_deviation(numbers: list[float]) -> float:\n     mean = sum(numbers) / len(numbers)\n     return sum(abs(x - mean) for x in numbers) / len(numbers)",
+    "prompt": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_065551_HumanEval_4",
+    "timestamp": "20260212_065551",
+    "score": 0.4088956415653229
+  },
+  {
+    "id": 26,
+    "case_id": "HumanEval/9::20260212_073753_HumanEval_9",
+    "task_id": "HumanEval/9",
+    "dataset": "HumanEval",
+    "entry_point": "rolling_max",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_073753_HumanEval_9/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def rolling_max(numbers: List[int]) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def rolling_max(numbers: list[int]) -> list[int]:\n    result = []\n    current_max = float('-inf')\n    for number in numbers:\n        current_max = max(current_max, number)\n        result.append(current_max)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,18 +1,7 @@\n-def rolling_max(numbers: List[int]) -> List[int]:\n-    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n-    in the sequence.\n-    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n-    [1, 2, 3, 3, 3, 4, 4]\n-    \"\"\"\n-    if not numbers:\n-        return []\n-    \n-    max_so_far = numbers[0]\n-    rolling_max_list = [max_so_far]\n-    \n-    for num in numbers[1:]:\n-        if num > max_so_far:\n-            max_so_far = num\n-        rolling_max_list.append(max_so_far)\n-    \n-    return rolling_max_list\n+def rolling_max(numbers: list[int]) -> list[int]:\n+    result = []\n+    current_max = float('-inf')\n+    for number in numbers:\n+        current_max = max(current_max, number)\n+        result.append(current_max)\n+    return result",
+    "prompt": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_073753_HumanEval_9",
+    "timestamp": "20260212_073753",
+    "score": 0.31095272302627563
+  },
+  {
+    "id": 7,
+    "case_id": "HumanEval/21::20260213_073942_HumanEval_21",
+    "task_id": "HumanEval/21",
+    "dataset": "HumanEval",
+    "entry_point": "rescale_to_unit",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_073942_HumanEval_21/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def rescale_to_unit(numbers: List[float]) -> List[float]:\n                                 ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(num - min_val) / (max_val - min_val) for num in numbers]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,9 +1,4 @@\n-def rescale_to_unit(numbers: List[float]) -> List[float]:\n-    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n-    such that the smallest number will become 0 and the largest will become 1\n-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n-    [0.0, 0.25, 0.5, 0.75, 1.0]\n-    \"\"\"\n+def rescale_to_unit(numbers: list[float]) -> list[float]:\n     min_val = min(numbers)\n     max_val = max(numbers)\n     return [(num - min_val) / (max_val - min_val) for num in numbers]",
+    "prompt": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_073942_HumanEval_21",
+    "timestamp": "20260213_073942",
+    "score": 0.2936967611312866
+  }
+]

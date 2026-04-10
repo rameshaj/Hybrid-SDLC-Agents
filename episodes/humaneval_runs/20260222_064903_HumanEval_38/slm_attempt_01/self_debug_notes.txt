@@ -1,0 +1,3 @@
+- Ensure `encode_cyclic` is imported or defined before calling `decode_cyclic`.
+- Use `globals().get('decode_cyclic')` instead of `decode_cyclic` to handle cases where the function might not be defined in the global scope.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?

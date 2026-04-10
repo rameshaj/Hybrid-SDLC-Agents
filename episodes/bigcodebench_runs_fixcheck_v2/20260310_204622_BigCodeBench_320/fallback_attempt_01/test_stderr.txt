@@ -1,0 +1,29 @@
+..FFF
+======================================================================
+FAIL: test_non_zero_exit_code (__main__.TestCases.test_non_zero_exit_code)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_204622_BigCodeBench_320/fallback_attempt_01/candidate_run.py", line 62, in test_non_zero_exit_code
+    self.assertEqual(result, 1)
+AssertionError: None != 1
+
+======================================================================
+FAIL: test_random_file_selection (__main__.TestCases.test_random_file_selection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_204622_BigCodeBench_320/fallback_attempt_01/candidate_run.py", line 84, in test_random_file_selection
+    self.assertTrue(found, f"Expected call with {expected_call} not found")
+AssertionError: False is not true : Expected call with valid_dir/script1.bat not found
+
+======================================================================
+FAIL: test_valid_input (__main__.TestCases.test_valid_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_204622_BigCodeBench_320/fallback_attempt_01/candidate_run.py", line 35, in test_valid_input
+    self.assertEqual(result, 0)
+AssertionError: None != 0
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (failures=3)

@@ -1,0 +1,77 @@
+user
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+
+import random
+import string
+
+# Constants
+LETTERS = string.ascii_letters
+
+def task_func(num_words, word_length):
+    """
+    Create a list of random words of a certain length.
+
+    Parameters:
+    - num_words (int): The number of words to generate.
+    - word_length (int): The length of each word.
+
+    Returns:
+    - words (list): A list of random words.
+
+    Requirements:
+    - random
+    - string
+
+    Raises:
+    - ValueError: If num_words or word_length is negative.
+    
+    Example:
+    >>> task_func(5, 3)
+    ['Ohb', 'Vrp', 'oiV', 'gRV', 'IfL']
+    """
+
+assistant
+```python
+import random
+import string
+
+# Constants
+LETTERS = string.ascii_letters
+
+def task_func(num_words, word_length):
+    """
+    Create a list of random words of a certain length.
+
+    Parameters:
+    - num_words (int): The number of words to generate.
+    - word_length (int): The length of each word.
+
+    Returns:
+    - words (list): A list of random words.
+
+    Requirements:
+    - random
+    - string
+
+    Raises:
+    - ValueError: If num_words or word_length is negative.
+    
+    Example:
+    >>> task_func(5, 3)
+    ['Ohb', 'Vrp', 'oiV', 'gRV', 'IfL']
+    """
+    if num_words < 0 or word_length < 0:
+        raise ValueError("num_words and word_length must be non-negative")
+    
+    words = [random.choice(LETTERS) * word_length for _ in range(num_words)]
+    return words
+```
+
+> EOF by user

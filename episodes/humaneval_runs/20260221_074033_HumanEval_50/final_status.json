@@ -1,0 +1,27 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "",
+    "dir": "episodes/humaneval_runs/20260221_074033_HumanEval_50/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "NO_CODE",
+      "elapsed_s": 0.0,
+      "failure_summary": "NO_CODE_EXTRACTED"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NO_CODE_EXTRACTED",
+    "attempt_02: NO_CODE_EXTRACTED"
+  ],
+  "fallback_failures": [
+    "fallback_01: NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'? | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074033_HumanEval_50/fallback_attempt_01/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('decode_shift'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074033_HumanEval_50/fallback_attempt_01/candidate_run.py\", line 17, in check\n    encoded_str = encode_shift(str)\n                  ^^^^^^^^^^^^\nNameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

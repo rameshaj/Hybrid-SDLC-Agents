@@ -1,0 +1,26 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "",
+    "dir": "episodes/humaneval_runs/20260211_081327_HumanEval_64/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 124,
+      "stdout": "",
+      "stderr": "SLM_TIMEOUT",
+      "elapsed_s": 0.0,
+      "failure_summary": "SLM_TIMEOUT"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: SLM_TIMEOUT",
+    "attempt_02: SLM_TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: ERROR OpenAI URLError: [Errno 1] Operation not permitted",
+    "fallback_02: ERROR OpenAI URLError: [Errno 1] Operation not permitted"
+  ]
+}

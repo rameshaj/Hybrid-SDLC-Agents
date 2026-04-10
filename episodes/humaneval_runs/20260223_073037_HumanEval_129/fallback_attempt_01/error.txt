@@ -1,0 +1,1 @@
+OpenAI URLError: [Errno 51] Network is unreachable

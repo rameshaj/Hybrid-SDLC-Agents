@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065351_HumanEval_79/slm_attempt_01/candidate_run.py\", line 21, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065351_HumanEval_79/slm_attempt_01/candidate_run.py\", line 18, in __run_tests\n    check(globals().get('decimal_to_binary'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065351_HumanEval_79/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate(0) == \"db0db\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "elapsed_s": 0.0597689151763916,
+  "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065351_HumanEval_79/slm_attempt_01/candidate_run.py\", line 18, in __run_tests\n    check(globals().get('decimal_to_binary'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065351_HumanEval_79/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate(0) == \"db0db\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+}

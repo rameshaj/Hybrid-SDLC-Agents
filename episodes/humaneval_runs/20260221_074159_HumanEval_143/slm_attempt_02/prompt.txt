@@ -1,0 +1,66 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: words_in_sentence
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/14 error=NameError fix_actions=['change_return'] score=0.546
+fix_diff:
+--- slm
++++ llm
+@@ -1,6 +1,2 @@
+-def all_prefixes(string: str) -> List[str]:
+-    """ Return list of all prefixes from shortest to longest of the input string
+-    >>> all_prefixes('abc')
+-    ['a', 'ab', 'abc']
+-    """
+-    return [string[:i+1] for i in range(len(string))]
++def all_prefixes(string: str) -> list:
++    return [string[:i] for i in range(1, len(string) + 1)]
+[case 2] task_id=HumanEval/12 error=NameError fix_actions=['change_return'] score=0.536
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def longest(strings: List[str]) -> Optional[str]:
+-    """ Out of list of strings, return the longest one. Return the first one in case of multiple
+-    strings of the same length. Return None in case the input list is empty.
+-    >>> longest([])
+-
+-    >>> longest(['a', 'b', 'c'])
+-    'a'
+-    >>> longest(['a', 'bb', 'ccc'])
+-    'ccc'
+-    """
++def longest(strings):
+     if not strings:
+         return None
+-    max_length = max(len(s) for s in strings)
+-    return next(s for s in strings if len(s) == max_length)
++    return max(strings, key=len)
+[case...
+
+def words_in_sentence(sentence):
+    """
+    You are given a string representing a sentence,
+    the sentence contains some words separated by a space,
+    and you have to return a string that contains the words from the original sentence,
+    whose lengths are prime numbers,
+    the order of the words in the new string should be the same as the original one.
+
+    Example 1:
+        Input: sentence = "This is a test"
+        Output: "is"
+
+    Example 2:
+        Input: sentence = "lets go for swimming"
+        Output: "go for"
+
+    Constraints:
+        * 1 <= len(sentence) <= 100
+        * sentence contains only letters
+    """

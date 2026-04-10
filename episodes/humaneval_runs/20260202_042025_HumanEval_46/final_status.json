@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def fib4(n: int):\n    if n == 0 or n == 1:\n        return 0\n    elif n == 2:\n        return 2\n    else:\n        a, b, c, d = 0, 0, 2, 0\n        for _ in range(3, n + 1):\n            a, b, c, d = b, c, d, a + b + c + d\n        return d",
+    "dir": "episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py\", line 29, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py\", line 26, in __run_tests\n    check(globals().get('fib4'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py\", line 18, in check\n    assert candidate(5) == 4\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "elapsed_s": 0.05568408966064453,
+      "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py\", line 26, in __run_tests\n    check(globals().get('fib4'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py\", line 18, in check\n    assert candidate(5) == 4\n           ^^^^^^^^^^^^^^^^^\nAssertionError"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py\", line 26, in __run_tests\n    check(globals().get('fib4'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_01/candidate_run.py\", line 18, in check\n    assert candidate(5) == 4\n           ^^^^^^^^^^^^^^^^^\nAssertionError",
+    "attempt_02: SyntaxError: invalid syntax | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042025_HumanEval_46/slm_attempt_02/candidate_run.py\", line 25\n    a, b, c, d =\n                ^\nSyntaxError: invalid syntax"
+  ],
+  "fallback_failures": []
+}

@@ -1,0 +1,59 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: do_algebra
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155042_HumanEval_160/slm_attempt_01/candidate_run.py", line 29, in __run_tests
+    check(globals().get('do_algebra'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155042_HumanEval_160/slm_attempt_01/candidate_run.py", line 20, in check
+    assert candidate(['+', '*', '-'], [2, 3, 4, 5]) == 9
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+def do_algebra(operator, operand):
+    """
+    Given two lists operator, and operand. The first list has basic algebra operations, and 
+    the second list is a list of integers. Use the two given lists to build the algebric 
+    expression and return the evaluation of this expression.
+
+    The basic algebra operations:
+    Addition ( + ) 
+    Subtraction ( - ) 
+    Multiplication ( * ) 
+    Floor division ( // ) 
+    Exponentiation ( ** ) 
+
+    Example:
+    operator['+', '*', '-']
+    array = [2, 3, 4, 5]
+    result = 2 + 3 * 4 - 5
+    => result = 9
+
+    Note:
+        The length of operator list is equal to the length of operand list minus one.
+        Operand is a list of of non-negative integers.
+        Operator list has at least one operator, and operand list has at least two operands.
+
+    """
+
+assistant
+```python
+def do_algebra(operator, operand):
+    result = operand[0]
+    for i in range(len(operator)):
+        if operator[i] == '+':
+            result += operand[i + 1]
+        elif operator[i] == '-':
+            result -= operand[i + 1]
+        elif operator[i] == '*':
+            result *= operand[i + 1]
+        elif operator[i] == '//':
+            result //= operand[i + 1]
+        elif operator[i] == '**':
+            result **= operand[i + 1]
+    return result
+```
+
+> EOF by user

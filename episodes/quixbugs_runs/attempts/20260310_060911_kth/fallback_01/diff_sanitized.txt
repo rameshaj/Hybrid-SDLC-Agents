@@ -1,0 +1,18 @@
+diff --git a/python_programs/kth.py b/python_programs/kth.py
+index 1234567..89abcdef 100644
+--- a/python_programs/kth.py
++++ b/python_programs/kth.py
+@@ -1,11 +1,11 @@
+ def kth(arr, k):
+     pivot = arr[0]
+     below = [x for x in arr if x < pivot]
+     above = [x for x in arr if x > pivot]
+ 
+     num_less = len(below)
+     num_lessoreq = len(arr) - len(above)
+ 
+-    if k < num_less:
++    if k < len(below):
+         return kth(below, k)
+-    elif k >= num_lessoreq:
++    elif k >= len(arr) - len(above):

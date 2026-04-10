@@ -1,0 +1,27 @@
+user
+Implement task_func(proc_name: str) -> bool.
+Check if a process with name proc_name is running using psutil. If running, return True. If not, start it (subprocess) and return False.
+Return ONLY the function code.
+assistant
+```python
+import subprocess
+import psutil
+
+def task_func(proc_name: str) -> bool:
+    try:
+        # Check if the process is already running
+        for proc in psutil.process_iter(['name']):
+            if proc.info['name'] == proc_name:
+                return True
+        
+        # If not running, start the process
+        subprocess.Popen(proc_name)
+        return False
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return False
+```
+
+> EOF by user
+
+

@@ -1,0 +1,101 @@
+EEEEEEEE
+======================================================================
+ERROR: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 17, in test_case_1
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+======================================================================
+ERROR: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 24, in test_case_2
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+======================================================================
+ERROR: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 31, in test_case_3
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 38, in test_case_4
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+======================================================================
+ERROR: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 45, in test_case_5
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+======================================================================
+ERROR: test_case_with_non_integers (__main__.TestCases.test_case_with_non_integers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 52, in test_case_with_non_integers
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+======================================================================
+ERROR: test_empty_first_list (__main__.TestCases.test_empty_first_list)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 69, in test_empty_first_list
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+======================================================================
+ERROR: test_imbalanced_lists (__main__.TestCases.test_imbalanced_lists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 61, in test_imbalanced_lists
+    freq = task_func(l1, l2)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/fallback_attempt_01/candidate_run.py", line 2, in task_func
+    combined = [item for pair in zip_longest(l1, l2) for item in pair if item is not None]
+                                 ^^^^^^^^^^^
+NameError: name 'zip_longest' is not defined
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+FAILED (errors=8)

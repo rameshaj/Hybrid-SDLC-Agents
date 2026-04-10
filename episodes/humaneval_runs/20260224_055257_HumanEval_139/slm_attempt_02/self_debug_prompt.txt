@@ -1,0 +1,47 @@
+You are a debugging assistant.
+Given the task and failing code, propose minimal fixes.
+Return 1-3 short bullet points, each starting with '- '. No code.
+Function name: special_factorial
+Task:
+def special_factorial(n):
+    """The Brazilian factorial is defined as:
+    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!
+    where n > 0
+
+    For example:
+    >>> special_factorial(4)
+    288
+
+    The function will receive an integer as input and should return the special
+    factorial of this integer.
+    """
+
+Failed code:
+def special_factorial(n):
+    """The Brazilian factorial is defined as:
+    brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!
+    where n > 0
+
+    For example:
+    >>> special_factorial(4)
+    288
+
+    The function will receive an integer as input and should return the special
+    factorial of this integer.
+    """
+    if n <= 0:
+        raise ValueError("Input must be a positive integer")
+    
+    result = 1
+    for i in range(1, n + 1):
+        result *= math.factorial(i)
+    
+    return result
+
+Failure:
+NameError: name 'math' is not defined | tail:     assert candidate(4) == 288, "Test 4"
+           ^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_055257_HumanEval_139/slm_attempt_02/candidate_run.py", line 18, in special_factorial
+    result *= math.factorial(i)
+              ^^^^
+NameError: name 'math' is not defined

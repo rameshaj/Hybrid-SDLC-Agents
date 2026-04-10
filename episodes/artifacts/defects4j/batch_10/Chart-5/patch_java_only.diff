@@ -1,0 +1,24 @@
+# Java-only patch
+# buggy: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-5-5b
+# fixed: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-5-5f
+
+--- /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-5-5b/source/org/jfree/data/xy/XYSeries.java	2026-01-02 18:53:53
++++ /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-5-5f/source/org/jfree/data/xy/XYSeries.java	2026-01-02 18:54:03
+@@ -540,12 +540,16 @@
+     public XYDataItem addOrUpdate(Number x, Number y) {
+         if (x == null) {
+             throw new IllegalArgumentException("Null 'x' argument.");
++        }
++        if (this.allowDuplicateXValues) {
++            add(x, y);
++            return null;
+         }
+ 
+         // if we get to here, we know that duplicate X values are not permitted
+         XYDataItem overwritten = null;
+         int index = indexOf(x);
+-        if (index >= 0 && !this.allowDuplicateXValues) {
++        if (index >= 0) {
+             XYDataItem existing = (XYDataItem) this.data.get(index);
+             try {
+                 overwritten = (XYDataItem) existing.clone();

@@ -1,0 +1,27 @@
+{
+  "adapter_path": "data/derived/finetune/qwen1.5b_lora_fix",
+  "model_path": "models/hf/qwen2.5-coder-1.5b-instruct",
+  "val_path": "data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl",
+  "results": [
+    {
+      "task_id": "HumanEval/21",
+      "entry_point": "rescale_to_unit",
+      "error_type": "NameError",
+      "max_new_tokens": 81,
+      "prompt": "You are a coding assistant. Fix the function to pass tests.\n\nTask:\nfrom typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n\nFailure (summary):\nNameError: name 'List' is not defined. Did you mean: 'list'?\n\nSLM code:\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(num - min_val) / (max_val - min_val) for num in numbers]\n\nReturn ONLY valid Python code. No explanations, no markdown.\n",
+      "expected": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(num - min_val) / (max_val - min_val) for num in numbers]",
+      "generated_raw": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_num = min(numbers)\n    max_num = max(numbers)\n    range_value = max_num - min_num\n    \n    if range_value == 0:\n        raise ValueError(\"The input list must contain at least two distinct values.\")\n    \n    scaled_numbers = [(num - min_num) / range_value for num in numbers]\n   ",
+      "generated_code": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_num = min(numbers)\n    max_num = max(numbers)\n    range_value = max_num - min_num\n    \n    if range_value == 0:\n        raise ValueError(\"The input list must contain at least two distinct values.\")\n    \n    scaled_numbers = [(num - min_num) / range_value for num in numbers]"
+    },
+    {
+      "task_id": "HumanEval/22",
+      "entry_point": "filter_integers",
+      "error_type": "NameError",
+      "max_new_tokens": 57,
+      "prompt": "You are a coding assistant. Fix the function to pass tests.\n\nTask:\nfrom typing import List, Any\n\n\ndef filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n\nFailure (summary):\nNameError: name 'List' is not defined. Did you mean: 'list'?\n\nSLM code:\ndef filter_integers(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for integers\n    >>> filter_integers(['a', 3.14, 5])\n    [5]\n    >>> filter_integers([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n    return [value for value in values if isinstance(value, int)]\n\nReturn ONLY valid Python code. No explanations, no markdown.\n",
+      "expected": "def filter_integers(values: list) -> list:\n    return [value for value in values if isinstance(value, int)]",
+      "generated_raw": "def filter_integers(values: list[Any]) -> list[int]:\n    result = []\n    for value in values:\n        if isinstance(value, int):\n            result.append(value)\n    return result",
+      "generated_code": "def filter_integers(values: list[Any]) -> list[int]:\n    result = []\n    for value in values:\n        if isinstance(value, int):\n            result.append(value)\n    return result"
+    }
+  ]
+}

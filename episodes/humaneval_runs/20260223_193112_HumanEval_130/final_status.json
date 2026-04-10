@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def tri(n):\n    if n == 0:\n        return []\n    elif n == 1:\n        return [3]\n    elif n == 2:\n        return [3, 2]\n    elif n == 3:\n        return [1, 3, 2, 8]\n    \n    sequence = [3, 2, 8]\n    for i in range(4, n + 1):\n        if i % 2 == 0:\n            sequence.append(1 + i / 2)\n        else:\n            sequence.append(sequence[i - 1] + sequence[i - 2] + sequence[i + 1])\n    \n    return sequence",
+    "dir": "episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py\", line 42, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py\", line 39, in __run_tests\n    check(globals().get('tri'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py\", line 25, in check\n    assert candidate(4) == [1, 3, 2.0, 8.0, 3.0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "elapsed_s": 0.12688493728637695,
+      "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py\", line 39, in __run_tests\n    check(globals().get('tri'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py\", line 25, in check\n    assert candidate(4) == [1, 3, 2.0, 8.0, 3.0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py\", line 39, in __run_tests\n    check(globals().get('tri'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py\", line 25, in check\n    assert candidate(4) == [1, 3, 2.0, 8.0, 3.0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "attempt_02: SyntaxError: invalid decimal literal | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_02/candidate_run.py\", line 65\n    print_info: model type       = 1.5B\n                                     ^\nSyntaxError: invalid decimal literal"
+  ],
+  "fallback_failures": [
+    "fallback_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/fallback_attempt_01/candidate_run.py\", line 31, in __run_tests\n    check(globals().get('tri'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/fallback_attempt_01/candidate_run.py\", line 16, in check\n    assert candidate(3) == [1, 3, 2.0, 8.0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fallback_02: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/fallback_attempt_02/candidate_run.py\", line 31, in __run_tests\n    check(globals().get('tri'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/fallback_attempt_02/candidate_run.py\", line 16, in check\n    assert candidate(3) == [1, 3, 2.0, 8.0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

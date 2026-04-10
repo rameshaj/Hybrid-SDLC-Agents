@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "",
+    "dir": "episodes/humaneval_runs/20260222_235349_HumanEval_115/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 124,
+      "stdout": "",
+      "stderr": "SLM_TIMEOUT",
+      "elapsed_s": 0.0,
+      "failure_summary": "SLM_TIMEOUT"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: SLM_TIMEOUT",
+    "attempt_02: SLM_TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: AssertionError: Error | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_235349_HumanEval_115/fallback_attempt_01/candidate_run.py\", line 22, in __run_tests\n    check(globals().get('max_fill'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_235349_HumanEval_115/fallback_attempt_01/candidate_run.py\", line 17, in check\n    assert candidate([[1,1,1,1], [1,1,1,1]], 9) == 2, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error",
+    "fallback_02: NameError: name 'math' is not defined | tail:     assert candidate([[0,0,1,0], [0,1,0,0], [1,1,1,1]], 1) == 6, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_235349_HumanEval_115/fallback_attempt_02/candidate_run.py\", line 3, in max_fill\n    return math.ceil(total_water_units / capacity) if capacity > 0 else 0\n           ^^^^\nNameError: name 'math' is not defined"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

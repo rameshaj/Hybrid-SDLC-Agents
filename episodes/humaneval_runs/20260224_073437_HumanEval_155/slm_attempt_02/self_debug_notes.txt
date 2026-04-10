@@ -1,0 +1,3 @@
+- Ensure `num` is positive before checking its digits.
+- Use `abs(num)` to handle negative numbers correctly.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?

@@ -1,0 +1,4 @@
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/slm_attempt_01/candidate_run.py", line 2
+    return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), nums.index(x))
+                 ^
+SyntaxError: '(' was never closed

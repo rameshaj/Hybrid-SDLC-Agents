@@ -1,0 +1,62 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: get_max_triples
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/9 error=NameError fix_actions=['change_return'] score=0.452
+fix_diff:
+--- slm
++++ llm
+@@ -1,18 +1,7 @@
+-def rolling_max(numbers: List[int]) -> List[int]:
+-    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+-    in the sequence.
+-    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+-    [1, 2, 3, 3, 3, 4, 4]
+-    """
+-    if not numbers:
+-        return []
+-    
+-    max_so_far = numbers[0]
+-    rolling_max_list = [max_so_far]
+-    
+-    for num in numbers[1:]:
+-        if num > max_so_far:
+-            max_so_far = num
+-        rolling_max_list.append(max_so_far)
+-    
+-    return rolling_max_list
++def rolling_max...
+[case 2] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.376
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i %...
+
+def get_max_triples(n):
+    """
+    You are given a positive integer n. You have to create an integer array a of length n.
+        For each i (1 ≤ i ≤ n), the value of a[i] = i * i - i + 1.
+        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, 
+    and a[i] + a[j] + a[k] is a multiple of 3.
+
+    Example :
+        Input: n = 5
+        Output: 1
+        Explanation: 
+        a = [1, 3, 7, 13, 21]
+        The only valid triple is (1, 7, 13).
+    """

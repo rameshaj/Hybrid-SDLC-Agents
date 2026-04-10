@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "model": "SLM",
+  "attempt": 1,
+  "reason": "score >= threshold",
+  "score": 1.0,
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

@@ -1,0 +1,11 @@
+--- a/python_programs/kth.py
++++ b/python_programs/kth.py
+@@ -6,7 +6,7 @@
+     num_less = len(below)
+     num_lessoreq = len(arr) - len(above)
+ 
+-    if k < num_less:
++    if k < num_less: 
+         return kth(below, k)
+     elif k >= num_lessoreq:
+         return kth(above, k)

@@ -1,0 +1,43 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: TIMEOUT
+- attempt_02: TIMEOUT
+
+import subprocess
+import os
+import signal
+import time
+
+
+def task_func(process_name: str) -> int:
+    """
+    Stops all running processes with a specific name.
+
+    Parameters:
+    process_name (str): The name of the processes to be stopped.
+
+    Returns:
+    int: The number of processes stopped. If no processes are found, returns 0.
+
+    Requirements:
+    - subprocess
+    - os
+    - signal
+    - time
+
+    Note:
+    - The function sends a termination signal to the processes and waits for 1 second. 
+      There is no guarantee that all processes will have terminated within this time.
+
+    Example:
+    >>> pids = task_func('test_name') # Dummy example, should return 0
+    >>> pids
+    0
+    """

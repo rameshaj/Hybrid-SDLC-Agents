@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def encode(message):\n    vowels = 'aeiouAEIOU'\n    result = ''\n    for char in message:\n        if char.isalpha():\n            if char in vowels:\n                next_vowel = vowels[(vowels.index(char) + 2) % len(vowels)]\n                result += next_vowel\n            else:\n                result += char.swapcase()\n        else:\n            result += char\n    return result",
+    "dir": "episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py\", line 32, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py\", line 29, in __run_tests\n    check(globals().get('encode'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py\", line 18, in check\n    assert candidate('TEST') == 'tgst', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+      "elapsed_s": 0.040946006774902344,
+      "failure_summary": "AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py\", line 29, in __run_tests\n    check(globals().get('encode'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py\", line 18, in check\n    assert candidate('TEST') == 'tgst', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py\", line 29, in __run_tests\n    check(globals().get('encode'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_01/candidate_run.py\", line 18, in check\n    assert candidate('TEST') == 'tgst', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "attempt_02: AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_02/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('encode'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044237_HumanEval_93/slm_attempt_02/candidate_run.py\", line 12, in check\n    assert candidate('TEST') == 'tgst', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)"
+  ],
+  "fallback_failures": []
+}

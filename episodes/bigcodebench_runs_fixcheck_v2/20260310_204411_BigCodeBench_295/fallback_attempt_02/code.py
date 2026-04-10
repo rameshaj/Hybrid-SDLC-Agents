@@ -1,0 +1,12 @@
+# Refined function after importing required libraries
+
+import itertools
+import statistics
+
+def task_func(elements, subset_size):
+    subsets = itertools.combinations(elements, subset_size)
+    sums = [sum(subset) for subset in subsets]
+    mean = statistics.mean(sums)
+    median = statistics.median(sums)
+    mode = statistics.mode(sums)
+    return {'mean': mean, 'median': median, 'mode': mode}

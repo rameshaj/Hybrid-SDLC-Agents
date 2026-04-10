@@ -1,0 +1,3 @@
+Implement task_func(csv_path: str) -> str.
+Given a CSV with columns product, quantity, return the product with the highest total quantity sold. Assume header row.
+Return ONLY the function code.

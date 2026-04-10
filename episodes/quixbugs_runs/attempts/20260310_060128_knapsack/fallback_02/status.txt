@@ -1,0 +1,1 @@
+FALLBACK_PATCH_APPLY_FAIL: HUNK_CONTEXT_NOT_FOUND hunk=1 sample=def knapsack(capacity, items):

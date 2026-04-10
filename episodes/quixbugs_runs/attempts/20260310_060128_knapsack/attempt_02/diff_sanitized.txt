@@ -1,0 +1,8 @@
+diff --git a/python_programs/knapsack.py b/python_programs/knapsack.py
+--- a/python_programs/knapsack.py
++++ b/python_programs/knapsack.py
+@@ -1,2 +1,2 @@
+-    for i in range(1, len(items) + 1):
++    for i in range(1, len(items) + 1):
+-            if weight < j:
++            if weight <= j:  # Changed from '<' to '<='

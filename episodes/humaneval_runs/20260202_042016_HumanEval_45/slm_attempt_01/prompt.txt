@@ -1,0 +1,11 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: triangle_area
+
+def triangle_area(a, h):
+    """Given length of a side and high return area for a triangle.
+    >>> triangle_area(5, 3)
+    7.5
+    """

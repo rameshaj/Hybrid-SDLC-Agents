@@ -1,0 +1,53 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: match_parens
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/6 error=NameError fix_actions=['change_return'] score=0.544
+fix_diff:
+--- slm
++++ llm
+@@ -1,20 +1,13 @@
+-def parse_nested_parens(paren_string: str) -> List[int]:
+-    """ Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+-    For each of the group, output the deepest level of nesting of parentheses.
+-    E.g. (()()) has maximum two levels of nesting while ((())) has three.
+-
+-    >>> parse_nested_parens('(()()) ((())) () ((())()())')
+-    [2, 3, 1, 3]
+-    """
+-    def max_depth(s):
+-        depth = 0
++def parse_nested_parens(paren_string: str) -> list:
++    results = []
++    for group in paren_string.s...
+[case 2] task_id=HumanEval/1 error=NameError fix_actions=['add_guard', 'change_return'] score=0.542
+fix_diff:
+--- slm
++++ llm
+@@ -1,24 +1,22 @@
+-def separate_paren_groups(paren_string: str) -> List[str]:
+-    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+-    separate those group into separate strings and return the list of those.
+-    Separate groups are balanced (each open brace is properly closed) and no...
+
+def match_parens(lst):
+    '''
+    You are given a list of two strings, both strings consist of open
+    parentheses '(' or close parentheses ')' only.
+    Your job is to check if it is possible to concatenate the two strings in
+    some order, that the resulting string will be good.
+    A string S is considered to be good if and only if all parentheses in S
+    are balanced. For example: the string '(())()' is good, while the string
+    '())' is not.
+    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.
+
+    Examples:
+    match_parens(['()(', ')']) == 'Yes'
+    match_parens([')', ')']) == 'No'
+    '''

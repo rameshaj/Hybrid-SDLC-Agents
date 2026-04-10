@@ -1,0 +1,40 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets
+.env
+api tokens.rtf
+scripts/hf_access_token.txt
+
+# Large model files
+models/
+
+# Temp / system
+.DS_Store
+_dummy_files_backup/
+testdir_f_947/
+testdir_task_func/
+.attempt.patch
+.tmp_attempt.patch
+
+# Large model binary files (too large for GitHub)
+**/*.safetensors
+**/*.pt
+**/*.pth
+**/*.bin
+data/derived/**/checkpoint-*/
+manual_runs/chart1/workdir/
+
+# Empty dirs
+vector_store/
+indexes/
+data_raw/
+data_processed/
+finetune_jsonl/
+
+# Episode parquet/jsonl at root level
+episodes/*.parquet
+episodes/*.jsonl

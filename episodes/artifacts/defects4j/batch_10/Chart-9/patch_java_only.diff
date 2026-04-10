@@ -1,0 +1,15 @@
+# Java-only patch
+# buggy: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-9-9b
+# fixed: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-9-9f
+
+--- /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-9-9b/source/org/jfree/data/time/TimeSeries.java	2026-01-02 18:59:18
++++ /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-9-9f/source/org/jfree/data/time/TimeSeries.java	2026-01-02 18:59:28
+@@ -941,7 +941,7 @@
+             endIndex = -(endIndex + 1); // this is first item AFTER end period
+             endIndex = endIndex - 1;    // so this is last item BEFORE end
+         }
+-        if (endIndex < 0) {
++        if ((endIndex < 0)  || (endIndex < startIndex)) {
+             emptyRange = true;
+         }
+         if (emptyRange) {

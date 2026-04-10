@@ -1,0 +1,54 @@
+[
+  {
+    "id": 13,
+    "case_id": "HumanEval/4::20260212_065551_HumanEval_4",
+    "task_id": "HumanEval/4",
+    "dataset": "HumanEval",
+    "entry_point": "mean_absolute_deviation",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_065551_HumanEval_4/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def mean_absolute_deviation(numbers: List[float]) -> float:\n                                         ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def mean_absolute_deviation(numbers: list[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,3 @@\n-def mean_absolute_deviation(numbers: List[float]) -> float:\n-    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n-    around the mean of this dataset.\n-    Mean Absolute Deviation is the average absolute difference between each\n-    element and a centerpoint (mean in this case):\n-    MAD = average | x - x_mean |\n-    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n-    1.0\n-    \"\"\"\n-    if not numbers:\n-        return 0.0\n-\n+def mean_absolute_deviation(numbers: list[float]) -> float:\n     mean = sum(numbers) / len(numbers)\n     return sum(abs(x - mean) for x in numbers) / len(numbers)",
+    "prompt": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_065551_HumanEval_4",
+    "timestamp": "20260212_065551",
+    "score": 0.43370723724365234
+  },
+  {
+    "id": 18,
+    "case_id": "HumanEval/67::20260213_082821_HumanEval_67",
+    "task_id": "HumanEval/67",
+    "dataset": "HumanEval",
+    "entry_point": "fruit_distribution",
+    "slm_failure_type": "ValueError",
+    "slm_failure_summary": "ValueError: invalid literal for int() with base 10: 'apples' | tail:     assert candidate(\"5 apples and 6 oranges\",19) == 8\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_082821_HumanEval_67/slm_attempt_02/candidate_run.py\", line 2, in fruit_distribution\n    return n - sum(map(int, s.split()))\n               ^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'apples'",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def fruit_distribution(s, n):\n    words = s.split()\n    apples = int(words[0])\n    oranges = int(words[3])\n    return n - apples - oranges",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,2 +1,5 @@\n-def fruit_distribution(s,n):\n-    return n - sum(map(int, s.split()))\n+def fruit_distribution(s, n):\n+    words = s.split()\n+    apples = int(words[0])\n+    oranges = int(words[3])\n+    return n - apples - oranges",
+    "prompt": "\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number of the mango fruits in the basket.\n    for examble:\n    fruit_distribution(\"5 apples and 6 oranges\", 19) ->19 - 5 - 6 = 8\n    fruit_distribution(\"0 apples and 1 oranges\",3) -> 3 - 0 - 1 = 2\n    fruit_distribution(\"2 apples and 3 oranges\", 100) -> 100 - 2 - 3 = 95\n    fruit_distribution(\"100 apples and 1 oranges\",120) -> 120 - 100 - 1 = 19\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_082821_HumanEval_67",
+    "timestamp": "20260213_082821",
+    "score": 0.30426838994026184
+  },
+  {
+    "id": 25,
+    "case_id": "HumanEval/8::20260212_073415_HumanEval_8",
+    "task_id": "HumanEval/8",
+    "dataset": "HumanEval",
+    "entry_point": "sum_product",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_073415_HumanEval_8/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def sum_product(numbers: List[int]) -> Tuple[int, int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def sum_product(numbers):\n    total_sum = sum(numbers)\n    total_product = 1\n    for number in numbers:\n        total_product *= number\n    return (total_sum, total_product) if numbers else (0, 1)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,17 +1,6 @@\n-def sum_product(numbers: List[int]) -> Tuple[int, int]:\n-    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n-    Empty sum should be equal to 0 and empty product should be equal to 1.\n-    >>> sum_product([])\n-    (0, 1)\n-    >>> sum_product([1, 2, 3, 4])\n-    (10, 24)\n-    \"\"\"\n-    if not numbers:\n-        return (0, 1)\n-    \n+def sum_product(numbers):\n     total_sum = sum(numbers)\n     total_product = 1\n-    for num in numbers:\n-        total_product *= num\n-    \n-    return total_sum, total_product\n+    for number in numbers:\n+        total_product *= number\n+    return (total_sum, total_product) if numbers else (0, 1)",
+    "prompt": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_073415_HumanEval_8",
+    "timestamp": "20260212_073415",
+    "score": 0.29150158166885376
+  }
+]

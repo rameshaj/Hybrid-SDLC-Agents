@@ -1,0 +1,21 @@
+user
+Implement task_func(dir_path: str, zip_path: str) -> str.
+Zip all files (non-recursive) in dir_path into zip_path. Return zip_path.
+Return ONLY the function code.
+assistant
+```python
+import os
+import zipfile
+
+def task_func(dir_path: str, zip_path: str) -> str:
+    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        for root, dirs, files in os.walk(dir_path):
+            for file in files:
+                file_path = os.path.join(root, file)
+                zipf.write(file_path, os.path.relpath(file_path, dir_path))
+    return zip_path
+```
+
+> EOF by user
+
+

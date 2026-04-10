@@ -1,0 +1,3 @@
+- Ensure the list is not empty.
+- Check if the list has more than one duplicate of the same number.
+- Use a different approach to check if the list is sorted.

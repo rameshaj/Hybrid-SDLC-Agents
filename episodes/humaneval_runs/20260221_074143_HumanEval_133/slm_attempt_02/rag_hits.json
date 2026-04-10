@@ -1,0 +1,52 @@
+[
+  {
+    "id": 13,
+    "case_id": "HumanEval/4::20260212_065551_HumanEval_4",
+    "task_id": "HumanEval/4",
+    "dataset": "HumanEval",
+    "entry_point": "mean_absolute_deviation",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_065551_HumanEval_4/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def mean_absolute_deviation(numbers: List[float]) -> float:\n                                         ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def mean_absolute_deviation(numbers: list[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,3 @@\n-def mean_absolute_deviation(numbers: List[float]) -> float:\n-    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n-    around the mean of this dataset.\n-    Mean Absolute Deviation is the average absolute difference between each\n-    element and a centerpoint (mean in this case):\n-    MAD = average | x - x_mean |\n-    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n-    1.0\n-    \"\"\"\n-    if not numbers:\n-        return 0.0\n-\n+def mean_absolute_deviation(numbers: list[float]) -> float:\n     mean = sum(numbers) / len(numbers)\n     return sum(abs(x - mean) for x in numbers) / len(numbers)",
+    "prompt": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_065551_HumanEval_4",
+    "timestamp": "20260212_065551",
+    "score": 0.47943270206451416
+  },
+  {
+    "id": 25,
+    "case_id": "HumanEval/8::20260212_073415_HumanEval_8",
+    "task_id": "HumanEval/8",
+    "dataset": "HumanEval",
+    "entry_point": "sum_product",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_073415_HumanEval_8/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def sum_product(numbers: List[int]) -> Tuple[int, int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def sum_product(numbers):\n    total_sum = sum(numbers)\n    total_product = 1\n    for number in numbers:\n        total_product *= number\n    return (total_sum, total_product) if numbers else (0, 1)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,17 +1,6 @@\n-def sum_product(numbers: List[int]) -> Tuple[int, int]:\n-    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n-    Empty sum should be equal to 0 and empty product should be equal to 1.\n-    >>> sum_product([])\n-    (0, 1)\n-    >>> sum_product([1, 2, 3, 4])\n-    (10, 24)\n-    \"\"\"\n-    if not numbers:\n-        return (0, 1)\n-    \n+def sum_product(numbers):\n     total_sum = sum(numbers)\n     total_product = 1\n-    for num in numbers:\n-        total_product *= num\n-    \n-    return total_sum, total_product\n+    for number in numbers:\n+        total_product *= number\n+    return (total_sum, total_product) if numbers else (0, 1)",
+    "prompt": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_073415_HumanEval_8",
+    "timestamp": "20260212_073415",
+    "score": 0.4576456844806671
+  },
+  {
+    "id": 7,
+    "case_id": "HumanEval/21::20260213_073942_HumanEval_21",
+    "task_id": "HumanEval/21",
+    "dataset": "HumanEval",
+    "entry_point": "rescale_to_unit",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_073942_HumanEval_21/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def rescale_to_unit(numbers: List[float]) -> List[float]:\n                                 ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(num - min_val) / (max_val - min_val) for num in numbers]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,9 +1,4 @@\n-def rescale_to_unit(numbers: List[float]) -> List[float]:\n-    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n-    such that the smallest number will become 0 and the largest will become 1\n-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n-    [0.0, 0.25, 0.5, 0.75, 1.0]\n-    \"\"\"\n+def rescale_to_unit(numbers: list[float]) -> list[float]:\n     min_val = min(numbers)\n     max_val = max(numbers)\n     return [(num - min_val) / (max_val - min_val) for num in numbers]",
+    "prompt": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_073942_HumanEval_21",
+    "timestamp": "20260213_073942",
+    "score": 0.44408610463142395
+  }
+]

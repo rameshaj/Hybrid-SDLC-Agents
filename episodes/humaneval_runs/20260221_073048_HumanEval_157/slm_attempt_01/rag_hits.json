@@ -1,0 +1,56 @@
+[
+  {
+    "id": 22,
+    "case_id": "HumanEval/71::20260212_081734_HumanEval_71",
+    "task_id": "HumanEval/71",
+    "dataset": "HumanEval",
+    "entry_point": "triangle_area",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py\", line 25, in __run_tests\n    check(globals().get('triangle_area'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py\", line 10, in check\n    assert candidate(3, 4, 5) == 6.00, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def triangle_area(a, b, c):\n    if a + b > c and a + c > b and b + c > a:\n        s = (a + b + c) / 2\n        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n        return round(area, 2)\n    return -1",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,5 +1,6 @@\n def triangle_area(a, b, c):\n     if a + b > c and a + c > b and b + c > a:\n-        return round((a * b * c) ** 0.5 / 4, 2)\n-    else:\n-        return -1\n+        s = (a + b + c) / 2\n+        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n+        return round(area, 2)\n+    return -1",
+    "prompt": "\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle. \n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater \n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 6.00\n    triangle_area(1, 2, 10) == -1\n    '''\n",
+    "run_dir": "episodes/humaneval_runs/20260212_081734_HumanEval_71",
+    "timestamp": "20260212_081734",
+    "score": 0.35296183824539185
+  },
+  {
+    "id": 3,
+    "case_id": "HumanEval/14::20260213_070326_HumanEval_14",
+    "task_id": "HumanEval/14",
+    "dataset": "HumanEval",
+    "entry_point": "all_prefixes",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_070326_HumanEval_14/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def all_prefixes(string: str) -> List[str]:\n                                     ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def all_prefixes(string: str) -> list:\n    return [string[:i] for i in range(1, len(string) + 1)]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,6 +1,2 @@\n-def all_prefixes(string: str) -> List[str]:\n-    \"\"\" Return list of all prefixes from shortest to longest of the input string\n-    >>> all_prefixes('abc')\n-    ['a', 'ab', 'abc']\n-    \"\"\"\n-    return [string[:i+1] for i in range(len(string))]\n+def all_prefixes(string: str) -> list:\n+    return [string[:i] for i in range(1, len(string) + 1)]",
+    "prompt": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['a', 'ab', 'abc']\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_070326_HumanEval_14",
+    "timestamp": "20260213_070326",
+    "score": 0.33290722966194153
+  },
+  {
+    "id": 2,
+    "case_id": "HumanEval/12::20260212_074142_HumanEval_12",
+    "task_id": "HumanEval/12",
+    "dataset": "HumanEval",
+    "entry_point": "longest",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074142_HumanEval_12/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def longest(strings: List[str]) -> Optional[str]:\n                         ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def longest(strings):\n    if not strings:\n        return None\n    return max(strings, key=len)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def longest(strings: List[str]) -> Optional[str]:\n-    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n-    strings of the same length. Return None in case the input list is empty.\n-    >>> longest([])\n-\n-    >>> longest(['a', 'b', 'c'])\n-    'a'\n-    >>> longest(['a', 'bb', 'ccc'])\n-    'ccc'\n-    \"\"\"\n+def longest(strings):\n     if not strings:\n         return None\n-    max_length = max(len(s) for s in strings)\n-    return next(s for s in strings if len(s) == max_length)\n+    return max(strings, key=len)",
+    "prompt": "from typing import List, Optional\n\n\ndef longest(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> longest([])\n\n    >>> longest(['a', 'b', 'c'])\n    'a'\n    >>> longest(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_074142_HumanEval_12",
+    "timestamp": "20260212_074142",
+    "score": 0.3311651349067688
+  }
+]

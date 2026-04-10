@@ -1,0 +1,10 @@
+[FAIL] lcs_length case#1 in=['witch', 'sandwich'] good=2 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#2 in=['meow', 'homeowner'] good=4 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#3 in=['fun', ''] good=0 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#4 in=['fun', 'function'] good=3 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#5 in=['cyborg', 'cyber'] good=3 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#6 in=['physics', 'physics'] good=7 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#7 in=['space age', 'pace a'] good=6 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#8 in=['flippy', 'floppy'] good=3 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length case#9 in=['acbdegcedbg', 'begcfeubk'] good=3 bad=('__EXC__', "IndexError('string index out of range')")
+[FAIL] lcs_length failed 9/9 cases

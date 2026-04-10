@@ -1,0 +1,52 @@
+
+Loading model... 
+
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b7650-68b4d516c
+model      : qwen2.5-coder-1.5b-instruct-q4_k_m.gguf
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read               add a text file
+
+
+> You are a software repair assistant.
+Given this Java test failure:
+"java.lang.AssertionError: expected:<3> but was:<2> at FooTest.testBar(FooTest.java:42)"
+
+Task:
+- Propose a minimal patch to Foo.java.
+- Return ONLY a unified diff. No explanations.
+
+Constraints for output:
+- Must include lines starting with --- and +++
+- Must include at least one @@ hunk header
+- Do not include Markdown fences.
+
+```
+diff --git a/src/main/java/com/example/Foo.java b/src/main/java/com/example/Foo.java
+--- a/src/main/java/com/example/Foo.java
++++ b/src/main/java/com/example/Foo.java
+@@ -40,7 +40,7 @@ public class Foo {
+     public void testBar() {
+         assertEquals(3, bar());
+     }
+ }
+```
+
+[ Prompt: 57.8 t/s | Generation: 5.5 t/s ]
+
+> 
+
+Exiting...

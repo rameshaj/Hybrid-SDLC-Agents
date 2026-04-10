@@ -1,0 +1,55 @@
+[
+  {
+    "id": 10,
+    "case_id": "HumanEval/3::20260206_071641_HumanEval_3",
+    "task_id": "HumanEval/3",
+    "dataset": "HumanEval",
+    "entry_point": "below_zero",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260206_071641_HumanEval_3/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def below_zero(operations: List[int]) -> bool:\n                               ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def below_zero(operations: list[int]) -> bool:\n    balance = 0\n    for operation in operations:\n        balance += operation\n        if balance < 0:\n            return True\n    return False",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,4 +1,4 @@\n-def below_zero(operations: List[int]) -> bool:\n+def below_zero(operations: list[int]) -> bool:\n     balance = 0\n     for operation in operations:\n         balance += operation",
+    "prompt": "from typing import List\n\n\ndef below_zero(operations: List[int]) -> bool:\n    \"\"\" You're given a list of deposit and withdrawal operations on a bank account that starts with\n    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and\n    at that point function should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260206_071641_HumanEval_3",
+    "timestamp": "20260206_071641",
+    "score": 0.3435598611831665
+  },
+  {
+    "id": 18,
+    "case_id": "HumanEval/67::20260213_082821_HumanEval_67",
+    "task_id": "HumanEval/67",
+    "dataset": "HumanEval",
+    "entry_point": "fruit_distribution",
+    "slm_failure_type": "ValueError",
+    "slm_failure_summary": "ValueError: invalid literal for int() with base 10: 'apples' | tail:     assert candidate(\"5 apples and 6 oranges\",19) == 8\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_082821_HumanEval_67/slm_attempt_02/candidate_run.py\", line 2, in fruit_distribution\n    return n - sum(map(int, s.split()))\n               ^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'apples'",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def fruit_distribution(s, n):\n    words = s.split()\n    apples = int(words[0])\n    oranges = int(words[3])\n    return n - apples - oranges",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,2 +1,5 @@\n-def fruit_distribution(s,n):\n-    return n - sum(map(int, s.split()))\n+def fruit_distribution(s, n):\n+    words = s.split()\n+    apples = int(words[0])\n+    oranges = int(words[3])\n+    return n - apples - oranges",
+    "prompt": "\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number of the mango fruits in the basket.\n    for examble:\n    fruit_distribution(\"5 apples and 6 oranges\", 19) ->19 - 5 - 6 = 8\n    fruit_distribution(\"0 apples and 1 oranges\",3) -> 3 - 0 - 1 = 2\n    fruit_distribution(\"2 apples and 3 oranges\", 100) -> 100 - 2 - 3 = 95\n    fruit_distribution(\"100 apples and 1 oranges\",120) -> 120 - 100 - 1 = 19\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_082821_HumanEval_67",
+    "timestamp": "20260213_082821",
+    "score": 0.3419007658958435
+  },
+  {
+    "id": 23,
+    "case_id": "HumanEval/75::20260213_064248_HumanEval_75",
+    "task_id": "HumanEval/75",
+    "dataset": "HumanEval",
+    "entry_point": "is_multiply_prime",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_064248_HumanEval_75/slm_attempt_02/candidate_run.py\", line 43, in __run_tests\n    check(globals().get('is_multiply_prime'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_064248_HumanEval_75/slm_attempt_02/candidate_run.py\", line 31, in check\n    assert candidate(8) == True\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def is_multiply_prime(a):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    \n    for i in range(len(primes)):\n        for j in range(i, len(primes)):\n            for k in range(j, len(primes)):\n                if primes[i] * primes[j] * primes[k] == a:\n                    return True\n    return False",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,11 +1,4 @@\n def is_multiply_prime(a):\n-    \"\"\"Write a function that returns true if the given number is the multiplication of 3 prime numbers\n-    and false otherwise.\n-    Knowing that (a) is less then 100. \n-    Example:\n-    is_multiply_prime(30) == True\n-    30 = 2 * 3 * 5\n-    \"\"\"\n     def is_prime(n):\n         if n <= 1:\n             return False\n@@ -14,12 +7,11 @@\n                 return False\n         return True\n \n-    count = 0\n-    for i in range(2, int(a**0.5) + 1):\n-        if a % i == 0 and is_prime(i):\n-            count += 1\n-            if count > 3:\n-                return False\n-    if count == 3:\n-        return True\n+    primes = [i for i in range(2, 100) if is_prime(i)]\n+    \n+    for i in range(len(primes)):\n+        for j in range(i, len(primes)):\n+            for k in range(j, len(primes)):\n+                if primes[i] * primes[j] * primes[k] == a:\n+                    return True\n     return False",
+    "prompt": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of 3 prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_064248_HumanEval_75",
+    "timestamp": "20260213_064248",
+    "score": 0.3398072421550751
+  }
+]

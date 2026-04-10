@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "......F.F\n======================================================================\nFAIL: test_case_7 (__main__.TestCases.test_case_7)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215035_BigCodeBench_957/slm_attempt_02/candidate_run.py\", line 66, in test_case_7\n    self.assertEqual(result, (3, 0, 0))\nAssertionError: Tuples differ: (0, 0, 0) != (3, 0, 0)\n\nFirst differing element 0:\n0\n3\n\n- (0, 0, 0)\n+ (3, 0, 0)\n\n======================================================================\nFAIL: test_case_9 (__main__.TestCases.test_case_9)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215035_BigCodeBench_957/slm_attempt_02/candidate_run.py\", line 75, in test_case_9\n    self.assertEqual(result, (23, 112, 22))\nAssertionError: Tuples differ: (24, 112, 22) != (23, 112, 22)\n\nFirst differing element 0:\n24\n23\n\n- (24, 112, 22)\n?   ^\n\n+ (23, 112, 22)\n?   ^\n\n\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\n\nFAILED (failures=2)\n",
+  "elapsed_s": 0.1756429672241211,
+  "failure_summary": "AssertionError: Tuples differ: (24, 112, 22) != (23, 112, 22) | tail: ?   ^\n+ (23, 112, 22)\n?   ^\n----------------------------------------------------------------------\nRan 9 tests in 0.001s\nFAILED (failures=2)"
+}

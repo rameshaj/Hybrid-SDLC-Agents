@@ -1,0 +1,3 @@
+- Ensure that both inputs are either integers or floats.
+- Use `float(a.replace(',', '.'))` to convert string representations of real numbers to floats, handling both '.' and ',' as decimal separators.
+- Modify the function to handle mixed types (integers and floats) by comparing them directly.

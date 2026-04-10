@@ -1,0 +1,39 @@
+......F.F
+======================================================================
+FAIL: test_case_7 (__main__.TestCases.test_case_7)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215035_BigCodeBench_957/slm_attempt_02/candidate_run.py", line 66, in test_case_7
+    self.assertEqual(result, (3, 0, 0))
+AssertionError: Tuples differ: (0, 0, 0) != (3, 0, 0)
+
+First differing element 0:
+0
+3
+
+- (0, 0, 0)
++ (3, 0, 0)
+
+======================================================================
+FAIL: test_case_9 (__main__.TestCases.test_case_9)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215035_BigCodeBench_957/slm_attempt_02/candidate_run.py", line 75, in test_case_9
+    self.assertEqual(result, (23, 112, 22))
+AssertionError: Tuples differ: (24, 112, 22) != (23, 112, 22)
+
+First differing element 0:
+24
+23
+
+- (24, 112, 22)
+?   ^
+
++ (23, 112, 22)
+?   ^
+
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+FAILED (failures=2)

@@ -1,0 +1,32 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/6 error=NameError fix_actions=['change_return'] score=0.399
+fix_diff:
+--- slm
++++ llm
+@@ -1,20 +1,13 @@
+-def parse_nested_parens(paren_string: str) -> List[int]:
+-    """ Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+-    For each of the group, output the deepest level of nesting of parentheses.
+-    E.g. (()()) has maximum two levels of nesting while ((())) has three.
+-
+-    >>> parse_nested_parens('(()()) ((())) () ((())()())')
+-    [2, 3, 1, 3]
+-    """
+-    def max_depth(s):
+-        depth = 0
++def parse_nested_parens(paren_string: str) -> list:
++    results = []
++    for group in paren_string.s...
+[case 2] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.386
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i %...

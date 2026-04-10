@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_073942_HumanEval_21/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def rescale_to_unit(numbers: List[float]) -> List[float]:\n                                 ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?\n",
+  "elapsed_s": 0.10386896133422852,
+  "failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_073942_HumanEval_21/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def rescale_to_unit(numbers: List[float]) -> List[float]:\n                                 ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+}

@@ -1,0 +1,78 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: tri
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py", line 39, in __run_tests
+    check(globals().get('tri'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_193112_HumanEval_130/slm_attempt_01/candidate_run.py", line 25, in check
+    assert candidate(4) == [1, 3, 2.0, 8.0, 3.0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Self-debug notes:
+- Ensure the base cases are correctly handled.
+- Initialize the sequence with the correct initial values.
+- Correctly handle the recursive case for odd numbers.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/71 error=AssertionError fix_actions=['change_return'] score=0.828
+fix_diff:
+--- slm
++++ llm
+@@ -1,5 +1,6 @@
+ def triangle_area(a, b, c):
+     if a + b > c and a + c > b and b + c > a:
+-        return round((a * b * c) ** 0.5 / 4, 2)
+-    else:
+-        return -1
++        s = (a + b + c) / 2
++        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
++        return round(area, 2)
++    return -1
+[case 2] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.827
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 3] task_id=HumanEval/54 error=AssertionError fix_actions=['change_return'] score=0.815
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,2 @@
+ def same_chars(s0: str, s1: str):
+-    """
+-    Check if two words have the same characters.
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+-    True
+-    >>> same_chars('abcd', 'dddddddabc')
+-    True
+-    >>> same_chars('dddddddabc', 'abcd')
+-    True
+-    >>> same_chars('eabcd', 'dddddddabc')
+-    False
+-    >>> same_chars('abcd'...
+
+def tri(n):
+    """Everyone knows Fibonacci sequence, it was studied deeply by mathematicians in 
+    the last couple centuries. However, what people don't know is Tribonacci sequence.
+    Tribonacci sequence is defined by the recurrence:
+    tri(1) = 3
+    tri(n) = 1 + n / 2, if n is even.
+    tri(n) =  tri(n - 1) + tri(n - 2) + tri(n + 1), if n is odd.
+    For example:
+    tri(2) = 1 + (2 / 2) = 2
+    tri(4) = 3
+    tri(3) = tri(2) + tri(1) + tri(4)
+           = 2 + 3 + 3 = 8 
+    You are given a non-negative integer number n, you have to a return a list of the 
+    first n + 1 numbers of the Tribonacci sequence.
+    Examples:
+    tri(3) = [1, 3, 2, 8]
+    """

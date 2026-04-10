@@ -1,0 +1,5 @@
+def do_algebra(operator, operand):
+    expression = str(operand[0])
+    for i, op in enumerate(operator):
+        expression += f" {op} {operand[i + 1]}"
+    return eval(expression)

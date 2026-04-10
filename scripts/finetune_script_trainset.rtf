@@ -1,0 +1,394 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red17\green0\blue51;}
+{\*\expandedcolortbl;;\csgray\c0;\csgenericrgb\c6667\c0\c20000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 #!/usr/bin/env python3\
+  import argparse\
+  import glob\
+  import json\
+  import os\
+  import re\
+  from typing import Dict, List, Optional, Tuple\
+\
+\
+  DEFAULT_VAL_TASKS = ["HumanEval/21", "HumanEval/22"]\
+  DEFAULT_TEST_TASKS = ["HumanEval/0", "HumanEval/7", "HumanEval/14", "HumanEval/75"]\
+\
+  DEFAULT_SYSTEM_PROMPT = (\
+      "You are a careful coding assistant. "\
+      "Given a task, a failed SLM attempt, and failure evidence, "\
+      "produce only the corrected Python solution code."\
+  )\
+\
+\
+  def read_jsonl(path: str) -> List[dict]:\
+      rows = []\
+      with open(path, "r", encoding="utf-8") as f:\
+          for line in f:\
+              line = line.strip()\
+              if not line:\
+                  continue\
+              rows.append(json.loads(line))\
+      return rows\
+\
+\
+  def write_jsonl(path: str, rows: List[dict]) -> None:\
+      os.makedirs(os.path.dirname(path), exist_ok=True)\
+      with open(path, "w", encoding="utf-8") as f:\
+          for row in rows:\
+              f.write(json.dumps(row, ensure_ascii=True))\
+              f.write("\\n")\
+\
+\
+  def tail_text(text: str, max_chars: int) -> str:\
+      if len(text) <= max_chars:\
+          return text\
+      return text[-max_chars:]\
+\
+\
+  def read_text(path: str, max_chars: int) -> Optional[str]:\
+      try:\
+          with open(path, "r", encoding="utf-8", errors="ignore") as f:\
+              content = f.read()\
+      except FileNotFoundError:\
+          return None\
+      return tail_text(content.strip(), max_chars)\
+\
+\
+  def find_latest_attempt(run_dir: str, prefix: str) -> Optional[str]:\
+      pattern = os.path.join(run_dir, f"\{prefix\}_attempt_*")\
+      matches = glob.glob(pattern)\
+      if not matches:\
+          return None\
+\
+      def attempt_key(path: str) -> Tuple[int, str]:\
+          base = os.path.basename(path)\
+          m = re.search(r"attempt_(\\d+)$", base)\
+          if m:\
+              return (int(m.group(1)), base)\
+          return (-1, base)\
+\
+      matches.sort(key=attempt_key)\
+      return matches[-1]\
+\
+\
+  def load_attempt_artifacts(attempt_dir: Optional[str], max_chars: int) -> Dict[str, Optional[str]]:\
+      if not attempt_dir:\
+          return \{\
+              "dir": None,\
+              "code": None,\
+              "test_stderr": None,\
+              "test_stdout": None,\
+              "debug_notes": None,\
+              "llm_response": None,\
+          \}\
+\
+      def read_first(paths: List[str]) -> Optional[str]:\
+          for p in paths:\
+              content = read_text(p, max_chars=max_chars)\
+              if content:\
+                  return content\
+          return None\
+\
+      code = read_first(\
+          [\
+              os.path.join(attempt_dir, "solution.py"),\
+              os.path.join(attempt_dir, "completion.py"),\
+              os.path.join(attempt_dir, "model_output.py"),\
+          ]\
+      )\
+      test_stderr = read_text(os.path.join(attempt_dir, "test_stderr.txt"), max_chars=max_chars)\
+      test_stdout = read_text(os.path.join(attempt_dir, "test_stdout.txt"), max_chars=max_chars)\
+      debug_notes = read_first(\
+          [\
+              os.path.join(attempt_dir, "self_debug_notes.txt"),\
+              os.path.join(attempt_dir, "debug_notes.txt"),\
+          ]\
+      )\
+      llm_response = read_first(\
+          [\
+              os.path.join(attempt_dir, "llm_response.txt"),\
+              os.path.join(attempt_dir, "response.txt"),\
+              os.path.join(attempt_dir, "model_output.txt"),\
+          ]\
+      )\
+\
+      return \{\
+          "dir": attempt_dir,\
+          "code": code,\
+          "test_stderr": test_stderr,\
+          "test_stdout": test_stdout,\
+          "debug_notes": debug_notes,\
+          "llm_response": llm_response,\
+      \}\
+\
+\
+  def pick_case_prompt(case: dict) -> str:\
+      for key in ["prompt", "task_prompt", "problem", "instruction", "question"]:\
+          if key in case and case[key]:\
+              return case[key]\
+      return ""\
+\
+\
+  def pick_case_task_id(case: dict, default: str) -> str:\
+      for key in ["task_id", "task", "id"]:\
+          if key in case and case[key]:\
+              return str(case[key])\
+      return default\
+\
+\
+  def pick_code_from_case(case: dict, keys: List[str]) -> Optional[str]:\
+      for key in keys:\
+          val = case.get(key)\
+          if isinstance(val, str) and val.strip():\
+              return val.strip()\
+      return None\
+\
+\
+  def infer_run_dir(case: dict) -> Optional[str]:\
+      for key in ["run_dir", "slm_run_dir", "case_run_dir"]:\
+          if key in case and case[key]:\
+              return case[key]\
+      return None\
+\
+\
+  def infer_llm_passed(case: dict) -> Optional[bool]:\
+      truthy_keys = [\
+          "llm_passed",\
+          "fallback_passed",\
+          "llm_ok",\
+          "fallback_ok",\
+          "passed",\
+      ]\
+      falsy_keys = [\
+          "llm_failed",\
+          "fallback_failed",\
+          "failed",\
+      ]\
+      for key in truthy_keys:\
+          if key in case:\
+              return bool(case[key])\
+      for key in falsy_keys:\
+          if key in case:\
+              return not bool(case[key])\
+      status = case.get("status")\
+      if isinstance(status, str):\
+          if status.lower() in \{"passed", "fallback_passed", "llm_passed"\}:\
+              return True\
+          if status.lower() in \{"failed", "fallback_failed", "llm_failed"\}:\
+              return False\
+      return None\
+\
+\
+  def build_user_content(\
+      prompt: str,\
+      slm: Dict[str, Optional[str]],\
+      llm: Dict[str, Optional[str]],\
+      include_llm_notes: bool,\
+      max_chars: int,\
+  ) -> str:\
+      sections = []\
+      if prompt:\
+          sections.append("Task:\\n" + prompt.strip())\
+      if slm.get("code"):\
+          sections.append("SLM Attempt (failed):\\n```python\\n" + slm["code"].strip() + "\\n```")\
+      if slm.get("test_stderr"):\
+          sections.append("SLM Failure Evidence:\\n" + slm["test_stderr"])\
+      if slm.get("debug_notes"):\
+          sections.append("SLM Self-Debug Notes:\\n" + slm["debug_notes"])\
+      if include_llm_notes:\
+          llm_notes = llm.get("debug_notes") or llm.get("llm_response")\
+          if llm_notes:\
+              sections.append("LLM Fix Notes:\\n" + tail_text(llm_notes, max_chars))\
+      if llm.get("test_stdout") or llm.get("test_stderr"):\
+          llm_summary = llm.get("test_stdout") or llm.get("test_stderr")\
+          if llm_summary:\
+              sections.append("LLM Test Summary:\\n" + tail_text(llm_summary, max_chars))\
+      sections.append("Return only the corrected solution code.")\
+      return "\\n\\n".join(sections).strip()\
+\
+\
+  def make_messages(system_prompt: str, user_content: str, assistant_content: str) -> List[dict]:\
+      return [\
+          \{"role": "system", "content": system_prompt\},\
+          \{"role": "user", "content": user_content\},\
+          \{"role": "assistant", "content": assistant_content\},\
+      ]\
+\
+\
+  def main() -> None:\
+      parser = argparse.ArgumentParser(\
+          description="Build an augmented finetuning dataset from fallback cases."\
+      )\
+      parser.add_argument(\
+          "--cases",\
+          default="data/derived/rag/cases.jsonl",\
+          help="Path to cases.jsonl",\
+      )\
+      parser.add_argument(\
+          "--out-dir",\
+          default="data/derived/finetune_augmented",\
+          help="Output directory",\
+      )\
+      parser.add_argument(\
+          "--val-task-ids",\
+          default=",".join(DEFAULT_VAL_TASKS),\
+          help="Comma-separated task ids for validation",\
+      )\
+      parser.add_argument(\
+          "--test-task-ids",\
+          default=",".join(DEFAULT_TEST_TASKS),\
+          help="Comma-separated task ids for test",\
+      )\
+      parser.add_argument(\
+          "--include-unknown",\
+          action="store_true",\
+          help="Include cases where LLM pass/fail is unknown",\
+      )\
+      parser.add_argument(\
+          "--merge-train-jsonl",\
+          default=None,\
+          help="Optional existing train.jsonl to merge",\
+      )\
+      parser.add_argument(\
+          "--max-context-chars",\
+          type=int,\
+          default=4000,\
+          help="Max characters to keep from logs/notes",\
+      )\
+      parser.add_argument(\
+          "--system-prompt",\
+          default=DEFAULT_SYSTEM_PROMPT,\
+          help="System prompt to embed in the dataset",\
+      )\
+      parser.add_argument(\
+          "--no-llm-notes",\
+          action="store_true",\
+          help="Do not include LLM fix notes in the user prompt",\
+      )\
+      args = parser.parse_args()\
+\
+      cases = read_jsonl(args.cases)\
+\
+      # Deduplicate by task id, keep the last occurrence (assumed latest).\
+      by_task: Dict[str, dict] = \{\}\
+      for idx, case in enumerate(cases):\
+          task_id = pick_case_task_id(case, f"case_\{idx\}")\
+          by_task[task_id] = case\
+\
+      val_tasks = \{t.strip() for t in args.val_task_ids.split(",") if t.strip()\}\
+      test_tasks = \{t.strip() for t in args.test_task_ids.split(",") if t.strip()\}\
+\
+      train_rows = []\
+      val_rows = []\
+      test_rows = []\
+      skipped = []\
+      unknown = []\
+\
+      for task_id, case in sorted(by_task.items()):\
+          prompt = pick_case_prompt(case)\
+          run_dir = infer_run_dir(case)\
+\
+          slm_code = pick_code_from_case(case, ["slm_code", "slm_completion", "slm_output"])\
+          llm_code = pick_code_from_case(\
+              case, ["llm_code", "fallback_code", "llm_completion", "llm_output"]\
+          )\
+\
+          slm_attempt_dir = None\
+          llm_attempt_dir = None\
+          if run_dir:\
+              slm_attempt_dir = find_latest_attempt(run_dir, "slm")\
+              llm_attempt_dir = find_latest_attempt(run_dir, "llm")\
+\
+          slm = load_attempt_artifacts(slm_attempt_dir, max_chars=args.max_context_chars)\
+          llm = load_attempt_artifacts(llm_attempt_dir, max_chars=args.max_context_chars)\
+\
+          if not slm_code and slm.get("code"):\
+              slm_code = slm.get("code")\
+          if not llm_code and llm.get("code"):\
+              llm_code = llm.get("code")\
+\
+          llm_passed = infer_llm_passed(case)\
+          if llm_passed is None and not args.include_unknown:\
+              unknown.append(task_id)\
+              continue\
+          if llm_passed is False:\
+              skipped.append(task_id)\
+              continue\
+          if not llm_code:\
+              skipped.append(task_id)\
+              continue\
+\
+          user_content = build_user_content(\
+              prompt=prompt,\
+              slm=slm,\
+              llm=llm,\
+              include_llm_notes=not args.no_llm_notes,\
+              max_chars=args.max_context_chars,\
+          )\
+          messages = make_messages(args.system_prompt, user_content, llm_code)\
+          record = \{\
+              "task_id": task_id,\
+              "messages": messages,\
+              "meta": \{\
+                  "run_dir": run_dir,\
+                  "slm_attempt_dir": slm.get("dir"),\
+                  "llm_attempt_dir": llm.get("dir"),\
+              \},\
+          \}\
+\
+          if task_id in val_tasks:\
+              val_rows.append(record)\
+          elif task_id in test_tasks:\
+              test_rows.append(record)\
+          else:\
+              train_rows.append(record)\
+\
+      if args.merge_train_jsonl:\
+          merged = read_jsonl(args.merge_train_jsonl)\
+          train_rows.extend(merged)\
+\
+      out_train = os.path.join(args.out_dir, "train.jsonl")\
+      out_val = os.path.join(args.out_dir, "val.jsonl")\
+      out_test = os.path.join(args.out_dir, "test.jsonl")\
+\
+      write_jsonl(out_train, train_rows)\
+      write_jsonl(out_val, val_rows)\
+      write_jsonl(out_test, test_rows)\
+\
+      # Also emit prompt/completion for compatibility.\
+      def to_prompt_completion(rows: List[dict]) -> List[dict]:\
+          out = []\
+          for row in rows:\
+              msgs = row["messages"]\
+              prompt = ""\
+              for msg in msgs:\
+                  if msg["role"] == "assistant":\
+                      continue\
+                  prompt += f"\{msg['role'].upper()\}:\\n\{msg['content']\}\\n\\n"\
+              out.append(\{"task_id": row["task_id"], "prompt": prompt.strip(), "completion": msgs[-1]["content"]\})\
+          return out\
+\
+      write_jsonl(os.path.join(args.out_dir, "train_prompt_completion.jsonl"), to_prompt_completion(train_rows))\
+      write_jsonl(os.path.join(args.out_dir, "val_prompt_completion.jsonl"), to_prompt_completion(val_rows))\
+      write_jsonl(os.path.join(args.out_dir, "test_prompt_completion.jsonl"), to_prompt_completion(test_rows))\
+\
+      summary = \{\
+          "train": len(train_rows),\
+          "val": len(val_rows),\
+          "test": len(test_rows),\
+          "skipped": len(skipped),\
+          "unknown": len(unknown),\
+          "val_tasks": sorted(val_tasks),\
+          "test_tasks": sorted(test_tasks),\
+      \}\
+      write_jsonl(os.path.join(args.out_dir, "summary.jsonl"), [summary])\
+\
+\
+  if __name__ == "__main__":\
+      main()\
+\
+  P}

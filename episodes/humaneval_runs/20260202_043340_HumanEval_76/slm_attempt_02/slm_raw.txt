@@ -1,0 +1,55 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: is_simple_power
+Previous failures:
+- attempt_01: AssertionError: This prints if this assert fails 2 (also good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043340_HumanEval_76/slm_attempt_01/candidate_run.py", line 31, in __run_tests
+    check(globals().get('is_simple_power'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_043340_HumanEval_76/slm_attempt_01/candidate_run.py", line 26, in check
+    assert candidate(1, 12)==True, "This prints if this assert fails 2 (also good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 2 (also good for debugging!)
+
+def is_simple_power(x, n):
+    """Your task is to write a function that returns true if a number x is a simple
+    power of n and false in other cases.
+    x is a simple power of n if n**int=x
+    For example:
+    is_simple_power(1, 4) => true
+    is_simple_power(2, 2) => true
+    is_simple_power(8, 2) => true
+    is_simple_power(3, 2) => false
+    is_simple_power(3, 1) => false
+    is_simple_power(5, 3) => false
+    """
+
+assistant
+```python
+def is_simple_power(x, n):
+    """Your task is to write a function that returns true if a number x is a simple
+    power of n and false in other cases.
+    x is a simple power of n if n**int=x
+    For example:
+    is_simple_power(1, 4) => true
+    is_simple_power(2, 2) => true
+    is_simple_power(8, 2) => true
+    is_simple_power(3, 2) => false
+    is_simple_power(3, 1) => false
+    is_simple_power(5, 3) => false
+    """
+    if n == 1:
+        return x == 1
+    if x == 0:
+        return False
+    if x < 1:
+        return False
+    while n**int <= x:
+        if n**int == x:
+            return True
+        int += 1
+    return False
+```
+
+> EOF by user

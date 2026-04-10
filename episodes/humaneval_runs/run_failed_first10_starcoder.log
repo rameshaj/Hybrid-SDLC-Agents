@@ -1,0 +1,12 @@
+running ['HumanEval/0', 'HumanEval/1', 'HumanEval/3', 'HumanEval/4', 'HumanEval/5', 'HumanEval/6', 'HumanEval/7', 'HumanEval/8', 'HumanEval/9', 'HumanEval/12']
+RUN HumanEval/0
+RUN HumanEval/1
+RUN HumanEval/3
+RUN HumanEval/4
+RUN HumanEval/5
+RUN HumanEval/6
+RUN HumanEval/7
+RUN HumanEval/8
+RUN HumanEval/9
+RUN HumanEval/12
+DONE

@@ -1,0 +1,59 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: anti_shuffle
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/12 error=NameError fix_actions=['change_return'] score=0.433
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def longest(strings: List[str]) -> Optional[str]:
+-    """ Out of list of strings, return the longest one. Return the first one in case of multiple
+-    strings of the same length. Return None in case the input list is empty.
+-    >>> longest([])
+-
+-    >>> longest(['a', 'b', 'c'])
+-    'a'
+-    >>> longest(['a', 'bb', 'ccc'])
+-    'ccc'
+-    """
++def longest(strings):
+     if not strings:
+         return None
+-    max_length = max(len(s) for s in strings)
+-    return next(s for s in strings if len(s) == max_length)
++    return max(strings, key=len)
+[case 2] task_id=HumanEval/14 error=NameError fix_actions=['change_return'] score=0.398
+fix_diff:
+--- slm
++++ llm
+@@ -1,6 +1,2 @@
+-def all_prefixes(string: str) -> List[str]:
+-    """ Return list of all prefixes from shortest to longest of the input string
+-    >>> all_prefixes('abc')
+-    ['a', 'ab', 'abc']
+-    """
+-    return [string[:i+1] for i in range(len(string))]
++def all_prefixes(string: str) -> list:
++    return [string[:i] for i in range(1, len(string) + 1)]
+[case...
+
+def anti_shuffle(s):
+    """
+    Write a function that takes a string and returns an ordered version of it.
+    Ordered version of string, is a string where all words (separated by space)
+    are replaced by a new word where all the characters arranged in
+    ascending order based on ascii value.
+    Note: You should keep the order of words and blank spaces in the sentence.
+
+    For example:
+    anti_shuffle('Hi') returns 'Hi'
+    anti_shuffle('hello') returns 'ehllo'
+    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'
+    """

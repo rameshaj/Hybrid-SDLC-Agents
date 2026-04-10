@@ -1,0 +1,37 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/8 error=NameError fix_actions=['change_return'] score=0.482
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,6 @@
+-def sum_product(numbers: List[int]) -> Tuple[int, int]:
+-    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+-    Empty sum should be equal to 0 and empty product should be equal to 1.
+-    >>> sum_product([])
+-    (0, 1)
+-    >>> sum_product([1, 2, 3, 4])
+-    (10, 24)
+-    """
+-    if not numbers:
+-        return (0, 1)
+-    
++def sum_product(numbers):
+     total_sum = sum(numbers)
+     total_product = 1
+-    for num in numbers:
+-        total_product *= num
+-    
+-    return total_sum, tot...
+[case 2] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.406
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i %...

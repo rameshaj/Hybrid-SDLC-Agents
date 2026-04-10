@@ -1,0 +1,18 @@
+# Java-only patch
+# buggy: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-7-7b
+# fixed: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-7-7f
+
+--- /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-7-7b/source/org/jfree/data/time/TimePeriodValues.java	2026-01-02 18:56:40
++++ /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-7-7f/source/org/jfree/data/time/TimePeriodValues.java	2026-01-02 18:56:50
+@@ -297,9 +297,9 @@
+         }
+         
+         if (this.maxMiddleIndex >= 0) {
+-            long s = getDataItem(this.minMiddleIndex).getPeriod().getStart()
++            long s = getDataItem(this.maxMiddleIndex).getPeriod().getStart()
+                 .getTime();
+-            long e = getDataItem(this.minMiddleIndex).getPeriod().getEnd()
++            long e = getDataItem(this.maxMiddleIndex).getPeriod().getEnd()
+                 .getTime();
+             long maxMiddle = s + (e - s) / 2;
+             if (middle > maxMiddle) {

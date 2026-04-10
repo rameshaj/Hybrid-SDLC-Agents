@@ -1,0 +1,15 @@
+# Java-only patch
+# buggy: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-10-10b
+# fixed: /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-10-10f
+
+--- /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-10-10b/source/org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java	2026-01-02 19:00:38
++++ /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data_raw/defects4j_batch_10/Chart-10-10f/source/org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java	2026-01-02 19:00:48
+@@ -62,7 +62,7 @@
+      * @return The formatted HTML area tag attribute(s).
+      */
+     public String generateToolTipFragment(String toolTipText) {
+-        return " title=\"" + toolTipText
++        return " title=\"" + ImageMapUtilities.htmlEscape(toolTipText) 
+             + "\" alt=\"\"";
+     }
+ 

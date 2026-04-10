@@ -1,0 +1,14 @@
+def count_nums(arr):
+    def sum_of_digits(n):
+        s = 0
+        for digit in str(n):
+            if digit == '-':
+                continue
+            s += int(digit)
+        return s
+
+    count = 0
+    for num in arr:
+        if sum_of_digits(num) > 0:
+            count += 1
+    return count

@@ -1,0 +1,4 @@
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260204_062147_BigCodeBench_4/slm_attempt_02/candidate_run.py", line 58
+    """Test with non-string keys to see how function handles it"""
+                                                               ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 65)

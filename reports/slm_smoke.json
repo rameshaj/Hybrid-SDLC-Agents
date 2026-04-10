@@ -1,0 +1,57 @@
+{
+  "timestamp_utc": "2026-01-10T02:03:07.778448+00:00",
+  "model_path": "models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+  "model_exists": true,
+  "artifacts": {
+    "basic_raw": {
+      "exists": true,
+      "bytes": 1969,
+      "lines": 39,
+      "sha256": "5a1413608ec2bcb4130301c9ddd0be775ea9d06898338439c805e3427f807728",
+      "head_200": "\nLoading model... \n\n\n\u2584\u2584 \u2584\u2584\n\u2588\u2588 \u2588\u2588\n\u2588\u2588 \u2588\u2588  \u2580\u2580\u2588\u2584 \u2588\u2588\u2588\u2584\u2588\u2588\u2588\u2584  \u2580\u2580\u2588\u2584    \u2584\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588\u2584 \u2588\u2588\u2588\u2588\u2584\n\u2588\u2588 \u2588\u2588 \u2584\u2588\u2580\u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2584\u2588\u2580\u2588\u2588    \u2588\u2588    \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588\n\u2588\u2588 \u2588\u2588 \u2580\u2588\u2584\u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2580\u2588\u2584\u2588\u2588 \u2588\u2588 \u2580\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588\u2580 \u2588\u2588\u2588\u2588\u2580\n                       "
+    },
+    "basic_stderr": {
+      "exists": true,
+      "bytes": 246,
+      "lines": 2,
+      "sha256": "72b06ffccf860efca5f2c37ede1dd520c956587fd8ef9372d954403530a5da3d",
+      "head_200": "llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |\nllama_memory_breakdown_print: |   - Host               |                 2311"
+    },
+    "basic_answer": {
+      "exists": true,
+      "bytes": 986,
+      "lines": 5,
+      "sha256": "f8f69fd1df5f4369ba6b344b63e5e72a857d5889f8f89ac17672c80ce33c87a7",
+      "head_200": "- **Identify the Exception Type**: The first line of the stack trace indicates the type of exception that was thrown. This helps in understanding the nature of the error.\n- **Stack Trace Path**: The s"
+    },
+    "patch_raw": {
+      "exists": true,
+      "bytes": 1541,
+      "lines": 52,
+      "sha256": "628a545cee0e8edce19d13fc1431f3ec76a4b2750a16183fcdc4f37b6b6ae6c8",
+      "head_200": "\nLoading model... \n\n\n\u2584\u2584 \u2584\u2584\n\u2588\u2588 \u2588\u2588\n\u2588\u2588 \u2588\u2588  \u2580\u2580\u2588\u2584 \u2588\u2588\u2588\u2584\u2588\u2588\u2588\u2584  \u2580\u2580\u2588\u2584    \u2584\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588\u2584 \u2588\u2588\u2588\u2588\u2584\n\u2588\u2588 \u2588\u2588 \u2584\u2588\u2580\u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2584\u2588\u2580\u2588\u2588    \u2588\u2588    \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588\n\u2588\u2588 \u2588\u2588 \u2580\u2588\u2584\u2588\u2588 \u2588\u2588 \u2588\u2588 \u2588\u2588 \u2580\u2588\u2584\u2588\u2588 \u2588\u2588 \u2580\u2588\u2588\u2588\u2588 \u2588\u2588\u2588\u2588\u2580 \u2588\u2588\u2588\u2588\u2580\n                       "
+    },
+    "patch_stderr": {
+      "exists": true,
+      "bytes": 246,
+      "lines": 2,
+      "sha256": "72b06ffccf860efca5f2c37ede1dd520c956587fd8ef9372d954403530a5da3d",
+      "head_200": "llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |\nllama_memory_breakdown_print: |   - Host               |                 2311"
+    },
+    "patch_diff": {
+      "exists": true,
+      "bytes": 191,
+      "lines": 7,
+      "sha256": "243230f9dfbd0d48f0872cd100c7a0963920bbec5a9a8561c089f4f79981ab55",
+      "head_200": "--- a/src/main/java/com/example/Foo.java\n+++ b/src/main/java/com/example/Foo.java\n@@ -40,7 +40,7 @@ public class Foo {\n     public void testBar() {\n         assertEquals(3, bar());\n     }\n }\n"
+    }
+  },
+  "notes": {
+    "backend": "llama.cpp (llama-cli)",
+    "quant": "Q4_K_M",
+    "seed": 42,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "repeat_penalty": 1.05
+  }
+}

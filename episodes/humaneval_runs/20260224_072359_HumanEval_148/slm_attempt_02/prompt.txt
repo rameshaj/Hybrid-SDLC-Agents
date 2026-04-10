@@ -1,0 +1,77 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: bf
+Previous failures:
+- attempt_01: AssertionError: First test error: 2 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_072359_HumanEval_148/slm_attempt_01/candidate_run.py", line 28, in __run_tests
+    check(globals().get('bf'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_072359_HumanEval_148/slm_attempt_01/candidate_run.py", line 14, in check
+    assert candidate("Jupiter", "Neptune") == ("Saturn", "Uranus"), "First test error: " + str(len(candidate("Jupiter", "Neptune")))      
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: First test error: 2
+Self-debug notes:
+- Ensure that the input planet names are valid.
+- Check if the indices of the input planet names are correct.
+- Return an empty tuple if the input planet names are not valid.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.870
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 2] task_id=HumanEval/54 error=AssertionError fix_actions=['change_return'] score=0.844
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,2 @@
+ def same_chars(s0: str, s1: str):
+-    """
+-    Check if two words have the same characters.
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+-    True
+-    >>> same_chars('abcd', 'dddddddabc')
+-    True
+-    >>> same_chars('dddddddabc', 'abcd')
+-    True
+-    >>> same_chars('eabcd', 'dddddddabc')
+-    False
+-    >>> same_chars('abcd', 'dddddddabce')
+-    False
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')
+-    False
+-    """
+-    return sorted(s0) == sorted(s1)
++    return set(s0) == set(s1)
+[case 3] task_id=HumanEval/64 error=AssertionError fix_actions=['add_guard'] score=0.822
+fix_diff:
+--- slm
++++ llm
+@@ -1,16 +1,10 @@
+ def vowels_count(s):
+-    """Write a function vowels_count which takes a string representing
+-    a word as input and...
+
+def bf(planet1, planet2):
+    '''
+    There are eight planets in our solar system: the closerst to the Sun 
+    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn, 
+    Uranus, Neptune.
+    Write a function that takes two planet names as strings planet1 and planet2. 
+    The function should return a tuple containing all planets whose orbits are 
+    located between the orbit of planet1 and the orbit of planet2, sorted by 
+    the proximity to the sun. 
+    The function should return an empty tuple if planet1 or planet2
+    are not correct planet names. 
+    Examples
+    bf("Jupiter", "Neptune") ==> ("Saturn", "Uranus")
+    bf("Earth", "Mercury") ==> ("Venus")
+    bf("Mercury", "Uranus") ==> ("Venus", "Earth", "Mars", "Jupiter", "Saturn")
+    '''

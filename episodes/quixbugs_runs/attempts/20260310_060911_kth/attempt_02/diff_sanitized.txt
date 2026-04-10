@@ -1,0 +1,6 @@
+diff --git a/python_programs/kth.py b/python_programs/kth.py
+--- a/python_programs/kth.py
++++ b/python_programs/kth.py
+@@ -1,1 +1,1 @@
+-    above = [x for x in arr if x > pivot]
++    above = [x for x in arr if x >= pivot]

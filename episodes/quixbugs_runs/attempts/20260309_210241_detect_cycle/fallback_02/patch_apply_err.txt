@@ -1,0 +1,5 @@
+/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/quixbugs_runs/attempts/20260309_210241_detect_cycle/fallback_02/.attempt.patch: patching file 'python_programs/detect_cycle.py'
+1 out of 1 hunks failed--saving rejects to 'python_programs/detect_cycle.py.rej'
+patch -p0 --fuzz=3 --batch -i /Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/quixbugs_runs/attempts/20260309_210241_detect_cycle/fallback_02/.attempt.patch: No file to patch.  Skipping...
+1 out of 1 hunks ignored--saving rejects to 'a/python_programs/detect_cycle.py.rej'
+Can't create '/var/folders/4_/7sxg0cw55_sf68fwqyjgfg800000gn/T/patchr3h3ugL0lVM', output is in '/var/folders/4_/7sxg0cw55_sf68fwqyjgfg800000gn/T/patchr3h3ugL0lVM': No such file or directory

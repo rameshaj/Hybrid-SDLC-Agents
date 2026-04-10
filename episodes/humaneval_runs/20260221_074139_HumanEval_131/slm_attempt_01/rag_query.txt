@@ -1,0 +1,12 @@
+entry_point: digits
+error_type: NO_CODE_EXTRACTED
+error_summary: NO_CODE_EXTRACTED
+prompt:
+def digits(n):
+    """Given a positive integer n, return the product of the odd digits.
+    Return 0 if all digits are even.
+    For example:
+    digits(1)  == 1
+    digits(4)  == 0
+    digits(235) == 15
+    """

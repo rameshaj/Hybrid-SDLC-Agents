@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074102_HumanEval_108/fallback_attempt_01/candidate_run.py", line 28, in <module>
+    __run_tests()
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074102_HumanEval_108/fallback_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('count_nums'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074102_HumanEval_108/fallback_attempt_01/candidate_run.py", line 11, in check
+    assert candidate([-1, -2, 0]) == 0
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074102_HumanEval_108/fallback_attempt_01/candidate_run.py", line 5, in count_nums
+    return sum(1 for num in arr if sum_of_digits(num) > 0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074102_HumanEval_108/fallback_attempt_01/candidate_run.py", line 5, in <genexpr>
+    return sum(1 for num in arr if sum_of_digits(num) > 0)
+                                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074102_HumanEval_108/fallback_attempt_01/candidate_run.py", line 3, in sum_of_digits
+    return sum(int(d) for d in str(n) if d.isdigit()) - (int(str(n)[0]) if str(n)[0] == '-' else 0)
+                                                         ^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '-'

@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074141_HumanEval_132/fallback_attempt_01/candidate_run.py\", line 40, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074141_HumanEval_132/fallback_attempt_01/candidate_run.py\", line 37, in __run_tests\n    check(globals().get('is_nested'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074141_HumanEval_132/fallback_attempt_01/candidate_run.py\", line 24, in check\n    assert candidate('[[]') == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "elapsed_s": 0.06773495674133301,
+  "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074141_HumanEval_132/fallback_attempt_01/candidate_run.py\", line 37, in __run_tests\n    check(globals().get('is_nested'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074141_HumanEval_132/fallback_attempt_01/candidate_run.py\", line 24, in check\n    assert candidate('[[]') == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+}

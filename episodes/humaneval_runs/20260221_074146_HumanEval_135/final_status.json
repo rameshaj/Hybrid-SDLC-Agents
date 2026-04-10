@@ -1,0 +1,27 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "",
+    "dir": "episodes/humaneval_runs/20260221_074146_HumanEval_135/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "NO_CODE",
+      "elapsed_s": 0.0,
+      "failure_summary": "NO_CODE_EXTRACTED"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NO_CODE_EXTRACTED",
+    "attempt_02: NO_CODE_EXTRACTED"
+  ],
+  "fallback_failures": [
+    "fallback_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074146_HumanEval_135/fallback_attempt_01/candidate_run.py\", line 21, in __run_tests\n    check(globals().get('can_arrange'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074146_HumanEval_135/fallback_attempt_01/candidate_run.py\", line 13, in check\n    assert candidate([4,8,5,7,3])==4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

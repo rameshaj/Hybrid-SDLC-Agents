@@ -1,0 +1,57 @@
+[
+  {
+    "id": 21,
+    "case_id": "HumanEval/70::20260212_081548_HumanEval_70",
+    "task_id": "HumanEval/70",
+    "dataset": "HumanEval",
+    "entry_point": "strange_sort_list",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081548_HumanEval_70/slm_attempt_02/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('strange_sort_list'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081548_HumanEval_70/slm_attempt_02/candidate_run.py\", line 7, in check\n    assert candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    sorted_lst = sorted(lst)\n    result = []\n    left, right = 0, len(sorted_lst) - 1\n    while left <= right:\n        if left == right:\n            result.append(sorted_lst[left])\n        else:\n            result.append(sorted_lst[left])\n            result.append(sorted_lst[right])\n        left += 1\n        right -= 1\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,2 +1,15 @@\n def strange_sort_list(lst):\n-    return sorted(lst, key=lambda x: (x % 2, -x))\n+    if not lst:\n+        return []\n+    sorted_lst = sorted(lst)\n+    result = []\n+    left, right = 0, len(sorted_lst) - 1\n+    while left <= right:\n+        if left == right:\n+            result.append(sorted_lst[left])\n+        else:\n+            result.append(sorted_lst[left])\n+            result.append(sorted_lst[right])\n+        left += 1\n+        right -= 1\n+    return result",
+    "prompt": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n",
+    "run_dir": "episodes/humaneval_runs/20260212_081548_HumanEval_70",
+    "timestamp": "20260212_081548",
+    "score": 0.803046464920044
+  },
+  {
+    "id": 5,
+    "case_id": "HumanEval/19::20260212_074839_HumanEval_19",
+    "task_id": "HumanEval/19",
+    "dataset": "HumanEval",
+    "entry_point": "sort_numbers",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074839_HumanEval_19/slm_attempt_02/candidate_run.py\", line 27, in __run_tests\n    check(globals().get('sort_numbers'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074839_HumanEval_19/slm_attempt_02/candidate_run.py\", line 21, in check\n    assert candidate('three five nine') == 'three five nine'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def sort_numbers(numbers: str) -> str:\n    num_dict = {\n        'zero': 0, 'one': 1, 'two': 2, 'three': 3,\n        'four': 4, 'five': 5, 'six': 6, 'seven': 7,\n        'eight': 8, 'nine': 9\n    }\n    sorted_numbers = sorted(numbers.split(), key=lambda x: num_dict[x])\n    return ' '.join(sorted_numbers)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,8 @@\n def sort_numbers(numbers: str) -> str:\n-    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n-    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n-    Return the string with numbers sorted from smallest to largest\n-    >>> sort_numbers('three one five')\n-    'one three five'\n-    \"\"\"\n-    return ' '.join(sorted(numbers.split()))\n+    num_dict = {\n+        'zero': 0, 'one': 1, 'two': 2, 'three': 3,\n+        'four': 4, 'five': 5, 'six': 6, 'seven': 7,\n+        'eight': 8, 'nine': 9\n+    }\n+    sorted_numbers = sorted(numbers.split(), key=lambda x: num_dict[x])\n+    return ' '.join(sorted_numbers)",
+    "prompt": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'one three five'\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_074839_HumanEval_19",
+    "timestamp": "20260212_074839",
+    "score": 0.7690943479537964
+  },
+  {
+    "id": 12,
+    "case_id": "HumanEval/37::20260213_080041_HumanEval_37",
+    "task_id": "HumanEval/37",
+    "dataset": "HumanEval",
+    "entry_point": "sort_even",
+    "slm_failure_type": "TypeError",
+    "slm_failure_summary": "TypeError: 'int' object is not iterable | tail:     return [even_indices[i] if i % 2 == 0 else sorted(l[i]) for i in range(len(l))]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_080041_HumanEval_37/slm_attempt_02/candidate_run.py\", line 3, in <listcomp>\n    return [even_indices[i] if i % 2 == 0 else sorted(l[i]) for i in range(len(l))]\n                                               ^^^^^^^^^^^^\nTypeError: 'int' object is not iterable",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def sort_even(l: list):\n    even_indices = sorted(l[i] for i in range(len(l)) if i % 2 == 0)\n    return [even_indices[i // 2] if i % 2 == 0 else l[i] for i in range(len(l))]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,3 +1,3 @@\n def sort_even(l: list):\n-    even_indices = [i for i in range(len(l)) if i % 2 == 0]\n-    return [even_indices[i] if i % 2 == 0 else sorted(l[i]) for i in range(len(l))]\n+    even_indices = sorted(l[i] for i in range(len(l)) if i % 2 == 0)\n+    return [even_indices[i // 2] if i % 2 == 0 else l[i] for i in range(len(l))]",
+    "prompt": "\n\ndef sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [1, 2, 3]\n    >>> sort_even([5, 6, 3, 4])\n    [3, 6, 5, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_080041_HumanEval_37",
+    "timestamp": "20260213_080041",
+    "score": 0.7099405527114868
+  }
+]

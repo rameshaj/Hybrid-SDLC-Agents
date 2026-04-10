@@ -1,0 +1,47 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: AssertionError: Tuples differ: (24, 112, 22) != (23, 112, 22) | tail: ?   ^
++ (23, 112, 22)
+?   ^
+----------------------------------------------------------------------
+Ran 9 tests in 0.002s
+FAILED (failures=3)
+
+import string
+import re
+
+
+def task_func(text: str) -> tuple:
+    """
+    Counts the number of words, characters, and unique characters in a given text.
+
+    Parameters:
+    - text (str): The input text to be analyzed.
+
+    Returns:
+    - tuple: A tuple containing three integers: the number of words,
+                                                the number of characters,
+                                                the number of unique characters.
+
+    Requirements:
+    - string
+    - re
+
+    Note:
+    - This function considers whitespace-separated substrings as words.
+    - When counting characters, this function excludes whitespace and special
+      characters (i.e. string.punctuation).
+
+    Example:
+    >>> task_func('Hello, world!')
+    (2, 10, 7)
+    >>> task_func('Python is  awesome!  ')
+    (3, 15, 12)
+    """

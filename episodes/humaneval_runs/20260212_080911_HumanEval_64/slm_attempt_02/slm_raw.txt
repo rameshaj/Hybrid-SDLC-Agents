@@ -1,0 +1,52 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: vowels_count
+Previous failures:
+- attempt_01: AssertionError: Test 5 | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_080911_HumanEval_64/slm_attempt_01/candidate_run.py", line 36, in __run_tests
+    check(globals().get('vowels_count'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_080911_HumanEval_64/slm_attempt_01/candidate_run.py", line 26, in check
+    assert candidate("keY") == 2, "Test 5"
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Test 5
+
+FIX = """
+Add more test cases.
+"""
+
+def vowels_count(s):
+    """Write a function vowels_count which takes a string representing
+    a word as input and returns the number of vowels in the string.
+    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a
+    vowel, but only when it is at the end of the given word.
+
+    Example:
+    >>> vowels_count("abcde")
+    2
+    >>> vowels_count("ACEDY")
+    3
+    """
+
+assistant
+```python
+def vowels_count(s):
+    """Write a function vowels_count which takes a string representing
+    a word as input and returns the number of vowels in the string.
+    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a
+    vowel, but only when it is at the end of the given word.
+
+    Example:
+    >>> vowels_count("abcde")
+    2
+    >>> vowels_count("ACEDY")
+    3
+    """
+    count = sum(1 for char in s if char.lower() in 'aeiou')
+    if s.endswith('y') and s[:-1].lower() not in 'aeiou':
+        count += 1
+    return count
+```
+
+> EOF by user

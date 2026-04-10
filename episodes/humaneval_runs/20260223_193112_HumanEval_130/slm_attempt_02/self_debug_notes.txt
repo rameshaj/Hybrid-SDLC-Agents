@@ -1,0 +1,3 @@
+- Fix the decimal literal in `print_info: model type       = 1.5B`
+- Remove the trailing comma in `print_info: arch             = qwen2`
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?

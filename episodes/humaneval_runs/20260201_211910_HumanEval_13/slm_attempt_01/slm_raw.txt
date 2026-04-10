@@ -1,0 +1,24 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: greatest_common_divisor
+
+def greatest_common_divisor(a: int, b: int) -> int:
+    """ Return a greatest common divisor of two integers a and b
+    >>> greatest_common_divisor(3, 5)
+    1
+    >>> greatest_common_divisor(25, 15)
+    5
+    """
+
+assistant
+```python
+def greatest_common_divisor(a: int, b: int) -> int:
+    while b != 0:
+        a, b = b, a % b
+    return a
+```
+
+> EOF by user

@@ -1,0 +1,19 @@
+user
+Implement task_func(letters: list[str], k: int) -> dict[str, float].
+For each letter, generate k random integers in [1, 100] and compute the population standard deviation (statistics.pstdev). Return dict letter->stdev.
+Return ONLY the function code.
+assistant
+```python
+import statistics
+
+def task_func(letters: list[str], k: int) -> dict[str, float]:
+    result = {}
+    for letter in letters:
+        random_numbers = [statistics.pstdev([random.randint(1, 100) for _ in range(k)]) for _ in range(k)]
+        result[letter] = random_numbers
+    return result
+```
+
+> EOF by user
+
+

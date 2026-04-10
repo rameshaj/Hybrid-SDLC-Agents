@@ -1,0 +1,40 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.789
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 2] task_id=HumanEval/64 error=AssertionError fix_actions=['add_guard'] score=0.767
+fix_diff:
+--- slm
++++ llm
+@@ -1,16 +1,10 @@
+ def vowels_count(s):
+-    """Write a function vowels_count which takes a string representing
+-    a word as input and returns the number of vowels in the string.
+-    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a
+-    vowel, but only when it is at the end of the given word.
+-
+-    Example:
+-    >>> vowels_count("abcde")
+-    2
+-    >>> vowels_count("ACEDY")
+-    3
+-    """
+-    count = sum(1 for char in s if char.lower() in 'aeiou')
+-    if s.endswith('y') and s[:-1].lower() not in 'aeiou':
+-        count += 1
++    vowels = 'aeiou'
++...
+[case 3] task_id=HumanEval/71 error=AssertionError fix_actions=['change_return'] score=0.753
+fix_diff:
+--- slm
++++ llm
+@@ -1,5 +1,6 @@
+ def triangle_area(a, b, c):
+     if a + b > c and a + c > b and b...

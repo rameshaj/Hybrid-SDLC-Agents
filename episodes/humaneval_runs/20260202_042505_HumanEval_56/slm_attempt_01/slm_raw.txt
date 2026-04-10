@@ -1,0 +1,35 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: correct_bracketing
+
+def correct_bracketing(brackets: str):
+    """ brackets is a string of "<" and ">".
+    return True if every opening bracket has a corresponding closing bracket.
+
+    >>> correct_bracketing("<")
+    False
+    >>> correct_bracketing("<>")
+    True
+    >>> correct_bracketing("<<><>>")
+    True
+    >>> correct_bracketing("><<>")
+    False
+    """
+
+assistant
+```python
+def correct_bracketing(brackets: str):
+    stack = []
+    for char in brackets:
+        if char == '<':
+            stack.append(char)
+        elif char == '>':
+            if not stack or stack.pop() != '<':
+                return False
+    return not stack
+```
+
+> EOF by user

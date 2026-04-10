@@ -1,0 +1,3 @@
+- Ensure that the input planet names are valid.
+- Check if the indices of the input planet names are correct.
+- Return an empty tuple if the input planet names are not valid.

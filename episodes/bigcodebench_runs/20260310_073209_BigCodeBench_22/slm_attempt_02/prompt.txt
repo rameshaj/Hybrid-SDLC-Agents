@@ -1,0 +1,47 @@
+You are a coding assistant.
+Complete the function below.
+Return ONLY valid Python code. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: task_func
+Return the full code including all provided imports and the function definition.
+Do not remove or rename any provided imports or the function signature.
+Use the provided stub and fill in the function body.
+Previous failures:
+- attempt_01: SyntaxError: unterminated triple-quoted string literal (detected at line 104) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073209_BigCodeBench_22/slm_attempt_01/candidate_run.py", line 6
+    """
+    ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 104)
+
+import collections
+from itertools import zip_longest
+from random import choices
+
+def task_func(l1, l2, K=10):
+    """
+    Combine two lists by alternating their elements, even if they are of different lengths. 
+    Elements from the longer list without a counterpart in the shorter one will be included on their own.
+    Then, create a random sample of size K from the combined list, and calculate the frequency of 
+    each element in the sample.
+
+    Parameters:
+    l1 (list): The first list containing any hashable types.
+    l2 (list): The second list containing any hashable types.
+    K (int): the size of the random sample from the combined list. Default to 10.
+
+    Returns:
+    collections.Counter: An object that counts the frequency of each element in the sample.
+
+    Requirements:
+    - collections
+    - itertools.zip_longest
+    - random.choices
+
+    Example:
+    >>> import random
+    >>> random.seed(32)
+    >>> l1 = list(range(10))
+    >>> l2 = list(range(10, 20))
+    >>> freq = task_func(l1, l2)
+    >>> print(freq)
+    Counter({5: 2, 10: 1, 2: 1, 3: 1, 9: 1, 14: 1, 7: 1, 1: 1, 8: 1})
+    """

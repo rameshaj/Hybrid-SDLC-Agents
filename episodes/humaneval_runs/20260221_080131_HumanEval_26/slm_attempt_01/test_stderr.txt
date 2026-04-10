@@ -1,0 +1,4 @@
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_080131_HumanEval_26/slm_attempt_01/candidate_run.py", line 1
+    gguf_init_from_file: failed to open GGUF file 'models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf'
+                                ^^
+SyntaxError: invalid syntax

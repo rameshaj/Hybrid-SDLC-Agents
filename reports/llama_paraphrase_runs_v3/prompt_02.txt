@@ -1,0 +1,3 @@
+Write Python code for task_func(n: int) -> dict[str, int].
+Generate a random mixed-case string of length n using ascii_letters. Return a dict mapping each character to its frequency. Raise ValueError if n < 0.
+Return ONLY the function code.

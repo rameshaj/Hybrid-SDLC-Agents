@@ -1,0 +1,3 @@
+Implement task_func(pairs: list[tuple[str, str]]) -> tuple[float, float, float].
+Convert string pairs to ints, sum all numbers, generate a random list of that length with ints in [0, 9], and return (p25, p50, p75) percentiles. Use numpy.percentile.
+Return ONLY the function code.

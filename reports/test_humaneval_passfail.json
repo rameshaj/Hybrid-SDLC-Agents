@@ -1,0 +1,59 @@
+{
+  "adapter_path": "data/derived/finetune/qwen1.5b_lora_fix",
+  "model_path": "models/hf/qwen2.5-coder-1.5b-instruct",
+  "test_path": "data/derived/finetune/humaneval_slm_fix_pairs.cleaned.test.jsonl",
+  "results": [
+    {
+      "task_id": "HumanEval/0",
+      "entry_point": "has_close_elements",
+      "error_type": "NameError",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "max_new_tokens": 121,
+      "expected": "def has_close_elements(numbers: list[float], threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+      "generated_raw": "def has_close_elements(numbers: list[float], threshold: float) -> bool:\n    numbers.sort()\n    for i in range(len(numbers) - 1):\n        if abs(numbers[i] - numbers[i + 1]) < threshold:\n            return True\n    return False",
+      "generated_code": "def has_close_elements(numbers: list[float], threshold: float) -> bool:\n    numbers.sort()\n    for i in range(len(numbers) - 1):\n        if abs(numbers[i] - numbers[i + 1]) < threshold:\n            return True\n    return False"
+    },
+    {
+      "task_id": "HumanEval/14",
+      "entry_point": "all_prefixes",
+      "error_type": "NameError",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "max_new_tokens": 96,
+      "expected": "def all_prefixes(string: str) -> list:\n    return [string[:i] for i in range(1, len(string) + 1)]",
+      "generated_raw": "def all_prefixes(string: str) -> list:\n    result = []\n    for i in range(1, len(string) + 1):\n        result.append(string[:i])\n    return result",
+      "generated_code": "def all_prefixes(string: str) -> list:\n    result = []\n    for i in range(1, len(string) + 1):\n        result.append(string[:i])\n    return result"
+    },
+    {
+      "task_id": "HumanEval/7",
+      "entry_point": "filter_by_substring",
+      "error_type": "NameError",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "max_new_tokens": 86,
+      "expected": "def filter_by_substring(strings, substring):\n    return [s for s in strings if substring in s]",
+      "generated_raw": "def filter_by_substring(strings, substring):\n    filtered_strings = []\n    for string in strings:\n        if substring in string:\n            filtered_strings.append(string)\n    return filtered_strings",
+      "generated_code": "def filter_by_substring(strings, substring):\n    filtered_strings = []\n    for string in strings:\n        if substring in string:\n            filtered_strings.append(string)\n    return filtered_strings"
+    },
+    {
+      "task_id": "HumanEval/75",
+      "entry_point": "is_multiply_prime",
+      "error_type": "AssertionError",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/humaneval_eval_gcsbzh3s/HumanEval_75.py\", line 27, in <module>\n    check(is_multiply_prime)\n  File \"/tmp/humaneval_eval_gcsbzh3s/HumanEval_75.py\", line 17, in check\n    assert candidate(3 * 5 * 7) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "max_new_tokens": 200,
+      "expected": "def is_multiply_prime(a):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    \n    for i in range(len(primes)):\n        for j in range(i, len(primes)):\n            for k in range(j, len(primes)):\n                if primes[i] * primes[j] * primes[k] == a:\n                    return True\n    return False",
+      "generated_raw": "def is_multiply_prime(a):\n    primes = [2, 3, 5]\n    count = 0\n    for prime in primes:\n        while a % prime == 0:\n            a //= prime\n            count += 1\n    return count == 3",
+      "generated_code": "def is_multiply_prime(a):\n    primes = [2, 3, 5]\n    count = 0\n    for prime in primes:\n        while a % prime == 0:\n            a //= prime\n            count += 1\n    return count == 3"
+    }
+  ]
+}

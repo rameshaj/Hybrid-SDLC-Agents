@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    seen = set()\n    result = []\n    for num in numbers:\n        if num not in seen:\n            seen.add(num)\n            result.append(num)\n    return result",
+    "dir": "episodes/humaneval_runs/20260222_054807_HumanEval_26/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_054807_HumanEval_26/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def remove_duplicates(numbers: List[int]) -> List[int]:\n                                   ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?\n",
+      "elapsed_s": 0.06445121765136719,
+      "failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_054807_HumanEval_26/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def remove_duplicates(numbers: List[int]) -> List[int]:\n                                   ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_054807_HumanEval_26/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def remove_duplicates(numbers: List[int]) -> List[int]:\n                                   ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+  ],
+  "fallback_failures": [],
+  "rag_enabled": false,
+  "rag_top_k": 3
+}

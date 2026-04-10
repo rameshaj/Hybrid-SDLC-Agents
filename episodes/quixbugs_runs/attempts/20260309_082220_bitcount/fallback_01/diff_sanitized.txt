@@ -1,0 +1,20 @@
+diff --git a/python_programs/bitcount.py b/python_programs/bitcount.py
+index 2e7c1e2..e2e7e2a 100644
+--- a/python_programs/bitcount.py
++++ b/python_programs/bitcount.py
+@@ -1,7 +1,9 @@
+ 
+-def bitcount(n):
+-    count = 0
+-    while n:
+-        n &= n - 1
+-        count += 1
+-    return count
++def bitcount(n):
++    if n < 0:
++        raise ValueError("n must be a nonnegative int")
++    count = 0
++    while n:
++        n &= n - 1
++        count += 1
++    return count

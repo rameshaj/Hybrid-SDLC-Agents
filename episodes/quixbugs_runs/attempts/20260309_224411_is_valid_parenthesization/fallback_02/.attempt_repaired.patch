@@ -1,0 +1,10 @@
+--- a/python_programs/is_valid_parenthesization.py
++++ b/python_programs/is_valid_parenthesization.py
+@@ -8,7 +8,6 @@
+             depth -= 1
+             if depth < 0:
+                 return False
+-
+     return True
+ 
+ 

@@ -1,0 +1,11 @@
+def encode(message):
+    def shift_vowel(c):
+        vowels = 'aeiouAEIOU'
+        if c in vowels:
+            if c.islower():
+                return chr((ord(c) - ord('a') + 2) % 26 + ord('a'))
+            else:
+                return chr((ord(c) - ord('A') + 2) % 26 + ord('A'))
+        return c
+
+    return ''.join(shift_vowel(c).swapcase() for c in message)

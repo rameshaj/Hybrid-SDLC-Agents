@@ -1,0 +1,7 @@
+[FAIL] flatten case#1 in=[[[1, [], [2, 3]], [[4]], 5]] good=[1, 2, 3, 4, 5] bad=[<generator object flatten at 0x10da102e0>, <generator object flatten at 0x10da104a0>, <generator object flatten at 0x10da10510>, <generator object flatten at 0x10da10580>, <generator object flatten at 0x10da10350>]
+[FAIL] flatten case#3 in=[[[], [], 1, [], 1, [], []]] good=[1, 1] bad=[<generator object flatten at 0x10d9b4350>, <generator object flatten at 0x10da102e0>]
+[FAIL] flatten case#4 in=[[1, 2, 3, [[4]]]] good=[1, 2, 3, 4] bad=[<generator object flatten at 0x10d9b4350>, <generator object flatten at 0x10da103c0>, <generator object flatten at 0x10da102e0>, <generator object flatten at 0x10da10350>]
+[FAIL] flatten case#5 in=[[1, 4, 6]] good=[1, 4, 6] bad=[<generator object flatten at 0x10d9b4350>, <generator object flatten at 0x10da104a0>, <generator object flatten at 0x10da103c0>]
+[FAIL] flatten case#6 in=[['moe', 'curly', 'larry']] good=['moe', 'curly', 'larry'] bad=[<generator object flatten at 0x10d9b4350>, <generator object flatten at 0x10da10510>, <generator object flatten at 0x10da104a0>]
+[FAIL] flatten case#7 in=[['a', 'b', ['c'], ['d'], [['e']]]] good=['a', 'b', 'c', 'd', 'e'] bad=[<generator object flatten at 0x10d9b4350>, <generator object flatten at 0x10da102e0>, <generator object flatten at 0x10da104a0>, <generator object flatten at 0x10da103c0>, <generator object flatten at 0x10da10430>]
+[FAIL] flatten failed 6/7 cases

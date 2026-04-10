@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def generate_integers(a, b):\n    return sorted([i for i in range(a, b + 1) if i % 2 == 0])",
+    "dir": "episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py\", line 21, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py\", line 18, in __run_tests\n    check(globals().get('generate_integers'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 1\n",
+      "elapsed_s": 0.28263187408447266,
+      "failure_summary": "AssertionError: Test 1 | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py\", line 18, in __run_tests\n    check(globals().get('generate_integers'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 1"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError: Test 1 | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py\", line 18, in __run_tests\n    check(globals().get('generate_integers'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/slm_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 1",
+    "attempt_02: SLM_TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: AssertionError: Test 1 | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/fallback_attempt_01/candidate_run.py\", line 20, in __run_tests\n    check(globals().get('generate_integers'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/fallback_attempt_01/candidate_run.py\", line 9, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 1",
+    "fallback_02: AssertionError: Test 1 | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/fallback_attempt_02/candidate_run.py\", line 20, in __run_tests\n    check(globals().get('generate_integers'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_110545_HumanEval_163/fallback_attempt_02/candidate_run.py\", line 9, in check\n    assert candidate(2, 10) == [2, 4, 6, 8], \"Test 1\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 1"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

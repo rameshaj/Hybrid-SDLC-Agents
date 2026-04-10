@@ -1,0 +1,56 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: f
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/25 error=NameError fix_actions=[] score=0.573
+fix_diff:
+--- slm
++++ llm
+@@ -1,21 +1,9 @@
+-def factorize(n: int) -> List[int]:
+-    """ Return list of prime factors of given integer in the order from smallest to largest.
+-    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.
+-    Input number should be equal to the product of all factors
+-    >>> factorize(8)
+-    [2, 2, 2]
+-    >>> factorize(25)
+-    [5, 5]
+-    >>> factorize(70)
+-    [2, 5, 7]
+-    """
++def factorize(n: int) -> list:
+     factors = []
+     divisor = 2
+-    while divisor * divisor <= n:
++    while n > 1:
+         w...
+[case 2] task_id=HumanEval/8 error=NameError fix_actions=['change_return'] score=0.553
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,6 @@
+-def sum_product(numbers: List[int]) -> Tuple[int, int]:
+-    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+-    Empty sum should be equal to 0 and empty product should be equal to 1.
+-    >>> sum_product([])
+-    (0, 1)
+-    >>> sum_product([1, 2, 3, 4])
+-    (10, 24)
+-    """
+-    i...
+
+def f(n):
+    """ Implement the function f that takes n as a parameter,
+    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even
+    or the sum of numbers from 1 to i otherwise.
+    i starts from 1.
+    the factorial of i is the multiplication of the numbers from 1 to i (1 * 2 * ... * i).
+    Example:
+    f(5) == [1, 2, 6, 24, 15]
+    """

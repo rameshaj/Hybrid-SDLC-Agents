@@ -1,0 +1,66 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: even_odd_count
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_073437_HumanEval_155/slm_attempt_01/candidate_run.py", line 33, in __run_tests
+    check(globals().get('even_odd_count'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_073437_HumanEval_155/slm_attempt_01/candidate_run.py", line 24, in check
+    assert candidate(0) == (1, 0)
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Self-debug notes:
+- Ensure the function returns a tuple.
+- Use `abs(num)` to remove the sign of the number if it's negative.
+- Ensure the while loop condition is correct. It should be `num > 0` instead of `num >= 0`.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.783
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 2] task_id=HumanEval/70 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.763
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,15 @@
+ def strange_sort_list(lst):
+-    return sorted(lst, key=lambda x: (x % 2, -x))
++    if not lst:
++        return []
++    sorted_lst = sorted(lst)
++    result = []
++    left, right = 0, len(sorted_lst) - 1
++    while left <= right:
++        if left == right:
++            result.append(sorted_lst[left])
++        else:
++            result.append(sorted_lst[left])
++            result.append(sorted_lst[right])
++        left += 1
++        right -= 1
++    return result
+[case 3] task_id=HumanEval/19 error=AssertionError fix_actions=['change_return'] score=0.750
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,8 @@
+ def sort_numbers(numbers: str) -> str:
+-    """ Input is a space-delimited string of numberals from 'zero' to 'nine'.
+-    Valid choices are 'zero',...
+
+def even_odd_count(num):
+    """Given an integer. return a tuple that has the number of even and odd digits respectively.
+
+     Example:
+        even_odd_count(-12) ==> (1, 1)
+        even_odd_count(123) ==> (1, 2)
+    """

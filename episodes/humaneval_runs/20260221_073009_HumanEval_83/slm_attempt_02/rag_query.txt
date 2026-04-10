@@ -1,0 +1,9 @@
+entry_point: starts_one_ends
+error_type: NO_CODE_EXTRACTED
+error_summary: NO_CODE_EXTRACTED
+prompt:
+def starts_one_ends(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """

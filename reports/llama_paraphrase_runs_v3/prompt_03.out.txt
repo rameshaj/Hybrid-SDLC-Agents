@@ -1,0 +1,15 @@
+user
+Implement task_func(letters: list[str], k: int) -> list[str].
+For each letter, generate a list of k random integers in [1, 100]. Compute the mean for each list. Return the letters sorted by ascending mean (use statistics.mean).
+Return ONLY the function code.
+assistant
+```python
+import statistics
+
+def task_func(letters: list[str], k: int) -> list[str]:
+    return sorted(letters, key=lambda letter: statistics.mean([random.randint(1, 100) for _ in range(k)]))
+```
+
+> EOF by user
+
+

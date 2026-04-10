@@ -1,0 +1,1 @@
+FALLBACK_ERROR: RuntimeError: OpenAI URLError: [Errno 1] Operation not permitted

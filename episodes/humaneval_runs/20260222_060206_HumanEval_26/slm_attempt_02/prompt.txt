@@ -1,0 +1,60 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: remove_duplicates
+Previous failures:
+- attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060206_HumanEval_26/slm_attempt_01/candidate_run.py", line 1, in <module>
+    def remove_duplicates(numbers: List[int]) -> List[int]:
+                                   ^^^^
+NameError: name 'List' is not defined. Did you mean: 'list'?
+Self-debug notes:
+- Import the `List` type from the `typing` module.
+- Ensure that the function signature matches the expected input and output types.
+- Use a set to keep track of seen numbers and add them to the result list only if they haven't been seen before.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.648
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
++def intersperse(numbers, delimeter):
++    result = []
++    for i, number in enumerate(numbers):
++        result.append(number)
++        if i < len(numbers)...
+[case 2] task_id=HumanEval/0 error=NameError fix_actions=[] score=0.601
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+-def has_close_elements(numbers: List[float], threshold: float) -> bool:
+-    """ Check if in given list of numbers, are any two numbers closer to each other than
+-    given threshold.
+-    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)
+-    False
+-    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+-    True
+-    """
++def has_clo...
+
+from typing import List
+
+
+def remove_duplicates(numbers: List[int]) -> List[int]:
+    """ From a list of integers, remove all elements that occur more than once.
+    Keep order of elements left the same as in the input.
+    >>> remove_duplicates([1, 2, 3, 2, 4])
+    [1, 3, 4]
+    """

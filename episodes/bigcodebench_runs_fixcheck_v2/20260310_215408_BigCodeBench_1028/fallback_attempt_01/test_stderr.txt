@@ -1,0 +1,109 @@
+..invalid option or syntax: -bn1
+top usage: top
+		[-a | -d | -e | -c <mode>]
+		[-F | -f]
+		[-h]
+		[-i <interval>]
+		[-l <samples>]
+		[-ncols <columns>]
+		[-o <key>] [-O <secondaryKey>]
+			keys: pid (default), command, cpu, cpu_me, cpu_others, csw,
+				time, threads, ports, mregion, mem, rprvt, purg, vsize, vprvt,
+				kprvt, kshrd, pgrp, ppid, state, uid, wq, faults, cow, user,
+				msgsent, msgrecv, sysbsd, sysmach, pageins, boosts, instrs, cycles
+		[-R | -r]
+		[-S]
+		[-s <delay>]
+		[-n <nprocs>]
+		[-stats <key(s)>]
+		[-pid <processid>]
+		[-user <username>]
+		[-U <username>]
+		[-u]
+
+Einvalid option or syntax: -bn1
+top usage: top
+		[-a | -d | -e | -c <mode>]
+		[-F | -f]
+		[-h]
+		[-i <interval>]
+		[-l <samples>]
+		[-ncols <columns>]
+		[-o <key>] [-O <secondaryKey>]
+			keys: pid (default), command, cpu, cpu_me, cpu_others, csw,
+				time, threads, ports, mregion, mem, rprvt, purg, vsize, vprvt,
+				kprvt, kshrd, pgrp, ppid, state, uid, wq, faults, cow, user,
+				msgsent, msgrecv, sysbsd, sysmach, pageins, boosts, instrs, cycles
+		[-R | -r]
+		[-S]
+		[-s <delay>]
+		[-n <nprocs>]
+		[-stats <key(s)>]
+		[-pid <processid>]
+		[-user <username>]
+		[-U <username>]
+		[-u]
+
+E.E
+======================================================================
+ERROR: test_io_error_handling (__main__.TestCases.test_io_error_handling)
+Test the function's behavior when an IOError occurs during file operations.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/fallback_attempt_01/candidate_run.py", line 117, in test_io_error_handling
+    result = task_func(5, 10)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/fallback_attempt_01/candidate_run.py", line 20, in task_func
+    cpu_usage = subprocess.check_output("top -bn1 | grep 'Cpu(s)'", shell=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'top -bn1 | grep 'Cpu(s)'' returned non-zero exit status 1.
+
+======================================================================
+ERROR: test_normal_operation (__main__.TestCases.test_normal_operation)
+Test the normal operation of the function.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/fallback_attempt_01/candidate_run.py", line 62, in test_normal_operation
+    result = task_func(5, 25)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/fallback_attempt_01/candidate_run.py", line 20, in task_func
+    cpu_usage = subprocess.check_output("top -bn1 | grep 'Cpu(s)'", shell=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command 'top -bn1 | grep 'Cpu(s)'' returned non-zero exit status 1.
+
+======================================================================
+ERROR: test_subprocess_output_handling_windows (__main__.TestCases.test_subprocess_output_handling_windows)
+Test handling of subprocess output on Windows.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/fallback_attempt_01/candidate_run.py", line 93, in test_subprocess_output_handling_windows
+    result = task_func(5, 10)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/fallback_attempt_01/candidate_run.py", line 18, in task_func
+    cpu_usage = int(cpu_usage.decode().split('\n')[1].strip())
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.052s
+
+FAILED (errors=3)

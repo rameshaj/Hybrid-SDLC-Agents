@@ -1,0 +1,27 @@
+diff --git a/python_programs/get_factors.py b/python_programs/get_factors.py
+index e69de29..d95f3ad 100644
+--- a/python_programs/get_factors.py
++++ b/python_programs/get_factors.py
+@@ -1,8 +1,8 @@
+ 
+ def get_factors(n):
+     if n == 1:
+         return []
+ 
+-    for i in range(2, int(n ** 0.5) + 1):
++    for i in range(2, int(n ** 0.5) + 1):
+         if n % i == 0:
+-            return [i] + get_factors(n // i)
++            return [i] + get_factors(n // i) + get_factors(i)
+@@ -14,10 +14,11 @@
+ 
+ Examples:
+     >>> get_factors(1)
+     []
+     >>> get_factors(100)
+     [2, 2, 5, 5]
+     >>> get_factors(101)
+     [101]
+ """
+ 
++    return []

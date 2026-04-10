@@ -1,0 +1,3 @@
+- Import the `math` module to use the `gcd` function.
+- Replace `gcd` with `math.gcd` in the code.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?

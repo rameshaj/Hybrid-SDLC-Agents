@@ -1,0 +1,15 @@
+diff --git a/python_programs/breadth_first_search.py b/python_programs/breadth_first_search.py
+index 1234567..89abcdef 100644
+--- a/python_programs/breadth_first_search.py
++++ b/python_programs/breadth_first_search.py
+@@ -8,6 +8,9 @@ def breadth_first_search(startnode, goalnode):
+     queue.append(startnode)
+ 
+     nodesseen = set()
+     nodesseen.add(startnode)
+ 
++    if not queue:  # Check if the queue is empty before proceeding
++        return False
++
+     while True:
+         node = queue.popleft()

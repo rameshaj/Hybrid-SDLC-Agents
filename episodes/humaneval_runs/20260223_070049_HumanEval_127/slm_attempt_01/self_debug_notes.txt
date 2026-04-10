@@ -1,0 +1,3 @@
+- Ensure the intersection length is greater than 1.
+- Use `int(length**0.5) + 1` to iterate up to the square root of the length.
+- Add a check for the prime number condition after the loop.

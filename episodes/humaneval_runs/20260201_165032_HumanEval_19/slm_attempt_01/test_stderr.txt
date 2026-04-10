@@ -1,0 +1,4 @@
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_165032_HumanEval_19/slm_attempt_01/candidate_run.py", line 10
+    ```python
+    ^
+SyntaxError: invalid syntax

@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def order_by_points(nums):\n    return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), nums.index(x))",
+    "dir": "episodes/humaneval_runs/20260224_064907_HumanEval_145/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/slm_attempt_01/candidate_run.py\", line 2\n    return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), nums.index(x))\n                 ^\nSyntaxError: '(' was never closed\n",
+      "elapsed_s": 0.06162714958190918,
+      "failure_summary": "SyntaxError: '(' was never closed | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/slm_attempt_01/candidate_run.py\", line 2\n    return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), nums.index(x))\n                 ^\nSyntaxError: '(' was never closed"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: SyntaxError: '(' was never closed | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/slm_attempt_01/candidate_run.py\", line 2\n    return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), nums.index(x))\n                 ^\nSyntaxError: '(' was never closed",
+    "attempt_02: SyntaxError: '(' was never closed | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/slm_attempt_02/candidate_run.py\", line 2\n    return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), nums.index(x))\n                 ^\nSyntaxError: '(' was never closed"
+  ],
+  "fallback_failures": [
+    "fallback_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/fallback_attempt_01/candidate_run.py\", line 20, in __run_tests\n    check(globals().get('order_by_points'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/fallback_attempt_01/candidate_run.py\", line 7, in check\n    assert candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "fallback_02: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/fallback_attempt_02/candidate_run.py\", line 20, in __run_tests\n    check(globals().get('order_by_points'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_064907_HumanEval_145/fallback_attempt_02/candidate_run.py\", line 7, in check\n    assert candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

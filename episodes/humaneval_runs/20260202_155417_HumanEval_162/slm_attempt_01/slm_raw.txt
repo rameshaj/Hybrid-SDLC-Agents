@@ -1,0 +1,26 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: string_to_md5
+
+def string_to_md5(text):
+    """
+    Given a string 'text', return its md5 hash equivalent string.
+    If 'text' is an empty string, return None.
+
+    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+    """
+
+assistant
+```python
+import hashlib
+
+def string_to_md5(text):
+    if not text:
+        return None
+    return hashlib.md5(text.encode()).hexdigest()
+```
+
+> EOF by user

@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "gguf_init_from_file: failed to open GGUF file 'models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf'\ngguf_init_from_file: failed to open GGUF file 'models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf'",
+    "dir": "episodes/humaneval_runs/20260221_080131_HumanEval_26/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_080131_HumanEval_26/slm_attempt_01/candidate_run.py\", line 1\n    gguf_init_from_file: failed to open GGUF file 'models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf'\n                                ^^\nSyntaxError: invalid syntax\n",
+      "elapsed_s": 0.07240724563598633,
+      "failure_summary": "SyntaxError: invalid syntax | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_080131_HumanEval_26/slm_attempt_01/candidate_run.py\", line 1\n    gguf_init_from_file: failed to open GGUF file 'models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf'\n                                ^^\nSyntaxError: invalid syntax"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: SyntaxError: invalid syntax | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_080131_HumanEval_26/slm_attempt_01/candidate_run.py\", line 1\n    gguf_init_from_file: failed to open GGUF file 'models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf'\n                                ^^\nSyntaxError: invalid syntax"
+  ],
+  "fallback_failures": [],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

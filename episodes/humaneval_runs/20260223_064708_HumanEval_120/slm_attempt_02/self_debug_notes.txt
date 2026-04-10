@@ -1,0 +1,3 @@
+- Ensure the function `maximum` returns a sorted list of length `k`.
+- The function should handle the input array and the value of `k` correctly.
+- The function should not raise any errors or exceptions.

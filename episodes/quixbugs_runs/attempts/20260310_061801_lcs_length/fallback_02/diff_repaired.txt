@@ -1,0 +1,16 @@
+--- a/python_programs/lcs_length.py
++++ b/python_programs/lcs_length.py
+@@ -4,11 +4,12 @@
+     dp = Counter()
+ 
+     for i in range(len(s)):
+-        for j in range(len(t)):
++        for j in range(len(t) + 1):
+             if s[i] == t[j]:
+                 dp[i, j] = dp[i - 1, j] + 1
+ 
+     return max(dp.values()) if dp else 0
++    return 0
+ 
+ 
+ 

@@ -1,0 +1,30 @@
+user
+Implement task_func(pairs: list[tuple[str, str]]) -> tuple[float, float, int].
+Convert string pairs to ints, sum all numbers, generate a random list of that length with ints in [0, 9], and return (mean, median, mode). Use statistics.
+Return ONLY the function code.
+assistant
+```python
+import statistics
+from typing import List, Tuple
+
+def task_func(pairs: List[Tuple[str, str]]) -> Tuple[float, float, int]:
+    # Convert string pairs to integers
+    numbers = [int(pair[0]) + int(pair[1]) for pair in pairs]
+    
+    # Sum all numbers
+    total_sum = sum(numbers)
+    
+    # Generate a random list of that length with ints in [0, 9]
+    random_list = [statistics.randint(0, 9) for _ in range(total_sum)]
+    
+    # Calculate mean, median, mode
+    mean = statistics.mean(random_list)
+    median = statistics.median(random_list)
+    mode = statistics.mode(random_list)
+    
+    return mean, median, mode
+```
+
+> EOF by user
+
+

@@ -1,0 +1,78 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: fix_spaces
+Previous failures:
+- attempt_01: AssertionError: This prints if this assert fails 3 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_061835_HumanEval_140/slm_attempt_01/candidate_run.py", line 34, in __run_tests
+    check(globals().get('fix_spaces'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_061835_HumanEval_140/slm_attempt_01/candidate_run.py", line 25, in check
+    assert candidate("Yellow Yellow  Dirty  Fellow") == "Yellow_Yellow__Dirty__Fellow", "This prints if this assert fails 3 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 3 (good for debugging!)
+- attempt_02: AssertionError: This prints if this assert fails 3 (good for debugging!) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_061835_HumanEval_140/slm_attempt_02/candidate_run.py", line 44, in __run_tests
+    check(globals().get('fix_spaces'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260224_061835_HumanEval_140/slm_attempt_02/candidate_run.py", line 35, in check
+    assert candidate("Yellow Yellow  Dirty  Fellow") == "Yellow_Yellow__Dirty__Fellow", "This prints if this assert fails 3 (good for debugging!)"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: This prints if this assert fails 3 (good for debugging!)
+Self-debug notes:
+- Ensure that the function `fix_spaces` is correctly implemented.
+- Check if there are any issues with the input string or the logic inside the function.
+- Verify that the function handles multiple consecutive spaces correctly and replaces them with `-`.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/71 error=AssertionError fix_actions=['change_return'] score=0.834
+fix_diff:
+--- slm
++++ llm
+@@ -1,5 +1,6 @@
+ def triangle_area(a, b, c):
+     if a + b > c and a + c > b and b + c > a:
+-        return round((a * b * c) ** 0.5 / 4, 2)
+-    else:
+-        return -1
++        s = (a + b + c) / 2
++        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5
++        return round(area, 2)
++    return -1
+[case 2] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.803
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 3] task_id=HumanEval/54 error=AssertionError fix_actions=['change_return'] score=0.791
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,2 @@
+ def same_chars(s0: str, s1: str):
+-    """
+-    Check if two words have the same characters.
+-    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+-    True
+-    >>> same_chars('abcd', 'dddddddabc')
+-    True
+-    >>> same_chars('dddddddabc', 'abcd')
+-    True
+-    >>> same_chars('eabcd', 'dddddddabc')
+-    False
+-    >>> same_chars('abcd'...
+
+def fix_spaces(text):
+    """
+    Given a string text, replace all spaces in it with underscores, 
+    and if a string has more than 2 consecutive spaces, 
+    then replace all consecutive spaces with - 
+    
+    fix_spaces("Example") == "Example"
+    fix_spaces("Example 1") == "Example_1"
+    fix_spaces(" Example 2") == "_Example_2"
+    fix_spaces(" Example   3") == "_Example-3"
+    """

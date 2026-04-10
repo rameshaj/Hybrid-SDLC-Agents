@@ -1,0 +1,3 @@
+Implement task_func(csv_path: str, out_dir: str, chunk_size: int) -> list[str].
+Split a CSV into chunks of chunk_size rows (excluding header). Shuffle rows within each chunk and write to separate files in out_dir. Return list of chunk file paths.
+Return ONLY the function code.

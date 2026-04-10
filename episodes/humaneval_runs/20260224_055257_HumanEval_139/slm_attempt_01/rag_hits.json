@@ -1,0 +1,57 @@
+[
+  {
+    "id": 24,
+    "case_id": "HumanEval/77::20260213_065301_HumanEval_77",
+    "task_id": "HumanEval/77",
+    "dataset": "HumanEval",
+    "entry_point": "iscube",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError: Third test error: False | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065301_HumanEval_77/slm_attempt_02/candidate_run.py\", line 22, in __run_tests\n    check(globals().get('iscube'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_065301_HumanEval_77/slm_attempt_02/candidate_run.py\", line 9, in check\n    assert candidate(-1) == True, \"Third test error: \" + str(candidate(-1))\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Third test error: False",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def iscube(a):\n    if a < 0:\n        a = -a\n    return round(a ** (1/3)) ** 3 == a",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,2 +1,4 @@\n def iscube(a):\n-    return a == abs(a)**(1/3)\n+    if a < 0:\n+        a = -a\n+    return round(a ** (1/3)) ** 3 == a",
+    "prompt": "\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this ingeger is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> True\n    iscube(2) ==> False\n    iscube(-1) ==> True\n    iscube(64) ==> True\n    iscube(0) ==> True\n    iscube(180) ==> False\n    '''\n",
+    "run_dir": "episodes/humaneval_runs/20260213_065301_HumanEval_77",
+    "timestamp": "20260213_065301",
+    "score": 0.7887548208236694
+  },
+  {
+    "id": 17,
+    "case_id": "HumanEval/64::20260212_080911_HumanEval_64",
+    "task_id": "HumanEval/64",
+    "dataset": "HumanEval",
+    "entry_point": "vowels_count",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError: Test 5 | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_080911_HumanEval_64/slm_attempt_02/candidate_run.py\", line 35, in __run_tests\n    check(globals().get('vowels_count'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_080911_HumanEval_64/slm_attempt_02/candidate_run.py\", line 25, in check\n    assert candidate(\"keY\") == 2, \"Test 5\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 5",
+    "fix_actions": [
+      "add_guard"
+    ],
+    "llm_code": "def vowels_count(s):\n    vowels = 'aeiou'\n    count = 0\n    s = s.lower()\n    for i in range(len(s)):\n        if s[i] in vowels:\n            count += 1\n        elif s[i] == 'y' and i == len(s) - 1:\n            count += 1\n    return count",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,16 +1,10 @@\n def vowels_count(s):\n-    \"\"\"Write a function vowels_count which takes a string representing\n-    a word as input and returns the number of vowels in the string.\n-    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n-    vowel, but only when it is at the end of the given word.\n-\n-    Example:\n-    >>> vowels_count(\"abcde\")\n-    2\n-    >>> vowels_count(\"ACEDY\")\n-    3\n-    \"\"\"\n-    count = sum(1 for char in s if char.lower() in 'aeiou')\n-    if s.endswith('y') and s[:-1].lower() not in 'aeiou':\n-        count += 1\n+    vowels = 'aeiou'\n+    count = 0\n+    s = s.lower()\n+    for i in range(len(s)):\n+        if s[i] in vowels:\n+            count += 1\n+        elif s[i] == 'y' and i == len(s) - 1:\n+            count += 1\n     return count",
+    "prompt": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    \"\"\"Write a function vowels_count which takes a string representing\n    a word as input and returns the number of vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> vowels_count(\"abcde\")\n    2\n    >>> vowels_count(\"ACEDY\")\n    3\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_080911_HumanEval_64",
+    "timestamp": "20260212_080911",
+    "score": 0.7666347026824951
+  },
+  {
+    "id": 22,
+    "case_id": "HumanEval/71::20260212_081734_HumanEval_71",
+    "task_id": "HumanEval/71",
+    "dataset": "HumanEval",
+    "entry_point": "triangle_area",
+    "slm_failure_type": "AssertionError",
+    "slm_failure_summary": "AssertionError: This prints if this assert fails 1 (good for debugging!) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py\", line 25, in __run_tests\n    check(globals().get('triangle_area'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_081734_HumanEval_71/slm_attempt_02/candidate_run.py\", line 10, in check\n    assert candidate(3, 4, 5) == 6.00, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def triangle_area(a, b, c):\n    if a + b > c and a + c > b and b + c > a:\n        s = (a + b + c) / 2\n        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n        return round(area, 2)\n    return -1",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,5 +1,6 @@\n def triangle_area(a, b, c):\n     if a + b > c and a + c > b and b + c > a:\n-        return round((a * b * c) ** 0.5 / 4, 2)\n-    else:\n-        return -1\n+        s = (a + b + c) / 2\n+        area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n+        return round(area, 2)\n+    return -1",
+    "prompt": "\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle. \n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater \n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 6.00\n    triangle_area(1, 2, 10) == -1\n    '''\n",
+    "run_dir": "episodes/humaneval_runs/20260212_081734_HumanEval_71",
+    "timestamp": "20260212_081734",
+    "score": 0.7529590129852295
+  }
+]

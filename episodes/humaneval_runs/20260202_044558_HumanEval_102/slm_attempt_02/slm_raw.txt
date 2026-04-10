@@ -1,0 +1,44 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: choose_num
+Previous failures:
+- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044558_HumanEval_102/slm_attempt_01/candidate_run.py", line 25, in __run_tests
+    check(globals().get('choose_num'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044558_HumanEval_102/slm_attempt_01/candidate_run.py", line 12, in check
+    assert candidate(13, 12) == -1
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+def choose_num(x, y):
+    """This function takes two positive numbers x and y and returns the
+    biggest even integer number that is in the range [x, y] inclusive. If 
+    there's no such number, then the function should return -1.
+
+    For example:
+    choose_num(12, 15) = 14
+    choose_num(13, 12) = -1
+    """
+
+assistant
+```python
+def choose_num(x, y):
+    """This function takes two positive numbers x and y and returns the
+    biggest even integer number that is in the range [x, y] inclusive. If 
+    there's no such number, then the function should return -1.
+
+    For example:
+    choose_num(12, 15) = 14
+    choose_num(13, 12) = -1
+    """
+    if x > y:
+        return -1
+    if x % 2 == 0:
+        return x
+    else:
+        return x + 1 if x + 1 <= y else -1
+```
+
+> EOF by user

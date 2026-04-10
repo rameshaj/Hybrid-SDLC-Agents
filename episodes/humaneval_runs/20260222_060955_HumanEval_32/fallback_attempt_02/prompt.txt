@@ -1,0 +1,89 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: find_zero
+Previous failures:
+- attempt_01: SyntaxError: unterminated triple-quoted string literal (detected at line 130) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060955_HumanEval_32/slm_attempt_01/candidate_run.py", line 2
+    """ xs are coefficients of a polynomial.
+    ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 130)
+- attempt_02: SyntaxError: unterminated triple-quoted string literal (detected at line 130) | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060955_HumanEval_32/slm_attempt_02/candidate_run.py", line 2
+    """ xs are coefficients of a polynomial.
+    ^
+SyntaxError: unterminated triple-quoted string literal (detected at line 130)
+- fallback_01: IndentationError: unindent does not match any outer indentation level | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_060955_HumanEval_32/fallback_attempt_01/candidate_run.py", line 4
+    def f(x):
+             ^
+IndentationError: unindent does not match any outer indentation level
+Self-debug notes:
+- 0.5
+- 0.5
+- Fix the triple-quoted string literal by removing the extra closing quote.
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/3 error=NameError fix_actions=[] score=0.555
+fix_diff:
+--- slm
++++ llm
+@@ -1,4 +1,4 @@
+-def below_zero(operations: List[int]) -> bool:
++def below_zero(operations: list[int]) -> bool:
+     balance = 0
+     for operation in operations:
+         balance += operation
+[case 2] task_id=HumanEval/8 error=NameError fix_actions=['change_return'] score=0.539
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,6 @@
+-def sum_product(numbers: List[int]) -> Tuple[int, int]:
+-    """ For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.
+-    Empty sum should be equal to 0 and empty product should be equal to 1.
+-    >>> sum_product([])
+-    (0, 1)
+-    >>> sum_product([1, 2, 3, 4])
+-    (10, 24)
+-    """
+-    if not numbers:
+-        return (0, 1)
+-    
++def sum_product(numbers):
+     total_sum = sum(numbers)
+     total_product = 1
+-    for num in numbers:
+-        total_product *= num
+-    
+-    return total_sum, tot...
+[case 3] task_id=HumanEval/75 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.512
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+ def is_multiply_prime(a):
+-...
+
+import math
+
+
+def poly(xs: list, x: float):
+    """
+    Evaluates polynomial with coefficients xs at point x.
+    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n
+    """
+    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])
+
+
+def find_zero(xs: list):
+    """ xs are coefficients of a polynomial.
+    find_zero find x such that poly(x) = 0.
+    find_zero returns only only zero point, even if there are many.
+    Moreover, find_zero only takes list xs having even number of coefficients
+    and largest non zero coefficient as it guarantees
+    a solution.
+    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x
+    -0.5
+    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3
+    1.0
+    """

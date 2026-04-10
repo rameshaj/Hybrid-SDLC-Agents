@@ -1,0 +1,48 @@
+{
+  "adapter_path": "data/derived/finetune/qwen1.5b_lora_fix",
+  "model_path": "models/hf/qwen2.5-coder-1.5b-instruct",
+  "val_path": "data/derived/finetune/humaneval_slm_fix_pairs.cleaned.val.jsonl",
+  "test_path": "data/derived/finetune/humaneval_slm_fix_pairs.cleaned.test.jsonl",
+  "prompt_prefix": "You are a careful Python engineer. Follow these rules:\n- Return only Python code.\n- Keep the function signature exactly as given.\n- Include required imports for any typing names you use (e.g., Any, List).\n- Avoid hardcoding small cases; implement a general solution.\n- Do not raise exceptions for edge cases unless explicitly asked; handle safely.\n",
+  "results": [
+    {
+      "task_id": "HumanEval/21",
+      "entry_point": "rescale_to_unit",
+      "error_type": "NameError",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "max_new_tokens": 113,
+      "expected": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(num - min_val) / (max_val - min_val) for num in numbers]",
+      "generated_raw": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    if len(numbers) < 2:\n        raise ValueError(\"Input list must contain at least two elements.\")\n    \n    min_val = min(numbers)\n    max_val = max(numbers)\n    range_val = max_val - min_val\n    \n    return [(x - min_val) / range_val for x in numbers]",
+      "generated_code": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    if len(numbers) < 2:\n        raise ValueError(\"Input list must contain at least two elements.\")\n    \n    min_val = min(numbers)\n    max_val = max(numbers)\n    range_val = max_val - min_val\n    \n    return [(x - min_val) / range_val for x in numbers]"
+    },
+    {
+      "task_id": "HumanEval/22",
+      "entry_point": "filter_integers",
+      "error_type": "NameError",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/humaneval_eval_nd9gnq3i/HumanEval_22.py\", line 1, in <module>\n    def filter_integers(values: list[Any]) -> list[int]:\n                                     ^^^\nNameError: name 'Any' is not defined. Did you mean: 'any'?\n",
+      "max_new_tokens": 89,
+      "expected": "def filter_integers(values: list) -> list:\n    return [value for value in values if isinstance(value, int)]",
+      "generated_raw": "def filter_integers(values: list[Any]) -> list[int]:\n    result = []\n    for item in values:\n        if isinstance(item, int):\n            result.append(item)\n    return result",
+      "generated_code": "def filter_integers(values: list[Any]) -> list[int]:\n    result = []\n    for item in values:\n        if isinstance(item, int):\n            result.append(item)\n    return result"
+    },
+    {
+      "task_id": "HumanEval/75",
+      "entry_point": "is_multiply_prime",
+      "error_type": "AssertionError",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/humaneval_eval_nd9gnq3i/HumanEval_75.py\", line 27, in <module>\n    check(is_multiply_prime)\n  File \"/tmp/humaneval_eval_nd9gnq3i/HumanEval_75.py\", line 17, in check\n    assert candidate(3 * 5 * 7) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "max_new_tokens": 200,
+      "expected": "def is_multiply_prime(a):\n    def is_prime(n):\n        if n <= 1:\n            return False\n        for i in range(2, int(n**0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    \n    for i in range(len(primes)):\n        for j in range(i, len(primes)):\n            for k in range(j, len(primes)):\n                if primes[i] * primes[j] * primes[k] == a:\n                    return True\n    return False",
+      "generated_raw": "def is_multiply_prime(a):\n    primes = [2, 3, 5]\n    count = 0\n    for prime in primes:\n        while a % prime == 0:\n            a //= prime\n            count += 1\n    return count == 3",
+      "generated_code": "def is_multiply_prime(a):\n    primes = [2, 3, 5]\n    count = 0\n    for prime in primes:\n        while a % prime == 0:\n            a //= prime\n            count += 1\n    return count == 3"
+    }
+  ]
+}

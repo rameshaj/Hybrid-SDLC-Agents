@@ -1,0 +1,9 @@
+from collections import Counter
+import itertools
+import string
+
+def task_func(word: str) -> dict:
+    combinations = [''.join(combo) for combo in itertools.permutations(string.ascii_lowercase, 2)]
+    word_pairs = [word[i:i+2] for i in range(len(word) - 1)]
+    counts = Counter(word_pairs)
+    return {combo: counts.get(combo, 0) for combo in combinations}

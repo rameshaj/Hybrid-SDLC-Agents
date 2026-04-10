@@ -1,0 +1,9 @@
+{
+  "ok": false,
+  "score": 0.0,
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074146_HumanEval_135/fallback_attempt_01/candidate_run.py\", line 24, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074146_HumanEval_135/fallback_attempt_01/candidate_run.py\", line 21, in __run_tests\n    check(globals().get('can_arrange'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074146_HumanEval_135/fallback_attempt_01/candidate_run.py\", line 13, in check\n    assert candidate([4,8,5,7,3])==4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "elapsed_s": 0.07714605331420898,
+  "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074146_HumanEval_135/fallback_attempt_01/candidate_run.py\", line 21, in __run_tests\n    check(globals().get('can_arrange'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074146_HumanEval_135/fallback_attempt_01/candidate_run.py\", line 13, in check\n    assert candidate([4,8,5,7,3])==4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+}

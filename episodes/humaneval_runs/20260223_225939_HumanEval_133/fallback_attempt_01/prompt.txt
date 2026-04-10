@@ -1,0 +1,62 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: sum_squares
+Previous failures:
+- attempt_01: NameError: name 'math' is not defined | tail:     return sum(math.ceil(x) ** 2 for x in lst)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260223_225939_HumanEval_133/slm_attempt_01/candidate_run.py", line 2, in <genexpr>
+    return sum(math.ceil(x) ** 2 for x in lst)
+               ^^^^
+NameError: name 'math' is not defined
+- attempt_02: SLM_TIMEOUT
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/4 error=NameError fix_actions=[] score=0.469
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,3 @@
+-def mean_absolute_deviation(numbers: List[float]) -> float:
+-    """ For a given list of input numbers, calculate Mean Absolute Deviation
+-    around the mean of this dataset.
+-    Mean Absolute Deviation is the average absolute difference between each
+-    element and a centerpoint (mean in this case):
+-    MAD = average | x - x_mean |
+-    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])
+-    1.0
+-    """
+-    if not numbers:
+-        return 0.0
+-
++def mean_absolute_deviation(numbers: list[float]) -> float:
+     mean = sum(numbers) / len(numbers)
+     re...
+[case 2] task_id=HumanEval/21 error=NameError fix_actions=[] score=0.453
+fix_diff:
+--- slm
++++ llm
+@@ -1,9 +1,4 @@
+-def rescale_to_unit(numbers: List[float]) -> List[float]:
+-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+-    such that the smallest number will become 0 and the largest will become 1
+-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+-    [0.0, 0.25, 0.5, 0.75, 1.0]
+-    """
++def rescale_to_unit(numbers: list[floa...
+
+def sum_squares(lst):
+    """You are given a list of numbers.
+    You need to return the sum of squared numbers in the given list,
+    round each element in the list to the upper int(Ceiling) first.
+    Examples:
+    For lst = [1,2,3] the output should be 14
+    For lst = [1,4,9] the output should be 98
+    For lst = [1,3,5,7] the output should be 84
+    For lst = [1.4,4.2,0] the output should be 29
+    For lst = [-2.4,1,1] the output should be 6
+    
+
+    """

@@ -1,0 +1,29 @@
+.....FFF
+======================================================================
+FAIL: test_case_with_non_integers (__main__.TestCases.test_case_with_non_integers)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck/20260310_082021_BigCodeBench_22/slm_attempt_01/candidate_run.py", line 88, in test_case_with_non_integers
+    self.assertIn(most_common, [0.1, 0.2, 0.3, 0.4, 0.5, 0.6])
+AssertionError: (0.1, 0.4) not found in [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+
+======================================================================
+FAIL: test_empty_first_list (__main__.TestCases.test_empty_first_list)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck/20260310_082021_BigCodeBench_22/slm_attempt_01/candidate_run.py", line 104, in test_empty_first_list
+    self.assertTrue(all(item in l2 for item in freq.elements()))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_imbalanced_lists (__main__.TestCases.test_imbalanced_lists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck/20260310_082021_BigCodeBench_22/slm_attempt_01/candidate_run.py", line 96, in test_imbalanced_lists
+    self.assertTrue(any(item in freq for item in l1))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.003s
+
+FAILED (failures=3)

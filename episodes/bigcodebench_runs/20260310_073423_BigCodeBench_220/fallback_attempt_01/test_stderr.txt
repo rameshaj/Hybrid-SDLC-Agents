@@ -1,0 +1,77 @@
+FEEEE
+======================================================================
+ERROR: test_mainloop_invocation (__main__.TestCases.test_mainloop_invocation)
+Test that the Turtle window's mainloop is called.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 55, in test_mainloop_invocation
+    task_func(colors)
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 5, in task_func
+    t.color(choice(colors))
+            ^^^^^^
+NameError: name 'choice' is not defined
+
+======================================================================
+ERROR: test_square_drawing (__main__.TestCases.test_square_drawing)
+Test that the turtle moves correctly to draw squares.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 39, in test_square_drawing
+    task_func(colors)
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 5, in task_func
+    t.color(choice(colors))
+            ^^^^^^
+NameError: name 'choice' is not defined
+
+======================================================================
+ERROR: test_time_delay (__main__.TestCases.test_time_delay)
+Test that there is a time delay between each square.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 47, in test_time_delay
+    task_func(colors)
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 5, in task_func
+    t.color(choice(colors))
+            ^^^^^^
+NameError: name 'choice' is not defined
+
+======================================================================
+ERROR: test_turtle_setup (__main__.TestCases.test_turtle_setup)
+Test the setup of the Turtle Graphics environment.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 21, in test_turtle_setup
+    task_func(colors)
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 5, in task_func
+    t.color(choice(colors))
+            ^^^^^^
+NameError: name 'choice' is not defined
+
+======================================================================
+FAIL: test_function_executes_without_error (__main__.TestCases.test_function_executes_without_error)
+Test that the task_func function executes without raising any errors.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260310_073423_BigCodeBench_220/fallback_attempt_01/candidate_run.py", line 34, in test_function_executes_without_error
+    self.assertTrue(execution_successful)
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+FAILED (failures=1, errors=4)

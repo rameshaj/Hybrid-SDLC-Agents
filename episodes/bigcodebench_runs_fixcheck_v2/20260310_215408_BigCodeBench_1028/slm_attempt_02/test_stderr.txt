@@ -1,0 +1,77 @@
+..EEEE
+======================================================================
+ERROR: test_io_error_handling (__main__.TestCases.test_io_error_handling)
+Test the function's behavior when an IOError occurs during file operations.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 132, in test_io_error_handling
+    result = task_func(5, 10)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 42, in task_func
+    with open(LOGFILE_PATH, 'w') as log_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1183, in _execute_mock_call
+    raise effect
+OSError: Mocked error
+
+======================================================================
+ERROR: test_normal_operation (__main__.TestCases.test_normal_operation)
+Test the normal operation of the function.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 77, in test_normal_operation
+    result = task_func(5, 25)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 44, in task_func
+    cpu_usage = platform.cpu_percent(interval=interval)
+                ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'platform' has no attribute 'cpu_percent'
+
+======================================================================
+ERROR: test_subprocess_output_handling_linux (__main__.TestCases.test_subprocess_output_handling_linux)
+Test handling of subprocess output on Linux.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 124, in test_subprocess_output_handling_linux
+    result = task_func(5, 10)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 44, in task_func
+    cpu_usage = platform.cpu_percent(interval=interval)
+                ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'platform' has no attribute 'cpu_percent'
+
+======================================================================
+ERROR: test_subprocess_output_handling_windows (__main__.TestCases.test_subprocess_output_handling_windows)
+Test handling of subprocess output on Windows.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.11/unittest/mock.py", line 1375, in patched
+    return func(*newargs, **newkeywargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 108, in test_subprocess_output_handling_windows
+    result = task_func(5, 10)
+             ^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_215408_BigCodeBench_1028/slm_attempt_02/candidate_run.py", line 44, in task_func
+    cpu_usage = platform.cpu_percent(interval=interval)
+                ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'platform' has no attribute 'cpu_percent'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.008s
+
+FAILED (errors=4)

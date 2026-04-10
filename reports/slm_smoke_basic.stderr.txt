@@ -1,0 +1,2 @@
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 2311 =  1059 +     896 +     355                |

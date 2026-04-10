@@ -1,0 +1,75 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: decode_cyclic
+Previous failures:
+- attempt_01: NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'? | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py", line 29, in __run_tests
+    check(globals().get('decode_cyclic'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_064903_HumanEval_38/slm_attempt_01/candidate_run.py", line 23, in check
+    encoded_str = encode_cyclic(str)
+                  ^^^^^^^^^^^^^
+NameError: name 'encode_cyclic' is not defined. Did you mean: 'decode_cyclic'?
+Self-debug notes:
+- Ensure `encode_cyclic` is imported or defined before calling `decode_cyclic`.
+- Use `globals().get('decode_cyclic')` instead of `decode_cyclic` to handle cases where the function might not be defined in the global scope.
+- User-specified prompt will pre-start conversation, did you mean to set --system-prompt (-sys) instead?
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/77 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.646
+fix_diff:
+--- slm
++++ llm
+@@ -1,2 +1,4 @@
+ def iscube(a):
+-    return a == abs(a)**(1/3)
++    if a < 0:
++        a = -a
++    return round(a ** (1/3)) ** 3 == a
+[case 2] task_id=HumanEval/64 error=AssertionError fix_actions=['add_guard'] score=0.644
+fix_diff:
+--- slm
++++ llm
+@@ -1,16 +1,10 @@
+ def vowels_count(s):
+-    """Write a function vowels_count which takes a string representing
+-    a word as input and returns the number of vowels in the string.
+-    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a
+-    vowel, but only when it is at the end of the given word.
+-
+-    Example:
+-    >>> vowels_count("abcde")
+-    2
+-    >>> vowels_count("ACEDY")
+-    3
+-    """
+-    count = sum(1 for char in s if char.lower() in 'aeiou')
+-    if s.endswith('y') and s[:-1].lower() not in 'aeiou':
+-        count += 1
++    vowels = 'aeiou'
++...
+[case 3] task_id=HumanEval/54 error=AssertionError fix_actions=['change_return'] score=0.641
+fix_diff:
+--- slm
++++ llm
+@@ -1,17 +1,2 @@
+ def same_chars(s0: str, s1: str):
+-    """
+-    Check if two wor...
+
+def encode_cyclic(s: str):
+    """
+    returns encoded string by cycling groups of three characters.
+    """
+    # split string to groups. Each of length 3.
+    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+    # cycle elements in each group. Unless group has fewer elements than 3.
+    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]
+    return "".join(groups)
+
+
+def decode_cyclic(s: str):
+    """
+    takes as input string encoded with encode_cyclic function. Returns decoded string.
+    """

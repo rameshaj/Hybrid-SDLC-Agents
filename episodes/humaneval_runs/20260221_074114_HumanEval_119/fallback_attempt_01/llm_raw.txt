@@ -1,0 +1,11 @@
+```python
+def match_parens(lst):
+    open_count_1 = lst[0].count('(')
+    close_count_1 = lst[0].count(')')
+    open_count_2 = lst[1].count('(')
+    close_count_2 = lst[1].count(')')
+
+    if open_count_1 + open_count_2 == close_count_1 + close_count_2:
+        return 'Yes'
+    return 'No'
+```

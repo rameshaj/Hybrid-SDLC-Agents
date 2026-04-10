@@ -1,0 +1,20 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: string_to_md5
+Previous failures:
+- attempt_01: NameError: name 'hashlib' is not defined | tail:     assert candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_155152_HumanEval_162/slm_attempt_01/candidate_run.py", line 4, in string_to_md5
+    return hashlib.md5(text.encode()).hexdigest()
+           ^^^^^^^
+NameError: name 'hashlib' is not defined
+
+def string_to_md5(text):
+    """
+    Given a string 'text', return its md5 hash equivalent string.
+    If 'text' is an empty string, return None.
+
+    >>> string_to_md5('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'
+    """

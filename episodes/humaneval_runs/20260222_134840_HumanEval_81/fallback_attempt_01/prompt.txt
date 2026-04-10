@@ -1,0 +1,66 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: numerical_letter_grade
+Previous failures:
+- attempt_01: SLM_TIMEOUT
+- attempt_02: SLM_TIMEOUT
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/21 error=NameError fix_actions=[] score=0.442
+fix_diff:
+--- slm
++++ llm
+@@ -1,9 +1,4 @@
+-def rescale_to_unit(numbers: List[float]) -> List[float]:
+-    """ Given list of numbers (of at least two elements), apply a linear transform to that list,
+-    such that the smallest number will become 0 and the largest will become 1
+-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])
+-    [0.0, 0.25, 0.5, 0.75, 1.0]
+-    """
++def rescale_to_unit(numbers: list[float]) -> list[float]:
+     min_val = min(numbers)
+     max_val = max(numbers)
+     return [(num - min_val) / (max_val - min_val) for num in numbers]
+[case 2] task_id=HumanEval/17 error=NameError fix_actions=['change_return'] score=0.427
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def parse_music(music_string: str) -> List[int]:
+-    """ Input to this function is a string representing musical notes in a special ASCII format.
+-    Your task is to parse this string and return list of integers corresponding to how many beats does each
+-    not last.
+-
+-    Here is a legend:
+-    'o' - whole note, lasts four beats
+-    'o|' - half note, lasts two beats
+-    '.|' - quater note, last...
+
+def numerical_letter_grade(grades):
+    """It is the last week of the semester and the teacher has to give the grades
+    to students. The teacher has been making her own algorithm for grading.
+    The only problem is, she has lost the code she used for grading.
+    She has given you a list of GPAs for some students and you have to write 
+    a function that can output a list of letter grades using the following table:
+             GPA       |    Letter grade
+              4.0                A+
+            > 3.7                A 
+            > 3.3                A- 
+            > 3.0                B+
+            > 2.7                B 
+            > 2.3                B-
+            > 2.0                C+
+            > 1.7                C
+            > 1.3                C-
+            > 1.0                D+ 
+            > 0.7                D 
+            > 0.0                D-
+              0.0                E
+    
+
+    Example:
+    grade_equation([4.0, 3, 1.7, 2, 3.5]) ==> ['A+', 'B', 'C-', 'C', 'A-']
+    """

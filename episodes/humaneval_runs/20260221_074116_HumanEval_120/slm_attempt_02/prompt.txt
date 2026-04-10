@@ -1,0 +1,74 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: maximum
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/9 error=NameError fix_actions=['change_return'] score=0.559
+fix_diff:
+--- slm
++++ llm
+@@ -1,18 +1,7 @@
+-def rolling_max(numbers: List[int]) -> List[int]:
+-    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+-    in the sequence.
+-    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+-    [1, 2, 3, 3, 3, 4, 4]
+-    """
+-    if not numbers:
+-        return []
+-    
+-    max_so_far = numbers[0]
+-    rolling_max_list = [max_so_far]
+-    
+-    for num in numbers[1:]:
+-        if num > max_so_far:
+-            max_so_far = num
+-        rolling_max_list.append(max_so_far)
+-    
+-    return rolling_max_list
++def rolling_max...
+[case 2] task_id=HumanEval/12 error=NameError fix_actions=['change_return'] score=0.509
+fix_diff:
+--- slm
++++ llm
+@@ -1,14 +1,4 @@
+-def longest(strings: List[str]) -> Optional[str]:
+-    """ Out of list of strings, return the longest one. Return the first one in case of multiple
+-    strings of the same length. Return None in case the input list is empty.
+-    >>> longest([])
+-
+-    >>> longest(['a', 'b', 'c'])
+-    'a'
+-    >>> longest(['a', 'bb', 'ccc'])
+-    'cc...
+
+def maximum(arr, k):
+    """
+    Given an array arr of integers and a positive integer k, return a sorted list 
+    of length k with the maximum k numbers in arr.
+
+    Example 1:
+
+        Input: arr = [-3, -4, 5], k = 3
+        Output: [-4, -3, 5]
+
+    Example 2:
+
+        Input: arr = [4, -4, 4], k = 2
+        Output: [4, 4]
+
+    Example 3:
+
+        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1
+        Output: [2]
+
+    Note:
+        1. The length of the array will be in the range of [1, 1000].
+        2. The elements in the array will be in the range of [-1000, 1000].
+        3. 0 <= k <= len(arr)
+    """

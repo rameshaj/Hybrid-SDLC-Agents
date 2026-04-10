@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def parse_nested_parens(paren_string: str) -> List[int]:\n    levels = []\n    current_level = 0\n    for char in paren_string:\n        if char == '(':\n            current_level += 1\n            levels.append(current_level)\n        elif char == ')':\n            current_level -= 1\n    return levels",
+    "dir": "episodes/humaneval_runs/20260201_211005_HumanEval_6/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_211005_HumanEval_6/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def parse_nested_parens(paren_string: str) -> List[int]:\n                                                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?\n",
+      "elapsed_s": 0.07462596893310547,
+      "failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_211005_HumanEval_6/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def parse_nested_parens(paren_string: str) -> List[int]:\n                                                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_211005_HumanEval_6/slm_attempt_01/candidate_run.py\", line 1, in <module>\n    def parse_nested_parens(paren_string: str) -> List[int]:\n                                                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "attempt_02: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_211005_HumanEval_6/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def parse_nested_parens(paren_string: str) -> List[int]:\n                                                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "attempt_03: NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_211005_HumanEval_6/slm_attempt_03/candidate_run.py\", line 1, in <module>\n    def parse_nested_parens(paren_string: str) -> List[int]:\n                                                  ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?"
+  ],
+  "fallback_failures": []
+}

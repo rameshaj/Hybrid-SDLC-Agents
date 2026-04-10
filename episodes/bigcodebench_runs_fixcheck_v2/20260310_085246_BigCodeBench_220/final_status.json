@@ -1,0 +1,26 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "from random import choice\nimport turtle\nimport time\n\ndef task_func(colors):\n    \"\"\"\n    Draws five squares of random colors using Turtle Graphics. Each square is drawn\n    sequentially with a 1-second pause between squares.\n    The function requires a list of colors as input and sets up a Turtle Graphics window, \n    creates a Turtle object, and uses it to draw the squares with colors from the provided list.\n    The window remains open after drawing.\n\n    Parameters:\n        colors (list): A list of color names (as strings) to use for drawing the squares.\n\n    Returns:\n        None.\n\n    Requirements:\n    - random.choice\n    - turtle\n    - time\n\n    Examples:\n    >>> task_func(['red', 'blue', 'green', 'yellow', 'purple'])  # This will open a Turtle Graphics window and draw squares\n    >>> turtle.TurtleScreen._RUNNING\n    True  # Check if the Turtle Graphics screen is running\n    \"\"\"\n    screen = turtle.Screen()\n    screen.title(\"Random Color Squares\")\n    turtle.speed(0)  # Fastest drawing speed\n\n    for _ in range(5):\n        color = choice(colors)\n        turtle.color(color)\n        turtle.begin_fill()\n        for _ in range(4):\n            turtle.forward(100)\n            turtle.right(90)\n        turtle.end_fill()\n        time.sleep(1)\n\n    turtle.done()",
+    "dir": "episodes/bigcodebench_runs_fixcheck_v2/20260310_085246_BigCodeBench_220/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 124,
+      "stdout": "",
+      "stderr": ".\n[TIMEOUT]\n",
+      "elapsed_s": 10.01070785522461,
+      "failure_summary": "TIMEOUT"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: TIMEOUT",
+    "attempt_02: TIMEOUT"
+  ],
+  "fallback_failures": [
+    "fallback_01: TIMEOUT",
+    "fallback_02: TIMEOUT"
+  ]
+}

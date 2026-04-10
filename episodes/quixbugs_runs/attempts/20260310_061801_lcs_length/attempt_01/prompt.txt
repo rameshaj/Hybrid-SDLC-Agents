@@ -1,0 +1,68 @@
+You are fixing a Python bug.
+STRICT RULES:
+1) Output ONLY a unified diff
+2) First line MUST be: diff --git
+3) NO explanation text
+4) Do NOT wrap in code fences or <PATCH> tags
+5) Do NOT repeat the prompt
+
+Target:
+a/python_programs/lcs_length.py
+b/python_programs/lcs_length.py
+
+Attempt 1/2
+Previous status: INIT
+
+Recent failure diagnostics (previous attempts):
+None
+
+Recent attempted diffs (previous attempts):
+None
+
+Buggy file content (exact):
+def lcs_length(s, t):
+    from collections import Counter
+
+    dp = Counter()
+
+    for i in range(len(s)):
+        for j in range(len(t)):
+            if s[i] == t[j]:
+                dp[i, j] = dp[i - 1, j] + 1
+
+    return max(dp.values()) if dp else 0
+
+
+
+"""
+Longest Common Substring
+longest-common-substring
+
+Input:
+    s: a string
+    t: a string
+
+Output:
+    Length of the longest substring common to s and t
+
+Example:
+    >>> lcs_length('witch', 'sandwich')
+    2
+    >>> lcs_length('meow', 'homeowner')
+    4
+"""
+
+
+Failing output:
+```
+[FAIL] lcs_length case#1 in=['witch', 'sandwich'] good=2 bad=1
+[FAIL] lcs_length case#2 in=['meow', 'homeowner'] good=4 bad=1
+[FAIL] lcs_length case#4 in=['fun', 'function'] good=3 bad=1
+[FAIL] lcs_length case#5 in=['cyborg', 'cyber'] good=3 bad=1
+[FAIL] lcs_length case#6 in=['physics', 'physics'] good=7 bad=1
+[FAIL] lcs_length case#7 in=['space age', 'pace a'] good=6 bad=1
+[FAIL] lcs_length case#8 in=['flippy', 'floppy'] good=3 bad=2
+[FAIL] lcs_length case#9 in=['acbdegcedbg', 'begcfeubk'] good=3 bad=1
+[FAIL] lcs_length failed 8/9 cases
+
+```

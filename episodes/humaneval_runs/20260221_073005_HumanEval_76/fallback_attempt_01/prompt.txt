@@ -1,0 +1,66 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: is_simple_power
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+- attempt_02: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/75 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.388
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+ def is_multiply_prime(a):
+-    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+-    and false otherwise.
+-    Knowing that (a) is less then 100. 
+-    Example:
+-    is_multiply_prime(30) == True
+-    30 = 2 * 3 * 5
+-    """
+     def is_prime(n):
+         if n <= 1:
+             return False
+@@ -14,12 +7,11 @@
+                 return False
+         return True
+ 
+-    count = 0
+-    for i in range(2, int(a**0.5) + 1):
+-        if a % i == 0 and is_prime(i):
+-            count += 1
+-            if count > 3:
+-...
+[case 2] task_id=HumanEval/3 error=NameError fix_actions=[] score=0.387
+fix_diff:
+--- slm
++++ llm
+@@ -1,4 +1,4 @@
+-def below_zero(operations: List[int]) -> bool:
++def below_zero(operations: list[int]) -> bool:
+     balance = 0
+     for operation in operations:
+         balance += operation
+[case 3] task_id=HumanEval/0 error=NameError fix_actions=[] score=0.379
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+-def has_close_elements(numbers: List[float]...
+
+def is_simple_power(x, n):
+    """Your task is to write a function that returns true if a number x is a simple
+    power of n and false in other cases.
+    x is a simple power of n if n**int=x
+    For example:
+    is_simple_power(1, 4) => true
+    is_simple_power(2, 2) => true
+    is_simple_power(8, 2) => true
+    is_simple_power(3, 2) => false
+    is_simple_power(3, 1) => false
+    is_simple_power(5, 3) => false
+    """

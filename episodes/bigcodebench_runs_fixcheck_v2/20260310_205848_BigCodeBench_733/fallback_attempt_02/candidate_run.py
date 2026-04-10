@@ -1,0 +1,36 @@
+import re
+import string
+
+def task_func(content):
+    stop_words = set(['a', 'an', 'the', 'is', 'are', 'was', 'were', 'this', 'that', 'it', 'he', 'she', 'they', 'you', 'we', 'of', 'in', 'on', 'at', 'to', 'for', 'with', 'as', 'by', 'from', 'about', 'but', 'or', 'and', 'if', 'then', 'than', 'so', 'not', 'no', 'yes', 'all', 'any', 'some', 'one', 'two', 'three', 'four', 'five', 'more', 'most', 'much', 'many', 'few', 'less', 'least', 'such', 'like', 'just', 'now', 'here', 'there', 'where', 'when', 'why', 'how', 'what', 'who', 'whom', 'which', 'whose', 'if', 'while', 'until', 'since', 'before', 'after', 'during', 'between', 'among', 'above', 'below', 'over', 'under', 'through', 'across', 'along', 'around', 'against', 'without', 'within', 'beyond', 'despite', 'except', 'including', 'regarding', 'concerning', 'following', 'according', 'based', 'upon', 'alongside', 'together', 'along', 'besides', 'beside', 'near', 'far', 'close', 'next', 'last', 'first', 'second', 'third', 'last', 'next', 'previous', 'future', 'past', 'present', 'time', 'day', 'week', 'month', 'year', 'decade', 'century', 'millennium', 'age', 'era', 'period', 'moment', 'instance', 'case', 'situation', 'event', 'thing', 'fact', 'idea', 'concept', 'notion', 'belief', 'opinion', 'view', 'perspective', 'attitude', 'feeling', 'emotion', 'state', 'condition', 'quality', 'characteristic', 'attribute', 'feature', 'aspect', 'element', 'component', 'part', 'piece', 'section', 'segment', 'portion', 'fraction', 'bit', 'amount', 'quantity', 'sum', 'total', 'whole', 'entire', 'complete', 'full', 'entirety', 'integrity', 'unity', 'wholeness', 'togetherness', 'cohesion', 'connection', 'relationship', 'link', 'bond', 'tie', 'association', 'affiliation', 'partnership', 'collaboration', 'cooperation', 'teamwork', 'joint', 'shared', 'common', 'mutual', 'reciprocal', 'interdependent', 'interconnected', 'interrelated', 'intertwined', 'entwined', 'woven', 'knitted', 'braided', 'twisted', 'fused', 'merged', 'combined', 'blended', 'mixed', 'amalgamated', 'united', 'joined', 'linked', 'attached', 'fastened', 'secured', 'bound', 'tied', 'connected', 'related', 'associated', 'correlated', 'analogous', 'similar', 'comparable', 'equivalent', 'alike', 'like', 'same', 'identical', 'matching', 'congruent', 'consistent', 'congruous', 'harmonious', 'synchronized', 'coordinated', 'aligned', 'conformed', 'adapted', 'adjusted', 'modified', 'altered', 'changed', 'transformed', 'converted', 'evolved', 'developed', 'progressed', 'advanced', 'improved', 'enhanced', 'augmented', 'boosted', 'amplified', 'magnified', 'expanded', 'broadened', 'widened', 'stretched', 'lengthened', 'extended', 'prolonged', 'continued', 'sustained', 'maintained', 'preserved', 'protected', 'safeguarded', 'secured', 'ensured', 'guaranteed', 'warranted', 'assured', 'certified', 'validated', 'verified', 'authenticated', 'substantiated', 'corroborated', 'confirmed', 'ratified', 'endorsed', 'approved', 'accepted', 'acknowledged', 'recognized', 'appreciated', 'valued', 'esteemed', 'respected', 'honored', 'cherished', 'treasured', 'prized', 'valued', 'esteemed', 'regarded', 'considered'])
+
+import unittest
+class TestCases(unittest.TestCase):
+    def test_case_1(self):
+        # Test with a mix of stopwords and non-stopwords
+        self.assertEqual(task_func('this is an example content'), 1)
+    def test_case_2(self):
+        # Test with all stopwords except the last word
+        self.assertEqual(task_func('this is an the of'), 0)
+    def test_case_3(self):
+        # Test with no stopwords
+        self.assertEqual(task_func('example content programming'), 2)
+    def test_case_4(self):
+        # Test with punctuation
+        self.assertEqual(task_func('example, content; programming, python.'), 3)
+    def test_case_5(self):
+        # Test with an empty string
+        self.assertEqual(task_func(''), 0)
+    def test_case_6(self):
+        # Test with a single non-stopword
+        self.assertEqual(task_func('content'), 0)
+    def test_case_7(self):
+        # Test with a single stopword
+        self.assertEqual(task_func('the'), 0)
+    def test_case_8(self):
+        # Test with a mix and uppercase letters
+        self.assertEqual(task_func('This IS an Example Content'), 1)
+
+if __name__ == '__main__':
+    import unittest
+    unittest.main()

@@ -1,0 +1,53 @@
+[
+  {
+    "id": 6,
+    "case_id": "HumanEval/20::20260213_073022_HumanEval_20",
+    "task_id": "HumanEval/20",
+    "dataset": "HumanEval",
+    "entry_point": "find_closest_elements",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_073022_HumanEval_20/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n                                       ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def find_closest_elements(numbers):\n    numbers.sort()\n    closest_pair = (numbers[0], numbers[1])\n    min_diff = abs(numbers[1] - numbers[0])\n    \n    for i in range(1, len(numbers)):\n        diff = abs(numbers[i] - numbers[i - 1])\n        if diff < min_diff:\n            min_diff = diff\n            closest_pair = (numbers[i - 1], numbers[i])\n    \n    return closest_pair",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,10 +1,12 @@\n-def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n-    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n-    other and return them in order (smaller number, larger number).\n-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n-    (2.0, 2.2)\n-    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n-    (2.0, 2.0)\n-    \"\"\"\n+def find_closest_elements(numbers):\n     numbers.sort()\n-    return numbers[0], numbers[-1]\n+    closest_pair = (numbers[0], numbers[1])\n+    min_diff = abs(numbers[1] - numbers[0])\n+    \n+    for i in range(1, len(numbers)):\n+        diff = abs(numbers[i] - numbers[i - 1])\n+        if diff < min_diff:\n+            min_diff = diff\n+            closest_pair = (numbers[i - 1], numbers[i])\n+    \n+    return closest_pair",
+    "prompt": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_073022_HumanEval_20",
+    "timestamp": "20260213_073022",
+    "score": 0.5897095203399658
+  },
+  {
+    "id": 0,
+    "case_id": "HumanEval/0::20260212_064246_HumanEval_0",
+    "task_id": "HumanEval/0",
+    "dataset": "HumanEval",
+    "entry_point": "has_close_elements",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_064246_HumanEval_0/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def has_close_elements(numbers: List[float], threshold: float) -> bool:\n                                    ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def has_close_elements(numbers: list[float], threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,11 +1,4 @@\n-def has_close_elements(numbers: List[float], threshold: float) -> bool:\n-    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n-    given threshold.\n-    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n-    False\n-    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n-    True\n-    \"\"\"\n+def has_close_elements(numbers: list[float], threshold: float) -> bool:\n     for i in range(len(numbers)):\n         for j in range(i + 1, len(numbers)):\n             if abs(numbers[i] - numbers[j]) < threshold:",
+    "prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_064246_HumanEval_0",
+    "timestamp": "20260212_064246",
+    "score": 0.5243077278137207
+  },
+  {
+    "id": 7,
+    "case_id": "HumanEval/21::20260213_073942_HumanEval_21",
+    "task_id": "HumanEval/21",
+    "dataset": "HumanEval",
+    "entry_point": "rescale_to_unit",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260213_073942_HumanEval_21/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def rescale_to_unit(numbers: List[float]) -> List[float]:\n                                 ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [],
+    "llm_code": "def rescale_to_unit(numbers: list[float]) -> list[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(num - min_val) / (max_val - min_val) for num in numbers]",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,9 +1,4 @@\n-def rescale_to_unit(numbers: List[float]) -> List[float]:\n-    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n-    such that the smallest number will become 0 and the largest will become 1\n-    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n-    [0.0, 0.25, 0.5, 0.75, 1.0]\n-    \"\"\"\n+def rescale_to_unit(numbers: list[float]) -> list[float]:\n     min_val = min(numbers)\n     max_val = max(numbers)\n     return [(num - min_val) / (max_val - min_val) for num in numbers]",
+    "prompt": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260213_073942_HumanEval_21",
+    "timestamp": "20260213_073942",
+    "score": 0.4736453890800476
+  }
+]

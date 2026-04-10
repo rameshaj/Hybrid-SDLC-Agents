@@ -1,0 +1,3 @@
+- Ensure the function `special_factorial` is correctly defined.
+- The function should return the product of all factorials from 1 to `n`.
+- The function should be tested with a range of inputs to ensure correctness.

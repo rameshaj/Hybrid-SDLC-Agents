@@ -1,0 +1,3 @@
+Implement task_func(ftp_url: str, out_dir: str) -> int.
+Download all files from an FTP directory using wget in a subprocess. Return the number of files downloaded.
+Return ONLY the function code.

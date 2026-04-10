@@ -1,0 +1,51 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: is_nested
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/6 error=NameError fix_actions=['change_return'] score=0.584
+fix_diff:
+--- slm
++++ llm
+@@ -1,20 +1,13 @@
+-def parse_nested_parens(paren_string: str) -> List[int]:
+-    """ Input to this function is a string represented multiple groups for nested parentheses separated by spaces.
+-    For each of the group, output the deepest level of nesting of parentheses.
+-    E.g. (()()) has maximum two levels of nesting while ((())) has three.
+-
+-    >>> parse_nested_parens('(()()) ((())) () ((())()())')
+-    [2, 3, 1, 3]
+-    """
+-    def max_depth(s):
+-        depth = 0
++def parse_nested_parens(paren_string: str) -> list:
++    results = []
++    for group in paren_string.s...
+[case 2] task_id=HumanEval/1 error=NameError fix_actions=['add_guard', 'change_return'] score=0.459
+fix_diff:
+--- slm
++++ llm
+@@ -1,24 +1,22 @@
+-def separate_paren_groups(paren_string: str) -> List[str]:
+-    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+-    separate those group into separate strings and return the list of those.
+-    Separate groups are balanced (each open brace is properly closed) and no...
+
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid subsequence of brackets 
+    where at least one bracket in the subsequence is nested.
+
+    is_nested('[[]]') ➞ True
+    is_nested('[]]]]]]][[[[[]') ➞ False
+    is_nested('[][]') ➞ False
+    is_nested('[]') ➞ False
+    is_nested('[[][]]') ➞ True
+    is_nested('[[]][[') ➞ True
+    '''

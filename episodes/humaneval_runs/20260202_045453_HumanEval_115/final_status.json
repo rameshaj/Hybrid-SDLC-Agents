@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def max_fill(grid, capacity):\n    return sum(sum(row) // capacity for row in grid)",
+    "dir": "episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py\", line 24, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py\", line 21, in __run_tests\n    check(globals().get('max_fill'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py\", line 10, in check\n    assert candidate([[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]], 2) == 5, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error\n",
+      "elapsed_s": 0.05764198303222656,
+      "failure_summary": "AssertionError: Error | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py\", line 21, in __run_tests\n    check(globals().get('max_fill'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py\", line 10, in check\n    assert candidate([[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]], 2) == 5, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError: Error | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py\", line 21, in __run_tests\n    check(globals().get('max_fill'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_01/candidate_run.py\", line 10, in check\n    assert candidate([[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]], 2) == 5, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error",
+    "attempt_02: AssertionError: Error | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_02/candidate_run.py\", line 23, in __run_tests\n    check(globals().get('max_fill'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_045453_HumanEval_115/slm_attempt_02/candidate_run.py\", line 18, in check\n    assert candidate([[1,1,1,1], [1,1,1,1]], 9) == 2, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error"
+  ],
+  "fallback_failures": []
+}

@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/src/humaneval/run_humaneval_hybrid.py", line 453, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/src/humaneval/run_humaneval_hybrid.py", line 433, in main
+    res = run_task(
+          ^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/src/humaneval/run_humaneval_hybrid.py", line 281, in run_task
+    raw = run_slm_prompt(attempt_prompt, slm_cfg, timeout_s=slm_cfg.timeout_s)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/src/humaneval/run_humaneval_hybrid.py", line 155, in run_slm_prompt
+    p = subprocess.run(
+        ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 2109, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/opt/anaconda3/lib/python3.11/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/usr/local/bin/llama-completion', '-m', 'models/gguf/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf', '-p', 'You are a coding assistant.\nImplement the function below.\nReturn ONLY valid Python code for the function. No explanations, no markdown.\nDo NOT include tests or example usage.\nFunction name: sort_numbers\nPrevious failures:\n- attempt_01: AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_212302_HumanEval_19/slm_attempt_01/candidate_run.py", line 21, in __run_tests\n    check(globals().get(\'sort_numbers\'))\n  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260201_212302_HumanEval_19/slm_attempt_01/candidate_run.py", line 15, in check\n    assert candidate(\'three five nine\') == \'three five nine\'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    """ Input is a space-delimited string of numberals from \'zero\' to \'nine\'.\n    Valid choices are \'zero\', \'one\', \'two\', \'three\', \'four\', \'five\', \'six\', \'seven\', \'eight\' and \'nine\'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers(\'three one five\')\n    \'one three five\'\n    """\n', '-n', '256', '--seed', '42', '--temp', '0.2', '--top-p', '0.95', '--repeat-penalty', '1.05']' timed out after 120 seconds

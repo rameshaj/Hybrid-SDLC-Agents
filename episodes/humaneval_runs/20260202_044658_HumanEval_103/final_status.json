@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "def rounded_avg(n, m):\n    if n > m:\n        return -1\n    return bin(round((n + m) / 2))[2:]",
+    "dir": "episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py\", line 31, in <module>\n    __run_tests()\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py\", line 28, in __run_tests\n    check(globals().get('rounded_avg'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py\", line 9, in check\n    assert candidate(1, 5) == \"0b11\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+      "elapsed_s": 0.04654812812805176,
+      "failure_summary": "AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py\", line 28, in __run_tests\n    check(globals().get('rounded_avg'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py\", line 9, in check\n    assert candidate(1, 5) == \"0b11\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py\", line 28, in __run_tests\n    check(globals().get('rounded_avg'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_01/candidate_run.py\", line 9, in check\n    assert candidate(1, 5) == \"0b11\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "attempt_02: AssertionError | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_02/candidate_run.py\", line 28, in __run_tests\n    check(globals().get('rounded_avg'))\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_044658_HumanEval_103/slm_attempt_02/candidate_run.py\", line 9, in check\n    assert candidate(1, 5) == \"0b11\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError"
+  ],
+  "fallback_failures": []
+}

@@ -1,0 +1,71 @@
+You are a senior software engineer fixing a Python bug.
+STRICT OUTPUT RULES:
+1) Output ONLY a unified diff patch.
+2) First line MUST start with: diff --git
+3) Do NOT add any explanation before or after the diff.
+4) Provide COMPLETE hunks (do not truncate).
+5) Do NOT use code fences. Optional wrapper ONLY if needed: <PATCH> ... </PATCH>
+6) Every hunk line MUST start with one of: space, '+', '-', or '\'.
+7) Unchanged context lines MUST start with a single space.
+Target path MUST be exactly: a/python_programs/breadth_first_search.py and b/python_programs/breadth_first_search.py
+
+SLM attempts summary:
+attempt_01: PATCH_APPLY_FAIL: NO_HUNKS
+attempt_02: PATCH_APPLY_FAIL: NO_HUNKS
+attempt_03: PATCH_APPLY_FAIL: NO_HUNKS
+
+Fallback attempts summary:
+None
+
+Buggy file content (exact):
+```python
+
+from collections import deque as Queue
+
+def breadth_first_search(startnode, goalnode):
+    queue = Queue()
+    queue.append(startnode)
+
+    nodesseen = set()
+    nodesseen.add(startnode)
+
+    while True:
+        node = queue.popleft()
+
+        if node is goalnode:
+            return True
+        else:
+            queue.extend(node for node in node.successors if node not in nodesseen)
+            nodesseen.update(node.successors)
+
+    return False
+
+
+
+"""
+Breadth-First Search
+
+
+Input:
+    startnode: A digraph node
+    goalnode: A digraph node
+
+Output:
+    Whether goalnode is reachable from startnode
+"""
+
+```
+
+Failing test output:
+```
+Path found! 
+Path found! 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data/external/QuixBugs/python_programs/breadth_first_search_test.py", line 41, in main
+    if breadth_first_search(nodef, nodee):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data/external/QuixBugs/python_programs/breadth_first_search.py", line 12, in breadth_first_search
+    node = queue.popleft()
+IndexError: pop from an empty deque
+
+```

@@ -1,0 +1,27 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "",
+    "dir": "episodes/humaneval_runs/20260221_074231_HumanEval_162/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "NO_CODE",
+      "elapsed_s": 0.0,
+      "failure_summary": "NO_CODE_EXTRACTED"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: NO_CODE_EXTRACTED",
+    "attempt_02: NO_CODE_EXTRACTED"
+  ],
+  "fallback_failures": [
+    "fallback_01: NameError: name 'hashlib' is not defined | tail:     assert candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074231_HumanEval_162/fallback_attempt_01/candidate_run.py\", line 4, in string_to_md5\n    return hashlib.md5(text.encode()).hexdigest()\n           ^^^^^^^\nNameError: name 'hashlib' is not defined"
+  ],
+  "rag_enabled": true,
+  "rag_top_k": 3
+}

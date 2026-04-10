@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074033_HumanEval_50/fallback_attempt_01/candidate_run.py", line 26, in <module>
+    __run_tests()
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074033_HumanEval_50/fallback_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('decode_shift'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074033_HumanEval_50/fallback_attempt_01/candidate_run.py", line 17, in check
+    encoded_str = encode_shift(str)
+                  ^^^^^^^^^^^^
+NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?

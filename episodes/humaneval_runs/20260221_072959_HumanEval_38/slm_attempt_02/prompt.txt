@@ -1,0 +1,57 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: decode_cyclic
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/1 error=NameError fix_actions=['add_guard', 'change_return'] score=0.464
+fix_diff:
+--- slm
++++ llm
+@@ -1,24 +1,22 @@
+-def separate_paren_groups(paren_string: str) -> List[str]:
+-    """ Input to this function is a string containing multiple groups of nested parentheses. Your goal is to
+-    separate those group into separate strings and return the list of those.
+-    Separate groups are balanced (each open brace is properly closed) and not nested within each other
+-    Ignore any spaces in the input string.
+-    >>> separate_paren_groups('( ) (( )) (( )( ))')
+-    ['()', '(())', '(()())']
+-    """
+-    result = []
+-    current_group = ''
+-    depth = 0
+-
+-    for char in...
+[case 2] task_id=HumanEval/14 error=NameError fix_actions=['change_return'] score=0.428
+fix_diff:
+--- slm
++++ llm
+@@ -1,6 +1,2 @@
+-def all_prefixes(string: str) -> List[str]:
+-    """ Return list of all prefixes from shortest to longest of the input string
+-    >>> all_prefixes('abc')
+-    ['a', 'ab', 'abc']
+-    """
+-    return [string[:i+1] for i in range(len(string))]
++def all_prefixes(string: str) -> list:
++    return [string[:i] for i in range(1, l...
+
+def encode_cyclic(s: str):
+    """
+    returns encoded string by cycling groups of three characters.
+    """
+    # split string to groups. Each of length 3.
+    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]
+    # cycle elements in each group. Unless group has fewer elements than 3.
+    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]
+    return "".join(groups)
+
+
+def decode_cyclic(s: str):
+    """
+    takes as input string encoded with encode_cyclic function. Returns decoded string.
+    """

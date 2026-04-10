@@ -1,0 +1,22 @@
+user
+Write Python code for task_func(n: int) -> dict[str, int].
+Generate a random mixed-case string of length n using ascii_letters. Return a dict mapping each character to its frequency. Raise ValueError if n < 0.
+Return ONLY the function code.
+assistant
+```python
+import random
+import string
+
+def task_func(n):
+    if n < 0:
+        raise ValueError("n must be non-negative")
+    
+    mixed_case_string = ''.join(random.choice(string.ascii_letters) for _ in range(n))
+    char_frequency = {char: mixed_case_string.count(char) for char in string.ascii_letters}
+    
+    return char_frequency
+```
+
+> EOF by user
+
+

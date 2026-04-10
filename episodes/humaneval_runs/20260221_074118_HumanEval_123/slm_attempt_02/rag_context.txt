@@ -1,0 +1,34 @@
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/5 error=NameError fix_actions=['add_guard', 'change_return'] score=0.359
+fix_diff:
+--- slm
++++ llm
+@@ -1,8 +1,7 @@
+-def intersperse(numbers: List[int], delimeter: int) -> List[int]:
+-    """ Insert a number 'delimeter' between every two consecutive elements of input list `numbers'
+-    >>> intersperse([], 4)
+-    []
+-    >>> intersperse([1, 2, 3], 4)
+-    [1, 4, 2, 4, 3]
+-    """
+-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]
++def intersperse(numbers, delimeter):
++    result = []
++    for i, number in enumerate(numbers):
++        result.append(number)
++        if i < len(numbers)...
+[case 2] task_id=HumanEval/9 error=NameError fix_actions=['change_return'] score=0.348
+fix_diff:
+--- slm
++++ llm
+@@ -1,18 +1,7 @@
+-def rolling_max(numbers: List[int]) -> List[int]:
+-    """ From a given list of integers, generate a list of rolling maximum element found until given moment
+-    in the sequence.
+-    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])
+-    [1, 2, 3, 3, 3, 4, 4]
+-    """
+-    if not numbers:
+-        return []
+-    
+-    max_so_far = nu...

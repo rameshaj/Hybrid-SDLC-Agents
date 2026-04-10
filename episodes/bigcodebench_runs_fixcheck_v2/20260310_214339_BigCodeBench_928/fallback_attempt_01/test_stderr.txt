@@ -1,0 +1,50 @@
+EEEEE
+======================================================================
+ERROR: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214339_BigCodeBench_928/fallback_attempt_01/candidate_run.py", line 19, in test_case_1
+    self.assertEqual(result['zz'], 0)
+                     ~~~~~~^^^^^^
+KeyError: 'zz'
+
+======================================================================
+ERROR: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214339_BigCodeBench_928/fallback_attempt_01/candidate_run.py", line 23, in test_case_2
+    self.assertEqual(result['aa'], 1)
+                     ~~~~~~^^^^^^
+KeyError: 'aa'
+
+======================================================================
+ERROR: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214339_BigCodeBench_928/fallback_attempt_01/candidate_run.py", line 35, in test_case_3
+    self.assertEqual(result['zz'], 0)
+                     ~~~~~~^^^^^^
+KeyError: 'zz'
+
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214339_BigCodeBench_928/fallback_attempt_01/candidate_run.py", line 42, in test_case_4
+    self.assertEqual(result['zz'], 0)
+                     ~~~~~~^^^^^^
+KeyError: 'zz'
+
+======================================================================
+ERROR: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs_fixcheck_v2/20260310_214339_BigCodeBench_928/fallback_attempt_01/candidate_run.py", line 46, in test_case_5
+    self.assertEqual(result['zz'], 0)
+                     ~~~~~~^^^^^^
+KeyError: 'zz'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (errors=5)

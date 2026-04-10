@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py", line 35, in <module>
+    __run_tests()
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py", line 32, in __run_tests
+    check(globals().get('find_zero'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py", line 26, in check
+    solution = candidate(copy.deepcopy(coeffs))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260221_074024_HumanEval_32/fallback_attempt_01/candidate_run.py", line 6, in find_zero
+    return bisect(poly, -1000, 1000)
+           ^^^^^^
+NameError: name 'bisect' is not defined

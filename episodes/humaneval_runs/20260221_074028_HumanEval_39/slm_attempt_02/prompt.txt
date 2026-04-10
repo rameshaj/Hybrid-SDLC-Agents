@@ -1,0 +1,63 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Self-debug notes are hints only. Do NOT copy them into the code.
+Function name: prime_fib
+Previous failures:
+- attempt_01: NO_CODE_EXTRACTED
+RAG hints:
+RAG hints from similar cases:
+[case 1] task_id=HumanEval/25 error=NameError fix_actions=[] score=0.449
+fix_diff:
+--- slm
++++ llm
+@@ -1,21 +1,9 @@
+-def factorize(n: int) -> List[int]:
+-    """ Return list of prime factors of given integer in the order from smallest to largest.
+-    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.
+-    Input number should be equal to the product of all factors
+-    >>> factorize(8)
+-    [2, 2, 2]
+-    >>> factorize(25)
+-    [5, 5]
+-    >>> factorize(70)
+-    [2, 5, 7]
+-    """
++def factorize(n: int) -> list:
+     factors = []
+     divisor = 2
+-    while divisor * divisor <= n:
++    while n > 1:
+         w...
+[case 2] task_id=HumanEval/75 error=AssertionError fix_actions=['add_guard', 'change_return'] score=0.438
+fix_diff:
+--- slm
++++ llm
+@@ -1,11 +1,4 @@
+ def is_multiply_prime(a):
+-    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+-    and false otherwise.
+-    Knowing that (a) is less then 100. 
+-    Example:
+-    is_multiply_prime(30) == True
+-    30 = 2 * 3 * 5
+-    """
+     def is_prime(n):
+         if n <= 1:
+             ret...
+
+def prime_fib(n: int):
+    """
+    prime_fib returns n-th number that is a Fibonacci number and it's also prime.
+    >>> prime_fib(1)
+    2
+    >>> prime_fib(2)
+    3
+    >>> prime_fib(3)
+    5
+    >>> prime_fib(4)
+    13
+    >>> prime_fib(5)
+    89
+    """

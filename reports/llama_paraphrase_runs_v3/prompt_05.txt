@@ -1,0 +1,3 @@
+Write task_func(d: dict[str, list[int]]) -> dict[int, int].
+Flatten all integer lists in d into one list and return a Counter mapping each int to its count. Use itertools and collections.Counter.
+Return ONLY the function code.

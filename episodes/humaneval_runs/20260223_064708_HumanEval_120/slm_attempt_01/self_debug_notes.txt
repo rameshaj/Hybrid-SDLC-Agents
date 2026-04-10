@@ -1,0 +1,3 @@
+- The function `maximum` is supposed to return the sorted list of the maximum `k` numbers in the input array.
+- The current implementation uses `sorted(arr)[-k:]`, which returns the last `k` elements of the sorted array, not the first `k` elements.
+- To fix this, you should use `arr[:k]` to get the first `k` elements of the sorted array.

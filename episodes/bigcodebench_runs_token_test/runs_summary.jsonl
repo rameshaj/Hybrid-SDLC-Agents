@@ -1,0 +1,2 @@
+{"status": "PASS", "model": "SLM", "attempt": 1, "run_dir": "episodes/bigcodebench_runs_token_test/20260310_080409_BigCodeBench_4"}
+{"status": "FAIL", "model": "NONE", "run_dir": "episodes/bigcodebench_runs_token_test/20260310_080552_BigCodeBench_22"}

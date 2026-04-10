@@ -1,0 +1,129 @@
+# Sample Runs (One Per Dataset)
+
+Date captured: 2026-03-14
+
+This file records one concrete sample run per dataset, with the requested outcomes:
+- HumanEval: PASS
+- QuixBugs: PASS
+- Defects4J: FAIL
+- BigCodeBench: SLM FAIL, LLM PASS
+
+---
+
+## 1) HumanEval - PASS Sample
+
+Sample run path:
+- `episodes/humaneval_runs/20260201_211622_HumanEval_10`
+
+Status evidence:
+- `final_status.json` contains:
+  - `"status": "PASS"`
+  - `"model": "SLM"`
+  - `"attempt": 2`
+  - `"reason": "score >= threshold"`
+  - `"score": 1.0`
+- `slm_attempt_01/result.json` contains first-attempt failure:
+  - `"ok": false`
+  - `"failure_summary": "AssertionError ..."`
+- `slm_attempt_02/result.json` contains second-attempt pass:
+  - `"ok": true`
+  - `"score": 1.0`
+  - `"failure_summary": "PASS"`
+
+What this run folder contains:
+- `task.json`: selected HumanEval task payload (prompt, entry point, tests metadata).
+- `final_status.json`: final decision for this run.
+- `slm_attempt_01/prompt.txt`: prompt sent to SLM.
+- `slm_attempt_01/slm_raw.txt`: raw SLM output.
+- `slm_attempt_01/code.py`: extracted candidate function code.
+- `slm_attempt_01/candidate_run.py`: executable harness used for testing.
+- `slm_attempt_01/result.json`: structured pass/fail + score + timing.
+- `slm_attempt_01/test_stdout.txt`, `slm_attempt_01/test_stderr.txt`: test execution logs.
+- `slm_attempt_02/prompt.txt`: second-attempt prompt (includes prior failure context).
+- `slm_attempt_02/slm_raw.txt`: second-attempt raw output.
+- `slm_attempt_02/code.py`, `slm_attempt_02/candidate_run.py`: second-attempt executable code.
+- `slm_attempt_02/result.json`: second-attempt pass result.
+- `slm_attempt_02/test_stdout.txt`, `slm_attempt_02/test_stderr.txt`: second-attempt test logs.
+
+---
+
+## 2) QuixBugs - PASS Sample
+
+Sample run path:
+- `episodes/quixbugs_runs/attempts/20260309_221252_flatten`
+
+Status evidence:
+- `final_status.txt` contains: `PASS`
+- Baseline/pre state shows failure:
+  - `test_before.txt`: `[FAIL] flatten failed 6/7 cases`
+  - `attempt_01/test_pre.txt`: `[FAIL] flatten failed 6/7 cases`
+- After patch application:
+  - `attempt_01/test_after.txt`: `[PASS] flatten (7 cases)`
+
+What this run folder contains:
+- `test_before.txt`: baseline test output on buggy code.
+- `final_status.txt`: final run outcome.
+- `attempt_01/prompt.txt`: SLM patch-generation prompt.
+- `attempt_01/slm_raw.txt`: raw generated output.
+- `attempt_01/diff_sanitized.txt`: normalized diff used for apply.
+- `attempt_01/.attempt.patch`: extracted candidate diff.
+- `attempt_01/.attempt_repaired.patch`, `attempt_01/diff_repaired.txt`: repaired patch/hunk variant.
+- `attempt_01/applied_diff_actual.diff`: actual applied file diff.
+- `attempt_01/test_pre.txt`, `attempt_01/test_after.txt`: before/after test results for that attempt.
+- `attempt_01/slm_err.txt`: stderr captured from SLM invocation.
+
+---
+
+## 3) Defects4J - FAIL Sample
+
+Sample run file:
+- `reports/defects4j/batch_10/Chart-2-2b-defects4j-test.txt`
+
+Status evidence:
+- File reports:
+  - `Failing tests: 2`
+  - `org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_2`
+  - `org.jfree.data.general.junit.DatasetUtilitiesTests::testBug2849731_3`
+- Companion fixed-version file for the same task:
+  - `reports/defects4j/batch_10/Chart-2-2f-defects4j-test.txt`
+  - reports `Failing tests: 0`
+
+What this run file contains:
+- Raw Defects4J test execution summary from Ant phases.
+- Compilation/test phase status lines (`compile.tests`, `run.dev.tests`).
+- Final failing test count.
+- Fully qualified failing test identifiers.
+
+Note:
+- This sample is from the stored Defects4J test-run report files (buggy checkout failing run), which are the available persisted run artifacts in this workspace for Defects4J.
+
+---
+
+## 4) BigCodeBench - SLM FAIL, LLM PASS Sample
+
+Sample run path:
+- `episodes/bigcodebench_runs_fixcheck_v2/20260310_085745_BigCodeBench_279`
+
+Status evidence:
+- `final_status.json` contains:
+  - `"status": "PASS"`
+  - `"model": "LLM"`
+  - `"attempt": 1`
+  - `"score": 1.0`
+- `slm_attempt_01/result.json` contains:
+  - `"ok": false`
+  - `"failure_summary": "AssertionError: 5 != 4 ..."`
+- `slm_attempt_02/result.json` contains:
+  - `"ok": false`
+  - `"failure_summary": "AssertionError: 5 != 4 ..."`
+- `fallback_attempt_01/result.json` contains:
+  - `"ok": true`
+  - `"score": 1.0`
+  - `"failure_summary": "PASS"`
+
+What this run folder contains:
+- `task.json`: selected BigCodeBench task payload.
+- `final_status.json`: final run decision showing fallback LLM success.
+- `slm_attempt_01/*`, `slm_attempt_02/*`: SLM prompts, raw outputs, code, result, stdout/stderr.
+- `fallback_attempt_01/*`: fallback prompt, raw LLM output, code, result, stdout/stderr for the passing fallback attempt.
+- Per-attempt `code.py`, `candidate_run.py`, `result.json`, `test_stdout.txt`, `test_stderr.txt` for reproducible diagnosis.

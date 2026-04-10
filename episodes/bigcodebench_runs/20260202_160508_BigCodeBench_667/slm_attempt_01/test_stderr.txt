@@ -1,0 +1,65 @@
+EEEEE
+======================================================================
+ERROR: test_case_1 (__main__.TestCases.test_case_1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 7, in test_case_1
+    self.assertEqual(task_func({'a': 1, 'b': 2, 'c': 3}, 2), ['c', 'b'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 2, in task_func
+    return [letter for letter, _ in heapq.nlargest(n, x.items(), key=lambda item: item[1])]
+                                    ^^^^^
+NameError: name 'heapq' is not defined
+
+======================================================================
+ERROR: test_case_2 (__main__.TestCases.test_case_2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 9, in test_case_2
+    self.assertEqual(task_func({'a': 1, 'b': 2, 'c': 3}, 1), ['c'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 2, in task_func
+    return [letter for letter, _ in heapq.nlargest(n, x.items(), key=lambda item: item[1])]
+                                    ^^^^^
+NameError: name 'heapq' is not defined
+
+======================================================================
+ERROR: test_case_3 (__main__.TestCases.test_case_3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 11, in test_case_3
+    self.assertEqual(task_func({'a': 1, 'b': 2, 'c': 3}, 3), ['c', 'b', 'a'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 2, in task_func
+    return [letter for letter, _ in heapq.nlargest(n, x.items(), key=lambda item: item[1])]
+                                    ^^^^^
+NameError: name 'heapq' is not defined
+
+======================================================================
+ERROR: test_case_4 (__main__.TestCases.test_case_4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 13, in test_case_4
+    self.assertEqual(task_func({'a': 1, 'b': 2, 'c': 3}, 0), [])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 2, in task_func
+    return [letter for letter, _ in heapq.nlargest(n, x.items(), key=lambda item: item[1])]
+                                    ^^^^^
+NameError: name 'heapq' is not defined
+
+======================================================================
+ERROR: test_case_5 (__main__.TestCases.test_case_5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 15, in test_case_5
+    self.assertEqual(task_func({'a': 1, 'b': 2, 'c': 3}, 4), ['c', 'b', 'a'])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260202_160508_BigCodeBench_667/slm_attempt_01/candidate_run.py", line 2, in task_func
+    return [letter for letter, _ in heapq.nlargest(n, x.items(), key=lambda item: item[1])]
+                                    ^^^^^
+NameError: name 'heapq' is not defined
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.003s
+
+FAILED (errors=5)

@@ -1,0 +1,3 @@
+- Fix the syntax error by closing the parentheses.
+- Use `abs(x)` to handle negative numbers correctly.
+- Ensure that the lambda function returns a tuple with the sum of digits and the index.

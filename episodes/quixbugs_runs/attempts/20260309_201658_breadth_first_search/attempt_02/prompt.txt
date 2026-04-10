@@ -1,0 +1,65 @@
+You are fixing a Python bug.
+STRICT RULES:
+1) Output ONLY a unified diff
+2) First line MUST be: diff --git
+3) NO explanation text
+4) Do NOT wrap in code fences or <PATCH> tags
+5) Do NOT repeat the prompt
+
+Target:
+a/python_programs/breadth_first_search.py
+b/python_programs/breadth_first_search.py
+
+Attempt 2/2
+Previous status: PATCH_APPLY_FAIL: NO_HUNKS
+
+Buggy file content (exact):
+
+from collections import deque as Queue
+
+def breadth_first_search(startnode, goalnode):
+    queue = Queue()
+    queue.append(startnode)
+
+    nodesseen = set()
+    nodesseen.add(startnode)
+
+    while True:
+        node = queue.popleft()
+
+        if node is goalnode:
+            return True
+        else:
+            queue.extend(node for node in node.successors if node not in nodesseen)
+            nodesseen.update(node.successors)
+
+    return False
+
+
+
+"""
+Breadth-First Search
+
+
+Input:
+    startnode: A digraph node
+    goalnode: A digraph node
+
+Output:
+    Whether goalnode is reachable from startnode
+"""
+
+
+Failing output:
+```
+Path found! 
+Path found! 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data/external/QuixBugs/python_programs/breadth_first_search_test.py", line 41, in main
+    if breadth_first_search(nodef, nodee):
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/data/external/QuixBugs/python_programs/breadth_first_search.py", line 12, in breadth_first_search
+    node = queue.popleft()
+IndexError: pop from an empty deque
+
+```

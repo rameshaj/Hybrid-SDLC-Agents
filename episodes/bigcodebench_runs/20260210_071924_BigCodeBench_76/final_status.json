@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "best_slm": {
+    "score": 0.0,
+    "ok": false,
+    "code": "import random\nimport string\nfrom django.http import HttpResponse\n\ndef task_func(request, session_expire_time):\n    \"\"\"\n    This function creates a random session key comprising letters and digits with a specific length of 20,\n    then sets this key in a cookie on an HttpResponse object with the specified expiration time.\n\n    Parameters:\n    request (django.http.HttpRequest): The incoming Django HttpRequest.\n    session_expire_time (int): The expiration time for the session cookie in seconds.\n\n    Returns:\n    django.http.HttpResponse: A Django HttpResponse with the session key set in a cookie.\n\n    Raises:\n    ValueError: If the session key does not contain both letters and digits or\n                the session key length is not equal to 20.\n\n    Note:\n    -   The function set the response content to \"Session key generated successfully.\" if the session key\n        is valid.\n\n    Examples:\n    >>> from django.conf import settings\n    >>> from django.http import HttpRequest\n    >>> if not settings.configured:\n    ...     settings.configure()\n    >>> request = HttpRequest()\n    >>> response = task_func(request, 60)\n    >>> 'session_key' in response.cookies\n    True\n    >>> len(response.cookies['session_key'].value) ==",
+    "dir": "episodes/bigcodebench_runs/20260210_071924_BigCodeBench_76/slm_attempt_01",
+    "res": {
+      "ok": false,
+      "score": 0.0,
+      "rc": 1,
+      "stdout": "",
+      "stderr": "  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260210_071924_BigCodeBench_76/slm_attempt_01/candidate_run.py\", line 85\n    \"\"\"Test if the function completes without error when session key is valid.\"\"\"\n                                                                              ^\nSyntaxError: unterminated triple-quoted string literal (detected at line 96)\n",
+      "elapsed_s": 0.2163081169128418,
+      "failure_summary": "SyntaxError: unterminated triple-quoted string literal (detected at line 96) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260210_071924_BigCodeBench_76/slm_attempt_01/candidate_run.py\", line 85\n    \"\"\"Test if the function completes without error when session key is valid.\"\"\"\n                                                                              ^\nSyntaxError: unterminated triple-quoted string literal (detected at line 96)"
+    }
+  },
+  "slm_failures": [
+    "attempt_01: SyntaxError: unterminated triple-quoted string literal (detected at line 96) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260210_071924_BigCodeBench_76/slm_attempt_01/candidate_run.py\", line 85\n    \"\"\"Test if the function completes without error when session key is valid.\"\"\"\n                                                                              ^\nSyntaxError: unterminated triple-quoted string literal (detected at line 96)",
+    "attempt_02: SyntaxError: unterminated triple-quoted string literal (detected at line 96) | tail:   File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/bigcodebench_runs/20260210_071924_BigCodeBench_76/slm_attempt_02/candidate_run.py\", line 85\n    \"\"\"Test if the function completes without error when session key is valid.\"\"\"\n                                                                              ^\nSyntaxError: unterminated triple-quoted string literal (detected at line 96)"
+  ],
+  "fallback_failures": []
+}

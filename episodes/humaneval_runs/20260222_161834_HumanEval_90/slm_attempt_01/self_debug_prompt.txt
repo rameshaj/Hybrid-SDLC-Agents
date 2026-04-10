@@ -1,0 +1,31 @@
+You are a debugging assistant.
+Given the task and failing code, propose minimal fixes.
+Return 1-3 short bullet points, each starting with '- '. No code.
+Function name: next_smallest
+Task:
+def next_smallest(lst):
+    """
+    You are given a list of integers.
+    Write a function next_smallest() that returns the 2nd smallest element of the list.
+    Return None if there is no such element.
+    
+    next_smallest([1, 2, 3, 4, 5]) == 2
+    next_smallest([5, 1, 4, 3, 2]) == 2
+    next_smallest([]) == None
+    next_smallest([1, 1]) == None
+    """
+
+Failed code:
+def next_smallest(lst):
+    if len(lst) < 2:
+        return None
+    lst.sort()
+    return lst[1]
+
+Failure:
+AssertionError | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_161834_HumanEval_90/slm_attempt_01/candidate_run.py", line 24, in __run_tests
+    check(globals().get('next_smallest'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260222_161834_HumanEval_90/slm_attempt_01/candidate_run.py", line 13, in check
+    assert candidate([1, 1]) == None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

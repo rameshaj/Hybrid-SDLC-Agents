@@ -1,0 +1,24 @@
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: decode_shift
+Previous failures:
+- attempt_01: NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'? | tail:   File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py", line 23, in __run_tests
+    check(globals().get('decode_shift'))
+  File "/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260202_042246_HumanEval_50/slm_attempt_01/candidate_run.py", line 17, in check
+    encoded_str = encode_shift(str)
+                  ^^^^^^^^^^^^
+NameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?
+
+def encode_shift(s: str):
+    """
+    returns encoded string by shifting every character by 5 in the alphabet.
+    """
+    return "".join([chr(((ord(ch) + 5 - ord("a")) % 26) + ord("a")) for ch in s])
+
+
+def decode_shift(s: str):
+    """
+    takes as input string encoded with encode_shift function. Returns decoded string.
+    """

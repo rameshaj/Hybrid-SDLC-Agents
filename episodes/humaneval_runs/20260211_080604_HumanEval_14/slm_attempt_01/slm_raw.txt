@@ -1,0 +1,23 @@
+user
+You are a coding assistant.
+Implement the function below.
+Return ONLY valid Python code for the function. No explanations, no markdown.
+Do NOT include tests or example usage.
+Function name: all_prefixes
+
+from typing import List
+
+
+def all_prefixes(string: str) -> List[str]:
+    """ Return list of all prefixes from shortest to longest of the input string
+    >>> all_prefixes('abc')
+    ['a', 'ab', 'abc']
+    """
+
+assistant
+```python
+def all_prefixes(string: str) -> List[str]:
+    return [string[:i] for i in range(1, len(string) + 1)]
+```
+
+> EOF by user

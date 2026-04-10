@@ -1,0 +1,6 @@
+diff --git a/python_programs/lcs_length.py b/python_programs/lcs_length.py
+--- a/python_programs/lcs_length.py
++++ b/python_programs/lcs_length.py
+@@ -1,1 +1,1 @@
+-    dp = Counter()
++    dp = {}

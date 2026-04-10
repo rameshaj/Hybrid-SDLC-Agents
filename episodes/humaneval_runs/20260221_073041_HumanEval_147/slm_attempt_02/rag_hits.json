@@ -1,0 +1,57 @@
+[
+  {
+    "id": 26,
+    "case_id": "HumanEval/9::20260212_073753_HumanEval_9",
+    "task_id": "HumanEval/9",
+    "dataset": "HumanEval",
+    "entry_point": "rolling_max",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_073753_HumanEval_9/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def rolling_max(numbers: List[int]) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def rolling_max(numbers: list[int]) -> list[int]:\n    result = []\n    current_max = float('-inf')\n    for number in numbers:\n        current_max = max(current_max, number)\n        result.append(current_max)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,18 +1,7 @@\n-def rolling_max(numbers: List[int]) -> List[int]:\n-    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n-    in the sequence.\n-    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n-    [1, 2, 3, 3, 3, 4, 4]\n-    \"\"\"\n-    if not numbers:\n-        return []\n-    \n-    max_so_far = numbers[0]\n-    rolling_max_list = [max_so_far]\n-    \n-    for num in numbers[1:]:\n-        if num > max_so_far:\n-            max_so_far = num\n-        rolling_max_list.append(max_so_far)\n-    \n-    return rolling_max_list\n+def rolling_max(numbers: list[int]) -> list[int]:\n+    result = []\n+    current_max = float('-inf')\n+    for number in numbers:\n+        current_max = max(current_max, number)\n+        result.append(current_max)\n+    return result",
+    "prompt": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_073753_HumanEval_9",
+    "timestamp": "20260212_073753",
+    "score": 0.452263206243515
+  },
+  {
+    "id": 14,
+    "case_id": "HumanEval/5::20260212_070827_HumanEval_5",
+    "task_id": "HumanEval/5",
+    "dataset": "HumanEval",
+    "entry_point": "intersperse",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_070827_HumanEval_5/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n                             ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "add_guard",
+      "change_return"
+    ],
+    "llm_code": "def intersperse(numbers, delimeter):\n    result = []\n    for i, number in enumerate(numbers):\n        result.append(number)\n        if i < len(numbers) - 1:\n            result.append(delimeter)\n    return result",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,8 +1,7 @@\n-def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n-    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n-    >>> intersperse([], 4)\n-    []\n-    >>> intersperse([1, 2, 3], 4)\n-    [1, 4, 2, 4, 3]\n-    \"\"\"\n-    return [numbers[i] for i in range(len(numbers)) if i % 2 == 0] + [delimeter] + [numbers[i] for i in range(len(numbers)) if i % 2 != 0]\n+def intersperse(numbers, delimeter):\n+    result = []\n+    for i, number in enumerate(numbers):\n+        result.append(number)\n+        if i < len(numbers) - 1:\n+            result.append(delimeter)\n+    return result",
+    "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_070827_HumanEval_5",
+    "timestamp": "20260212_070827",
+    "score": 0.3758985996246338
+  },
+  {
+    "id": 2,
+    "case_id": "HumanEval/12::20260212_074142_HumanEval_12",
+    "task_id": "HumanEval/12",
+    "dataset": "HumanEval",
+    "entry_point": "longest",
+    "slm_failure_type": "NameError",
+    "slm_failure_summary": "NameError: name 'List' is not defined. Did you mean: 'list'? | tail: Traceback (most recent call last):\n  File \"/Users/ajayramesh/Documents/AIML/Masteers/ThesisImplementation/thesis-hybrid-sdlc-agent/episodes/humaneval_runs/20260212_074142_HumanEval_12/slm_attempt_02/candidate_run.py\", line 1, in <module>\n    def longest(strings: List[str]) -> Optional[str]:\n                         ^^^^\nNameError: name 'List' is not defined. Did you mean: 'list'?",
+    "fix_actions": [
+      "change_return"
+    ],
+    "llm_code": "def longest(strings):\n    if not strings:\n        return None\n    return max(strings, key=len)",
+    "fix_diff": "--- slm\n+++ llm\n@@ -1,14 +1,4 @@\n-def longest(strings: List[str]) -> Optional[str]:\n-    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n-    strings of the same length. Return None in case the input list is empty.\n-    >>> longest([])\n-\n-    >>> longest(['a', 'b', 'c'])\n-    'a'\n-    >>> longest(['a', 'bb', 'ccc'])\n-    'ccc'\n-    \"\"\"\n+def longest(strings):\n     if not strings:\n         return None\n-    max_length = max(len(s) for s in strings)\n-    return next(s for s in strings if len(s) == max_length)\n+    return max(strings, key=len)",
+    "prompt": "from typing import List, Optional\n\n\ndef longest(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> longest([])\n\n    >>> longest(['a', 'b', 'c'])\n    'a'\n    >>> longest(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+    "run_dir": "episodes/humaneval_runs/20260212_074142_HumanEval_12",
+    "timestamp": "20260212_074142",
+    "score": 0.346617192029953
+  }
+]
